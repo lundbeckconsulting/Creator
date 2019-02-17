@@ -1,0 +1,115 @@
+﻿.h1 {
+  font-size: 2.6em;
+  margin: 0px; }
+  .h1.bold {
+    font-weight: bold; }
+  .h1.airy {
+    margin: 12px; }
+  .h1-airy {
+    font-size: 2.6em;
+    margin: 12px; }
+
+.h2 {
+  font-size: 2.2em;
+  margin: 0px; }
+  .h2.bold {
+    font-weight: bold; }
+  .h2.airy {
+    margin: 12px; }
+  .h2-airy {
+    font-size: 2.2em;
+    margin: 12px; }
+
+.h3 {
+  font-size: 1.8em;
+  margin: 0px; }
+  .h3.bold {
+    font-weight: bold; }
+  .h3.airy {
+    margin: 12px; }
+  .h3-airy {
+    font-size: 1.8em;
+    margin: 12px; }
+
+.h4 {
+  font-size: 1.4em;
+  margin: 0px; }
+  .h4.bold {
+    font-weight: bold; }
+  .h4.airy {
+    margin: 12px; }
+  .h4-airy {
+    font-size: 1.4em;
+    margin: 12px; }
+
+.h5 {
+  font-size: 1.2em;
+  margin: 0px; }
+  .h5.bold {
+    font-weight: bold; }
+  .h5.airy {
+    margin: 12px; }
+  .h5-airy {
+    font-size: 1.2em;
+    margin: 12px; }
+
+.h6 {
+  font-size: 0.8em;
+  margin: 0px; }
+  .h6.bold {
+    font-weight: bold; }
+  .h6.airy {
+    margin: 12px; }
+  .h6-airy {
+    font-size: 0.8em;
+    margin: 12px; }
+
+@media (min-width: 768px) {
+  .h1 {
+    font-size: 4em; }
+    .h1-airy {
+      font-size: 4em; }
+  .h2 {
+    font-size: 3.4em; }
+    .h2-airy {
+      font-size: 3.4em; }
+  .h3 {
+    font-size: 2.8em; }
+    .h3-airy {
+      font-size: 2.8em; }
+  .h4 {
+    font-size: 2.2em; }
+    .h4-airy {
+      font-size: 2.2em; }
+  .h5 {
+    font-size: 1.6em; }
+    .h5-airy {
+      font-size: 1.6em; }
+  .h6 {
+    font-size: 1em; }
+    .h6-airy {
+      font-size: 1em; } }
+
+.font-xs {
+  font-size: 0.8em; }
+
+.font-sm {
+  font-size: 1em; }
+
+.font-md {
+  font-size: 1.6em; }
+
+.font-lg {
+  font-size: 2.4em; }
+
+.font-xl {
+  font-size: 3em; }
+
+.align.left, .align-left {
+  text-align: left; }
+
+.align.right, .align-right {
+  text-align: right; }
+
+.align.center, .align-center {
+  text-align: center; }

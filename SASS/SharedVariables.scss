@@ -1,0 +1,14 @@
+﻿$contentMaxWidth: 1366px;
+$defaultPad: 16px;
+$systemSizes: (XS, SM, MD, LG, XL);
+
+$colorProfiles: (Default, Primary, Disabled, Success, Danger, Warning, Info, Light, Dark);
+$defaultCP: (Primary: black, Second: #1f1f1f, Third: #484848, Fourth: #a1a1a1, Fifth: #ececec);
+$primaryCP: (Primary: #007bff, Second: #4ba1fe, Third: #74b7ff, Fourth: #a3cfff, Fifth: #d8ebff);
+$disabledCP: (Primary: #959595, Second: #777777, Third: #969696, Fourth: #b4b4b4, Fifth: #e0e0e0);
+$successCP: (Primary: #2a7e3e, Second: #519d63, Third: #70b982, Fourth: #8cce9c, Fifth: #c2e8cb);
+$dangerCP: (Primary: #8c101b, Second: #a12d37, Third: #ca5660, Fourth: #ed7781, Fifth: #ffcacf);
+$warningCP: (Primary: #ffbf00, Second: #ffd24a, Third: #ffde7b, Fourth: #ffe9a6, Fifth: #fff2cb);
+$infoCP: (Primary: #17b5d5, Second: #40c3dd, Third: #6ad1e5, Fourth: #93d5e2, Fifth: #cef7ff);
+$lightCP: (Primary: #bebebe, Second: #d6d6d6, Third: #e7e7e7, Fourth: #f4f4f4, Fifth: white);
+$darkCP: (Primary: #3e3e3e, Second: #616161, Third: #838383, Fourth: #ababab, Fifth: #e1e1e1);

@@ -1,0 +1,36 @@
+﻿@import "../SharedVariables.scss";
+@import "../Function.scss";
+@import "Layout.Mixin.scss";
+
+.modal {
+    @each $size, $val in $modalSizes {
+        &.size-#{lower($size)}, &-#{lower($size)} {
+            @include modal($size);
+        }
+    }
+
+    @each $size, $val in $modalSizes {
+        @each $color in $colorProfiles {
+            &-#{lower($size)}-#{lower($color)} {
+                @include modal($size, $color);
+            }
+        }
+    }
+
+    @each $c in $colorProfiles {
+        &.cp-#{lower($c)} {
+            color: color($c);
+        }
+    }
+}
+
+#modalBackground {
+    display: none;
+    background-color: rgba(black, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 98;
+}

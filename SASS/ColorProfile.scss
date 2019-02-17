@@ -1,0 +1,19 @@
+﻿@import "SharedVariables.scss";
+@import "Function.scss";
+
+@each $name in $colorProfiles {
+    $profile: colorProfile($name);
+
+    @each $n, $val in $profile {
+        @if (equal($n, "Primary")) {
+            .cp-#{lower($name)} {
+                color: $val;
+            }
+        }
+        @else {
+            .cp-#{lower($name)}-#{lower($n)} {
+                color: $val;
+            }
+        }
+    }
+}

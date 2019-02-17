@@ -1,0 +1,42 @@
+﻿@import "../Mixin.scss";
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+}
+
+html.creator {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    & > body.creator {
+        height: 100%;
+        margin: 0px;
+
+        & header.creator {
+            @include responsive();
+        }
+
+        & .main-nav {
+            @include responsive();
+        }
+
+        & > main.creator {
+            @include responsive();
+
+            & .content {
+            }
+        }
+
+        & footer.creator {
+            @include responsive();
+
+            text-align: center;
+        }
+    }
+}

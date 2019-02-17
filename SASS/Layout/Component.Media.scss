@@ -1,0 +1,28 @@
+﻿@import "../Media.scss";
+@import "../Function.scss";
+
+[class^="show-from-"] {
+    display: none;
+}
+
+@each $name, $val in $mediaBreakpoints {
+    @if not (equal($name, "XS")) {
+        .show-#{lower($name)} {
+            display: none;
+        }
+
+        .hide-#{lower($name)} {
+            display: block;
+        }
+
+        @include media($name) {
+            .hide-#{lower($name)} {
+                display: none;
+            }
+
+            .show-#{lower($name)} {
+                display: block !important;
+            }
+        }
+    }
+}

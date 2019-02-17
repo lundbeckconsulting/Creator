@@ -1,0 +1,38 @@
+﻿@import "../SharedVariables.scss";
+@import "../Function.scss";
+
+.creator.symbol {
+    &.clickable {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    & > .wrap {
+        & > .label {
+            margin-left: 6px;
+
+            &.sm {
+                font-size: 1em;
+            }
+
+            &.md {
+                font-size: 1.8em;
+            }
+
+            &.lg {
+                font-size: 3em;
+            }
+
+            &.xl {
+                font-size: 3.8em;
+            }
+        }
+
+        @each $cp in $colorProfiles {
+            &.cp-#{lower($cp)} {
+                color: color($cp);
+            }
+        }
+    }
+}

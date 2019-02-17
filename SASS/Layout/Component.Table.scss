@@ -1,0 +1,64 @@
+﻿@import "Layout.Mixin.scss";
+@import "../Function.scss";
+
+.table {
+    @include table();
+
+    display: table;
+
+    &.clean, &-clean {
+        border: none;
+
+        td {
+            border: none;
+        }
+    }
+
+    @each $name in $colorProfiles {
+        &.cp-#{lower($name)} {
+            td {
+                border-color: rgba(color($name), 0.4);
+                color: color($name);
+            }
+
+            &.alternate, &-#{lower($name)-alternate} {
+                @include tableAlternate($name);
+
+                tr:nth-child(even) {
+                    $clr: color($name, Fifth);
+
+                    @if (upper($name) == "LIGHT") {
+                        $clr: #ededed;
+                    }
+
+                    background-color: color($name, Fifth);
+                }
+            }
+        }
+    }
+
+    @each $name in $colorProfiles {
+        &-#{lower($name)} {
+            @include table($name);
+        }
+
+        &-#{lower($name)}-alternate {
+            @include table($name);
+
+            tr:nth-child(even) {
+                background-color: color($name, Fifth);
+            }
+        }
+    }
+
+    &-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-auto {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

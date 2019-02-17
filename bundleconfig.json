@@ -1,0 +1,26 @@
+  [
+  {
+    "outputFileName": "_Build/creator.css",
+    "inputFiles": [
+      "_Build/CSS/Shared.css",
+      "_Build/CSS/ColorProfile.css",
+      "_Build/CSS/Layout.Component.Layout.css",
+      "_Build/CSS/Layout.Component.Document.css",
+      "_Build/CSS/Layout.Component.Table.css",
+      "_Build/CSS/Layout.Component.Modal.css",
+      "_Build/CSS/Layout.Component.Font.css",
+      "_Build/CSS/Layout.Component.BoxStyles.css",
+      "_Build/CSS/Layout.Component.Flex.css",
+      "_Build/CSS/Layout.Component.Grid.css",
+      "_Build/CSS/Layout.Component.Media.css",
+      "_Build/CSS/Layout.Component.Row.css",
+      "_Build/CSS/TagHelper.Component.Symbol.css"
+    ]
+  },
+  {
+    "outputFileName": "_Build/creator.js",
+    "inputFiles": [
+      "_Build/SCRIPT/Layout.Component.Modal.js"
+    ]
+  }
+]

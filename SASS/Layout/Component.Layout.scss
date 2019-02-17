@@ -1,0 +1,67 @@
+﻿@import "Layout.Mixin.scss";
+
+.bg-cover {
+    @include bgCover();
+
+    &.fixed {
+        background-attachment: fixed;
+    }
+
+    &-fixed {
+        @include bgCover(true);
+    }
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    bottom: unset;
+    left: 0;
+    right: 0;
+}
+
+.fixed-bottom {
+    position: fixed;
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.no-overflow {
+    @include noOverflow();
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.block-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@for $i from 1 through 9 {
+    .o-#{$i} {
+
+        @if ($i == 1) {
+            opacity: 1;
+        }
+        @else {
+            opacity: #{"0." + $i};
+        }
+    }
+}

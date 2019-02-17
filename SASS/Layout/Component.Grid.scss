@@ -1,0 +1,30 @@
+﻿@import "Variables.scss";
+@import "../Function.scss";
+
+.grid {
+    display: grid;
+
+    @each $name, $val in $gridItemSizes {
+        &.#{lower($name)}-fit, &-#{lower($name)}-fit {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+            grid-template-rows: auto;
+        }
+
+        &.#{lower($name)}-fill, &-#{lower($name)}-fill {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax($val, 1fr));
+            grid-template-rows: auto;
+        }
+    }
+
+    &-gap {
+        grid-gap: 12px;
+
+        @each $name, $val in $gridGapSizes {
+            &-#{lower($name)} {
+                grid-gap: $val;
+            }
+        }
+    }
+}

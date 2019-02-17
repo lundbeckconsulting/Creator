@@ -1,0 +1,40 @@
+﻿.creator.symbol.clickable:hover {
+  cursor: pointer; }
+
+.creator.symbol > .wrap > .label {
+  margin-left: 6px; }
+  .creator.symbol > .wrap > .label.sm {
+    font-size: 1em; }
+  .creator.symbol > .wrap > .label.md {
+    font-size: 1.8em; }
+  .creator.symbol > .wrap > .label.lg {
+    font-size: 3em; }
+  .creator.symbol > .wrap > .label.xl {
+    font-size: 3.8em; }
+
+.creator.symbol > .wrap.cp-default {
+  color: black; }
+
+.creator.symbol > .wrap.cp-primary {
+  color: #007bff; }
+
+.creator.symbol > .wrap.cp-disabled {
+  color: #959595; }
+
+.creator.symbol > .wrap.cp-success {
+  color: #2a7e3e; }
+
+.creator.symbol > .wrap.cp-danger {
+  color: #8c101b; }
+
+.creator.symbol > .wrap.cp-warning {
+  color: #ffbf00; }
+
+.creator.symbol > .wrap.cp-info {
+  color: #17b5d5; }
+
+.creator.symbol > .wrap.cp-light {
+  color: #bebebe; }
+
+.creator.symbol > .wrap.cp-dark {
+  color: #3e3e3e; }

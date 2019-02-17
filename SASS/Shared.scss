@@ -1,0 +1,17 @@
+﻿@import "Mixin.scss";
+
+.clean {
+    @include clean();
+}
+
+.r {
+    @include responsive(false, false);
+}
+
+.align-vertical {
+    padding: 20% 0;
+}
+
+.hide {
+    display: none;
+}

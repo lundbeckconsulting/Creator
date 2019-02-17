@@ -1,0 +1,66 @@
+﻿[
+  {
+    "outputFile": "_Build/CSS/ColorProfile.css",
+    "inputFile": "SASS/ColorProfile.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Shared.css",
+    "inputFile": "SASS/Shared.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Document.css",
+    "inputFile": "SASS/Layout/Component.Document.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Table.css",
+    "inputFile": "SASS/Layout/Component.Table.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Layout.css",
+    "inputFile": "SASS/Layout/Component.Layout.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Modal.css",
+    "inputFile": "SASS/Layout/Component.Modal.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Row.css",
+    "inputFile": "SASS/Layout/Component.Row.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Font.css",
+    "inputFile": "SASS/Layout/Component.Font.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.BoxStyles.css",
+    "inputFile": "SASS/Layout/Component.BoxStyles.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Flex.css",
+    "inputFile": "SASS/Layout/Component.Flex.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Grid.css",
+    "inputFile": "SASS/Layout/Component.Grid.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/Layout.Component.Media.css",
+    "inputFile": "SASS/Layout/Component.Media.scss"
+  },
+  {
+    "outputFile": "_Build/CSS/TagHelper.Component.Symbol.css",
+    "inputFile": "SASS/TagHelper/Component.Symbol.scss"
+  },
+  {
+    "outputFile": "_Build/SCRIPT/LIB.js",
+    "inputFile": "SCRIPT/LIB.js"
+  },
+  {
+    "outputFile": "_Build/SCRIPT/Layout.Component.Modal.js",
+    "inputFile": "SCRIPT/Layout.Component.Modal.js"
+  },
+  {
+    "outputFile": "_Build/SCRIPT/Layout.Component.Modal.es5.js",
+    "inputFile": "_Build/SCRIPT/Layout.Component.Modal.js"
+  }
+]

@@ -1,0 +1,30 @@
+﻿@import "SharedVariables.scss";
+
+@mixin clean() {
+    margin: 0px;
+    padding: 0px;
+}
+
+@mixin responsive($restrain: true, $center: true) {
+    width: 100%;
+    height: auto;
+
+    $min: unset;
+    $max: 100%;
+
+    @if ($restrain) {
+        $max: $contentMaxWidth;
+    }
+
+    min-width: $min;
+    max-width: $max;
+
+    @if ($center) {
+        margin: auto;
+    }
+}
+
+@mixin absoluteCenter() {
+    left: 50%;
+    transform: translate(-50%);
+}

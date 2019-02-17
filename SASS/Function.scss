@@ -1,0 +1,88 @@
+﻿@import "SharedVariables.scss";
+
+@function colorProfile($name) {
+    $result: ();
+
+    @if (equal($name, "Default")) {
+        $result: $defaultCP;
+    }
+    @else if (equal($name, "Primary")) {
+        $result: $primaryCP;
+    }
+    @else if (equal($name, "Disabled")) {
+        $result: $disabledCP;
+    }
+    @else if (equal($name, "Success")) {
+        $result: $successCP;
+    }
+    @else if (equal($name, "Danger")) {
+        $result: $dangerCP;
+    }
+    @else if (equal($name, "Warning")) {
+        $result: $warningCP;
+    }
+    @else if (equal($name, "Info")) {
+        $result: $infoCP;
+    }
+    @else if (equal($name, "Light")) {
+        $result: $lightCP;
+    }
+    @else if (equal($name, "Dark")) {
+        $result: $darkCP;
+    }
+
+    @return $result;
+}
+
+@function color($name, $type: Primary) {
+    $profile: colorProfile($name);
+
+    @return map-get($profile, $type);
+}
+
+@function upper($str) {
+    @return to-upper-case($str);
+}
+
+@function lower($str) {
+    @return to-lower-case($str);
+}
+
+@function equal($val, $valCompare) {
+    $result: false;
+
+    @if ($val == $valCompare) {
+        $result: true;
+    }
+    @else if (upper($val) == upper($valCompare)) {
+        $result: true;
+    }
+
+    @return $result;
+}
+
+@function pad($sizeName) {
+    $result: null;
+
+    @if (equal($sizeName, "XS")) {
+        $result: 2px;
+    }
+
+    @else if (equal($sizeName, "SM")) {
+        $result: 8px;
+    }
+
+    @else if (equal($sizeName, "MD")) {
+        $result: 18px;
+    }
+
+    @else if (equal($sizeName, "LG")) {
+        $result: 26px;
+    }
+
+    @else if (equal($sizeName, "XL")) {
+        $result: 38px;
+    }
+
+    @return $result;
+}
