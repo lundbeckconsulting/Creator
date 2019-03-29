@@ -1,0 +1,19 @@
+﻿@import "../Mixin.scss";
+@import "../MapsAndList.scss";
+
+@each $s in $commonSizes {
+    .#{getKW(Modal)} {
+        @include modal($s);
+    }
+}
+
+#modalBackground {
+    display: none;
+    background-color: rgba(black, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 98;
+}

@@ -1,12 +1,10 @@
-﻿@import "Layout.Mixin.scss";
+﻿@import "../Mixin.scss";
 @import "../Function.scss";
 
-.table {
+.#{getKW(Table)} {
     @include table();
 
-    display: table;
-
-    &.clean, &-clean {
+    &.clean {
         border: none;
 
         td {
@@ -14,35 +12,31 @@
         }
     }
 
-    @each $name in $colorProfiles {
-        &.cp-#{lower($name)} {
+    @each $name, $val in $colorProfiles {
+        $name: lower($name);
+        $color: rgba(map-get($val, Primary), 0.4);
+
+        &.cp-#{$name} {
             td {
-                border-color: rgba(color($name), 0.4);
-                color: color($name);
+                border-color: $color;
             }
 
-            &.alternate, &-#{lower($name)-alternate} {
+            &.alternate, &-#{$name + "-alternate"} {
                 @include tableAlternate($name);
 
                 tr:nth-child(even) {
-                    $clr: color($name, Fifth);
-
-                    @if (upper($name) == "LIGHT") {
-                        $clr: #ededed;
+                    @if (equal($name, Light)) {
+                        background-color: #ededed;
                     }
-
-                    background-color: color($name, Fifth);
                 }
             }
         }
-    }
 
-    @each $name in $colorProfiles {
-        &-#{lower($name)} {
+        &-#{$name} {
             @include table($name);
         }
 
-        &-#{lower($name)}-alternate {
+        &-#{lower($name) + "-alternate"} {
             @include table($name);
 
             tr:nth-child(even) {
@@ -50,15 +44,10 @@
             }
         }
     }
-
-    &-auto {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    &-auto {
+    
+    &.#{auto}, &-#{auto} {
         display: table;
-        margin-left: auto;
-        margin-right: auto;
+
+        @include marginAuto();
     }
 }

@@ -1,0 +1,24 @@
+﻿.pad {
+  padding: 16px; }
+
+.mrg {
+  margin: 18px; }
+
+.pad-mrg-clean {
+  padding: 0px;
+  margin: 0px; }
+
+.pad-clean {
+  padding: 0px;
+  margin: 0px; }
+
+.pad-doc {
+  padding: 16px; }
+
+.mrg.clean, .mrg-clean {
+  padding: 0px;
+  margin: 0px; }
+
+.mrg.auto, .mrg-auto {
+  margin-left: auto;
+  margin-right: auto; }

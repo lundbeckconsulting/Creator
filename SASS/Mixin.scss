@@ -1,19 +1,68 @@
-﻿@import "SharedVariables.scss";
+﻿@import "MapsAndList.scss";
+@import "Function.scss";
 
-@mixin clean() {
-    margin: 0px;
-    padding: 0px;
+@mixin modal($size: MD, $cp: Default) {
+    $colorLight: color($cp, Fourth);
+    $colorDark: color($cp, Primary);
+    $colorBack: color($cp, Fifth);
+
+    border: 4px solid $colorDark;
+    border-radius: getSys(BorderRadius);
+    padding: getPadding();
 }
 
-@mixin responsive($restrain: true, $center: true) {
-    width: 100%;
-    height: auto;
+@mixin doc($size: MD) {
+    @return getDoc($size);
+}
 
-    $min: unset;
+@mixin airy($size: MD, $inside: false) {
+    $val: getAiry($size);
+
+    @if ($inside) {
+        padding: $val;
+    }
+    @else {
+        margin: $val;
+    }
+}
+
+@mixin padding($size: MD) {
+    $val: getPadding($size);
+
+    padding: $val;
+}
+
+@mixin margin($size: MD) {
+    $val: getMargin($size);
+
+    margin: $size;
+}
+
+@mixin width($size: MD) {
+    $val: getWidth($size);
+
+    width: $val;
+}
+
+@mixin font($size: MD, $bold: false) {
+    $val: getFont($size);
+
+    font-size: $val;
+
+    @if ($bold) {
+        font-weight: bold;
+    }
+}
+
+@mixin responsive($restrain: true, $center: true, $pad: false) {
+    width: 100%;
+    height: 100%;
+
+    $min: 0px;
     $max: 100%;
 
     @if ($restrain) {
-        $max: $contentMaxWidth;
+        $max: getWidth(DOC);
     }
 
     min-width: $min;
@@ -22,9 +71,236 @@
     @if ($center) {
         margin: auto;
     }
+
+    @if ($pad) {
+        padding: getPadding(MD);
+    }
+}
+
+@mixin color($cpName: Default, $clrName: Primary, $font: false, $bg: false) {
+    $clr: color($cpName, $clrName);
+
+    @if ($font) {
+        color: $clr;
+    }
+    @else if ($bg) {
+        background-color: $clr;
+    }
 }
 
 @mixin absoluteCenter() {
     left: 50%;
     transform: translate(-50%);
+}
+
+@mixin clean($noBorders: false) {
+    padding: 0px;
+    margin: 0px;
+
+    @if ($noBorders) {
+        border: 0px;
+    }
+}
+
+@mixin marginAuto() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@mixin bgCover($fixed: false, $img: None) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @if ($fixed) {
+        background-attachment: fixed;
+    }
+
+    @if not (equal($img, None)) {
+        background-image: url($img);
+    }
+}
+
+@mixin bgRepeat() {
+    background-repeat: repeat;
+}
+
+@mixin bgRepeatY() {
+    background-position-y: left;
+    background-position-x: unset;
+}
+
+@mixin bgRepeatX() {
+    background-position-x: top;
+    background-position-y: unset;
+}
+
+@mixin fontOutline($size, $color: white, $outlineColor: black) {
+    color: $color;
+    -webkit-text-stroke-width: $size;
+    -webkit-text-stroke-color: $outlineColor;
+}
+
+@mixin cleanBase($pad: true, $mrg: true, $border: false) {
+    $p: 0px;
+    $m: 0px;
+    $b: 0px;
+
+    @if ($pad) {
+        padding: $p;
+    }
+
+    @if ($mrg) {
+        margin: $m;
+    }
+
+    @if ($border) {
+        border: $b;
+    }
+}
+
+@mixin table($cpName: Default, $mrgAuto: false) {
+    display: table;
+
+    @if ($mrgAuto) {
+        @include marginAuto();
+    }
+}
+
+@mixin tableAlternate($cpName: Default) {
+    tr:nth-child(even) {
+        $clr: color($cpName, Fifth);
+
+        @if (equal($cpName, Light)) {
+            $clr: #e8e8e8;
+        }
+
+        background-color: $clr;
+    }
+}
+
+@mixin bgCover($fixed: false, $img: None) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @if ($fixed) {
+        background-attachment: fixed;
+    }
+
+    @if not (equal($img, None)) {
+        background-image: url($img);
+    }
+}
+
+@mixin noOverflow() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin table($cpName: Default, $border: false, $fixed: false) {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    thead {
+        padding: 8px;
+        background-color: color($cpName, Third);
+        font-weight: bold;
+        color: color($cpName);
+    }
+
+    @if ($fixed) {
+        &.#{getKW(Fixed)}, &-#{getKW(Fixed)} {
+            position: fixed;
+        }
+    }
+
+    td {
+        $clr: color($cpName);
+        padding: 8px;
+        color: $clr;
+
+        @if ($border) {
+            border-bottom: 4px solid rgba($clr, 0.6);
+        }
+    }
+
+    td:first-child {
+        padding-right: 0;
+    }
+
+    &.alternate {
+        @include tableAlternate($cpName);
+    }
+
+    @include responsive();
+}
+
+@mixin tableAlternate($cpName: Default) {
+    tr:nth-child(even) {
+        $clr: color($cpName, Fifth);
+
+        @if (equal($cpName, Light)) {
+            $clr: #e8e8e8;
+        }
+
+        background-color: $clr;
+    }
+}
+
+@mixin formControl($cpName: Default, $border: false) {
+    $foreColor: color($cpName, Fifth);
+    $backColor: color($cpName);
+
+    @if (equal($cpName, Default)) {
+        $foreColor: black;
+        $backColor: white;
+        $border: true;
+    }
+    @else if (equal($cpName, Disabled)) {
+        font-style: italic;
+    }
+    @else if (equal($cpName, Warning)) {
+        $backColor: color($cpName, Primary);
+        $foreColor: lighten(red, 14%);
+    }
+
+    color: $foreColor;
+    background-color: $backColor;
+    padding-top: getPadding(MD);
+    padding-bottom: getSys(PadBase);
+    border-radius: getSys(BorderRadius);
+    font-size: getFont(MD);
+
+    @include boxGlowFocus($foreColor);
+}
+
+@mixin boxGlow($color, $size: 12px) {
+    box-shadow: 0 0 $size $color;
+    border: none;
+    -webkit-box-shadow: 0 0 $size 0 $color;
+    -moz-box-shadow: 0 0 $size 0 $color;
+}
+
+@mixin boxGlowFocus($color, $size: 12px) {
+    &:focus {
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        outline: none;
+
+        @include boxGlow($color, $size);
+    }
+}
+
+@mixin textGlow($color, $size: 6px) {
+    text-shadow: 1px 1px 10px $color, 1px 1px 10px $color;
+}
+
+@mixin fontOutline($size: 4px, $color: white, $outlineColor: black) {
+    color: $color;
+    -webkit-text-stroke-width: $size;
+    -webkit-text-stroke-color: $outlineColor;
 }

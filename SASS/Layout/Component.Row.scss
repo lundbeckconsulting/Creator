@@ -1,8 +1,8 @@
-﻿@import "../SharedVariables.scss";
-@import "../Function.scss";
+﻿@import "../Function.scss";
 @import "../Media.scss";
+@import "../MapsAndList.scss";
 
-.row {
+.#{getKW(Row)} {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
@@ -13,7 +13,7 @@
     }
 }
 
-@each $size in $systemSizes {
+@each $size in $commonSizes {
     @include media($size) {
         @for $c from 1 through 12 {
             .col-#{lower($size)}-#{$c} {
@@ -28,7 +28,7 @@
 }
 
 @include media(SM) {
-    .row {
+    .#{getKW(Row)} {
         grid-template-columns: repeat(12, 1fr);
     }
 }

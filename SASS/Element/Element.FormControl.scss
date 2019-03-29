@@ -1,0 +1,33 @@
+﻿@import "../Mixin.scss";
+@import "../Function.scss";
+@import "../MapsAndList.scss";
+
+@each $name, $map in $colorProfiles {
+    .#{getKW(TextBox) + "-" + lower($name)} {
+        @include formControl($name, true);
+        padding-left: 6px;
+        padding-right: 2px;
+        transition: all 0.30s ease-in-out;
+        outline: none;
+
+        &:focus {
+            @include boxGlow(color($name));
+        }
+    }
+}
+
+.#{getKW(TextBox) + "-" + lower(Disabled)} {
+    &:hover {
+        cursor: default !important;
+    }
+}
+
+[class*="btn-"] {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}

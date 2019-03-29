@@ -1,0 +1,67 @@
+﻿@import "../MapsAndList.scss";
+@import "../Function.scss";
+@import "../Mixin.scss";
+
+.chapter {
+    padding: $defaultPad;
+    border-radius: getSys(BorderRadius);
+    margin: $defaultMargin;
+
+    @each $name, $val in $colorProfiles {
+        &.cp-#{lower($name)} {
+            $borderColor: getMapVal($val, Primary);
+            $color: $borderColor;
+
+            color: $color;
+
+            & a {
+                color: $color;
+
+                &:hover {
+                    text-decoration: none;
+                    color: rgba($color, 0.8);
+                }
+            }
+
+            &.border-glow {
+                @include boxGlow($borderColor);
+            }
+
+            &.border-solid {
+                border: 2px solid $borderColor;
+            }
+        }
+    }
+
+    & > .content {
+        &.pre {
+            padding: $defaultPad;
+            background-color: color(Light, Third);
+            border-radius: getSys(BorderRadius);
+
+            & > .more.link {
+                display: inline-block;
+                font-weight: 600;
+
+                &:hover {
+                    text-decoration: none;
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        &.main {
+            padding: $defaultPad;
+
+            @each $s in $commonSizes {
+                &.bp-#{lower($s)} {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    & > .more.wrap {
+        display: block;
+    }
+}

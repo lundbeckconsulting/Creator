@@ -1,36 +1,23 @@
-﻿@import "../Layout/Variables.scss";
-@import "../Function.scss";
+﻿@import "../Function.scss";
 @import "../Media.scss";
 
-$airyHeadMargin: 12px;
+$airy: getKW(Airy);
 
 @each $size, $s in $headSizes {
-    .h#{$size} {
+    .#{getKW(Font) + "-" + lower($size)} {
         font-size: $s;
-        margin: 0px;
 
-        &.bold {
-            font-weight: bold;
-        }
-
-        &.airy {
-            margin: $airyHeadMargin;
-        }
-
-        &-airy {
-            font-size: $s;
-            margin: $airyHeadMargin;
-        }
-    }
-}
-
-@include media() {
-    @each $size, $s in $headMdSizes {
-        .h#{$size} {
-            font-size: $s;
-
-            &-airy {
+        @each $aN, $aV in $airyValues {
+            &.#{$airy + "." + lower($aN)}, &-#{$airy + "-" + lower($aN)} {
                 font-size: $s;
+                margin: $aV;
+            }
+        }
+
+        @each $aN, $aV in $airyValues {
+            &.#{$airy + "-" + lower($aN) + "." + getKW(Bold)}, &-#{$airy + "-" + lower($aN) + "-" + getKW(Bold)} {
+                font-size: $s;
+                margin: $aV;
             }
         }
     }
@@ -39,19 +26,5 @@ $airyHeadMargin: 12px;
 @each $size, $val in $fontSizes {
     .font-#{lower($size)} {
         font-size: $val;
-    }
-}
-
-.align {
-    &.left, &-left {
-        text-align: left;
-    }
-
-    &.right, &-right {
-        text-align: right;
-    }
-
-    &.center, &-center {
-        text-align: center;
     }
 }

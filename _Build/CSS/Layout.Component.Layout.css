@@ -2,49 +2,48 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
-  .bg-cover.fixed {
-    background-attachment: fixed; }
-  .bg-cover-fixed {
+  .bg-cover.fixed, .bg-cover-fixed {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed; }
 
-.fixed-top {
+.fixed.top, .fixed-top {
   position: fixed;
   top: 0;
   bottom: unset;
   left: 0;
   right: 0; }
 
-.fixed-bottom {
+.fixed.bottom, .fixed-bottom {
   position: fixed;
   top: unset;
   left: 0;
   right: 0;
   bottom: 0; }
 
-.no-overflow {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+.fixed.left, .fixed-left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: unset; }
 
-.float-left {
+.fixed.right, .fixed-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: unset;
+  right: 0; }
+
+.float.left, .float-left {
   float: left; }
 
-.float-right {
+.float.right, .float-right {
   float: right; }
 
-.hide {
+.hide, .close, .invisible {
   display: none; }
-
-.block {
-  display: block; }
-
-.block-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
 
 .o-1 {
   opacity: 1; }

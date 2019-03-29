@@ -1,0 +1,23 @@
+﻿.airy {
+  text-align: left; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-vertical-top {
+  position: absolute;
+  top: 0; }
+
+.align-vertical-center {
+  position: absolute;
+  top: 48%; }
+
+.align-vertical-bottom {
+  position: absolute;
+  bottom: 0; }

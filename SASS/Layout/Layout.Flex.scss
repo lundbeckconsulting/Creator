@@ -1,0 +1,62 @@
+﻿@import "../MapsAndList.scss";
+@import "../Function.scss";
+
+.#{getKW(Flex)} {
+    display: flex;
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    &.no-wrap {
+        flex-wrap: nowrap;
+    }
+
+    &.reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    &.even {
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: center;
+
+        & > * {
+            flex: 1 1 auto;
+        }
+    }
+
+    @each $show, $full in $flexJustifyItems {
+        $just: null;
+
+        @if (equal($full, Flex-Start)) {
+            $just: "start";
+        }
+        @else if (equal($full, Flex-End)) {
+            $just: "end";
+        }
+        @else {
+            $just: $full;
+        }
+
+        &-#{lower($just)} {
+            display: flex;
+            justify-content: lower($full);
+
+            @each $algnName, $algnVal in $flexAlignItems {
+                @if (equal($algnVal, Flex-Start)) {
+                    $align: "start";
+                }
+                @else if (equal($algnVal, Flex-End)) {
+                    $align: "end";
+                }
+
+                &-#{lower($algnName)} {
+                    display: flex;
+                    justify-content: lower($algnVal);
+                    align-items: lower($algnVal);
+                }
+            }
+        }
+    }
+}

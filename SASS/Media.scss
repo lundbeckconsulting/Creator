@@ -1,26 +1,23 @@
 ﻿@import "Function.scss";
-
-$mediaBreakpoints: (XS: 0px, SM: 576px, MD: 768px, LG: 992px, XL: 1200px);
+@import "MapsAndList.scss";
 
 @mixin media($size: MD, $orientation: Any, $mode: Up) {
-    $mode: upper($mode);
 	$s: map-get($mediaBreakpoints, $size);
 	$query: null;
-    $size: upper($size);
 
-	@if ($mode == UP) {
+	@if (equal($mode, UP)) {
 		$query: "(min-width: " + $s + ")";
 	}
-	@else if ($mode == DOWN) {
+	@else if (equal($mode, DOWN)) {
 		$query: "(max-width: " + $s + ")";
 	}
-	@else if ($mode == ONLY) {
+	@else if (equal($mode, ONLY)) {
 		$query: "(min-width: " + $s + ")";
 
-		@if not (equal($size, XL)) {
-			$max: null;
-
-			@if (equal($size, XS)) {
+		    @if not (equal($size, XL)) {
+			    $max: null;
+			}
+			@else if (equal($size, XS)) {
 				$max: SM;
 			}
 			@else if (equal($size, SM)) {
@@ -37,7 +34,6 @@ $mediaBreakpoints: (XS: 0px, SM: 576px, MD: 768px, LG: 992px, XL: 1200px);
 
 			$query: $query + " and (max-width: " + $max + ")";
 		}
-	}
 
 	@if not (equal($orientation, Any)) {
 		$query: $query + " and (orientation: " + lower($orientation) + ")";

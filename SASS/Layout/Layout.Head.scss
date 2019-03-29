@@ -1,0 +1,23 @@
+﻿@import "../Function.scss";
+@import "../MapsAndList.scss";
+
+@each $name, $val in $headSyno {
+    $size: getHead($val);
+
+    .h#{$name} {
+        font-size: $size;    
+
+        &.bold {
+            font-weight: bold;
+        }
+
+        &.airy {
+            margin: getAiry(MD);
+        }
+
+        &.bold.airy {
+            font-weight: bold;
+            margin: getAiry(MD);
+        }
+    }
+}

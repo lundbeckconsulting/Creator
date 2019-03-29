@@ -1,11 +1,13 @@
-﻿var C = {
-    Query:  {
-        exists: function (name) {
-            let result = location.search.indexOf(name + "=") > 0;
+﻿'use strict';
+
+var C = {
+    Query: {
+        exists: function exists(name) {
+            var result = location.search.indexOf(name + "=") > 0;
 
             return result;
         },
-        param: function (name) {
+        param: function param(name) {
             name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
 
             var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -16,31 +18,31 @@
     },
     DateTime: {
         Current: {
-            date: function () {
+            date: function date() {
                 return new Date();
             },
-            time: function () {
+            time: function time() {
                 return C.DateTime.Current.date().getTime();
             },
-            long: function () {
+            long: function long() {
                 return C.DateTime.toLongDate(C.DateTime.date());
             },
-            short: function () {
+            short: function short() {
                 return C.DateTime.toShortDate(C.DateTime.date());
             }
         },
-        toLongDate: function (date) {
-            let result = C.DateTime.toShortDate(date) + " " + date.getUTCHours() + ":" + date.getUTCMinutes() + "." + date.getUTCSeconds();
+        toLongDate: function toLongDate(date) {
+            var result = C.DateTime.toShortDate(date) + " " + date.getUTCHours() + ":" + date.getUTCMinutes() + "." + date.getUTCSeconds();
 
             return result;
         },
-        toShortDate: function (date) {
-            let result = date.getUTCDay() + "." + (date.getUTCMonth() + 1) + "." + date.getUTCFullYear();
+        toShortDate: function toShortDate(date) {
+            var result = date.getUTCDay() + "." + (date.getUTCMonth() + 1) + "." + date.getUTCFullYear();
 
             return result;
         },
-        subtractDays: function (days) {
-            let result = C.DateTime.Current.date;
+        subtractDays: function subtractDays(days) {
+            var result = C.DateTime.Current.date;
 
             result.setDate(result.getDate() - days);
 
@@ -48,12 +50,12 @@
         }
     },
     Common: {
-        siteId: function () {
-            let result = $("#lc-common-site-id").val();
+        siteId: function siteId() {
+            var result = $("#lc-common-site-id").val();
 
             return parseInt(result);
         },
-        appId: function (callback) {
+        appId: function appId(callback) {
             if (C.Common.siteId() > 0) {
                 C.Ajax.Invoke(null, "Site", "GetSite", { "id": C.Common.siteId() }, null, "GET", function (result) {
                     if (!C.State.isEmpty(callback)) {
@@ -62,9 +64,9 @@
                 });
             }
         },
-        isDevelopment: function () {
-            let result = -1;
-            let $elm = $("#lc-common-is-development");
+        isDevelopment: function isDevelopment() {
+            var result = -1;
+            var $elm = $("#lc-common-is-development");
 
             if (!C.State.isEmpty($elm)) {
                 if ($.isNumeric($elm.val())) {
@@ -74,13 +76,12 @@
 
             return C.Cast.toBool(result);
         },
-        creds: function (callback) {
-            let url = "/SECURE/creds.json";
+        creds: function creds(callback) {
+            var url = "/SECURE/creds.json";
 
             if (C.Utility.fileExists(url)) {
                 C.API.Ajax.GetJSON(url, success);
-            }
-            else {
+            } else {
                 C.Console.error("creds.json doesn't exists. \"" + url + "\"");
             }
 
@@ -90,11 +91,11 @@
         }
     },
     Utility: {
-        randomInterval: function (min, max) {
+        randomInterval: function randomInterval(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
         },
-        fileExists: function (url) {
-            let result = false;
+        fileExists: function fileExists(url) {
+            var result = false;
             var xhr = new XMLHttpRequest();
             xhr.open('HEAD', url, false);
             xhr.send();
@@ -109,16 +110,16 @@
         }
     },
     Console: {
-        basic: function (content) {
+        basic: function basic(content) {
             C.Console.invoke(C.Const.ConsoleTypes.BASIC, content);
         },
-        debug: function (content) {
+        debug: function debug(content) {
             C.Console.invoke(C.Const.ConsoleTypes.DEBUG, content);
         },
-        error: function (content) {
+        error: function error(content) {
             C.Console.invoke(C.Const.ConsoleTypes.ERROR, content);
         },
-        invoke: function (type, content) {
+        invoke: function invoke(type, content) {
             if (C.Common.isDevelopment()) {
                 switch (type) {
                     case C.Const.ConsoleTypes.BASIC:
@@ -137,22 +138,24 @@
         }
     },
     Log: {
-        info: function (content) {
+        info: function info(content) {
             C.Log.invoke(C.Const.LogTypes.INFO, content);
         },
-        warning: function (content) {
+        warning: function warning(content) {
             C.Log.invoke(C.Const.LogTypes.WARNING, content);
         },
-        exception: function (content, params = {}) {
+        exception: function exception(content) {
+            var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
             C.Log.invoke(C.Const.LogTypes.EXCEPTION, content, params);
         },
-        invoke: function (type, content, params = {}) {
-
+        invoke: function invoke(type, content) {
+            var params = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
         }
     },
     State: {
-        isEmpty: function (val) {
-            let result = true;
+        isEmpty: function isEmpty(val) {
+            var result = true;
 
             if (typeof val !== "undefined" && val !== null) {
                 result = val.length === 0;
@@ -160,12 +163,12 @@
 
             return result;
         },
-        isEqual: function (val1, val2) {
+        isEqual: function isEqual(val1, val2) {
             return val1 === val2;
         },
-        isEmail: function (email) {
-            let result = false;
-            let reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        isEmail: function isEmail(email) {
+            var result = false;
+            var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
             if (reg.test(email)) {
                 result = true;
@@ -173,9 +176,9 @@
 
             return result;
         },
-        isURL: function (url) {
-            let result = false;
-            let reg = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
+        isURL: function isURL(url) {
+            var result = false;
+            var reg = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
 
             if (reg.test(url)) {
                 result = true;
@@ -183,8 +186,8 @@
 
             return result;
         },
-        isBool: function (val) {
-            let result = false;
+        isBool: function isBool(val) {
+            var result = false;
 
             switch (val.toLowerCase()) {
                 case "true":
@@ -199,23 +202,22 @@
         }
     },
     Math: {
-        roundUp: function (val) {
-            let result = this;
-            let separator;
+        roundUp: function roundUp(val) {
+            var result = this;
+            var separator = undefined;
 
             if (!$.isNumeric(val)) {
                 C.Console.error("RoundUp", "Supplied value \"" + val + "\" not numeric");
-            }
-            else {
+            } else {
                 if (val.indexOf(".") > 0) {
                     separator = ".";
-                }
-                else if (val.indexOf(",") > 0) {
+                } else if (val.indexOf(",") > 0) {
                     separator = ",";
                 }
 
                 if (!separator.IsNull()) {
-                    let tmp1, tmp2;
+                    var tmp1 = undefined,
+                        tmp2 = undefined;
 
                     tmp1 = parseInt(val.substring(0, val.indexOf(separator)));
                     tmp2 = parseInt(val.substring(val.indexOf(separator)));
@@ -230,8 +232,8 @@
         }
     },
     Cast: {
-        toBool: function (val) {
-            let result = false;
+        toBool: function toBool(val) {
+            var result = false;
 
             switch (String(val).toLowerCase()) {
                 case "true":
@@ -242,8 +244,8 @@
 
             return result;
         },
-        toCapitalCase: function (val) {
-            let result;
+        toCapitalCase: function toCapitalCase(val) {
+            var result = undefined;
 
             if (!LC.PUB.State.isEmpty(val)) {
                 result = val.substring(0, 1).toUpperCase() + val.substring(1);
@@ -251,13 +253,13 @@
 
             return result;
         },
-        toCamelCase: function (val) {
-            let result;
-            let vals = val.Split(" ");
-            let i = 0;
+        toCamelCase: function toCamelCase(val) {
+            var result = undefined;
+            var vals = val.Split(" ");
+            var i = 0;
 
             $.each(vals, function (val) {
-                let word = C.State.toCapitalCase(val);
+                var word = C.State.toCapitalCase(val);
 
                 result += i === 0 ? word : " " + word;
 
@@ -266,27 +268,29 @@
 
             return result;
         },
-        toCamelCaseMerged: function (val) {
+        toCamelCaseMerged: function toCamelCaseMerged(val) {
             return C.Cast.ToCamelCase(val).replace(" ", "");
         }
     },
     Cookie: {
-        Get: function (name) {
+        Get: function Get(name) {
             return Cookies.Get(name);
         },
-        Set: function (name, value, expire = 180) {
+        Set: function Set(name, value) {
+            var expire = arguments.length <= 2 || arguments[2] === undefined ? 180 : arguments[2];
+
             Cookies.Set(name, value, { expires: expire, path: "" });
         },
-        Delete: function (name) {
+        Delete: function Delete(name) {
             Cookies.Remove(name, { expires: -1, path: "" });
         },
-        DeleteAll: function () {
-            let cookies = [];
+        DeleteAll: function DeleteAll() {
+            var cookies = [];
 
-            let i = 1;
+            var i = 1;
 
             $.each(Cookies.get(), function (cookie) {
-                let name = cookie.name;
+                var name = cookie.name;
 
                 C.Console.basic("Processing " + name);
 
@@ -300,9 +304,17 @@
         }
     },
     Ajax: {
-        Invoke: function (host = null, controller = null, action = null, query = {}, data = {}, type = "GET", callback = null) {
-            let url = C.Ajax.GetUrl(host, controller, action, query);
-            let timeStart = new Date();
+        Invoke: function Invoke() {
+            var host = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];
+            var controller = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
+            var action = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
+            var query = arguments.length <= 3 || arguments[3] === undefined ? {} : arguments[3];
+            var data = arguments.length <= 4 || arguments[4] === undefined ? {} : arguments[4];
+            var type = arguments.length <= 5 || arguments[5] === undefined ? "GET" : arguments[5];
+            var callback = arguments.length <= 6 || arguments[6] === undefined ? null : arguments[6];
+
+            var url = C.Ajax.GetUrl(host, controller, action, query);
+            var timeStart = new Date();
 
             $.ajax({
                 type: type.toUpperCase(),
@@ -310,29 +322,36 @@
                 data: JSON.stringify(data),
                 dataType: "JSON",
                 contentType: "application/json",
-                success: function (result) {
+                success: function success(result) {
                     C.Console.basic({ duration: (new Date() - timeStart) / 1000, url: url, data: data });
 
                     if (!C.State.isEmpty(callback)) {
                         callback(result);
                     }
                 },
-                error: function (xhr, status, error) {
-                    C.Console.error({ error: error });
+                error: function error(xhr, status, _error) {
+                    C.Console.error({ error: _error });
                     C.Console.error({ status: status });
                     C.Console.error({ xhr: xhr });
                 }
             });
         },
-        GetJSON: function (host = null, controller = null, action = null, query = {}, callback) {
+        GetJSON: function GetJSON(host, controller, action, query, callback) {
+            if (host === undefined) host = null;
+            if (controller === undefined) controller = null;
+            if (action === undefined) action = null;
+            if (query === undefined) query = {};
+
             $.getJSON(C.Ajax.GetUrl(host, controller, action, query), success);
 
             function success(data) {
                 callback(data);
             }
         },
-        GetUrl: function (host, controller, action, query = {}) {
-            let result = "";
+        GetUrl: function GetUrl(host, controller, action) {
+            var query = arguments.length <= 3 || arguments[3] === undefined ? {} : arguments[3];
+
+            var result = "";
 
             if (!C.State.isEmpty(host)) {
                 result = host;
@@ -346,14 +365,13 @@
                 result += "/" + action;
             }
 
-            let tmp;
-            let i = 0;
+            var tmp = undefined;
+            var i = 0;
 
             $.each(query, function (key, value) {
                 if (i === 0) {
                     tmp = "?";
-                }
-                else {
+                } else {
                     tmp += "&";
                 }
 
@@ -396,7 +414,7 @@
 
 (function ($) {
     $.fn.ToBool = function () {
-        let result = C.Cast.toBool(this.val());
+        var result = C.Cast.toBool(this.val());
 
         return result;
     };
@@ -418,7 +436,7 @@
     };
 
     $.fn.IsEmailAsInt = function () {
-        let result = 0;
+        var result = 0;
 
         if (this.IsEmail()) {
             result = 1;
@@ -432,7 +450,7 @@
     };
 
     $.fn.IsURLAsInt = function () {
-        let result = 0;
+        var result = 0;
 
         if (this.IsURL()) {
             result = 1;
@@ -442,7 +460,7 @@
     };
 
     $.fn.IsEmpty = function () {
-        let result = C.State.isEmpty(this.val());
+        var result = C.State.isEmpty(this.val());
 
         return result;
     };
@@ -467,7 +485,10 @@
         return this.val().endsWith(str);
     };
 
-    $.fn.SetCookie = function (name, expires = 180) {
+    $.fn.SetCookie = function (name) {
+        var expires = arguments.length <= 1 || arguments[1] === undefined ? 180 : arguments[1];
+
         C.Cookie.Set(name, this.val(), expires);
     };
-}(jQuery));
+})(jQuery);
+

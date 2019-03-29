@@ -1,18 +1,15 @@
-﻿@import "Layout.Mixin.scss";
+﻿@import "../Mixin.scss";
+@import "../Function.scss";
 
-.bg-cover {
+.#{getKW(BG-Cover)} {
     @include bgCover();
 
-    &.fixed {
-        background-attachment: fixed;
-    }
-
-    &-fixed {
+    &.#{getKW(Fixed)}, &-#{getKW(Fixed)} {
         @include bgCover(true);
     }
 }
 
-.fixed-top {
+.#{getKW(Fixed)}.top, .#{getKW(Fixed)}-top {
     position: fixed;
     top: 0;
     bottom: unset;
@@ -20,7 +17,7 @@
     right: 0;
 }
 
-.fixed-bottom {
+.#{getKW(Fixed)}.bottom, .#{getKW(Fixed)}-bottom {
     position: fixed;
     top: unset;
     left: 0;
@@ -28,30 +25,36 @@
     bottom: 0;
 }
 
-.no-overflow {
-    @include noOverflow();
+.#{getKW(Fixed)}.left, .#{getKW(Fixed)}-left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: unset;
 }
 
-.float-left {
+.#{getKW(Fixed)}.right, .#{getKW(Fixed)}-right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: unset;
+    right: 0;
+}
+
+.#{getKW(Float)}.left, .#{getKW(Float)}-left {
     float: left;
 }
 
-.float-right {
+.#{getKW(Float)}.right, .#{getKW(Float)}-right {
     float: right;
 }
 
-.hide {
+.#{getKW(Hide)}, .#{getKW(Close)}, .#{getKW(Invisible)} {
     display: none;
 }
 
-.block {
+.#{getSys(Show)}, .#{getSys(Block)}, .#{getSys(Visible)} {
     display: block;
-}
-
-.block-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 @for $i from 1 through 9 {

@@ -1,26 +1,32 @@
-  [
+[
   {
-    "outputFileName": "_Build/creator.css",
+    "outputFileName": "_Build/Creator.css",
     "inputFiles": [
-      "_Build/CSS/Shared.css",
-      "_Build/CSS/ColorProfile.css",
-      "_Build/CSS/Layout.Component.Layout.css",
+      "_Build/CSS/Element.BoxStyles.css",
+      "_Build/CSS/Element.FormControl.css",
+      "_Build/CSS/Element.Modal.css",
+      "_Build/CSS/Layout.Component.css",
       "_Build/CSS/Layout.Component.Document.css",
-      "_Build/CSS/Layout.Component.Table.css",
-      "_Build/CSS/Layout.Component.Modal.css",
       "_Build/CSS/Layout.Component.Font.css",
-      "_Build/CSS/Layout.Component.BoxStyles.css",
-      "_Build/CSS/Layout.Component.Flex.css",
-      "_Build/CSS/Layout.Component.Grid.css",
+      "_Build/CSS/Layout.Component.Layout.css",
       "_Build/CSS/Layout.Component.Media.css",
       "_Build/CSS/Layout.Component.Row.css",
-      "_Build/CSS/TagHelper.Component.Symbol.css"
+      "_Build/CSS/Layout.Component.Table.css",
+      "_Build/CSS/Layout.Flex.css",
+      "_Build/CSS/Layout.Grid.css",
+      "_Build/CSS/Layout.Head.css",
+      "_Build/CSS/Layout.Width.css",
+      "_Build/CSS/TagHelper.Component.Chapter.css",
+      "_Build/CSS/TagHelper.Component.Icon.css"
     ]
   },
   {
-    "outputFileName": "_Build/creator.js",
+    "outputFileName": "_Build/Creator.js",
     "inputFiles": [
-      "_Build/SCRIPT/Layout.Component.Modal.js"
+      "_Build/SCRIPT/LIB.js",
+      "_Build/SCRIPT/TagHelper.Component.Chapter.js",
+      "_Build/SCRIPT/TagHelper.Component.Modal.js",
+      "_Build/SCRIPT/Element.StickyFooter.js"
     ]
   }
 ]

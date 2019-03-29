@@ -1,0 +1,42 @@
+﻿$mediaBreakpoints: (XS: 0px, SM: 576px, MD: 768px, LG: 992px, XL: 1200px);
+$mediaOrientation: (0: Any, 1: Portrait, 2: Landscape);
+$marginValues: (XS: 4px, SM: 18px, MD: 28px, LG: 42px, XL: 60px, XXL: 82px, Auto: null);
+$docValues: (XS: 298px, SM: 444px, MD: 598px, LG: 878px, XL: 1366px);
+$padValues: (XS: 4px, SM: 10px, MD: 16px, LG: 30px, XL: 54px, XXL: 72px);
+$padDirections: (Left, Top, Right, Bottom, LeftRight, TopBottom);
+$airyValues: (XS: 4px, SM: 8px, MD: 16px, LG: 28px, XL: 44px, XXL: 62px);
+
+$headSizes: (XXS: 0.8rem, XS: 1.2rem, SM: 1.8rem, MD: 2.2rem, LG: 3rem, XL: 4.3rem, XXL: 6rem);
+$headMdSizes: (1: 4rem, 2: 3.4rem, 3: 2.8rem, 4: 2.2rem, 5: 1.6rem, 6: 1rem);
+$headSyno: (1: XXL, 2: XL, 3: LG, 4: MD, 5: SM, 6: XS, 7: XXS);
+$fontSizes: (XXS: 0.4rem, XS: 0.8rem, SM: 1rem, MD: 1.8rem, LG: 23rem, XL: 3.6rem, XXL: 5.2rem);
+
+$flexAlignItems: (Base: baseline, Center: center, End: flex-end, Start: flex-start, Stretch: stretch);
+$flexJustifyItems: (Center: center, End: flex-end, Start: flex-start, Around: space-around, Between: space-between);
+
+$gridItemSizes: (XS: 8px, SM: 60px, MD: 144px, LG: 366px, XL: 536px, XXL: 768px);
+$gridGapSizes: (XS: 2px, SM: 4px, MD: 8px, LG: 16px, XL: 30px, XXL: 1fr);
+$widthSizes: (XXS: 26px, XS: 64px, SM: 104px, MD: 232px, LG: 514px, XL: 788px, XXL: 974px, DOC: map-get($docValues, XL));
+
+$defaultCP: (Primary: black, Second: #1f1f1f, Third: #484848, Fourth: #a1a1a1, Fifth: #ececec);
+$primaryCP: (Primary: #007bff, Second: #4ba1fe, Third: #74b7ff, Fourth: #a3cfff, Fifth: #d8ebff);
+$disabledCP: (Primary: #959595, Second: #777777, Third: #969696, Fourth: #b4b4b4, Fifth: #e0e0e0);
+$successCP: (Primary: #2a7e3e, Second: #519d63, Third: #70b982, Fourth: #8cce9c, Fifth: #c2e8cb);
+$dangerCP: (Primary: #8c101b, Second: #a12d37, Third: #ca5660, Fourth: #ed7781, Fifth: #ffcacf);
+$warningCP: (Primary: #ffbf00, Second: #ffd24a, Third: #ffde7b, Fourth: #ffe9a6, Fifth: #fff2cb);
+$infoCP: (Primary: #17b5d5, Second: #40c3dd, Third: #6ad1e5, Fourth: #93d5e2, Fifth: #cef7ff);
+$lightCP: (Primary: #bebebe, Second: #d6d6d6, Third: #e7e7e7, Fourth: #f4f4f4, Fifth: white);
+$darkCP: (Primary: #3e3e3e, Second: #616161, Third: #838383, Fourth: #ababab, Fifth: #e1e1e1);
+$colorProfiles: (Default: $defaultCP, Primary: $primaryCP, Disabled: $disabledCP, Success: $successCP, Danger: $dangerCP, Warning: $warningCP, Info: $infoCP, Light: $lightCP, Dark: $darkCP);
+
+$keywords: (Default: default, Airy: airy, Border: border, Clean: clean, Width: width, Height: height, Cutoverflow: cutoverflow, Table: table, Inline-Table: inline-table, Input: input, Hide: hide, Close: close, Invisible: invisible, Show: show, Display: display, Block: block, Inline-Block: inline-block, Visible: visible, Float: float, Fixed: fixed, BG-Cover: bg-cover, BG-Repeat-X: bg-repeat-x, BG-Repeat-Y: bg-repeat-y, BG-NoRepeat: bg-norepeat, Grid: grid, Flex: flex, Font: font, Head: h, Row: row, Col: col-, Responsive: r, Image: img, HTML: html, Body: body, Button: button, Footer: footer, Div: div, Align: align, TextBox: txt, Modal: modal, Bold: bold);
+$sysValues: (BorderRadius: 8px, PadBase: map-get($padValues, MD), Margin: map-get($marginValues, MD), Font: map-get($fontSizes, SM), Width: map-get($docValues, MD), BorderWidth: 6px, DefaultBorder: 4px);
+$modals: (XS: 166px, SM: 334px, MD: 522px, LG: 704px, XL: 998px, XXL: 1012px);
+$padDirections: (Left, Top, Right, Bottom, LeftRight, TopBottom);
+
+$commonSizes: (XS, SM, MD, LG, XL);
+$extendedSizes: (XXS, XS, SM, MD, LG, XL, XXL);
+
+$contentMaxWidth: getWidth(DOC);
+$defaultPad: getPadding(MD);
+$defaultMargin: getMargin(SM);

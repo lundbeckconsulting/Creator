@@ -1,0 +1,11 @@
+﻿@import "../MapsAndList.scss";
+
+@each $name, $val in $widthSizes {
+    .#{getSys(Width) + "-" + lower($name)} {
+        width: $val;
+
+        &.#{getSys(Airy)} {
+            margin: map-get($airyValues, MD);
+        }
+    }
+}

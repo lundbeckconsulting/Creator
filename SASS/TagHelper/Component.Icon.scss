@@ -1,0 +1,22 @@
+﻿@import "../MapsAndList.scss";
+@import "../Function.scss";
+
+.creator.icon {
+    &.clickable {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    & > .wrap {
+        & > .label {
+            margin-left: 6px;
+        }
+
+        @each $name, $val in $colorProfiles {
+            &.cp-#{lower($name)} {
+                color: map-get($val, Primary);
+            }
+        }
+    }
+}

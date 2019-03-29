@@ -1,0 +1,32 @@
+﻿@import "../Function.scss";
+@import "../Mixin.scss";
+
+.pad {
+    padding: $defaultPad;
+}
+
+.mrg {
+    margin: getMargin(SM);
+}
+
+.pad-mrg-clean {
+    @include clean();
+}
+
+.pad-clean {
+    @include clean();
+}
+
+.pad-doc {
+    padding: $defaultPad;
+}
+
+.mrg {
+    &.clean, &-clean {
+        @include clean();
+    }
+
+    &.auto, &-auto {
+        @include marginAuto();
+    }
+}

@@ -12,4 +12,13 @@
         Light,
         Dark
     }
+
+    public enum Breakpoints
+    {
+        XS,
+        SM,
+        MD,
+        LG,
+        XL
+    }
 }
