@@ -82,5 +82,9 @@
   {
     "outputFile": "_Build/SCRIPT/Layout.Component.js",
     "inputFile": "SCRIPT/Element/Layout.Component.js"
+  },
+  {
+    "outputFile": "_Build/SCRIPT/Element.FormControl.js",
+    "inputFile": "SCRIPT/Element/Element.FormControl.js"
   }
 ]

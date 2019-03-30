@@ -589,3 +589,10 @@ $(document).ready(function () {
 $(function () {
     $("[class^='align-vertical-']").parent().css("position", "relative");
 });
+
+
+"use strict";
+
+$(function () {
+    $("[class^='txt-disabled']").attr("readonly", "readonly");
+});

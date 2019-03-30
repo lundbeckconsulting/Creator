@@ -313,7 +313,7 @@
             $fore: white;
         }
         @else if (equal($cpName, Dark)) {
-            $fore: #333333;
+            $fore: #6d6d6d;
         }
 
         cursor: $cursor;

@@ -1304,7 +1304,7 @@
   margin-right: 2px; }
   .btn-dark:hover {
     cursor: pointer;
-    color: #333333;
+    color: #6d6d6d;
     background-color: #101010; }
   .btn-dark-border {
     color: black;
@@ -1322,7 +1322,7 @@
     margin-right: 2px; }
     .btn-dark-border:hover {
       cursor: pointer;
-      color: #333333;
+      color: #6d6d6d;
       background-color: #101010; }
   .btn-dark-shadow {
     color: black;
@@ -1341,5 +1341,5 @@
     box-shadow: 3px 3px #474747; }
     .btn-dark-shadow:hover {
       cursor: pointer;
-      color: #333333;
+      color: #6d6d6d;
       background-color: #101010; }
