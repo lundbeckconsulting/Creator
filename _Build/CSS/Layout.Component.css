@@ -1,5 +1,23 @@
 ﻿.airy {
-  text-align: left; }
+  margin: 16px; }
+
+.airy-xs {
+  margin: 4px; }
+
+.airy-sm {
+  margin: 8px; }
+
+.airy-md {
+  margin: 16px; }
+
+.airy-lg {
+  margin: 28px; }
+
+.airy-xl {
+  margin: 44px; }
+
+.airy-xxl {
+  margin: 62px; }
 
 .align-left {
   text-align: left; }
@@ -14,9 +32,17 @@
   position: absolute;
   top: 0; }
 
-.align-vertical-center {
+.align-vertical-center, .align-vertical-center-50 {
   position: absolute;
-  top: 48%; }
+  top: 50%; }
+
+.align-vertical-center-25 {
+  position: absolute;
+  top: 25%; }
+
+.align-vertical-center-75 {
+  position: absolute;
+  top: 75%; }
 
 .align-vertical-bottom {
   position: absolute;

@@ -78,5 +78,9 @@
   {
     "outputFile": "_Build/SCRIPT/Element.StickyFooter.js",
     "inputFile": "SCRIPT/Element/Element.StickyFooter.js"
+  },
+  {
+    "outputFile": "_Build/SCRIPT/Layout.Component.js",
+    "inputFile": "SCRIPT/Element/Layout.Component.js"
   }
 ]

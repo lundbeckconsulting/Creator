@@ -24,7 +24,7 @@
             }
 
             &.border-glow {
-                @include boxGlow($borderColor);
+                @include boxGlow($name);
             }
 
             &.border-solid {

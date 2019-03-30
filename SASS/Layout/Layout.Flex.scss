@@ -39,7 +39,7 @@
             $just: $full;
         }
 
-        &-#{lower($just)} {
+        &-#{$just} {
             display: flex;
             justify-content: lower($full);
 

@@ -26,7 +26,8 @@
       "_Build/SCRIPT/LIB.js",
       "_Build/SCRIPT/TagHelper.Component.Chapter.js",
       "_Build/SCRIPT/TagHelper.Component.Modal.js",
-      "_Build/SCRIPT/Element.StickyFooter.js"
+      "_Build/SCRIPT/Element.StickyFooter.js",
+      "_Build/SCRIPT/Layout.Component.js"
     ]
   }
 ]

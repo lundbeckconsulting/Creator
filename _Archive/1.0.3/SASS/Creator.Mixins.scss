@@ -451,7 +451,7 @@
     border: 2px solid $color;
     border-radius: $formControlBorderRadius;
     background: white;
-    appearance: none;
+    -moz-appearance: none;
     font-size: 1em;
 
     &::-ms-expand {

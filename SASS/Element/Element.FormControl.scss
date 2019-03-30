@@ -3,31 +3,43 @@
 @import "../MapsAndList.scss";
 
 @each $name, $map in $colorProfiles {
-    .#{getKW(TextBox) + "-" + lower($name)} {
-        @include formControl($name, true);
-        padding-left: 6px;
-        padding-right: 2px;
-        transition: all 0.30s ease-in-out;
-        outline: none;
+    $name: lower($name);
 
-        &:focus {
-            @include boxGlow(color($name));
+    .#{getKW(TextBox) + "-" + $name}, .#{getKW(Textarea) + "-" + $name} {
+        @include formControlTextbox($name);
+
+        &-#{getKW(Border)} {
+            @include formControlTextbox($name, true);
+        }
+
+        &-#{getKW(Shadow)} {
+            @include formControlTextbox($name);
+            @include shadow();
+        }
+
+        &.#{getKW(Error)} {
+            @include formControlTextbox($name, false, false);
+            @include boxGlow(Danger, 18px, true, Danger);
+
+            &:hover, &:focus {
+                background-color: lighten(color(Danger), 62%) !important;
+            }
         }
     }
-}
 
-.#{getKW(TextBox) + "-" + lower(Disabled)} {
-    &:hover {
-        cursor: default !important;
-    }
-}
+    .#{getKW(Button) + "-" + $name} {
+        @include formControlButton($name);
 
-[class*="btn-"] {
-    padding-left: 20px;
-    padding-right: 20px;
+        &-#{getKW(Border)} {
+            @include formControlButton($name, true);
+        }
 
-    &:hover {
-        cursor: pointer;
-        opacity: 0.8;
+        &-#{getKW(Shadow)} {
+            @include formControlButton($name);
+
+            @if not (equal($name, Disabled)) {
+                @include shadow();
+            }
+        }
     }
 }

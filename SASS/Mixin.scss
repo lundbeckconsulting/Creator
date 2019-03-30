@@ -6,6 +6,7 @@
     $colorDark: color($cp, Primary);
     $colorBack: color($cp, Fifth);
 
+    max-width: getModal($size);
     border: 4px solid $colorDark;
     border-radius: getSys(BorderRadius);
     padding: getPadding();
@@ -251,56 +252,225 @@
     }
 }
 
-@mixin formControl($cpName: Default, $border: false) {
-    $foreColor: color($cpName, Fifth);
-    $backColor: color($cpName);
+@mixin formControl($cpName: Default, $border: false, $glowFocus: false, $padHori: 12px) {
+    $fore: color($cpName, Fifth);
+    $back: color($cpName);
+    $borderColor: $back;
+    $padVertical: 10px;
+    $padHorizontal: $padHori;
 
     @if (equal($cpName, Default)) {
-        $foreColor: black;
-        $backColor: white;
+        $fore: black;
+        $back: white;
         $border: true;
+        $borderColor: #2a2a2a;
     }
     @else if (equal($cpName, Disabled)) {
         font-style: italic;
     }
     @else if (equal($cpName, Warning)) {
-        $backColor: color($cpName, Primary);
-        $foreColor: lighten(red, 14%);
+        $back: color($cpName, Primary);
+        $fore: darkred;
+    }
+    @else if (equal($cpName, Dark)) {
+        $fore: black;
     }
 
-    color: $foreColor;
-    background-color: $backColor;
-    padding-top: getPadding(MD);
-    padding-bottom: getSys(PadBase);
+    color: $fore;
+    background-color: $back;
     border-radius: getSys(BorderRadius);
-    font-size: getFont(MD);
+    padding-top: $padVertical;
+    padding-bottom: $padVertical;
+    padding-left: $padHorizontal;
+    padding-right: $padHorizontal;
+    font-size: getFont();
+    transition: all 0.30s ease-in-out;
+    text-decoration: none;
 
-    @include boxGlowFocus($foreColor);
-}
+    @if ($border) {
+        border: 2px solid darken($borderColor, 18%);
+    }
+    @else {
+        border: 2px solid rgba(white, 0);
+    }
 
-@mixin boxGlow($color, $size: 12px) {
-    box-shadow: 0 0 $size $color;
-    border: none;
-    -webkit-box-shadow: 0 0 $size 0 $color;
-    -moz-box-shadow: 0 0 $size 0 $color;
-}
-
-@mixin boxGlowFocus($color, $size: 12px) {
-    &:focus {
-        -webkit-transition: all 0.30s ease-in-out;
-        -moz-transition: all 0.30s ease-in-out;
-        outline: none;
-
-        @include boxGlow($color, $size);
+    @if ($glowFocus) {
+        @include boxGlow($fore);
     }
 }
 
-@mixin textGlow($color, $size: 6px) {
-    text-shadow: 1px 1px 10px $color, 1px 1px 10px $color;
+@mixin formControlHover($cpName: Default) {
+    &:hover {
+        $back: darken(color($cpName), 18%);
+        $fore: color($cpName, Fifth);
+        $cursor: pointer;
+
+        @if (equal($cpName, Disabled)) {
+            $back: color($cpName);
+            $cursor: default;
+        }
+        @else if (equal($cpName, Warning)) {
+            $fore: white;
+        }
+        @else if (equal($cpName, Dark)) {
+            $fore: #333333;
+        }
+
+        cursor: $cursor;
+        color: $fore;
+        background-color: $back;
+    }
 }
 
-@mixin fontOutline($size: 4px, $color: white, $outlineColor: black) {
+@mixin formControlTextbox($cpName: Default, $border: false, $glow: true) {
+    $clr: color($cpName);
+
+    @if (equal($cpName, Default)) {
+        $border: true;
+        $clr: #a5a5a5;
+    }
+
+    @include formControl($cpName, $border);
+
+    @if not (equal($cpName, Disabled)) and ($glow) {
+        @include boxGlow($cpName);
+    }
+
+    @if ($border) {
+        @if (equal($cpName, Default)) {
+            $clr: #272727;
+        }
+
+        border: 2px solid darken($clr, 14%);
+    }
+
+    @if not (equal($cpName, Disabled)) {
+        $bgColor: lighten($clr, 8%);
+
+        @if (equal($cpName, Default)) {
+            $bgColor: #d4d4d4;
+        }
+
+        &:hover {
+            background-color: $bgColor;
+            border: 2px solid lighten($clr, 6%);
+        }
+    }
+    @else {
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+@mixin formControlButton($cpName: Default, $border: false) {
+    $mrg: 2px;
+
+    @if (equal($cpName, Default)) {
+        $border: true;
+    }
+
+    @include formControl($cpName, $border, false, 22px);
+    @include formControlHover($cpName);
+
+    margin-left: $mrg;
+    margin-right: $mrg;
+}
+
+@mixin boxGlow($cpName: Default, $size: 18px, $border: false, $borderCpName: Default) {
+    $clr: color($cpName);
+
+    @if (equal($cpName, Default)) {
+        $clr: #b9b9b9;
+    }
+
+    @if ($border) {
+        box-shadow: 0 0 $size color($borderCpName);
+        -webkit-box-shadow: 0 0 $size 0 color($borderCpName);
+        -moz-box-shadow: 0 0 $size 0 color($borderCpName);
+        border: 2px solid color($borderCpName);
+    }
+    @else {
+        border: 2px solid rgba(white, 0);
+
+        &:focus:not(.error) {
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            box-shadow: 0 0 $size $clr;
+            -webkit-box-shadow: 0 0 $size 0 $clr;
+            -moz-box-shadow: 0 0 $size 0 $clr;
+            outline: none;
+            background-color: lighten($clr, 6%);
+        }
+    }
+}
+
+@mixin textGlow($color, $x: 1px, $y: 1px, $blur: 10px) {
+    text-shadow: $x $y $blur $color, $x $y $blur $color;
+}
+
+@mixin textOutline($size: 4px, $color: white, $outlineColor: black) {
     color: $color;
     -webkit-text-stroke-width: $size;
     -webkit-text-stroke-color: $outlineColor;
+}
+
+@mixin shadow($size: 3px, $color: lighten(color(Default), 28%)) {
+    box-shadow: $size $size $color;
+}
+
+@mixin rotate($degrees: 90deg) {
+    transform: rotate($degrees);
+}
+
+@mixin rotate3D($x: 90, $y: 90, $z: 90, $angle: 90deg) {
+    transform: rotate3d($x, $y, $z, $angle);
+}
+
+@mixin rotateX($angle: 90deg) {
+    transform: rotateX($angle);
+}
+
+@mixin rotateY($angle: 90deg) {
+    transform: rotateY($angle);
+}
+
+@mixin rotateZ($angle: 90deg) {
+    transform: rotateZ($angle);
+}
+
+@mixin scale($x: 4, $y: 4) {
+    transform: scale($x, $y);
+}
+
+@mixin scaleX($scale: 4) {
+    transform: scaleX($scale);
+}
+
+@mixin scaleY($scale: 4) {
+    transform: scaleY($scale);
+}
+
+@mixin skew($x: 90deg, $y: 90deg) {
+    transform: skew($x, $y);
+}
+
+@mixin skewX($angel: 90deg) {
+    transform: skewX($angel);
+}
+
+@mixin skewY($angel: 90deg) {
+    transform: skewY($angel);
+}
+
+@mixin translate($x: 60px, $y: 100px) {
+    transform: translate($x, $y);
+}
+
+@mixin translateX($val: 60px) {
+    transform: translateX($val);
+}
+
+@mixin translateY($val: 100px) {
+    transform: translateY($val);
 }

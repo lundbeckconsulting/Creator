@@ -2,10 +2,16 @@
 @import "../MapsAndList.scss";
 
 .#{getKW(Airy)} {
-    text-align: left;
+    margin: getAiry();
 }
 
-.align {
+@each $n, $v in $airyValues {
+    .#{getKW(Airy) + "-" + lower($n)} {
+        margin: $v;
+    }
+}
+
+.#{getKW(Align)} {
     &-left {
         text-align: left;
     }
@@ -24,9 +30,19 @@
             top: 0;
         }
 
-        &-center {
+        &-center, &-center-50 {
             position: absolute;
-            top: 48%;
+            top: 50%;
+        }
+
+        &-center-25 {
+            position: absolute;
+            top: 25%;
+        }
+
+        &-center-75 {
+            position: absolute;
+            top: 75%;
         }
 
         &-bottom {

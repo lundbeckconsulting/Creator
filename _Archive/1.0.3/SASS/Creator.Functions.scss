@@ -5,11 +5,15 @@
 }
 
 @function first($list) {
-    @return nth($list, 1);
+    @return index($list, 1);
 }
 
-@function last($list) {
-    @return nth($list, length($list));
+@function last($listName, $index: 1) {
+    @return nth($listName, $index);
+}
+
+@function index($listName, $index: 1) {
+    @return nth($listName, $index);
 }
 
 @function isString($source) {
@@ -172,30 +176,3 @@
     @return map-get($commonControlNames, $name);
 }
 
-@function size($type, $size) {
-    $src: null;
-
-    @if ($type == Breakpoint) {
-        $src: $mediaBreakpointSizes;
-    }
-    @else if ($type == BreakpointDefault) {
-        $src: $mediaBreakpointDefaultSizes;
-    }
-    @else if ($type == CommonMedia) {
-        $src: $commonMediaSizes;
-    }
-    @else if ($type == DefaultMedia) {
-        $src: $mediaBreakpointDefaultSizes;
-    }
-    @else if ($type == Font) {
-        $src: $fontSizesMap;
-    }
-    @else if ($type == Icon) {
-        $src: $iconSizes;
-    }
-    @else if ($type == Header) {
-        $src: $headerSizes;
-    }
-
-    @return map-get($src, $size);
-}

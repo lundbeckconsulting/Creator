@@ -17,7 +17,7 @@
     $map: colorProfile($cpName);
 
     @each $name, $val in $map {
-        @if (equal($name, $val)) {
+        @if (equal($name, $type)) {
             $result: $val;
         }
     }
@@ -124,10 +124,10 @@
     @return map-get($sysValues, $name);
 }
 
-@function getKW($name: Default, $doLower: true) {
+@function getKW($name: Default, $lower: true) {
     $result: getKeyword($name);
 
-    @if ($doLower) {
+    @if ($lower) {
         $result: lower($result);
     }
 
