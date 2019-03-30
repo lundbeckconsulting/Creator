@@ -28,27 +28,19 @@
 }
 
 @mixin padding($size: MD) {
-    $val: getPadding($size);
-
-    padding: $val;
+    padding: getPadding($size);
 }
 
 @mixin margin($size: MD) {
-    $val: getMargin($size);
-
-    margin: $size;
+    margin: getMargin($size);
 }
 
 @mixin width($size: MD) {
-    $val: getWidth($size);
-
-    width: $val;
+    width: getWidth($size);
 }
 
 @mixin font($size: MD, $bold: false) {
-    $val: getFont($size);
-
-    font-size: $val;
+    font-size: getFont($size);
 
     @if ($bold) {
         font-weight: bold;
@@ -84,7 +76,8 @@
     @if ($font) {
         color: $clr;
     }
-    @else if ($bg) {
+
+    @if ($bg) {
         background-color: $clr;
     }
 }
@@ -94,20 +87,10 @@
     transform: translate(-50%);
 }
 
-@mixin clean($noBorders: false) {
-    padding: 0px;
-    margin: 0px;
-
-    @if ($noBorders) {
-        border: 0px;
-    }
-}
-
-@mixin marginAuto() {
+@mixin autoMargin() {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 @mixin bgCover($fixed: false, $img: None) {
     background-repeat: no-repeat;
@@ -137,27 +120,29 @@
     background-position-y: unset;
 }
 
-@mixin fontOutline($size, $color: white, $outlineColor: black) {
-    color: $color;
-    -webkit-text-stroke-width: $size;
-    -webkit-text-stroke-color: $outlineColor;
-}
-
-@mixin cleanBase($pad: true, $mrg: true, $border: false) {
-    $p: 0px;
-    $m: 0px;
-    $b: 0px;
-
+@mixin cleanBase($pad: true, $mrg: true, $border: false, $table: false, $td: false) {
     @if ($pad) {
-        padding: $p;
+        padding: initial;
     }
 
     @if ($mrg) {
-        margin: $m;
+        margin: initial;
     }
 
     @if ($border) {
-        border: $b;
+        border: none;
+    }
+
+    @if ($table) {
+        border: none;
+        margin: inherit;
+    }
+
+    @if ($td) {
+        td {
+            border: none;
+            padding: initial;
+        }
     }
 }
 
@@ -165,7 +150,7 @@
     display: table;
 
     @if ($mrgAuto) {
-        @include marginAuto();
+        @include autoMargin();
     }
 }
 
@@ -393,7 +378,7 @@
     @else {
         border: 2px solid rgba(white, 0);
 
-        &:focus:not(.error) {
+        &:focus:not(#{getKW(ValidateError)}) {
             -webkit-transition: all 0.30s ease-in-out;
             -moz-transition: all 0.30s ease-in-out;
             box-shadow: 0 0 $size $clr;
@@ -405,11 +390,11 @@
     }
 }
 
-@mixin textGlow($color, $x: 1px, $y: 1px, $blur: 10px) {
+@mixin textGlow($color: #002155, $x: 1px, $y: 1px, $blur: 10px) {
     text-shadow: $x $y $blur $color, $x $y $blur $color;
 }
 
-@mixin textOutline($size: 4px, $color: white, $outlineColor: black) {
+@mixin textOutline($size: 4px, $color: #4073c4, $outlineColor: #8d0000) {
     color: $color;
     -webkit-text-stroke-width: $size;
     -webkit-text-stroke-color: $outlineColor;

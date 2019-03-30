@@ -11,7 +11,7 @@
         color: rgba(0, 0, 0, 0.8); }
     .chapter.cp-default.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-default.border-glow:focus:not(.error) {
+      .chapter.cp-default.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #b9b9b9;
@@ -30,7 +30,7 @@
         color: rgba(0, 123, 255, 0.8); }
     .chapter.cp-primary.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-primary.border-glow:focus:not(.error) {
+      .chapter.cp-primary.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #007bff;
@@ -49,7 +49,7 @@
         color: rgba(149, 149, 149, 0.8); }
     .chapter.cp-disabled.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-disabled.border-glow:focus:not(.error) {
+      .chapter.cp-disabled.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #959595;
@@ -68,7 +68,7 @@
         color: rgba(42, 126, 62, 0.8); }
     .chapter.cp-success.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-success.border-glow:focus:not(.error) {
+      .chapter.cp-success.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #2a7e3e;
@@ -87,7 +87,7 @@
         color: rgba(140, 16, 27, 0.8); }
     .chapter.cp-danger.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-danger.border-glow:focus:not(.error) {
+      .chapter.cp-danger.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #8c101b;
@@ -106,7 +106,7 @@
         color: rgba(255, 191, 0, 0.8); }
     .chapter.cp-warning.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-warning.border-glow:focus:not(.error) {
+      .chapter.cp-warning.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #ffbf00;
@@ -125,7 +125,7 @@
         color: rgba(23, 181, 213, 0.8); }
     .chapter.cp-info.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-info.border-glow:focus:not(.error) {
+      .chapter.cp-info.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #17b5d5;
@@ -144,7 +144,7 @@
         color: rgba(190, 190, 190, 0.8); }
     .chapter.cp-light.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-light.border-glow:focus:not(.error) {
+      .chapter.cp-light.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #bebebe;
@@ -163,7 +163,7 @@
         color: rgba(62, 62, 62, 0.8); }
     .chapter.cp-dark.border-glow {
       border: 2px solid rgba(255, 255, 255, 0); }
-      .chapter.cp-dark.border-glow:focus:not(.error) {
+      .chapter.cp-dark.border-glow:focus:not(validate-error) {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         box-shadow: 0 0 18px #3e3e3e;

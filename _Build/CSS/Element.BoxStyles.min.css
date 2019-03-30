@@ -1,1 +1,1 @@
-﻿.pad{padding:16px;}.mrg{margin:18px;}.pad-mrg-clean{padding:0;margin:0;}.pad-clean{padding:0;margin:0;}.pad-doc{padding:16px;}.mrg.clean,.mrg-clean{padding:0;margin:0;}.mrg.auto,.mrg-auto{margin-left:auto;margin-right:auto;}
+﻿.pad{padding:16px;}.mrg{margin:18px;}.pad-mrg-clean{padding:initial;margin:initial;}.pad-clean{padding:initial;}.pad-doc{padding:16px;}.mrg.clean,.mrg-clean{margin:initial;}.mrg.auto,.mrg-auto{margin-left:auto;margin-right:auto;}

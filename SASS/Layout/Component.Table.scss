@@ -48,6 +48,6 @@
     &.#{auto}, &-#{auto} {
         display: table;
 
-        @include marginAuto();
+        @include autoMargin();
     }
 }

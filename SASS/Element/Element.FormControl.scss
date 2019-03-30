@@ -6,24 +6,32 @@
     $name: lower($name);
 
     .#{getKW(TextBox) + "-" + $name}, .#{getKW(Textarea) + "-" + $name} {
-        @include formControlTextbox($name);
+        @include formControlTextbox($name, false, false);
+        @include boxGlow($name);
 
         &-#{getKW(Border)} {
             @include formControlTextbox($name, true);
         }
 
         &-#{getKW(Shadow)} {
+            $clr: lighten(color(Default), 28%);
+
+            @if (equal($name, Dark)) {
+                $clr: black;
+            }
+
             @include formControlTextbox($name);
-            @include shadow();
+            @include shadow(3px, $clr);
         }
 
-        &.#{getKW(Error)} {
-            @include formControlTextbox($name, false, false);
+        &.#{getKW(ValidateError)} {
             @include boxGlow(Danger, 18px, true, Danger);
+            background-color: lighten(color(Danger), 62%) !important;
+        }
 
-            &:hover, &:focus {
-                background-color: lighten(color(Danger), 62%) !important;
-            }
+        &.#{getKW(ValidatedForm)} {
+            @include boxGlow(Success, 14px, true, Success);
+            background-color: lighten(color(Success), 54%) !important;
         }
     }
 

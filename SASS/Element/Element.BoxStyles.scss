@@ -10,11 +10,11 @@
 }
 
 .pad-mrg-clean {
-    @include clean();
+    @include cleanBase();
 }
 
 .pad-clean {
-    @include clean();
+    @include cleanBase(true, false, false);
 }
 
 .pad-doc {
@@ -23,10 +23,10 @@
 
 .mrg {
     &.clean, &-clean {
-        @include clean();
+        @include cleanBase(false, true, false);
     }
 
     &.auto, &-auto {
-        @include marginAuto();
+        @include autoMargin();
     }
 }
