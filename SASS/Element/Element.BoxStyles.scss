@@ -3,25 +3,29 @@
 
 .pad {
     padding: $defaultPad;
+
+    &-clean {
+        @include cleanBase(true, false, false);
+    }
+
+    &-mrg-clean {
+        @include cleanBase();
+    }
+
+    &-doc {
+        padding: $defaultPad;
+    }
+}
+
+@each $n, $v in $padValues {
+    .#{"pad-" + lower($n)} {
+        padding: $v;
+    }
 }
 
 .mrg {
     margin: getMargin(SM);
-}
 
-.pad-mrg-clean {
-    @include cleanBase();
-}
-
-.pad-clean {
-    @include cleanBase(true, false, false);
-}
-
-.pad-doc {
-    padding: $defaultPad;
-}
-
-.mrg {
     &.clean, &-clean {
         @include cleanBase(false, true, false);
     }

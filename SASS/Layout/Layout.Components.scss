@@ -1,17 +1,17 @@
 ﻿@import "../Function.scss";
 @import "../MapsAndList.scss";
 
-.#{getKW(Airy)} {
+.airy {
     margin: getAiry();
 }
 
 @each $n, $v in $airyValues {
-    .#{getKW(Airy) + "-" + lower($n)} {
+    .#{"airy-" + lower($n)} {
         margin: $v;
     }
 }
 
-.#{getKW(Align)} {
+.align {
     &-left {
         text-align: left;
     }

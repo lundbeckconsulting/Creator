@@ -9,11 +9,11 @@
         @include formControlTextbox($name, false, false);
         @include boxGlow($name);
 
-        &-#{getKW(Border)} {
+        &-border {
             @include formControlTextbox($name, true);
         }
 
-        &-#{getKW(Shadow)} {
+        &-shadow {
             $clr: lighten(color(Default), 28%);
 
             @if (equal($name, Dark)) {
@@ -38,11 +38,11 @@
     .#{getKW(Button) + "-" + $name} {
         @include formControlButton($name);
 
-        &-#{getKW(Border)} {
+        &-border {
             @include formControlButton($name, true);
         }
 
-        &-#{getKW(Shadow)} {
+        &-shadow {
             @include formControlButton($name);
 
             @if not (equal($name, Disabled)) {

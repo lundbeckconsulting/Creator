@@ -1,11 +1,30 @@
 ﻿@import "../MapsAndList.scss";
+@import "../Function.scss";
 
 @each $name, $val in $widthSizes {
-    .#{getSys(Width) + "-" + lower($name)} {
+    .#{"width-" + lower($name)} {
         width: $val;
 
-        &.#{getSys(Airy)} {
-            margin: map-get($airyValues, MD);
+        @each $n, $v in $airyValues {
+            &.#{"airy-" + lower($n)} {
+                margin: $v;
+            }
+
+            &-#{"airy-" + lower($n)} {
+                width: $val;
+                margin: $v;
+            }
+
+            @if (equal($n, MD)) {
+                &.airy {
+                    margin: $v;
+                }
+
+                &-airy {
+                    width: $val;
+                    margin: $v;
+                }
+            }
         }
     }
 }

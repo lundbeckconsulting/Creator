@@ -41,10 +41,6 @@
     @return upper(to-str($val)) == upper(to-str($valCompare));
 }
 
-@function parseRem($px, $base: 16px) {
-    @return ($px, $base) * 1rem;
-}
-
 @function getByMapItemIndex($map: $headSizes, $index: 1, $lower: true, $capitalize: false) {
     $result: null;
 

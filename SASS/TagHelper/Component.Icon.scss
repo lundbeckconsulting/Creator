@@ -14,8 +14,8 @@
         }
 
         @each $name, $val in $colorProfiles {
-            &.cp-#{lower($name)} {
-                color: map-get($val, Primary);
+            &-#{lower($name)} {
+                color: color($name, Primary);
             }
         }
     }

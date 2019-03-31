@@ -2,7 +2,7 @@
 @import "../MapsAndList.scss";
 
 @each $s in $commonSizes {
-    .#{getKW(Modal) + "-" + lower($s)} {
+    .#{"modal-" + lower($s)} {
         @include modal($s);
     }
 }

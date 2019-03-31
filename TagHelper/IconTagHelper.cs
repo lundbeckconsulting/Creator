@@ -257,6 +257,11 @@ namespace LC.Creator.TagHelpers
 
                 case Symbols.Phone:
                     pre = "fas";
+                    name = "phone";
+                    break;
+
+                case Symbols.PhoneFull:
+                    pre = "fas";
                     name = "phone-square";
                     break;
 
@@ -551,6 +556,7 @@ namespace LC.Creator.TagHelpers
                     break;
 
                 case Symbols.Phone:
+                case Symbols.PhoneFull:
                 case Symbols.Mobile:
                 case Symbols.MobileFull:
                     result = lang.Equals(SymbolLanguages.Norwegian) ? "Ring" : "Call";
@@ -679,6 +685,7 @@ namespace LC.Creator.TagHelpers
         EnvelopeOpen,
         EnvelopeOpenFull,
         Phone,
+        PhoneFull,
         Mobile,
         MobileFull,
         Facebook,

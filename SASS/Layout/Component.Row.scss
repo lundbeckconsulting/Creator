@@ -2,14 +2,14 @@
 @import "../Media.scss";
 @import "../MapsAndList.scss";
 
-.#{getKW(Row)} {
+.row {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
 
     & > div[class^='col-'] {
         grid-row: auto;
-        grid-column: 1;
+        grid-column: 1/-1;
     }
 }
 
@@ -28,7 +28,7 @@
 }
 
 @include media(SM) {
-    .#{getKW(Row)} {
+    .row {
         grid-template-columns: repeat(12, 1fr);
     }
 }

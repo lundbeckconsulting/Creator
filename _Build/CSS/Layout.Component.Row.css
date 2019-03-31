@@ -4,7 +4,7 @@
   grid-template-rows: repeat(2, auto); }
   .row > div[class^='col-'] {
     grid-row: auto;
-    grid-column: 1; }
+    grid-column: 1/-1; }
 
 @media (min-width: 0px) {
   .col-xs-1 {

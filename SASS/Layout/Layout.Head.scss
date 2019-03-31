@@ -1,23 +1,8 @@
-﻿@import "../Function.scss";
-@import "../MapsAndList.scss";
+﻿@import "Layout.Mixin.scss";
+@import "../Media.scss";
 
-@each $name, $val in $headSyno {
-    $size: getHead($val);
+@include head(true);
 
-    .h#{$name} {
-        font-size: $size;    
-
-        &.bold {
-            font-weight: bold;
-        }
-
-        &.airy {
-            margin: getAiry(MD);
-        }
-
-        &.bold.airy {
-            font-weight: bold;
-            margin: getAiry(MD);
-        }
-    }
+@include media() {
+    @include head();
 }

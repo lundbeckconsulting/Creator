@@ -3,15 +3,14 @@
 @import "../Mixin.scss";
 
 .chapter {
-    padding: $defaultPad;
-    border-radius: getSys(BorderRadius);
-    margin: $defaultMargin;
-
     @each $name, $val in $colorProfiles {
-        &.cp-#{lower($name)} {
+        &-#{lower($name)} {
             $borderColor: getMapVal($val, Primary);
             $color: $borderColor;
 
+            padding: $defaultPad;
+            border-radius: getSys(BorderRadius);
+            margin: $defaultMargin;
             color: $color;
 
             & a {
@@ -23,23 +22,23 @@
                 }
             }
 
-            &.border-glow {
-                @include boxGlow($name);
+            &.glow {
+                @include boxGlow($name, 18px, true, $name);
             }
 
-            &.border-solid {
+            &.solid {
                 border: 2px solid $borderColor;
             }
         }
     }
 
     & > .content {
-        &.pre {
+        &-pre {
             padding: $defaultPad;
             background-color: color(Light, Third);
             border-radius: getSys(BorderRadius);
 
-            & > .more.link {
+            & > .more-link {
                 display: inline-block;
                 font-weight: 600;
 
@@ -50,12 +49,17 @@
             }
         }
 
-        &.main {
-            padding: $defaultPad;
+        &-main {
+            @each $s in $extendedSizes {
+                $p: getPadding($s);
 
-            @each $s in $commonSizes {
-                &.bp-#{lower($s)} {
+                &-#{lower($s)} {
+                    padding: $p;
                     display: none;
+                }
+
+                @if (equal($s, MD)) {
+                    padding: $p;
                 }
             }
         }

@@ -1,53 +1,155 @@
 ﻿@import "../Mixin.scss";
 @import "../Function.scss";
 
-.#{getKW(Table)} {
-    @include table();
+@each $name, $val in $colorProfiles {
+    $name: lower($name);
+    $color: rgba(color($name, Primary), 0.6);
 
-    &.clean {
-        border: none;
+    .#{"table" + "-" + $name} {
+        @include table($name, false);
+        @include tableTd($name);
 
-        td {
-            border: none;
-        }
-    }
+        &.airy {
+            @include tableTd($name, true);
 
-    @each $name, $val in $colorProfiles {
-        $name: lower($name);
-        $color: rgba(map-get($val, Primary), 0.4);
+            &.fat {
+                @include tableTd($name, true, true);
 
-        &.cp-#{$name} {
-            td {
-                border-color: $color;
+                &.clean {
+                    @include tableTd($name, true, true, false);
+
+                    &.alternating {
+                        @include tableAlternate($name);
+                    }
+                }
+
+                &.alternating {
+                    @include tableAlternate($name);
+                }
             }
 
-            &.alternate, &-#{$name + "-alternate"} {
-                @include tableAlternate($name);
+            &.clean {
+                @include tableTd($name, true, false, false);
+            }
 
-                tr:nth-child(even) {
-                    @if (equal($name, Light)) {
-                        background-color: #ededed;
+            &.alternating {
+                @include tableAlternate($name);
+            }
+        }
+
+        &-airy {
+            @include table($name, false, true);
+            @include tableTd($name, true);
+
+            &-fat {
+                @include table($name, false);
+                @include tableTd($name, true, true);
+
+                &-clean {
+                    @include table($name, false);
+                    @include tableTd($name, true, true, false);
+
+                    &-alternating {
+                        @include table($name, false);
+                        @include tableTd($name, true, true, false);
+                        @include tableAlternate($name);
                     }
+                }
+
+                &-alternating {
+                    @include table($name, false, true, true);
+                    @include tableTd($name, true, true);
+                    @include tableAlternate($name);
+                }
+            }
+
+            &-clean {
+                @include table($name, false);
+                @include tableTd($name, true, false, false);
+
+                &-alternating {
+                    @include table($name, false, true, true);
+                    @include tableTd($name, true, true);
+                    @include tableAlternate($name);
+                }
+            }
+
+            &-alternating {
+                @include table($name, false, true);
+                @include tableTd($name, true);
+                @include tableAlternate($name);
+            }
+        }
+
+        &.clean {
+            @include tableTd($name, false, false, false);
+
+            &.alternating {
+                @include tableAlternate($name);
+            }
+        }
+
+        &-clean {
+            @include table($name, false);
+            @include tableTd($name, false, false, false);
+
+            &-alternating {
+                @include table($name, false);
+                @include tableTd($name, false, false, false);
+                @include tableAlternate($name);
+            }
+        }
+
+        &.fat {
+            @include tableTd($name, false, true);
+
+            &.alternating {
+                @include tableAlternate($name);
+            }
+
+            &.clean {
+                @include tableTd($name, false, true, false);
+
+                &.alternating {
+                    @include tableAlternate($name);
                 }
             }
         }
 
-        &-#{$name} {
-            @include table($name);
-        }
+        &-fat {
+            @include table($name, false, false, true);
+            @include tableTd($name, false, true);
 
-        &-#{lower($name) + "-alternate"} {
-            @include table($name);
+            &-alternating {
+                @include table($name, false);
+                @include tableTd($name, false, true);
+                @include tableAlternate($name);
+            }
 
-            tr:nth-child(even) {
-                background-color: color($name, Fifth);
+            &-clean {
+                @include table($name, false);
+                @include tableTd($name, false, true, false);
+
+                &-alternating {
+                    @include table($name, false);
+                    @include tableTd($name, false, true, false);
+                    @include tableAlternate($name);
+                }
             }
         }
-    }
-    
-    &.#{auto}, &-#{auto} {
-        display: table;
 
-        @include autoMargin();
+        &.alternating {
+            @include tableAlternate($name);
+        }
+
+        &-alternating {
+            @include table($name, false);
+            @include tableTd($name);
+            @include tableAlternate($name);
+        }
+    }
+
+    .#{getKW(Font) + "-black"} td {
+        color: black;
     }
 }

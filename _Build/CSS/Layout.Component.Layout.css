@@ -1,4 +1,27 @@
-﻿.bg-cover {
+﻿.r {
+  width: 100%;
+  min-width: 0px;
+  max-width: 1366px; }
+  .r.full-height {
+    height: 100%; }
+  .r.center {
+    margin-left: auto;
+    margin-right: auto; }
+  .r-center {
+    width: 100%;
+    min-width: 0px;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto; }
+    .r-center-full-height {
+      width: 100%;
+      min-width: 0px;
+      max-width: 1366px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 100%; }
+
+.bg-cover {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -44,6 +67,30 @@
 
 .hide, .close, .invisible {
   display: none; }
+
+.show, .block, .visible {
+  display: block; }
+
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
+
+.position-fixed {
+  position: fixed; }
+
+.position-static {
+  position: static; }
+
+.position-sticky {
+  position: sticky; }
+
+.position-center {
+  position: center; }
+
+.position-page {
+  position: page; }
 
 .o-1 {
   opacity: 1; }

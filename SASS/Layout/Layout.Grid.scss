@@ -1,6 +1,6 @@
 ﻿@import "../Function.scss";
 
-.#{getKW(Grid)} {
+.grid {
     @each $name, $val in $gridItemSizes {
         $name: lower($name);
 
