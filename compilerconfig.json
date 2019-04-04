@@ -1,87 +1,75 @@
 ﻿[
   {
-    "outputFile": "_Build/CSS/Element.BoxStyles.css",
-    "inputFile": "SASS/Element/Element.BoxStyles.scss"
-  },
-  {
     "outputFile": "_Build/CSS/Element.FormControl.css",
-    "inputFile": "SASS/Element/Element.FormControl.scss"
+    "inputFile": "SASS/Element/FormControl.scss"
   },
   {
     "outputFile": "_Build/CSS/Element.Modal.css",
-    "inputFile": "SASS/Element/Element.Modal.scss"
+    "inputFile": "SASS/Element/Modal.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Component.Document.css",
-    "inputFile": "SASS/Layout/Component.Document.scss"
+    "outputFile": "_Build/CSS/Element.Table.css",
+    "inputFile": "SASS/Element/Table.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Component.Font.css",
-    "inputFile": "SASS/Layout/Component.Font.scss"
+    "outputFile": "_Build/CSS/Layout.PaddingAndMargin.css",
+    "inputFile": "SASS/Layout/PaddingAndMargin.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Component.Layout.css",
-    "inputFile": "SASS/Layout/Component.Layout.scss"
+    "outputFile": "_Build/CSS/Layout.Document.css",
+    "inputFile": "SASS/Layout/Document.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Component.Media.css",
-    "inputFile": "SASS/Layout/Component.Media.scss"
+    "outputFile": "_Build/CSS/Layout.Typography.css",
+    "inputFile": "SASS/Layout/Typography.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Component.Row.css",
-    "inputFile": "SASS/Layout/Component.Row.scss"
+    "outputFile": "_Build/CSS/Layout.Media.css",
+    "inputFile": "SASS/Layout/Media.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Component.Table.css",
-    "inputFile": "SASS/Layout/Component.Table.scss"
+    "outputFile": "_Build/CSS/Layout.Row.css",
+    "inputFile": "SASS/Layout/Row.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Component.css",
-    "inputFile": "SASS/Layout/Layout.Components.scss"
+    "outputFile": "_Build/CSS/Layout.Other.css",
+    "inputFile": "SASS/Layout/Other.scss"
   },
   {
     "outputFile": "_Build/CSS/Layout.Flex.css",
-    "inputFile": "SASS/Layout/Layout.Flex.scss"
+    "inputFile": "SASS/Layout/Flex.scss"
   },
   {
     "outputFile": "_Build/CSS/Layout.Grid.css",
-    "inputFile": "SASS/Layout/Layout.Grid.scss"
+    "inputFile": "SASS/Layout/Grid.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Head.css",
-    "inputFile": "SASS/Layout/Layout.Head.scss"
+    "outputFile": "_Build/CSS/TagHelper.Chapter.css",
+    "inputFile": "SASS/TagHelper/Chapter.scss"
   },
   {
-    "outputFile": "_Build/CSS/Layout.Width.css",
-    "inputFile": "SASS/Layout/Layout.Width.scss"
-  },
-  {
-    "outputFile": "_Build/CSS/TagHelper.Component.Chapter.css",
-    "inputFile": "SASS/TagHelper/Component.Chapter.scss"
-  },
-  {
-    "outputFile": "_Build/CSS/TagHelper.Component.Icon.css",
-    "inputFile": "SASS/TagHelper/Component.Icon.scss"
+    "outputFile": "_Build/CSS/TagHelper.Icon.css",
+    "inputFile": "SASS/TagHelper/Icon.scss"
   },
   {
     "outputFile": "_Build/SCRIPT/LIB.js",
     "inputFile": "SCRIPT/LIB.js"
   },
   {
-    "outputFile": "_Build/SCRIPT/TagHelper.Component.Chapter.js",
-    "inputFile": "SCRIPT/Element/TagHelper/TagHelper.Component.Chapter.js"
+    "outputFile": "_Build/SCRIPT/TagHelper.Chapter.js",
+    "inputFile": "SCRIPT/Element/TagHelper/Chapter.js"
   },
   {
-    "outputFile": "_Build/SCRIPT/TagHelper.Component.Modal.js",
-    "inputFile": "SCRIPT/Element/TagHelper/TagHelper.Component.Modal.js"
+    "outputFile": "_Build/SCRIPT/TagHelper.Modal.js",
+    "inputFile": "SCRIPT/Element/TagHelper/Modal.js"
   },
   {
     "outputFile": "_Build/SCRIPT/Element.StickyFooter.js",
     "inputFile": "SCRIPT/Element/Element.StickyFooter.js"
   },
   {
-    "outputFile": "_Build/SCRIPT/Layout.Component.js",
-    "inputFile": "SCRIPT/Element/Layout.Component.js"
+    "outputFile": "_Build/SCRIPT/Layout.Other.js",
+    "inputFile": "SCRIPT/Element/Layout.Other.js"
   },
   {
     "outputFile": "_Build/SCRIPT/Element.FormControl.js",

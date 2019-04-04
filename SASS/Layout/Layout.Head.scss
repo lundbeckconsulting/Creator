@@ -1,8 +1,0 @@
-﻿@import "Layout.Mixin.scss";
-@import "../Media.scss";
-
-@include head(true);
-
-@include media() {
-    @include head();
-}

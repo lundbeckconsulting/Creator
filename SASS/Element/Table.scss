@@ -9,34 +9,6 @@
         @include table($name, false);
         @include tableTd($name);
 
-        &.airy {
-            @include tableTd($name, true);
-
-            &.fat {
-                @include tableTd($name, true, true);
-
-                &.clean {
-                    @include tableTd($name, true, true, false);
-
-                    &.alternating {
-                        @include tableAlternate($name);
-                    }
-                }
-
-                &.alternating {
-                    @include tableAlternate($name);
-                }
-            }
-
-            &.clean {
-                @include tableTd($name, true, false, false);
-            }
-
-            &.alternating {
-                @include tableAlternate($name);
-            }
-        }
-
         &-airy {
             @include table($name, false, true);
             @include tableTd($name, true);
@@ -100,22 +72,6 @@
             }
         }
 
-        &.fat {
-            @include tableTd($name, false, true);
-
-            &.alternating {
-                @include tableAlternate($name);
-            }
-
-            &.clean {
-                @include tableTd($name, false, true, false);
-
-                &.alternating {
-                    @include tableAlternate($name);
-                }
-            }
-        }
-
         &-fat {
             @include table($name, false, false, true);
             @include tableTd($name, false, true);
@@ -138,10 +94,6 @@
             }
         }
 
-        &.alternating {
-            @include tableAlternate($name);
-        }
-
         &-alternating {
             @include table($name, false);
             @include tableTd($name);
@@ -151,5 +103,10 @@
 
     .#{getKW(Font) + "-black"} td {
         color: black;
+
+        &-bold {
+            color: black;
+            font-weight: bold;
+        }
     }
 }

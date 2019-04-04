@@ -2,32 +2,29 @@
   {
     "outputFileName": "_Build/Creator.css",
     "inputFiles": [
-      "_Build/CSS/Element.BoxStyles.css",
       "_Build/CSS/Element.FormControl.css",
       "_Build/CSS/Element.Modal.css",
-      "_Build/CSS/Layout.Component.css",
-      "_Build/CSS/Layout.Component.Document.css",
-      "_Build/CSS/Layout.Component.Font.css",
-      "_Build/CSS/Layout.Component.Layout.css",
-      "_Build/CSS/Layout.Component.Media.css",
-      "_Build/CSS/Layout.Component.Row.css",
-      "_Build/CSS/Layout.Component.Table.css",
+      "_Build/CSS/Element.Table.css",
+      "_Build/CSS/Layout.Document.css",
+      "_Build/CSS/Layout.Typography.css",
+      "_Build/CSS/Layout.Media.css",
+      "_Build/CSS/Layout.Row.css",
       "_Build/CSS/Layout.Flex.css",
       "_Build/CSS/Layout.Grid.css",
       "_Build/CSS/Layout.Head.css",
-      "_Build/CSS/Layout.Width.css",
-      "_Build/CSS/TagHelper.Component.Chapter.css",
-      "_Build/CSS/TagHelper.Component.Icon.css"
+      "_Build/CSS/Layout.Other.css",
+      "_Build/CSS/TagHelper.Chapter.css",
+      "_Build/CSS/TagHelper.Icon.css"
     ]
   },
   {
     "outputFileName": "_Build/Creator.js",
     "inputFiles": [
       "_Build/SCRIPT/LIB.js",
-      "_Build/SCRIPT/TagHelper.Component.Chapter.js",
-      "_Build/SCRIPT/TagHelper.Component.Modal.js",
+      "_Build/SCRIPT/TagHelper.Chapter.js",
+      "_Build/SCRIPT/TagHelper.Modal.js",
       "_Build/SCRIPT/Element.StickyFooter.js",
-      "_Build/SCRIPT/Layout.Component.js",
+      "_Build/SCRIPT/Layout.Other.js",
       "_Build/SCRIPT/Element.FormControl.js"
     ]
   }

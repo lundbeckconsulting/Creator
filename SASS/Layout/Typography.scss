@@ -8,14 +8,14 @@ $airy: getKW(Airy);
         font-size: $s;
 
         @each $aN, $aV in $airyValues {
-            &.#{$airy + "." + lower($aN)}, &-#{$airy + "-" + lower($aN)} {
+            &-#{$airy + "-" + lower($aN)} {
                 font-size: $s;
                 margin: $aV;
             }
         }
 
         @each $aN, $aV in $airyValues {
-            &.#{$airy + "-" + lower($aN) + ".bold"}, &-#{$airy + "-" + lower($aN) + "-bold"} {
+            &-#{$airy + "-" + lower($aN) + "-bold"} {
                 font-size: $s;
                 margin: $aV;
             }
@@ -24,7 +24,7 @@ $airy: getKW(Airy);
 }
 
 @each $size, $val in $fontSizes {
-    .font-#{lower($size)} {
+    .#{getKW(Font) + "-" + lower($size)} {
         font-size: $val;
     }
 }

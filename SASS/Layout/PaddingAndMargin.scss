@@ -1,0 +1,56 @@
+﻿@import "../Function.scss";
+@import "../Mixin.scss";
+
+.pad {
+    &-clean {
+        padding: $defaultPad;
+        @include cleanBase(true, false, false);
+    }
+
+    &-mrg-clean {
+        padding: $defaultPad;
+        @include cleanBase();
+    }
+
+    &-doc {
+        padding: $defaultPad;
+        padding: $defaultPad;
+    }
+}
+
+@each $n, $v in $padValues {
+    .#{"pad-" + lower($n)} {
+        &-clean {
+            padding: $v;
+            @include cleanBase(true, false, false);
+        }
+
+        &-mrg-clean {
+            padding: $v;
+            @include cleanBase();
+        }
+
+        &-doc {
+            padding: $v;
+            padding: $defaultPad;
+        }
+    }
+}
+
+.mrg {
+    &-clean {
+        margin: getMargin(SM);
+        @include cleanBase(false, true, false);
+    }
+
+    &-auto {
+        margin: getMargin(SM);
+        @include autoMargin();
+    }
+
+    &-clean-auto {
+        margin: getMargin(SM);
+        @include cleanBase(false, true, false);
+        @include autoMargin();
+    }
+}

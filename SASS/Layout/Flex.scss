@@ -1,21 +1,11 @@
 ﻿@import "../MapsAndList.scss";
 @import "../Function.scss";
-@import "Layout.Mixin.scss";
+@import "Mixin.scss";
 
 .flex {
-    display: flex;
-
-    &.wrap {
-        flex-wrap: wrap;
-    }
-
     &-wrap {
         display: flex;
         flex-wrap: wrap;
-    }
-
-    &.no-wrap {
-        flex-wrap: nowrap;
     }
 
     &-no-wrap {
@@ -23,17 +13,9 @@
         flex-wrap: nowrap;
     }
 
-    &.reverse {
-        flex-wrap: wrap-reverse;
-    }
-
     &-reverse {
         display: flex;
         flex-wrap: wrap-reverse;
-    }
-
-    &.even {
-        @include flexEven();
     }
 
     &-even {
