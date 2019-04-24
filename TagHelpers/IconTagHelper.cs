@@ -18,13 +18,18 @@ namespace LC.Creator.TagHelpers
             base.PreProcess(context, ref output);
 
             TagBuilder wrap = default;
-            TagBuilder tag = new TagBuilder("span");
+            TagBuilder tag = GetTagBuilder(context, "span");
             tag.AddCssClass("wrap");
             tag.InnerHtml.AppendHtml(GetSymbol());
 
             if (!this.NoColor)
             {
                 tag.AddCssClass(GetColorProfile());
+            }
+
+            if (this.FixedWidth)
+            {
+                tag.AddCssClass("fa-fw");
             }
 
             if (this.Output.Equals(SymbolOutputs.Button))
@@ -57,9 +62,13 @@ namespace LC.Creator.TagHelpers
             {
                 TagBuilder text = new TagBuilder("span");
                 text.AddCssClass("label");
-                text.AddCssClass(this.Size.ToString().ToLower());
-                text.InnerHtml.Append(GetText());
 
+                if (!this.Size.Equals(SymbolSizes.None))
+                {
+                    text.AddCssClass(this.Size.ToString().ToLower());
+                }
+
+                text.InnerHtml.Append(GetText());
                 tag.InnerHtml.AppendHtml(text);
             }
 
@@ -316,16 +325,138 @@ namespace LC.Creator.TagHelpers
                     pre = "fas";
                     name = "thumbs-up";
                     break;
+
+                case Symbols.Home:
+                    pre = "fas";
+                    name = "home";
+                    break;
+
+                case Symbols.Bars:
+                    pre = "fas";
+                    name = "bars";
+                    break;
+
+                case Symbols.GitHub:
+                    pre = "fab";
+                    name = "github";
+                    break;
+
+                case Symbols.Globe:
+                    pre = "fas";
+                    name = "globe";
+                    break;
+
+                case Symbols.AddressBook:
+                    name = "address-book";
+                    break;
+
+                case Symbols.AddressBookFull:
+                    pre = "fas";
+                    name = "address-book";
+                    break;
+
+                case Symbols.Folder:
+                    name = "folder";
+                    break;
+
+                case Symbols.FolderFull:
+                    pre = "fas";
+                    name = "folder-open";
+                    break;
+
+                case Symbols.FolderMinusFull:
+                    pre = "fas";
+                    name = "folder-minus";
+                    break;
+
+                case Symbols.FolderPlusFull:
+                    pre = "fas";
+                    name = "folder-plus";
+                    break;
+
+                case Symbols.FolderOpen:
+                    name = "folder-open";
+                    break;
+
+                case Symbols.FolderOpenFull:
+                    pre = "fas";
+                    name = "folder-open";
+                    break;
+
+                case Symbols.UserCircle:
+                    name = "user-circle";
+                    break;
+
+                case Symbols.UserCircleFull:
+                    pre = "fas";
+                    name = "user-circle";
+                    break;
+
+                case Symbols.UserNinja:
+                    pre = "fas";
+                    name = "user-ninja";
+                    break;
+
+                case Symbols.UserSpy:
+                    pre = "fas";
+                    name = "user-secret";
+                    break;
+
+                case Symbols.UserTie:
+                    pre = "fas";
+                    name = "user-tie";
+                    break;
+
+                case Symbols.User:
+                    name = "user";
+                    break;
+
+                case Symbols.UserFull:
+                    pre = "fas";
+                    name = "user";
+                    break;
+
+                case Symbols.Code:
+                    pre = "fas";
+                    name = "code";
+                    break;
+
+                case Symbols.CodeLaptop:
+                    pre = "fas";
+                    name = "laptop-code";
+                    break;
+
+                case Symbols.Diagram:
+                    pre = "fas";
+                    name = "project-diagram";
+                    break;
+
+                case Symbols.Add:
+                    name = "plus-square";
+                    break;
+
+                case Symbols.AddFull:
+                    pre = "fas";
+                    name = "plus-square";
+                    break;
             }
 
             switch (this.Size)
             {
+                case SymbolSizes.XXS:
+                    result.AddCssClass("fa-xs");
+                    break;
+
+                case SymbolSizes.XS:
+                    result.AddCssClass("fa-sm");
+                    break;
+
                 case SymbolSizes.SM:
                     result.AddCssClass("fa-lg");
                     break;
 
                 case SymbolSizes.MD:
-                    result.AddCssClass("fa-3x");
+                    result.AddCssClass("fa-2x");
                     break;
 
                 case SymbolSizes.LG:
@@ -335,11 +466,15 @@ namespace LC.Creator.TagHelpers
                 case SymbolSizes.XL:
                     result.AddCssClass("fa-7x");
                     break;
+
+                case SymbolSizes.XXL:
+                    result.AddCssClass("fa-10x");
+                    break;
             }
 
-            if (this.FaPre != default)
+            if (!this.Pre.IsNull())
             {
-                pre = this.FaPre;
+                pre = this.Pre;
             }
 
             name = "fa-" + name;
@@ -460,6 +595,24 @@ namespace LC.Creator.TagHelpers
                     case Symbols.Like:
                     case Symbols.LikeFull:
                         result = lang.Equals(SymbolLanguages.Norwegian) ? "Lik" : "Like";
+                        break;
+
+                    case Symbols.Home:
+                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Hjem" : "Home";
+                        break;
+
+                    case Symbols.GitHub:
+                        result = "GitHub";
+                        break;
+
+                    case Symbols.Folder:
+                    case Symbols.FolderFull:
+                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Mappe" : "Folder";
+                        break;
+
+                    case Symbols.Add:
+                    case Symbols.AddFull:
+                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Legg til" : "Add";
                         break;
                 }
             }
@@ -588,6 +741,24 @@ namespace LC.Creator.TagHelpers
                 case Symbols.LikeFull:
                     result = lang.Equals(SymbolLanguages.Norwegian) ? "Lik" : "Like";
                     break;
+
+                case Symbols.Home:
+                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Hjem" : "Home";
+                    break;
+
+                case Symbols.GitHub:
+                    result = "GitHub";
+                    break;
+
+                case Symbols.Folder:
+                case Symbols.FolderFull:
+                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Mappe" : "Folder";
+                    break;
+
+                case Symbols.Add:
+                case Symbols.AddFull:
+                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Legg til" : "Add";
+                    break;
             }
 
             return result;
@@ -615,11 +786,14 @@ namespace LC.Creator.TagHelpers
         [HtmlAttributeName("type")]
         public Symbols Type { get; set; }
 
+        /// <summary>
+        /// Output format. Default is Span
+        /// </summary>
         [HtmlAttributeName("out")]
-        public SymbolOutputs Output { get; set; } = SymbolOutputs.Button;
+        public SymbolOutputs Output { get; set; } = SymbolOutputs.Span;
 
         [HtmlAttributeName("size")]
-        public SymbolSizes Size { get; set; } = SymbolSizes.MD;
+        public SymbolSizes Size { get; set; } = SymbolSizes.SM;
 
         [HtmlAttributeName("language")]
         public SymbolLanguages Language { get; set; } = SymbolLanguages.Auto;
@@ -630,6 +804,9 @@ namespace LC.Creator.TagHelpers
         [HtmlAttributeName("href")]
         public string Href { get; set; } = "#";
 
+        /// <summary>
+        /// Cursor turns to pointer when mouseover icon
+        /// </summary>
         [HtmlAttributeName("clickable")]
         public bool Clickable { get; set; } = true;
 
@@ -642,8 +819,11 @@ namespace LC.Creator.TagHelpers
         [HtmlAttributeName("color")]
         public ColorProfiles Color { get; set; } = ColorProfiles.Default;
 
-        [HtmlAttributeName("fa-pre")]
-        public string FaPre { get; set; } = default;
+        [HtmlAttributeName("pre")]
+        public string Pre { get; set; } = default;
+
+        [HtmlAttributeName("fixed-width")]
+        public bool FixedWidth { get; set; } = false;
     }
 
     public enum Symbols
@@ -696,7 +876,31 @@ namespace LC.Creator.TagHelpers
         Comments,
         CommentsFull,
         Like,
-        LikeFull
+        LikeFull,
+        Home,
+        Bars,
+        GitHub,
+        Globe,
+        AddressBook,
+        AddressBookFull,
+        Folder,
+        FolderFull,
+        FolderMinusFull,
+        FolderPlusFull,
+        FolderOpen,
+        FolderOpenFull,
+        UserCircle,
+        UserCircleFull,
+        UserNinja,
+        UserSpy,
+        UserTie,
+        User,
+        UserFull,
+        Code,
+        CodeLaptop,
+        Diagram,
+        Add,
+        AddFull
     }
 
     public enum SymbolOutputs
@@ -709,10 +913,14 @@ namespace LC.Creator.TagHelpers
 
     public enum SymbolSizes
     {
+        None,
+        XXS,
+        XS,
         SM,
         MD,
         LG,
-        XL
+        XL,
+        XXL
     }
 
     public enum SymbolLanguages

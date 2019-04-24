@@ -76,6 +76,11 @@ namespace LC.Creator.TagHelpers
         {
             TagBuilder result = new TagBuilder(tagName);
 
+            if (context.AllAttributes.ContainsName("id"))
+            {
+                result.Attributes.Add("id", context.AllAttributes["id"].Value.ToString());
+            }
+
             if (context.AllAttributes.ContainsName("class"))
             {
                 result.AddCssClass(context.AllAttributes["class"].Value.ToString());

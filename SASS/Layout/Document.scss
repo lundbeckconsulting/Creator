@@ -20,25 +20,19 @@ html.creator {
         font-size: 1.6rem;
 
         & header.creator {
-            @include responsive();
+            @include responsive(true, true, true);
         }
 
         & .main-nav {
-            @include responsive();
+            @include responsive(true, true, true);
         }
 
-        & > main.creator {
-            @include responsive();
-
-            & .content {
-            }
+        & main.creator {
+            @include responsive(true, true, true);
         }
 
         & footer.creator {
-            @include responsive();
-
-            text-align: center;
-            padding: $defaultPad;
+            @include responsive(true, true, true);
         }
     }
 }

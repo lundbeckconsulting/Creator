@@ -8,11 +8,13 @@
 
 @each $name, $val in $mediaBreakpoints {
     @if not (equal($name, XS)) {
-        .show-#{lower($name)} {
+        $name: lower($name);
+
+        .show-#{$name} {
             display: none;
         }
 
-        .hide-#{lower($name)} {
+        .hide-#{$name} {
             display: block;
         }
 
@@ -23,6 +25,12 @@
 
             .show-#{lower($name)} {
                 display: block !important;
+            }
+
+            @each $n, $v in $headSyno {
+                .#{"h" + $n + "-" + $name} {
+                    font-size: getHead($v) !important;
+                }
             }
         }
     }

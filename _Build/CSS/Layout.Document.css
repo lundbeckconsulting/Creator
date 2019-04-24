@@ -18,24 +18,26 @@ html.creator {
       min-width: 0px;
       max-width: 1366px;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      padding: 16px; }
     html.creator > body.creator .main-nav {
       width: 100%;
       min-width: 0px;
       max-width: 1366px;
       margin-left: auto;
-      margin-right: auto; }
-    html.creator > body.creator > main.creator {
+      margin-right: auto;
+      padding: 16px; }
+    html.creator > body.creator main.creator {
       width: 100%;
       min-width: 0px;
       max-width: 1366px;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      padding: 16px; }
     html.creator > body.creator footer.creator {
       width: 100%;
       min-width: 0px;
       max-width: 1366px;
       margin-left: auto;
       margin-right: auto;
-      text-align: center;
       padding: 16px; }

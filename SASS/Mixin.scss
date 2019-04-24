@@ -10,6 +10,13 @@
     border: 4px solid $colorDark;
     border-radius: getSys(BorderRadius);
     padding: getPadding();
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 18px;
+    background-color: white;
+    
+    @include absoluteCenter();
 }
 
 @mixin doc($size: MD) {
@@ -363,6 +370,7 @@
     @include formControl($cpName, $border, false, 22px);
     @include formControlHover($cpName);
 
+    display: inline-block;
     margin-left: $mrg;
     margin-right: $mrg;
 }

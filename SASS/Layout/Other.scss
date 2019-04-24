@@ -101,6 +101,18 @@
     }
 }
 
+.container {
+    @include responsive(true, false, true);
+
+    &-auto {
+        @include responsive(true, true, true);
+    }
+
+    &.clean {
+        @include cleanBase();
+    }
+}
+
 .#{getKW(BG-Cover)} {
     @include bgCover();
 
@@ -203,4 +215,109 @@
 
 @include media() {
     @include head();
+}
+
+.clean {
+    padding: unset;
+}
+
+.clean-mrg {
+    margin: unset;
+}
+
+.clean-all {
+    padding: unset;
+    margin: unset;
+}
+
+.bg {
+    &-white {
+        background-color: white;
+    }
+
+    &-black {
+        background-color: white;
+    }
+
+    @each $n, $v in $colorProfiles {
+        &-#{lower($n)} {
+            background-color: color($n);
+        }
+    }
+}
+
+.color {
+    &-white {
+        color: white;
+    }
+
+    &-black {
+        color: black;
+    }
+
+    @each $n, $v in $colorProfiles {
+        &-#{lower($n)} {
+            color: color($n);
+        }
+    }
+}
+
+.border {
+    &-white {
+        border-color: white;
+    }
+
+    &-black {
+        border-color: black;
+    }
+
+    @each $n, $v in $colorProfiles {
+        &-#{lower($n)} {
+            border-color: color($n);
+        }
+    }
+}
+
+.dis {
+    &-table {
+        display: table;
+    }
+
+    &-inline-table {
+        display: inline-table;
+    }
+
+    &-block {
+        display: block;
+    }
+
+    &-inline-block {
+        display:  inline-block;
+    }
+
+    &-normal {
+        display: normal;
+    }
+
+    &-none {
+        display: none;
+    }
+}
+
+.#{getKW(WhiteSpace)} {
+    &-nowrap {
+        white-space: nowrap;
+    }
+
+    &-normal {
+        white-space: normal;
+    }
+
+    &-pre {
+        white-space: pre;
+    }
+
+    &-normal {
+        white-space: normal;
+    }
 }
