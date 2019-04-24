@@ -6,7 +6,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid black;
@@ -31,7 +30,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid black;
@@ -56,7 +54,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid black;
@@ -95,10 +92,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid black;
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-default:hover {
@@ -113,10 +110,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid black;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-default-border:hover {
@@ -131,10 +128,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid black;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 3px 3px #474747; }
@@ -151,7 +148,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -175,7 +171,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #004fa3;
@@ -200,7 +195,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -238,10 +232,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-primary:hover {
@@ -256,10 +250,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #004fa3;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-primary-border:hover {
@@ -274,10 +268,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 3px 3px #474747; }
@@ -295,7 +289,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -319,7 +312,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #676767;
@@ -335,7 +327,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -364,10 +355,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-disabled:hover {
@@ -383,10 +374,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #676767;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-disabled-border:hover {
@@ -402,10 +393,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-disabled-shadow:hover {
@@ -421,7 +412,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -445,7 +435,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #13391c;
@@ -470,7 +459,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -508,10 +496,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-success:hover {
@@ -526,10 +514,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #13391c;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-success-border:hover {
@@ -544,10 +532,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 3px 3px #474747; }
@@ -564,7 +552,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -588,7 +575,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #3a070b;
@@ -613,7 +599,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -651,10 +636,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-danger:hover {
@@ -669,10 +654,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #3a070b;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-danger-border:hover {
@@ -687,10 +672,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 3px 3px #474747; }
@@ -707,7 +692,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -731,7 +715,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #a37a00;
@@ -756,7 +739,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -794,10 +776,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-warning:hover {
@@ -812,10 +794,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #a37a00;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-warning-border:hover {
@@ -830,10 +812,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 3px 3px #474747; }
@@ -850,7 +832,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -874,7 +855,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #0e6f82;
@@ -899,7 +879,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -937,10 +916,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-info:hover {
@@ -955,10 +934,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #0e6f82;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-info-border:hover {
@@ -973,10 +952,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 3px 3px #474747; }
@@ -993,7 +972,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -1017,7 +995,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #909090;
@@ -1042,7 +1019,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -1080,10 +1056,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-light:hover {
@@ -1098,10 +1074,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #909090;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-light-border:hover {
@@ -1116,10 +1092,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 3px 3px #474747; }
@@ -1136,7 +1112,6 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -1160,7 +1135,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #101010;
@@ -1185,7 +1159,6 @@
     padding-bottom: 10px;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -1223,10 +1196,10 @@
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
-  font-size: 1.8rem;
   transition: all 0.30s ease-in-out;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0);
+  display: inline-block;
   margin-left: 2px;
   margin-right: 2px; }
   .btn-dark:hover {
@@ -1241,10 +1214,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid #101010;
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
     .btn-dark-border:hover {
@@ -1259,10 +1232,10 @@
     padding-bottom: 10px;
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 1.8rem;
     transition: all 0.30s ease-in-out;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 3px 3px #474747; }

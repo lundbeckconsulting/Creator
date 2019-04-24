@@ -1,293 +1,558 @@
-﻿.f-xxs {
-  font-size: 1.1rem; }
-  .f-xxs-null-xs {
-    font-size: 1.1rem;
-    margin: 4px; }
-  .f-xxs-null-sm {
-    font-size: 1.1rem;
-    margin: 8px; }
-  .f-xxs-null-md {
-    font-size: 1.1rem;
-    margin: 16px; }
-  .f-xxs-null-lg {
-    font-size: 1.1rem;
-    margin: 28px; }
-  .f-xxs-null-xl {
-    font-size: 1.1rem;
-    margin: 44px; }
-  .f-xxs-null-xxl {
-    font-size: 1.1rem;
-    margin: 62px; }
-  .f-xxs-null-xs-bold {
-    font-size: 1.1rem;
-    margin: 4px; }
-  .f-xxs-null-sm-bold {
-    font-size: 1.1rem;
-    margin: 8px; }
-  .f-xxs-null-md-bold {
-    font-size: 1.1rem;
-    margin: 16px; }
-  .f-xxs-null-lg-bold {
-    font-size: 1.1rem;
-    margin: 28px; }
-  .f-xxs-null-xl-bold {
-    font-size: 1.1rem;
-    margin: 44px; }
-  .f-xxs-null-xxl-bold {
-    font-size: 1.1rem;
-    margin: 62px; }
+﻿.h1 {
+  font-size: 5.2rem; }
+  .h1.bold {
+    font-weight: bold; }
+  .h1.airy {
+    padding: 16px; }
 
-.f-xs {
-  font-size: 1.4rem; }
-  .f-xs-null-xs {
-    font-size: 1.4rem;
-    margin: 4px; }
-  .f-xs-null-sm {
-    font-size: 1.4rem;
-    margin: 8px; }
-  .f-xs-null-md {
-    font-size: 1.4rem;
-    margin: 16px; }
-  .f-xs-null-lg {
-    font-size: 1.4rem;
-    margin: 28px; }
-  .f-xs-null-xl {
-    font-size: 1.4rem;
-    margin: 44px; }
-  .f-xs-null-xxl {
-    font-size: 1.4rem;
-    margin: 62px; }
-  .f-xs-null-xs-bold {
-    font-size: 1.4rem;
-    margin: 4px; }
-  .f-xs-null-sm-bold {
-    font-size: 1.4rem;
-    margin: 8px; }
-  .f-xs-null-md-bold {
-    font-size: 1.4rem;
-    margin: 16px; }
-  .f-xs-null-lg-bold {
-    font-size: 1.4rem;
-    margin: 28px; }
-  .f-xs-null-xl-bold {
-    font-size: 1.4rem;
-    margin: 44px; }
-  .f-xs-null-xxl-bold {
-    font-size: 1.4rem;
-    margin: 62px; }
+@media (min-width: 0px) {
+  .h1-xs {
+    font-size: 5.2rem; }
+    .h1-xs.bold {
+      font-weight: bold; }
+    .h1-xs.airy {
+      padding: 16px; } }
 
-.f-sm {
-  font-size: 1.8rem; }
-  .f-sm-null-xs {
-    font-size: 1.8rem;
-    margin: 4px; }
-  .f-sm-null-sm {
-    font-size: 1.8rem;
-    margin: 8px; }
-  .f-sm-null-md {
-    font-size: 1.8rem;
-    margin: 16px; }
-  .f-sm-null-lg {
-    font-size: 1.8rem;
-    margin: 28px; }
-  .f-sm-null-xl {
-    font-size: 1.8rem;
-    margin: 44px; }
-  .f-sm-null-xxl {
-    font-size: 1.8rem;
-    margin: 62px; }
-  .f-sm-null-xs-bold {
-    font-size: 1.8rem;
-    margin: 4px; }
-  .f-sm-null-sm-bold {
-    font-size: 1.8rem;
-    margin: 8px; }
-  .f-sm-null-md-bold {
-    font-size: 1.8rem;
-    margin: 16px; }
-  .f-sm-null-lg-bold {
-    font-size: 1.8rem;
-    margin: 28px; }
-  .f-sm-null-xl-bold {
-    font-size: 1.8rem;
-    margin: 44px; }
-  .f-sm-null-xxl-bold {
-    font-size: 1.8rem;
-    margin: 62px; }
+@media (min-width: 576px) {
+  .h1-sm {
+    font-size: 5.2rem; }
+    .h1-sm.bold {
+      font-weight: bold; }
+    .h1-sm.airy {
+      padding: 16px; } }
 
-.f-md {
-  font-size: 2.2rem; }
-  .f-md-null-xs {
-    font-size: 2.2rem;
-    margin: 4px; }
-  .f-md-null-sm {
-    font-size: 2.2rem;
-    margin: 8px; }
-  .f-md-null-md {
-    font-size: 2.2rem;
-    margin: 16px; }
-  .f-md-null-lg {
-    font-size: 2.2rem;
-    margin: 28px; }
-  .f-md-null-xl {
-    font-size: 2.2rem;
-    margin: 44px; }
-  .f-md-null-xxl {
-    font-size: 2.2rem;
-    margin: 62px; }
-  .f-md-null-xs-bold {
-    font-size: 2.2rem;
-    margin: 4px; }
-  .f-md-null-sm-bold {
-    font-size: 2.2rem;
-    margin: 8px; }
-  .f-md-null-md-bold {
-    font-size: 2.2rem;
-    margin: 16px; }
-  .f-md-null-lg-bold {
-    font-size: 2.2rem;
-    margin: 28px; }
-  .f-md-null-xl-bold {
-    font-size: 2.2rem;
-    margin: 44px; }
-  .f-md-null-xxl-bold {
-    font-size: 2.2rem;
-    margin: 62px; }
+@media (min-width: 768px) {
+  .h1-md {
+    font-size: 5.2rem; }
+    .h1-md.bold {
+      font-weight: bold; }
+    .h1-md.airy {
+      padding: 16px; } }
 
-.f-lg {
-  font-size: 3rem; }
-  .f-lg-null-xs {
-    font-size: 3rem;
-    margin: 4px; }
-  .f-lg-null-sm {
-    font-size: 3rem;
-    margin: 8px; }
-  .f-lg-null-md {
-    font-size: 3rem;
-    margin: 16px; }
-  .f-lg-null-lg {
-    font-size: 3rem;
-    margin: 28px; }
-  .f-lg-null-xl {
-    font-size: 3rem;
-    margin: 44px; }
-  .f-lg-null-xxl {
-    font-size: 3rem;
-    margin: 62px; }
-  .f-lg-null-xs-bold {
-    font-size: 3rem;
-    margin: 4px; }
-  .f-lg-null-sm-bold {
-    font-size: 3rem;
-    margin: 8px; }
-  .f-lg-null-md-bold {
-    font-size: 3rem;
-    margin: 16px; }
-  .f-lg-null-lg-bold {
-    font-size: 3rem;
-    margin: 28px; }
-  .f-lg-null-xl-bold {
-    font-size: 3rem;
-    margin: 44px; }
-  .f-lg-null-xxl-bold {
-    font-size: 3rem;
-    margin: 62px; }
+@media (min-width: 992px) {
+  .h1-lg {
+    font-size: 5.2rem; }
+    .h1-lg.bold {
+      font-weight: bold; }
+    .h1-lg.airy {
+      padding: 16px; } }
 
-.f-xl {
+@media (min-width: 1200px) {
+  .h1-xl {
+    font-size: 5.2rem; }
+    .h1-xl.bold {
+      font-weight: bold; }
+    .h1-xl.airy {
+      padding: 16px; } }
+
+.h2 {
   font-size: 4.3rem; }
-  .f-xl-null-xs {
-    font-size: 4.3rem;
-    margin: 4px; }
-  .f-xl-null-sm {
-    font-size: 4.3rem;
-    margin: 8px; }
-  .f-xl-null-md {
-    font-size: 4.3rem;
-    margin: 16px; }
-  .f-xl-null-lg {
-    font-size: 4.3rem;
-    margin: 28px; }
-  .f-xl-null-xl {
-    font-size: 4.3rem;
-    margin: 44px; }
-  .f-xl-null-xxl {
-    font-size: 4.3rem;
-    margin: 62px; }
-  .f-xl-null-xs-bold {
-    font-size: 4.3rem;
-    margin: 4px; }
-  .f-xl-null-sm-bold {
-    font-size: 4.3rem;
-    margin: 8px; }
-  .f-xl-null-md-bold {
-    font-size: 4.3rem;
-    margin: 16px; }
-  .f-xl-null-lg-bold {
-    font-size: 4.3rem;
-    margin: 28px; }
-  .f-xl-null-xl-bold {
-    font-size: 4.3rem;
-    margin: 44px; }
-  .f-xl-null-xxl-bold {
-    font-size: 4.3rem;
-    margin: 62px; }
+  .h2.bold {
+    font-weight: bold; }
+  .h2.airy {
+    padding: 16px; }
 
-.f-xxl {
-  font-size: 6rem; }
-  .f-xxl-null-xs {
-    font-size: 6rem;
-    margin: 4px; }
-  .f-xxl-null-sm {
-    font-size: 6rem;
-    margin: 8px; }
-  .f-xxl-null-md {
-    font-size: 6rem;
-    margin: 16px; }
-  .f-xxl-null-lg {
-    font-size: 6rem;
-    margin: 28px; }
-  .f-xxl-null-xl {
-    font-size: 6rem;
-    margin: 44px; }
-  .f-xxl-null-xxl {
-    font-size: 6rem;
-    margin: 62px; }
-  .f-xxl-null-xs-bold {
-    font-size: 6rem;
-    margin: 4px; }
-  .f-xxl-null-sm-bold {
-    font-size: 6rem;
-    margin: 8px; }
-  .f-xxl-null-md-bold {
-    font-size: 6rem;
-    margin: 16px; }
-  .f-xxl-null-lg-bold {
-    font-size: 6rem;
-    margin: 28px; }
-  .f-xxl-null-xl-bold {
-    font-size: 6rem;
-    margin: 44px; }
-  .f-xxl-null-xxl-bold {
-    font-size: 6rem;
-    margin: 62px; }
+@media (min-width: 0px) {
+  .h2-xs {
+    font-size: 4.3rem; }
+    .h2-xs.bold {
+      font-weight: bold; }
+    .h2-xs.airy {
+      padding: 16px; } }
 
-.f-xxs {
-  font-size: 0.4rem; }
+@media (min-width: 576px) {
+  .h2-sm {
+    font-size: 4.3rem; }
+    .h2-sm.bold {
+      font-weight: bold; }
+    .h2-sm.airy {
+      padding: 16px; } }
 
-.f-xs {
+@media (min-width: 768px) {
+  .h2-md {
+    font-size: 4.3rem; }
+    .h2-md.bold {
+      font-weight: bold; }
+    .h2-md.airy {
+      padding: 16px; } }
+
+@media (min-width: 992px) {
+  .h2-lg {
+    font-size: 4.3rem; }
+    .h2-lg.bold {
+      font-weight: bold; }
+    .h2-lg.airy {
+      padding: 16px; } }
+
+@media (min-width: 1200px) {
+  .h2-xl {
+    font-size: 4.3rem; }
+    .h2-xl.bold {
+      font-weight: bold; }
+    .h2-xl.airy {
+      padding: 16px; } }
+
+.h3 {
+  font-size: 3rem; }
+  .h3.bold {
+    font-weight: bold; }
+  .h3.airy {
+    padding: 16px; }
+
+@media (min-width: 0px) {
+  .h3-xs {
+    font-size: 3rem; }
+    .h3-xs.bold {
+      font-weight: bold; }
+    .h3-xs.airy {
+      padding: 16px; } }
+
+@media (min-width: 576px) {
+  .h3-sm {
+    font-size: 3rem; }
+    .h3-sm.bold {
+      font-weight: bold; }
+    .h3-sm.airy {
+      padding: 16px; } }
+
+@media (min-width: 768px) {
+  .h3-md {
+    font-size: 3rem; }
+    .h3-md.bold {
+      font-weight: bold; }
+    .h3-md.airy {
+      padding: 16px; } }
+
+@media (min-width: 992px) {
+  .h3-lg {
+    font-size: 3rem; }
+    .h3-lg.bold {
+      font-weight: bold; }
+    .h3-lg.airy {
+      padding: 16px; } }
+
+@media (min-width: 1200px) {
+  .h3-xl {
+    font-size: 3rem; }
+    .h3-xl.bold {
+      font-weight: bold; }
+    .h3-xl.airy {
+      padding: 16px; } }
+
+.h4 {
+  font-size: 2.2rem; }
+  .h4.bold {
+    font-weight: bold; }
+  .h4.airy {
+    padding: 16px; }
+
+@media (min-width: 0px) {
+  .h4-xs {
+    font-size: 2.2rem; }
+    .h4-xs.bold {
+      font-weight: bold; }
+    .h4-xs.airy {
+      padding: 16px; } }
+
+@media (min-width: 576px) {
+  .h4-sm {
+    font-size: 2.2rem; }
+    .h4-sm.bold {
+      font-weight: bold; }
+    .h4-sm.airy {
+      padding: 16px; } }
+
+@media (min-width: 768px) {
+  .h4-md {
+    font-size: 2.2rem; }
+    .h4-md.bold {
+      font-weight: bold; }
+    .h4-md.airy {
+      padding: 16px; } }
+
+@media (min-width: 992px) {
+  .h4-lg {
+    font-size: 2.2rem; }
+    .h4-lg.bold {
+      font-weight: bold; }
+    .h4-lg.airy {
+      padding: 16px; } }
+
+@media (min-width: 1200px) {
+  .h4-xl {
+    font-size: 2.2rem; }
+    .h4-xl.bold {
+      font-weight: bold; }
+    .h4-xl.airy {
+      padding: 16px; } }
+
+.h5 {
+  font-size: 1.8rem; }
+  .h5.bold {
+    font-weight: bold; }
+  .h5.airy {
+    padding: 16px; }
+
+@media (min-width: 0px) {
+  .h5-xs {
+    font-size: 1.8rem; }
+    .h5-xs.bold {
+      font-weight: bold; }
+    .h5-xs.airy {
+      padding: 16px; } }
+
+@media (min-width: 576px) {
+  .h5-sm {
+    font-size: 1.8rem; }
+    .h5-sm.bold {
+      font-weight: bold; }
+    .h5-sm.airy {
+      padding: 16px; } }
+
+@media (min-width: 768px) {
+  .h5-md {
+    font-size: 1.8rem; }
+    .h5-md.bold {
+      font-weight: bold; }
+    .h5-md.airy {
+      padding: 16px; } }
+
+@media (min-width: 992px) {
+  .h5-lg {
+    font-size: 1.8rem; }
+    .h5-lg.bold {
+      font-weight: bold; }
+    .h5-lg.airy {
+      padding: 16px; } }
+
+@media (min-width: 1200px) {
+  .h5-xl {
+    font-size: 1.8rem; }
+    .h5-xl.bold {
+      font-weight: bold; }
+    .h5-xl.airy {
+      padding: 16px; } }
+
+.h6 {
+  font-size: 1.4rem; }
+  .h6.bold {
+    font-weight: bold; }
+  .h6.airy {
+    padding: 16px; }
+
+@media (min-width: 0px) {
+  .h6-xs {
+    font-size: 1.4rem; }
+    .h6-xs.bold {
+      font-weight: bold; }
+    .h6-xs.airy {
+      padding: 16px; } }
+
+@media (min-width: 576px) {
+  .h6-sm {
+    font-size: 1.4rem; }
+    .h6-sm.bold {
+      font-weight: bold; }
+    .h6-sm.airy {
+      padding: 16px; } }
+
+@media (min-width: 768px) {
+  .h6-md {
+    font-size: 1.4rem; }
+    .h6-md.bold {
+      font-weight: bold; }
+    .h6-md.airy {
+      padding: 16px; } }
+
+@media (min-width: 992px) {
+  .h6-lg {
+    font-size: 1.4rem; }
+    .h6-lg.bold {
+      font-weight: bold; }
+    .h6-lg.airy {
+      padding: 16px; } }
+
+@media (min-width: 1200px) {
+  .h6-xl {
+    font-size: 1.4rem; }
+    .h6-xl.bold {
+      font-weight: bold; }
+    .h6-xl.airy {
+      padding: 16px; } }
+
+.h7 {
+  font-size: 1.1rem; }
+  .h7.bold {
+    font-weight: bold; }
+  .h7.airy {
+    padding: 16px; }
+
+@media (min-width: 0px) {
+  .h7-xs {
+    font-size: 1.1rem; }
+    .h7-xs.bold {
+      font-weight: bold; }
+    .h7-xs.airy {
+      padding: 16px; } }
+
+@media (min-width: 576px) {
+  .h7-sm {
+    font-size: 1.1rem; }
+    .h7-sm.bold {
+      font-weight: bold; }
+    .h7-sm.airy {
+      padding: 16px; } }
+
+@media (min-width: 768px) {
+  .h7-md {
+    font-size: 1.1rem; }
+    .h7-md.bold {
+      font-weight: bold; }
+    .h7-md.airy {
+      padding: 16px; } }
+
+@media (min-width: 992px) {
+  .h7-lg {
+    font-size: 1.1rem; }
+    .h7-lg.bold {
+      font-weight: bold; }
+    .h7-lg.airy {
+      padding: 16px; } }
+
+@media (min-width: 1200px) {
+  .h7-xl {
+    font-size: 1.1rem; }
+    .h7-xl.bold {
+      font-weight: bold; }
+    .h7-xl.airy {
+      padding: 16px; } }
+
+.f-1 {
   font-size: 0.8rem; }
 
-.f-sm {
-  font-size: 1rem; }
+@media (min-width: 0px) {
+  .f-1-xs {
+    font-size: 0.8rem; } }
 
-.f-md {
+@media (min-width: 576px) {
+  .f-1-sm {
+    font-size: 0.8rem; } }
+
+@media (min-width: 768px) {
+  .f-1-md {
+    font-size: 0.8rem; } }
+
+@media (min-width: 992px) {
+  .f-1-lg {
+    font-size: 0.8rem; } }
+
+@media (min-width: 1200px) {
+  .f-1-xl {
+    font-size: 0.8rem; } }
+
+.f-2 {
+  font-size: 1.4rem; }
+
+@media (min-width: 0px) {
+  .f-2-xs {
+    font-size: 1.4rem; } }
+
+@media (min-width: 576px) {
+  .f-2-sm {
+    font-size: 1.4rem; } }
+
+@media (min-width: 768px) {
+  .f-2-md {
+    font-size: 1.4rem; } }
+
+@media (min-width: 992px) {
+  .f-2-lg {
+    font-size: 1.4rem; } }
+
+@media (min-width: 1200px) {
+  .f-2-xl {
+    font-size: 1.4rem; } }
+
+.f-3 {
   font-size: 1.8rem; }
 
-.f-lg {
-  font-size: 23rem; }
+@media (min-width: 0px) {
+  .f-3-xs {
+    font-size: 1.8rem; } }
 
-.f-xl {
-  font-size: 3.6rem; }
+@media (min-width: 576px) {
+  .f-3-sm {
+    font-size: 1.8rem; } }
 
-.f-xxl {
+@media (min-width: 768px) {
+  .f-3-md {
+    font-size: 1.8rem; } }
+
+@media (min-width: 992px) {
+  .f-3-lg {
+    font-size: 1.8rem; } }
+
+@media (min-width: 1200px) {
+  .f-3-xl {
+    font-size: 1.8rem; } }
+
+.f-4 {
+  font-size: 2.5rem; }
+
+@media (min-width: 0px) {
+  .f-4-xs {
+    font-size: 2.5rem; } }
+
+@media (min-width: 576px) {
+  .f-4-sm {
+    font-size: 2.5rem; } }
+
+@media (min-width: 768px) {
+  .f-4-md {
+    font-size: 2.5rem; } }
+
+@media (min-width: 992px) {
+  .f-4-lg {
+    font-size: 2.5rem; } }
+
+@media (min-width: 1200px) {
+  .f-4-xl {
+    font-size: 2.5rem; } }
+
+.f-5 {
+  font-size: 2.9rem; }
+
+@media (min-width: 0px) {
+  .f-5-xs {
+    font-size: 2.9rem; } }
+
+@media (min-width: 576px) {
+  .f-5-sm {
+    font-size: 2.9rem; } }
+
+@media (min-width: 768px) {
+  .f-5-md {
+    font-size: 2.9rem; } }
+
+@media (min-width: 992px) {
+  .f-5-lg {
+    font-size: 2.9rem; } }
+
+@media (min-width: 1200px) {
+  .f-5-xl {
+    font-size: 2.9rem; } }
+
+.f-6 {
+  font-size: 3.2rem; }
+
+@media (min-width: 0px) {
+  .f-6-xs {
+    font-size: 3.2rem; } }
+
+@media (min-width: 576px) {
+  .f-6-sm {
+    font-size: 3.2rem; } }
+
+@media (min-width: 768px) {
+  .f-6-md {
+    font-size: 3.2rem; } }
+
+@media (min-width: 992px) {
+  .f-6-lg {
+    font-size: 3.2rem; } }
+
+@media (min-width: 1200px) {
+  .f-6-xl {
+    font-size: 3.2rem; } }
+
+.f-7 {
+  font-size: 3.8rem; }
+
+@media (min-width: 0px) {
+  .f-7-xs {
+    font-size: 3.8rem; } }
+
+@media (min-width: 576px) {
+  .f-7-sm {
+    font-size: 3.8rem; } }
+
+@media (min-width: 768px) {
+  .f-7-md {
+    font-size: 3.8rem; } }
+
+@media (min-width: 992px) {
+  .f-7-lg {
+    font-size: 3.8rem; } }
+
+@media (min-width: 1200px) {
+  .f-7-xl {
+    font-size: 3.8rem; } }
+
+.f-8 {
+  font-size: 4.2rem; }
+
+@media (min-width: 0px) {
+  .f-8-xs {
+    font-size: 4.2rem; } }
+
+@media (min-width: 576px) {
+  .f-8-sm {
+    font-size: 4.2rem; } }
+
+@media (min-width: 768px) {
+  .f-8-md {
+    font-size: 4.2rem; } }
+
+@media (min-width: 992px) {
+  .f-8-lg {
+    font-size: 4.2rem; } }
+
+@media (min-width: 1200px) {
+  .f-8-xl {
+    font-size: 4.2rem; } }
+
+.f-9 {
+  font-size: 4.6rem; }
+
+@media (min-width: 0px) {
+  .f-9-xs {
+    font-size: 4.6rem; } }
+
+@media (min-width: 576px) {
+  .f-9-sm {
+    font-size: 4.6rem; } }
+
+@media (min-width: 768px) {
+  .f-9-md {
+    font-size: 4.6rem; } }
+
+@media (min-width: 992px) {
+  .f-9-lg {
+    font-size: 4.6rem; } }
+
+@media (min-width: 1200px) {
+  .f-9-xl {
+    font-size: 4.6rem; } }
+
+.f-10 {
   font-size: 5.2rem; }
+
+@media (min-width: 0px) {
+  .f-10-xs {
+    font-size: 5.2rem; } }
+
+@media (min-width: 576px) {
+  .f-10-sm {
+    font-size: 5.2rem; } }
+
+@media (min-width: 768px) {
+  .f-10-md {
+    font-size: 5.2rem; } }
+
+@media (min-width: 992px) {
+  .f-10-lg {
+    font-size: 5.2rem; } }
+
+@media (min-width: 1200px) {
+  .f-10-xl {
+    font-size: 5.2rem; } }

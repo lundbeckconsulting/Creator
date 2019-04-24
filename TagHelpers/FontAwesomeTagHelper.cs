@@ -16,10 +16,19 @@ namespace LC.Creator.TagHelpers
         {
             base.PreProcess(context, ref output);
 
-            string content = this.Prefix + " " + GetName() + GetSize() + GetAnimatedType() + GetFixedWidth() + GetListIcon();
+            output.TagName = "i";
+            output.TagMode = TagMode.StartTagAndEndTag;
+            output.Attributes.Clear();
 
-            output.Attributes.SetAttribute("aria-hidden", "true");
-            output.Attributes.Add("class", content.TrimEnd(new char[] { ' ' }));
+            string content = this.Prefix + " " + GetName() + GetSize() + GetAnimatedType() + GetFixedWidth() + GetListIcon();
+            content = content.TrimEnd(new char[] { ' ' });
+
+            if (context.AllAttributes.ContainsName("class"))
+            {
+                content += " " + context.AllAttributes["class"].Value;
+            }
+
+            output.Attributes.Add("class", content);
 
             await base.ProcessAsync(context, output);
         }

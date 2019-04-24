@@ -375,6 +375,22 @@
     margin-left: auto;
     margin-right: auto; }
 
+.container {
+  width: 100%;
+  min-width: 0px;
+  max-width: 1366px;
+  padding: 16px; }
+  .container-auto {
+    width: 100%;
+    min-width: 0px;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px; }
+  .container.clean {
+    padding: initial !important;
+    margin: initial; }
+
 .bg-cover {
   background-repeat: no-repeat;
   background-position: center center;
@@ -474,65 +490,65 @@
   opacity: 0.9; }
 
 .h1 {
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   font-weight: normal; }
   .h1-bold {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     font-weight: bold; }
   .h1-airy-xs {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 4px;
     font-weight: normal; }
   .h1-airy-xs-bold {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 4px;
     font-weight: bold; }
   .h1-airy-sm {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 8px;
     font-weight: normal; }
   .h1-airy-sm-bold {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 8px;
     font-weight: bold; }
   .h1-airy-md {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 16px;
     font-weight: normal; }
   .h1-airy-md-bold {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 16px;
     font-weight: bold; }
   .h1-airy {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 16px;
     font-weight: normal; }
     .h1-airy-bold {
-      font-size: 2.6rem;
+      font-size: 1.8rem;
       margin: 16px;
       font-weight: bold; }
   .h1-airy-lg {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 28px;
     font-weight: normal; }
   .h1-airy-lg-bold {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 28px;
     font-weight: bold; }
   .h1-airy-xl {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 44px;
     font-weight: normal; }
   .h1-airy-xl-bold {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 44px;
     font-weight: bold; }
   .h1-airy-xxl {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 62px;
     font-weight: normal; }
   .h1-airy-xxl-bold {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     margin: 62px;
     font-weight: bold; }
 
@@ -916,65 +932,65 @@
 
 @media (min-width: 768px) {
   .h1 {
-    font-size: 6rem;
+    font-size: 5.2rem;
     font-weight: normal; }
     .h1-bold {
-      font-size: 6rem;
+      font-size: 5.2rem;
       font-weight: bold; }
     .h1-airy-xs {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 4px;
       font-weight: normal; }
     .h1-airy-xs-bold {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 4px;
       font-weight: bold; }
     .h1-airy-sm {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 8px;
       font-weight: normal; }
     .h1-airy-sm-bold {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 8px;
       font-weight: bold; }
     .h1-airy-md {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 16px;
       font-weight: normal; }
     .h1-airy-md-bold {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 16px;
       font-weight: bold; }
     .h1-airy {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 16px;
       font-weight: normal; }
       .h1-airy-bold {
-        font-size: 6rem;
+        font-size: 5.2rem;
         margin: 16px;
         font-weight: bold; }
     .h1-airy-lg {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 28px;
       font-weight: normal; }
     .h1-airy-lg-bold {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 28px;
       font-weight: bold; }
     .h1-airy-xl {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 44px;
       font-weight: normal; }
     .h1-airy-xl-bold {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 44px;
       font-weight: bold; }
     .h1-airy-xxl {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 62px;
       font-weight: normal; }
     .h1-airy-xxl-bold {
-      font-size: 6rem;
+      font-size: 5.2rem;
       margin: 62px;
       font-weight: bold; }
   .h2 {
@@ -1349,3 +1365,142 @@
       font-size: 1.1rem;
       margin: 62px;
       font-weight: bold; } }
+
+.clean {
+  padding: unset; }
+
+.clean-mrg {
+  margin: unset; }
+
+.clean-all {
+  padding: unset;
+  margin: unset; }
+
+.bg-white {
+  background-color: white; }
+
+.bg-black {
+  background-color: white; }
+
+.bg-default {
+  background-color: black; }
+
+.bg-primary {
+  background-color: #007bff; }
+
+.bg-disabled {
+  background-color: #959595; }
+
+.bg-success {
+  background-color: #2a7e3e; }
+
+.bg-danger {
+  background-color: #8c101b; }
+
+.bg-warning {
+  background-color: #ffbf00; }
+
+.bg-info {
+  background-color: #17b5d5; }
+
+.bg-light {
+  background-color: #bebebe; }
+
+.bg-dark {
+  background-color: #3e3e3e; }
+
+.color-white {
+  color: white; }
+
+.color-black {
+  color: black; }
+
+.color-default {
+  color: black; }
+
+.color-primary {
+  color: #007bff; }
+
+.color-disabled {
+  color: #959595; }
+
+.color-success {
+  color: #2a7e3e; }
+
+.color-danger {
+  color: #8c101b; }
+
+.color-warning {
+  color: #ffbf00; }
+
+.color-info {
+  color: #17b5d5; }
+
+.color-light {
+  color: #bebebe; }
+
+.color-dark {
+  color: #3e3e3e; }
+
+.border-white {
+  border-color: white; }
+
+.border-black {
+  border-color: black; }
+
+.border-default {
+  border-color: black; }
+
+.border-primary {
+  border-color: #007bff; }
+
+.border-disabled {
+  border-color: #959595; }
+
+.border-success {
+  border-color: #2a7e3e; }
+
+.border-danger {
+  border-color: #8c101b; }
+
+.border-warning {
+  border-color: #ffbf00; }
+
+.border-info {
+  border-color: #17b5d5; }
+
+.border-light {
+  border-color: #bebebe; }
+
+.border-dark {
+  border-color: #3e3e3e; }
+
+.dis-table {
+  display: table; }
+
+.dis-inline-table {
+  display: inline-table; }
+
+.dis-block {
+  display: block; }
+
+.dis-inline-block {
+  display: inline-block; }
+
+.dis-normal {
+  display: normal; }
+
+.dis-none {
+  display: none; }
+
+.ws-nowrap {
+  white-space: nowrap; }
+
+.ws-normal {
+  white-space: normal; }
+
+.ws-pre {
+  white-space: pre; }
+
+.ws-normal {
+  white-space: normal; }

@@ -2,6 +2,7 @@
 @import "MapsAndList.scss";
 
 @mixin media($size: MD, $orientation: Any, $mode: Up) {
+    $size: upper($size);
 	$s: map-get($mediaBreakpoints, $size);
 	$query: null;
 
