@@ -12,6 +12,10 @@
     "inputFile": "SASS/Element/Table.scss"
   },
   {
+    "outputFile": "_Build/CSS/Element.Footer.css",
+    "inputFile": "SASS/Element/Footer.scss"
+  },
+  {
     "outputFile": "_Build/CSS/Layout.PaddingAndMargin.css",
     "inputFile": "SASS/Layout/PaddingAndMargin.scss"
   },

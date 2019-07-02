@@ -104,12 +104,24 @@
 .container {
     @include responsive(true, false, true);
 
-    &-auto {
-        @include responsive(true, true, true);
+    &-clean {
+        @include responsive(true, false, false);
     }
 
-    &.clean {
-        @include cleanBase();
+    &-auto {
+        @include responsive(true, true, true);
+
+        &-clean {
+            @include responsive(true, true, false);
+        }
+    }
+
+    &-full {
+        @include responsive(false, false, true);
+
+        &-clean {
+            @include responsive(false, false, false);
+        }
     }
 }
 
@@ -320,4 +332,15 @@
     &-normal {
         white-space: normal;
     }
+}
+
+.table-auto {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fill {
+    min-width: 100%;
+    min-height: 100%;
 }

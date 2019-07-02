@@ -10,15 +10,22 @@ namespace LC.Creator.TagHelpers
     [HtmlTargetElement("icon", Attributes = "type", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class IconTagHelper : TagHelperBase
     {
-        public IconTagHelper(IHostingEnvironment env, IHtmlHelper html) : base(env, html)
-        { }
+        public IconTagHelper(IHostingEnvironment env, IHtmlHelper html) : base(env, html) { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
             base.PreProcess(context, ref output);
 
-            TagBuilder wrap = default;
-            TagBuilder tag = GetTagBuilder(context, "span");
+            output.SuppressOutput();
+            output.PostContent.AppendHtml(GetTag());
+
+            await base.ProcessAsync(context, output);
+        }
+
+        public TagBuilder GetTag()
+        {
+            TagBuilder result = default;
+            TagBuilder tag = GetTagBuilder("span");
             tag.AddCssClass("wrap");
             tag.InnerHtml.AppendHtml(GetSymbol());
 
@@ -32,34 +39,35 @@ namespace LC.Creator.TagHelpers
                 tag.AddCssClass("fa-fw");
             }
 
-            if (this.Output.Equals(SymbolOutputs.Button))
+            if (this.Out.Equals(SymbolOutputs.Button))
             {
-                wrap = GetTagBuilder(context, "button");
+                result = GetTagBuilder("button");
             }
-            else if (this.Output.Equals(SymbolOutputs.Href))
+            else if (this.Out.Equals(SymbolOutputs.Href))
             {
-                wrap = GetTagBuilder(context, "a");
-                wrap.Attributes.Add("href", this.Href);
+                result = GetTagBuilder("a");
+                result.Attributes.Add("href", this.Href);
             }
-            else if (this.Output.Equals(SymbolOutputs.Div))
+            else if (this.Out.Equals(SymbolOutputs.Div))
             {
-                wrap = GetTagBuilder(context, "div");
+                result = GetTagBuilder("div");
             }
-            else if (this.Output.Equals(SymbolOutputs.Span))
+            else if (this.Out.Equals(SymbolOutputs.Span))
             {
-                wrap = GetTagBuilder(context, "span");
+                result = GetTagBuilder("span");
             }
 
-            wrap.AddCssClass("creator");
-            wrap.AddCssClass("icon");
+            result.AddCssClass("creator");
+            result.AddCssClass("icon");
 
             if (this.Clickable)
             {
-                wrap.AddCssClass("clickable");
+                result.AddCssClass("clickable");
             }
 
             if (!this.NoText)
             {
+                string foo = this.Text.IsNull() ? GetCaption() : this.Text;
                 TagBuilder text = new TagBuilder("span");
                 text.AddCssClass("label");
 
@@ -68,33 +76,43 @@ namespace LC.Creator.TagHelpers
                     text.AddCssClass(this.Size.ToString().ToLower());
                 }
 
-                text.InnerHtml.Append(GetText());
+                if (!foo.IsNull())
+                {
+                    text.InnerHtml.Append(foo);
+                }
+
                 tag.InnerHtml.AppendHtml(text);
             }
 
-            if (!context.AllAttributes.ContainsName("title"))
+            if (!this.NoTitle)
             {
-                string title = GetTitle();
+                string foo = default;
 
-                if (!title.IsNull())
+                if (!this.Title.IsNull())
                 {
-                    wrap.Attributes.Add("title", title);
+                    foo = this.Title;
+                }
+                else if (!this.Context.AllAttributes.ContainsName("title"))
+                {
+                    foo = GetCaption(CaptionTypes.Title);
+                }
+
+                if (!foo.IsNull())
+                {
+                    result.Attributes.Add("title", foo);
                 }
             }
 
-            wrap.InnerHtml.AppendHtml(tag);
+            result.InnerHtml.AppendHtml(tag);
 
-            output.SuppressOutput();
-            output.PostContent.AppendHtml(wrap);
-
-            await base.ProcessAsync(context, output);
+            return result;
         }
 
         private TagBuilder GetSymbol()
         {
             TagBuilder result = new TagBuilder("i");
 
-            string pre = "far", name = default;
+            string pre = this.Pre.IsNull() ? "far" : this.Pre, name = default;
 
             switch (this.Type)
             {
@@ -154,6 +172,16 @@ namespace LC.Creator.TagHelpers
                 case Symbols.FileUpload:
                     pre = "fas";
                     name = "file-upload";
+                    break;
+
+                case Symbols.FileDownload:
+                    pre = "fas";
+                    name = "file-download";
+                    break;
+
+                case Symbols.FileExport:
+                    pre = "fas";
+                    name = "file-export";
                     break;
 
                 case Symbols.Edit:
@@ -331,6 +359,11 @@ namespace LC.Creator.TagHelpers
                     name = "home";
                     break;
 
+                case Symbols.HomeDamage:
+                    pre = "fas";
+                    name = "house-damage";
+                    break;
+
                 case Symbols.Bars:
                     pre = "fas";
                     name = "bars";
@@ -439,6 +472,247 @@ namespace LC.Creator.TagHelpers
                     pre = "fas";
                     name = "plus-square";
                     break;
+
+                case Symbols.AddCircle:
+                    name = "plus-circle";
+                    break;
+
+                case Symbols.AddCircleFull:
+                    pre = "fas";
+                    name = "plus-circle";
+                    break;
+
+                case Symbols.ShoppingBasket:        
+                    pre = "fas";
+                    name = "shopping-basket";
+                    break;
+
+                case Symbols.ShoppingCart:
+                    pre = "fas";
+                    name = "shopping-cart";
+                    break;
+
+                case Symbols.ShoppingCartPlus:
+                    pre = "fas";
+                    name = "cart-plus";
+                    break;
+
+                case Symbols.ShoppingBag:
+                    pre = "fas";
+                    name = "shopping-bag";
+                    break;
+
+                case Symbols.Handshake:
+                    name = "handshake";
+                    break;
+
+                case Symbols.HandshakeFull:
+                    pre = "fas";
+                    name = "handshake";
+                    break;
+
+                case Symbols.ThumbsUp:
+                    name = "thumbs-up";
+                    break;
+
+                case Symbols.ThumbsUpFull:
+                    pre = "fas";
+                    name = "thumbs-up";
+                    break;
+
+                case Symbols.ThumbsDown:
+                    name = "thumbs-down";
+                    break;
+
+                case Symbols.ThumbsDownFull:
+                    pre = "fas";
+                    name = "thumbs-down";
+                    break;
+
+                case Symbols.MoneyCheckout:
+                    pre = "fas";
+                    name = "money-checkout-alt";
+                    break;
+
+                case Symbols.Truck:
+                    pre = "fas";
+                    name = "truck";
+                    break;
+
+                case Symbols.Visa:
+                    pre = "fab";
+                    name = "cc-visa";
+                    break;
+
+                case Symbols.Stripe:
+                    pre = "fab";
+                    name = "cc-stripe";
+                    break;
+
+                case Symbols.PayPal:
+                    pre = "fab";
+                    name = "cc-paypal";
+                    break;
+
+                case Symbols.PayPalIcon:
+                    pre = "fab";
+                    name = "paypal";
+                    break;
+
+                case Symbols.Mastercard:
+                    pre = "fab";
+                    name = "cc-mastercard";
+                    break;
+
+                case Symbols.ApplePay:
+                    pre = "fab";
+                    name = "cc-apple-pay";
+                    break;
+
+                case Symbols.ApplePayIcon:
+                    pre = "fab";
+                    name = "apple-pay";
+                    break;
+
+                case Symbols.AmericanExpress:
+                    pre = "fab";
+                    name = "cc-amex";
+                    break;
+
+                case Symbols.AmazonPay:
+                    pre = "fab";
+                    name = "cc-amazon-pay";
+                    break;
+
+                case Symbols.AmazonPayIcon:
+                    pre = "fab";
+                    name = "amazon-pay";
+                    break;
+
+                case Symbols.GoogleWallet:
+                    pre = "fab";
+                    name = "google-wallet";
+                    break;
+
+                case Symbols.Upload:
+                    pre = "fas";
+                    name = "upload";
+                    break;
+
+                case Symbols.UploadCloud:
+                    pre = "fas";
+                    name = "cloud-upload-alt";
+                    break;
+
+                case Symbols.DownloadCloud:
+                    pre = "fas";
+                    name = "cloud-download-alt";
+                    break;
+
+                case Symbols.Bullhorn:
+                    pre = "fas";
+                    name = "bullhorn";
+                    break;
+
+                case Symbols.Smile:
+                    name = "smile";
+                    break;
+
+                case Symbols.SmileFull:
+                    pre = "fas";
+                    name = "smile";
+                    break;
+
+                case Symbols.SmileWink:
+                    name = "smile-wink";
+                    break;
+
+                case Symbols.SmileWinkFull:
+                    pre = "fas";
+                    name = "smile-wink";
+                    break;
+
+                case Symbols.SmileLaugh:
+                    name = "grin";
+                    break;
+
+                case Symbols.SmileLaughFull:
+                    pre = "fas";
+                    name = "grin";
+                    break;
+
+                case Symbols.UserPlusFull:
+                    pre = "fas";
+                    name = "user-plus";
+                    break;
+
+                case Symbols.Check:
+                    pre = "fas";
+                    name = "check";
+                    break;
+
+                case Symbols.CheckSquare:
+                    name = "check-square";
+                    break;
+
+                case Symbols.CheckSquareFull:
+                    pre = "fas";
+                    name = "check-square";
+                    break;
+
+                case Symbols.CheckCircle:
+                    name = "check-circle";
+                    break;
+
+                case Symbols.CheckCircleFull:
+                    pre = "fas";
+                    name = "check-circle";
+                    break;
+
+                case Symbols.UserShield:
+                    pre = "fas";
+                    name = "user-shield";
+                    break;
+
+                case Symbols.Search:
+                    pre = "fas";
+                    name = "search";
+                    break;
+
+                case Symbols.SearchPlus:
+                    pre = "fas";
+                    name = "search-plus";
+                    break;
+
+                case Symbols.SearchMinus:
+                    pre = "fas";
+                    name = "search-minus";
+                    break;
+
+                case Symbols.SearchDollar:
+                    pre = "fas";
+                    name = "search-dollar";
+                    break;
+
+                case Symbols.SearchLocation:
+                    pre = "fas";
+                    name = "search-location";
+                    break;
+
+                case Symbols.Shield:
+                    pre = "fas";
+                    name = "shield-alt";
+                    break;
+
+                case Symbols.UserLock:
+                    pre = "fas";
+                    name = "user-lock";
+                    break;
+
+                case Symbols.Thumbstick:
+                    pre = "fas";
+                    name = "thumbstick";
+                    break;
             }
 
             switch (this.Size)
@@ -472,11 +746,6 @@ namespace LC.Creator.TagHelpers
                     break;
             }
 
-            if (!this.Pre.IsNull())
-            {
-                pre = this.Pre;
-            }
-
             name = "fa-" + name;
 
             result.AddCssClass("symbol");
@@ -503,10 +772,9 @@ namespace LC.Creator.TagHelpers
             return "cp-" + result.ToLower();
         }
 
-        private string GetText()
+        private string GetCaption(CaptionTypes type = CaptionTypes.Content)
         {
             string result = default;
-            SymbolLanguages lang = GetLanguage();
 
             if (this.Text.IsNull())
             {
@@ -514,60 +782,70 @@ namespace LC.Creator.TagHelpers
                 {
                     case Symbols.Save:
                     case Symbols.SaveFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Lagre" : "Save";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å lagre", "Click to save") : GetTextByLanguage("Lagre", "Save");
                         break;
 
                     case Symbols.Close:
                     case Symbols.CloseFull:
                     case Symbols.CloseCircle:
                     case Symbols.CloseCircleFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Lukk" : "Close";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å lukke", "Click to close") : GetTextByLanguage("Lukk", "Close");
                         break;
 
                     case Symbols.SignIn:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Logg inn" : "Sign in";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å logge inn", "Click to sign in") : GetTextByLanguage("Logg inn", "Sign in");
                         break;
 
                     case Symbols.SignOut:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Logg ut" : "Sign out";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å logge ut", "Click to sign out") : GetTextByLanguage("Logg ut", "Sign out");
                         break;
 
                     case Symbols.FileUpload:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Last opp" : "Upload";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp", "Click to upload") : GetTextByLanguage("Last opp", "Upload");
+                        break;
+
+                    case Symbols.FileDownload:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fil", "Click to download file") : GetTextByLanguage("Last ned", "Download");
+                        break;
+
+                    case Symbols.FileExport:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste eksportere", "Click to export") : GetTextByLanguage("Eksporter", "Export");
                         break;
 
                     case Symbols.DocImage:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Se bilde" : "See image";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se bilde", "Click to see image") : GetTextByLanguage("Se bilde", "See image");
                         break;
 
                     case Symbols.Edit:
                     case Symbols.EditFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Rediger" : "Edit";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å rediger", "Click to edit") : GetTextByLanguage("Rediger", "Edit");
                         break;
 
                     case Symbols.Copy:
                     case Symbols.CopyFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Kopier" : "Copy";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å kopiere", "Click to copy") : GetTextByLanguage("Kopier", "Copy");
                         break;
 
                     case Symbols.AddressCard:
                     case Symbols.AddressCardFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Adresse" : "Address";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se adresse", "Click to see address") : GetTextByLanguage("Adresse", "Address");
                         break;
 
                     case Symbols.Calendar:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Kalender" : "Calendar";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kalender", "Click to see calendar") : GetTextByLanguage("Kalender", "Calendar");
                         break;
 
                     case Symbols.Envelope:
                     case Symbols.EnvelopeFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Email" : "Email";
+                        result = GetTextByLanguage("E-post", "Email");
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å ende e-post", "Click to send email") : GetTextByLanguage("E-post", "Email");
                         break;
 
                     case Symbols.Phone:
                     case Symbols.Mobile:
                     case Symbols.MobileFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Ring" : "Call";
+                        result = GetTextByLanguage("Ring", "Call");
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å ringe", "Click to call") : GetTextByLanguage("Ring", "Call");
                         break;
 
                     case Symbols.Facebook:
@@ -579,26 +857,28 @@ namespace LC.Creator.TagHelpers
                         break;
 
                     case Symbols.DocCode:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Kode" : "Code";
+                        result = GetTextByLanguage("Kode", "Code");
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kode", "Click to see code") : GetTextByLanguage("Kode", "Code");
                         break;
 
                     case Symbols.Comment:
                     case Symbols.CommentFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Kommenter" : "Comment";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å skrive kommentar", "Click to leave comment") : GetTextByLanguage("Kommenter", "Comment");
                         break;
 
                     case Symbols.Comments:
                     case Symbols.CommentsFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Kommentarer" : "Comments";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kommentarer", "Click to see comments") : GetTextByLanguage("Kommentarer", "Comments");
                         break;
 
                     case Symbols.Like:
                     case Symbols.LikeFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Lik" : "Like";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å like", "Click to like") : GetTextByLanguage("Lik", "Like");
                         break;
 
                     case Symbols.Home:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Hjem" : "Home";
+                    case Symbols.HomeDamage:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å gå til hovedside", "Click to go to start page") : GetTextByLanguage("Hjem", "Home");
                         break;
 
                     case Symbols.GitHub:
@@ -607,182 +887,132 @@ namespace LC.Creator.TagHelpers
 
                     case Symbols.Folder:
                     case Symbols.FolderFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Mappe" : "Folder";
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å åpne mappe", "Click to open folder") : GetTextByLanguage("Mappe", "Folder");
                         break;
 
                     case Symbols.Add:
                     case Symbols.AddFull:
-                        result = lang.Equals(SymbolLanguages.Norwegian) ? "Legg til" : "Add";
+                    case Symbols.AddCircle:
+                    case Symbols.AddCircleFull:
+                        result = GetTextByLanguage("Legg til", "Add");
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til", "Click to add") : GetTextByLanguage("Legg til", "Add");
+                        break;
+
+                    case Symbols.ShoppingBasket:
+                    case Symbols.ShoppingCart:
+                    case Symbols.ShoppingBag:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se handlekurv", "Click to se cart") : GetTextByLanguage("Handlekurv", "Cart");
+                        break;
+
+                    case Symbols.ShoppingCartPlus:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til i handlekurv", "Click to add to cart") : GetTextByLanguage("Legg til handlekurv", "Add to cart");
+                        break;
+
+                    case Symbols.Handshake:
+                    case Symbols.HandshakeFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bekrefte", "Click to confirm") : GetTextByLanguage("Bekreft", "Confirm");
+                        break;
+
+                    case Symbols.ThumbsUp:
+                    case Symbols.ThumbsUpFull:
+                        result = GetTextByLanguage("Tommel opp", "Thumbs up");
+                        break;
+
+                    case Symbols.ThumbsDown:
+                    case Symbols.ThumbsDownFull:
+                        result = GetTextByLanguage("Tommel ned", "Thumbs down");
+                        break;
+
+                    case Symbols.Visa:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Visa", "Click to use Visa") : "Visa";
+                        break;
+
+                    case Symbols.Stripe:
+                        result = "Stripe";
+                        break;
+
+                    case Symbols.PayPal:
+                    case Symbols.PayPalIcon:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke PayPal", "Click to use PayPal") : "PayPal";
+                        break;
+
+                    case Symbols.Mastercard:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Mastercard", "Click to use Mastercard") : "Mastercard";
+                        break;
+
+                    case Symbols.ApplePay:
+                    case Symbols.ApplePayIcon:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Apple Pay", "Click to use Apple Pay") : "Apple Pay";
+                        break;
+
+                    case Symbols.AmericanExpress:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke American Express", "Click to use American Express") : "American Express";
+                        break;
+
+                    case Symbols.AmazonPay:
+                    case Symbols.AmazonPayIcon:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Amazon Pay", "Click to use Amazon Pay") : "Amazon Pay";
+                        break;
+
+                    case Symbols.GoogleWallet:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Google Wallet", "Click to use Google Wallet") : "Google Wallet";
+                        break;
+
+                    case Symbols.Bullhorn:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å kommentere", "Click to comment") : GetTextByLanguage("kommenter", "Comment");
+                        break;
+
+                    case Symbols.Upload:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp", "Click to upload") : GetTextByLanguage("Last opp", "Upload");
+                        break;
+
+                    case Symbols.Download:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned", "Click to download") : GetTextByLanguage("Last ned", "Download");
+                        break;
+
+                    case Symbols.UploadCloud:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp til skyen", "Click to upload to the cloud") : GetTextByLanguage("Last opp", "Upload");
+                        break;
+
+                    case Symbols.DownloadCloud:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fra skyen", "Click to download from the cloud") : GetTextByLanguage("Last ned", "Download");
+                        break;
+
+                    case Symbols.FileArchive:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se arkiv", "Click to see archive") : GetTextByLanguage("Arkiv", "Archive");
+                        break;
+
+                    case Symbols.FileArchiveFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fra skyen", "Click to download from the cloud") : GetTextByLanguage("Last ned", "Download");
+                        break;
+
+                    case Symbols.Bars:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se meny", "Click to see meny") : GetTextByLanguage("Meny", "Menu");
+                        break;
+
+                    case Symbols.UserPlusFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til ny bruker", "Click to create new user") : GetTextByLanguage("Legg til bruker", "Add user");
+                        break;
+
+                    case Symbols.Search:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å søke", "Click to search") : GetTextByLanguage("Søk", "Search");
                         break;
                 }
             }
-            else
+
+            string GetTextByLanguage(string no, string us)
             {
-                result = this.Text;
+                string rslt = this.Lang.Equals(SymbolLanguages.Norwegian) ? no : us;
+
+                return rslt;
             }
 
             return result;
         }
 
-        private string GetTitle()
-        {
-            string result = default;
-            SymbolLanguages lang = GetLanguage();
-
-            switch (this.Type)
-            {
-                case Symbols.Save:
-                case Symbols.SaveFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Lagre" : "Save";
-                    break;
-
-                case Symbols.Close:
-                case Symbols.CloseFull:
-                case Symbols.CloseCircle:
-                case Symbols.CloseCircleFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Lukk" : "Close";
-                    break;
-
-                case Symbols.SignIn:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Logg inn" : "Sign in";
-                    break;
-
-                case Symbols.SignOut:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Logg ut" : "Sign out";
-                    break;
-
-                case Symbols.FileUpload:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Last opp" : "Upload";
-                    break;
-
-                case Symbols.DocPDF:
-                    result = "PDF";
-                    break;
-
-                case Symbols.DocImage:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Se bilde" : "See image";
-                    break;
-
-                case Symbols.Edit:
-                case Symbols.EditFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Rediger" : "Edit";
-                    break;
-
-                case Symbols.Copy:
-                case Symbols.CopyFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Kopier" : "Copy";
-                    break;
-
-                case Symbols.AddressCard:
-                case Symbols.AddressCardFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Adresse" : "Address";
-                    break;
-
-                case Symbols.Calendar:
-                case Symbols.CalendarFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Kalender" : "Calendar";
-                    break;
-
-                case Symbols.Envelope:
-                case Symbols.EnvelopeFull:
-                    result = "Email";
-                    break;
-
-                case Symbols.ArrowLeft:
-                case Symbols.AngleLeft:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Forrige" : "Previous";
-                    break;
-
-                case Symbols.ArrowRight:
-                case Symbols.AngleRight:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Neste" : "Next";
-                    break;
-
-                case Symbols.ArrowUp:
-                case Symbols.AngleUp:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Opp" : "Up";
-                    break;
-
-                case Symbols.ArrowDown:
-                case Symbols.AngleDown:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Ned" : "Down";
-                    break;
-
-                case Symbols.Phone:
-                case Symbols.PhoneFull:
-                case Symbols.Mobile:
-                case Symbols.MobileFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Ring" : "Call";
-                    break;
-
-                case Symbols.Facebook:
-                    result = "Facebook";
-                    break;
-
-                case Symbols.Messenger:
-                    result = "Messenger";
-                    break;
-
-                case Symbols.DocCode:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Se kode" : "See code";
-                    break;
-
-                case Symbols.Comment:
-                case Symbols.CommentFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Kommenter" : "Comment";
-                    break;
-
-                case Symbols.Comments:
-                case Symbols.CommentsFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Kommentarer" : "Comments";
-                    break;
-
-                case Symbols.Like:
-                case Symbols.LikeFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Lik" : "Like";
-                    break;
-
-                case Symbols.Home:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Hjem" : "Home";
-                    break;
-
-                case Symbols.GitHub:
-                    result = "GitHub";
-                    break;
-
-                case Symbols.Folder:
-                case Symbols.FolderFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Mappe" : "Folder";
-                    break;
-
-                case Symbols.Add:
-                case Symbols.AddFull:
-                    result = lang.Equals(SymbolLanguages.Norwegian) ? "Legg til" : "Add";
-                    break;
-            }
-
-            return result;
-        }
-
-        private SymbolLanguages GetLanguage()
-        {
-            SymbolLanguages result = SymbolLanguages.English;
-
-            if (this.Language.Equals(SymbolLanguages.Auto))
-            {
-                if (this.CurrentCulture.Name.Equals("no-NB", "no-NN"))
-                {
-                    result = SymbolLanguages.Norwegian;
-                }
-            }
-            else
-            {
-                result = this.Language;
-            }
-
-            return result;
-        }
-
+        /// <summary>
+        /// Type of symbol
+        /// </summary>
         [HtmlAttributeName("type")]
         public Symbols Type { get; set; }
 
@@ -790,42 +1020,121 @@ namespace LC.Creator.TagHelpers
         /// Output format. Default is Span
         /// </summary>
         [HtmlAttributeName("out")]
-        public SymbolOutputs Output { get; set; } = SymbolOutputs.Span;
+        public SymbolOutputs Out { get; set; } = SymbolOutputs.Span;
 
+        /// <summary>
+        /// Size of symbol. Default is SM
+        /// </summary>
         [HtmlAttributeName("size")]
         public SymbolSizes Size { get; set; } = SymbolSizes.SM;
 
+        /// <summary>
+        /// The language to use in Content and Title. Default is auto which get's language from Current Culture
+        /// </summary>
         [HtmlAttributeName("language")]
         public SymbolLanguages Language { get; set; } = SymbolLanguages.Auto;
 
+        /// <summary>
+        /// Text that overrides the default value
+        /// </summary>
         [HtmlAttributeName("text")]
         public string Text { get; set; }
 
+        /// <summary>
+        /// Define a custom to title to be used by the icon
+        /// </summary>
+        [HtmlAttributeName("custom-title")]
+        public string Title { get; set; }
+
+        /// <summary>
+        /// URL to use when output is Href. Default is #
+        /// </summary>
         [HtmlAttributeName("href")]
         public string Href { get; set; } = "#";
 
         /// <summary>
-        /// Cursor turns to pointer when mouseover icon
+        /// Indicates if a icon supports clicking. Default is true
         /// </summary>
         [HtmlAttributeName("clickable")]
         public bool Clickable { get; set; } = true;
 
+        /// <summary>
+        /// If true icon renders without text. Default is true
+        /// </summary>
         [HtmlAttributeName("no-text")]
         public bool NoText { get; set; } = true;
 
+        /// <summary>
+        /// If true icon will have no title defined. Default is false
+        /// </summary>
+        [HtmlAttributeName("no-title")]
+        public bool NoTitle { get; set; } = false;
+
+        /// <summary>
+        /// If true icon renders with default color setting. Default is false
+        /// </summary>
         [HtmlAttributeName("no-color")]
         public bool NoColor { get; set; } = false;
 
+        /// <summary>
+        /// The Color Profile to use
+        /// </summary>
         [HtmlAttributeName("color")]
         public ColorProfiles Color { get; set; } = ColorProfiles.Default;
 
+        /// <summary>
+        /// Font Awesome pre tag
+        /// </summary>
         [HtmlAttributeName("pre")]
         public string Pre { get; set; } = default;
 
+        /// <summary>
+        /// Set to true if need for fixed width. Default is false
+        /// </summary>
         [HtmlAttributeName("fixed-width")]
         public bool FixedWidth { get; set; } = false;
+
+        /// <summary>
+        /// Adds extra text to icon text and title. Default is false
+        /// </summary>
+        [HtmlAttributeName("text-deluxe")]
+        public bool TextDeluxe { get; set; } = false;
+
+        /// <summary>
+        /// Processed Language
+        /// </summary>
+        private SymbolLanguages Lang
+        {
+            get
+            {
+                SymbolLanguages result = SymbolLanguages.English;
+
+                if (this.Language.Equals(SymbolLanguages.Auto))
+                {
+                    if (this.CurrentCulture.Name.Equals("no-NB", "no-NN"))
+                    {
+                        result = SymbolLanguages.Norwegian;
+                    }
+                }
+                else
+                {
+                    result = this.Language;
+                }
+
+                return result;
+            }
+        }
+
+        private enum CaptionTypes
+        {
+            Content,
+            Title
+        }
     }
 
+    /// <summary>
+    /// Supported symbols
+    /// </summary>
     public enum Symbols
     {
         Save,
@@ -841,6 +1150,8 @@ namespace LC.Creator.TagHelpers
         DocImage,
         DocCode,
         FileUpload,
+        FileDownload,
+        FileExport,
         Edit,
         EditFull,
         Copy,
@@ -878,6 +1189,7 @@ namespace LC.Creator.TagHelpers
         Like,
         LikeFull,
         Home,
+        HomeDamage,
         Bars,
         GitHub,
         Globe,
@@ -896,11 +1208,64 @@ namespace LC.Creator.TagHelpers
         UserTie,
         User,
         UserFull,
+        UserPlusFull,
         Code,
         CodeLaptop,
         Diagram,
         Add,
-        AddFull
+        AddFull,
+        AddCircle,
+        AddCircleFull,
+        ShoppingBasket,
+        ShoppingCart,
+        ShoppingCartPlus,
+        ShoppingBag,
+        Handshake,
+        HandshakeFull,
+        ThumbsUp,
+        ThumbsUpFull,
+        ThumbsDown,
+        ThumbsDownFull,
+        MoneyCheckout,
+        Truck,
+        Visa,
+        Stripe,
+        PayPal,
+        PayPalIcon,
+        Mastercard,
+        ApplePay,
+        ApplePayIcon,
+        AmericanExpress,
+        AmazonPay,
+        AmazonPayIcon,
+        GoogleWallet,
+        Bullhorn,
+        Upload,
+        Download,
+        UploadCloud,
+        DownloadCloud,
+        FileArchive,
+        FileArchiveFull,
+        Smile,
+        SmileFull,
+        SmileWink,
+        SmileWinkFull,
+        SmileLaugh,
+        SmileLaughFull,
+        Check,
+        CheckSquare,
+        CheckSquareFull,
+        CheckCircle,
+        CheckCircleFull,
+        UserShield,
+        Search,
+        SearchPlus,
+        SearchMinus,
+        SearchDollar,
+        SearchLocation,
+        Shield,
+        UserLock,
+        Thumbstick
     }
 
     public enum SymbolOutputs

@@ -380,6 +380,10 @@
   min-width: 0px;
   max-width: 1366px;
   padding: 16px; }
+  .container-clean {
+    width: 100%;
+    min-width: 0px;
+    max-width: 1366px; }
   .container-auto {
     width: 100%;
     min-width: 0px;
@@ -387,9 +391,21 @@
     margin-left: auto;
     margin-right: auto;
     padding: 16px; }
-  .container.clean {
-    padding: initial !important;
-    margin: initial; }
+    .container-auto-clean {
+      width: 100%;
+      min-width: 0px;
+      max-width: 1366px;
+      margin-left: auto;
+      margin-right: auto; }
+  .container-full {
+    width: 100%;
+    min-width: 0px;
+    max-width: 100%;
+    padding: 16px; }
+    .container-full-clean {
+      width: 100%;
+      min-width: 0px;
+      max-width: 100%; }
 
 .bg-cover {
   background-repeat: no-repeat;
@@ -1504,3 +1520,12 @@
 
 .ws-normal {
   white-space: normal; }
+
+.table-auto {
+  display: table;
+  margin-left: auto;
+  margin-right: auto; }
+
+.fill {
+  min-width: 100%;
+  min-height: 100%; }

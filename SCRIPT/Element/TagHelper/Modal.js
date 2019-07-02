@@ -16,6 +16,10 @@ $(function () {
 
         $("#modalBackground").fadeIn("fast", function () {
             $($modal).fadeIn("fast");
+
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
         });
     });
 

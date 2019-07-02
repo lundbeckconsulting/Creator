@@ -26,7 +26,7 @@ namespace LC.Creator.TagHelpers
             context.Items.Add(typeof(ChapterTagHelper), cntx);
             await output.GetChildContentAsync();
 
-            TagBuilder tag = GetTagBuilder(context, "div");
+            TagBuilder tag = GetTagBuilder("div");
             tag.AddCssClass("chapter");
             tag.AddCssClass("cp-" + this.Color.ToString().ToLower());
 

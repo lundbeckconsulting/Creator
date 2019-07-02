@@ -1,0 +1,19 @@
+﻿.sticky {
+    &-body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    &-nav {
+        flex: 0 0 auto;
+    }
+
+    &-content {
+        flex: 1 0 auto;
+    }
+
+    &-footer {
+        //height: 50px;
+    }
+}

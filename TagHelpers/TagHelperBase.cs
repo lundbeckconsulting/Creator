@@ -20,42 +20,17 @@ namespace LC.Creator.TagHelpers
             this.HtmlHelper = html;
         }
 
-        protected void PreProcess(TagHelperContext context, ref TagHelperOutput output, string clasz = default, string style = default, string title = default)
+        protected void PreProcess(TagHelperContext context, ref TagHelperOutput output, string id = default, string clasz = default, string style = default, string title = default)
         {
+            this.Context = context;
+            this.Output = output;
+
             if (_preProcessed)
             {
                 throw new MethodInvokedException("PreProcess");
             }
 
-            if (context.AllAttributes.ContainsName("class"))
-            {
-                output.Attributes.Add("class", context.AllAttributes["class"]);
-            }
-
-            if (!clasz.IsNull())
-            {
-                output.Attributes.Add("class", clasz);
-            }
-
-            if (context.AllAttributes.ContainsName("style"))
-            {
-                output.Attributes.Add("style", context.AllAttributes["style"]);
-            }
-
-            if (!style.IsNull())
-            {
-                output.Attributes.Add("style", style);
-            }
-
-            if (context.AllAttributes.ContainsName("title"))
-            {
-                output.Attributes.Add("title", context.AllAttributes["title"]);
-            }
-
-            if (!title.IsNull())
-            {
-                output.Attributes.Add("title", title);
-            }
+            ProcessBaseTags(id, clasz, style, title);
 
             (this.HtmlHelper as IViewContextAware).Contextualize(ViewContext);
 
@@ -72,32 +47,72 @@ namespace LC.Creator.TagHelpers
             await base.ProcessAsync(context, output);
         }
 
-        protected TagBuilder GetTagBuilder(TagHelperContext context, string tagName)
+        protected TagBuilder GetTagBuilder(string tagName)
         {
             TagBuilder result = new TagBuilder(tagName);
 
-            if (context.AllAttributes.ContainsName("id"))
+            if (this.Context.AllAttributes.ContainsName("id"))
             {
-                result.Attributes.Add("id", context.AllAttributes["id"].Value.ToString());
+                result.Attributes.Add("id", this.Context.AllAttributes["id"].Value.ToString());
             }
 
-            if (context.AllAttributes.ContainsName("class"))
+            if (this.Context.AllAttributes.ContainsName("class"))
             {
-                result.AddCssClass(context.AllAttributes["class"].Value.ToString());
+                result.AddCssClass(this.Context.AllAttributes["class"].Value.ToString());
             }
 
-            if (context.AllAttributes.ContainsName("style"))
+            if (this.Context.AllAttributes.ContainsName("style"))
             {
-                result.Attributes.Add("style", context.AllAttributes["style"].Value.ToString());
+                result.Attributes.Add("style", this.Context.AllAttributes["style"].Value.ToString());
             }
 
-            if (context.AllAttributes.ContainsName("title"))
+            if (this.Context.AllAttributes.ContainsName("title"))
             {
-                result.Attributes.Add("title", context.AllAttributes["title"].Value.ToString());
+                result.Attributes.Add("title", this.Context.AllAttributes["title"].Value.ToString());
             }
 
             return result;
         }
+
+        private void ProcessBaseTags(string id = default, string clasz = default, string style = default, string title = default)
+        {
+            if (!clasz.IsNull())
+            {
+                this.Output.Attributes.Add("class", clasz);
+            }
+            else if (this.Context.AllAttributes.ContainsName("class"))
+            {
+                this.Output.Attributes.Add("class", this.Context.AllAttributes["class"]);
+            }
+
+            if (!style.IsNull())
+            {
+                this.Output.Attributes.Add("style", style);
+            }
+            else if (this.Context.AllAttributes.ContainsName("style"))
+            {
+                this.Output.Attributes.Add("style", this.Context.AllAttributes["style"]);
+            }
+
+            if (!title.IsNull())
+            {
+                this.Output.Attributes.Add("title", title);
+            }
+            else if (this.Context.AllAttributes.ContainsName("title"))
+            {
+                this.Output.Attributes.Add("title", this.Context.AllAttributes["title"]);
+            }
+
+            if (!id.IsNull())
+            {
+                this.Output.Attributes.Add("id", id);
+            }
+            else if (this.Context.AllAttributes.ContainsName("id"))
+            {
+                this.Output.Attributes.Add("id", this.Context.AllAttributes["id"]);
+            }
+        }
+
 
         [HtmlAttributeNotBound]
         public IHostingEnvironment Environment { get; }
@@ -114,5 +129,11 @@ namespace LC.Creator.TagHelpers
 
         [HtmlAttributeNotBound]
         public CultureInfo CurrentCulture { get { return Thread.CurrentThread.CurrentCulture; } }
+
+        [HtmlAttributeNotBound]
+        public TagHelperContext Context { get; private set; }
+
+        [HtmlAttributeNotBound]
+        public TagHelperOutput Output { get; private set; }
     }
 }
