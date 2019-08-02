@@ -1,51 +1,64 @@
-﻿"use strict";
-
 $(function () {
-    $(".show-modal[data-modal]").click(function (e) {
-        var modalId = $(this).data("modal");
-
-        $("#" + modalId).trigger("modal:show");
+  function CloseModalBackground() {
+    $("#modalBackground").fadeOut("fast", function () {
+      $("#modalBackground").remove();
     });
+  }
 
-    $("[class^='modal']").on("modal:show", function (e) {
-        var $modal = this;
+  function TriggerCloseModal($modal) {
+    $($modal).trigger("modal:hidden");
+  }
 
-        var $bg = "<div id=\"modalBackground\"></div>";
+  function DoCloseModal($modal) {
+    $($modal).removeAttr("open");
+    TriggerCloseModal($modal);
+  }
 
-        $("body").append($bg);
+  function CloseModal(e, hideBG = true) {
+    var $modal = $(e.currentTarget).closest("[class^=\"modal-\"]");
+    DoCloseModal($modal);
 
-        $("#modalBackground").fadeIn("fast", function () {
-            $($modal).fadeIn("fast");
-
-            $("html, body").animate({
-                scrollTop: 0
-            }, 600);
-        });
-    });
-
-    $(".hide-modal").click(function (e) {
-        CloseModal();
-    });
-
-    $("[class^='modal']").on("modal:hide", function (e) {
-        CloseModal();
-    });
-
-    $(document).on("click", "#modalBackground", function () {
-        CloseModal();
-    });
-
-    $(document).on("keydown", function (e) {
-        if (e.keyCode === 27) {
-            CloseModal();
-        }
-    });
-
-    function CloseModal() {
-        $("[class^='modal']").hide();
-        $("#modalBackground").fadeOut("slow", function () {
-            $("#modalBackground").remove();
-        });
+    if (hideBG) {
+      CloseModalBackground();
     }
-});
+  }
 
+  function CloseAllModals() {
+    $("[class^=\"modal-\"][open=\"open\"]").each(function () {
+      DoCloseModal(this);
+    });
+    CloseModalBackground();
+  }
+
+  $(".show-modal[data-modal]").click(function (e) {
+    var modalId = $(this).data("modal");
+    $("#" + modalId).trigger("modal:show");
+  });
+  $("[class^=\"modal-\"]").on("modal:show", function (e) {
+    var $modal = this;
+    var $bg = "<div id=\"modalBackground\"></div>";
+    $("body").append($bg);
+    $("#modalBackground").fadeIn("slow", function () {
+      $($modal).attr("open", "open");
+      $($modal).trigger("modal:visible");
+      $("html, body").animate({
+        scrollTop: 0
+      }, 600);
+    });
+  });
+  $(".hide-modal").click(function (e) {
+    CloseModal(e);
+  });
+  $("[class^=\"modal-\"]").on("modal:hide", function (e) {
+    CloseModal(e);
+  });
+  $(document).on("click", "#modalBackground", function () {
+    CloseAllModals();
+  });
+  $(document).on("keydown", function (e) {
+    if (e.keyCode === 27) {
+      CloseAllModals();
+    }
+  });
+});
+//# sourceMappingURL=TagHelper.Modal.js.map

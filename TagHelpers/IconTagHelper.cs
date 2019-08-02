@@ -1,5 +1,4 @@
 ﻿using LC.Assets.Components.Extensions;
-using LC.Creator.Code;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -112,7 +111,8 @@ namespace LC.Creator.TagHelpers
         {
             TagBuilder result = new TagBuilder("i");
 
-            string pre = this.Pre.IsNull() ? "far" : this.Pre, name = default;
+            string pre = "far";
+            string name = default;
 
             switch (this.Type)
             {
@@ -1081,12 +1081,6 @@ namespace LC.Creator.TagHelpers
         /// </summary>
         [HtmlAttributeName("color")]
         public ColorProfiles Color { get; set; } = ColorProfiles.Default;
-
-        /// <summary>
-        /// Font Awesome pre tag
-        /// </summary>
-        [HtmlAttributeName("pre")]
-        public string Pre { get; set; } = default;
 
         /// <summary>
         /// Set to true if need for fixed width. Default is false

@@ -1,0 +1,390 @@
+﻿@function color($profileName: Default, $color: Primary) {
+    $result: null;
+    $profileName: toCPName($profileName);
+    $color: toCPColorName($color);
+
+    @if (map-has-key($CPs, $profileName)) {
+        $tmp: map-get($CPs, $profileName);
+
+        @if (map-has-key($tmp, $color)) {
+            $result: map-get($tmp, $color);
+        }
+        @else {
+            @error "Can't find color with name \"#{$color}\"";
+        }
+    }
+    @else {
+        @error "Can't find Color Profile with name \"#{$name}\"";
+    }
+
+    @return $result;
+}
+
+@function mapExists($mapName: Modal) {
+    @return map-has-key($mapIndex, toMapName($mapName));
+}
+
+@function GET($mapName: Sys, $key: null) {
+    $result: null;
+    $mapName: toMapName($mapName);
+
+    @if (map-has-key($mapIndex, $mapName)) {
+        $tmp: map-get($mapIndex, $mapName);
+
+        @if ($key) {
+            $result: map-get(map-get($tmp, Data), $key);
+        }
+        @else {
+            $result: $tmp;
+        }
+    }
+    @else {
+        //test ds  
+
+        @error "Map with name \"#{$name}\" doesn't exist";
+    }
+
+    @return $result;
+}
+
+@function upper($str) {
+    @return to-upper-case(toString($str));
+}
+
+@function lower($str) {
+    @return to-lower-case(toString($str));
+}
+
+@function toString($str) {
+    @return inspect($str);
+}
+
+@function toBoolean($value) {
+    @return equalz($value, true, false);
+}
+
+@function equal($base, $val) {
+    @return equalz($base, $val);
+}
+
+@function equalz($base, $vals...) {
+    $result: false;
+
+    @each $v in $vals {
+        @if (upper($base) == upper($v)) {
+            $result: true;
+        }
+    }
+
+    @return $result;
+}
+
+@function isNull($obj) {
+    $result: true;
+    $length: length($obj);
+
+    @if (isMap($obj)) and ($length > 0) {
+        $result: false;
+    }
+    @else if (isList($obj)) and ($length > 0) {
+        $result: false;
+    }
+    @else if (isString($obj)) and (str-length($obj) > 0) {
+        $result: false;
+    }
+
+    @return $result;
+}
+
+@function isMap($map) {
+    @return type-of($map) == 'map';
+}
+
+@function isList($list) {
+    @return type-of($list) == 'list';
+}
+
+@function isString($str) {
+    @return type-of($str) == 'string';
+}
+
+@function isCollection($coll) {
+    $result: false;
+
+    @if (isMap($coll)) or (isList($coll)) {
+        $result: true;
+    }
+
+    @return $result;
+}
+
+@function isNumber($value) {
+    @return type-of($value) == "number";
+}
+
+@function isInt($value) {
+    @return isNumber($value) and round($value) == $value;
+}
+
+@function isBool($value) {
+    $result: type-of($value) == "boolean";
+    
+    @if not ($result) {
+        @if (equalz($value, "true", "false")) {
+            $result: true;
+        }
+    }
+    
+    @return $result;
+}
+
+@function len($obj) {
+    @return length($obj);
+}
+
+@function toCamelCase($str) {
+    $progress: $str;
+    $result: null;
+    $running: true;
+
+    @while $running {
+        $index: str-index($progress, " ");
+
+        @if $index {
+            $result: $result + toCapitalize(str-slice($progress, 1, $index));
+            $progress: str-slice($progress, ($index + 1));
+        }
+        @else {
+            $running: false;
+        }
+    }
+
+    @return $result;
+}
+
+@function toCapitalize($str) {
+    @return upper(str-slice($str, 1, 1)) + str-slice($str, 2);
+}
+
+@function listContains($list, $key) {
+    @return (false == index($list, $key));
+}
+
+@function toMapName($name) {
+    $result: null;
+
+    @each $n, $v in $mapIndex {
+        @if (equal($name, $n)) {
+            $result: $n;
+        }
+    }
+
+    @if not ($result) {
+        @error "Can't find map with name \"#{$name}\"";
+    }
+
+    @return $result;
+}
+
+@function toCPName($name) {
+    $result: null;
+
+    @each $n, $v in $CPs {
+        @if (equal($name, $n)) {
+            $result: $n;
+        }
+    }
+
+    @if not ($result) {
+        @error "Can't find Color Profile with name \"#{$name}\"";
+    }
+
+    @return $result;
+}
+
+@function toCPColorName($name) {
+    $result: null;
+
+    @each $val, $color in $cpDefault {
+        @if (equal($name, $val)) {
+            $result: $val;
+        }
+    }
+
+    @if not ($result) {
+        @error "Can't find Color Profile Color with name \"#{$name}\"";
+    }
+
+    @return $result;
+}
+
+@function upper($str) {
+    @return to-upper-case(toString($str));
+}
+
+@function lower($str) {
+    @return to-lower-case(toString($str));
+}
+
+@function toString($str) {
+    @return inspect($str);
+}
+
+@function toBoolean($value) {
+    @return equalz($value, true, false);
+}
+
+@function equal($base, $val) {
+    @return equalz($base, $val);
+}
+
+@function equalz($base, $vals...) {
+    $result: false;
+
+    @each $v in $vals {
+        @if (upper($base) == upper($v)) {
+            $result: true;
+        }
+    }
+
+    @return $result;
+}
+
+@function isNull($obj) {
+    $result: true;
+    $length: length($obj);
+
+    @if (isMap($obj)) and ($length > 0) {
+        $result: false;
+    }
+    @else if (isList($obj)) and ($length > 0) {
+        $result: false;
+    }
+    @else if (isString($obj)) and (str-length($obj) > 0) {
+        $result: false;
+    }
+
+    @return $result;
+}
+
+@function isMap($map) {
+    @return type-of($map) == 'map';
+}
+
+@function isList($list) {
+    @return type-of($list) == 'list';
+}
+
+@function isString($str) {
+    @return type-of($str) == 'string';
+}
+
+@function isCollection($coll) {
+    $result: false;
+
+    @if (isMap($coll)) or (isList($coll)) {
+        $result: true;
+    }
+
+    @return $result;
+}
+
+@function isNumber($value) {
+    @return type-of($value) == "number";
+}
+
+@function isInt($value) {
+    @return isNumber($value) and round($value) == $value;
+}
+
+@function isBool($value) {
+    $result: type-of($value) == "boolean";
+    
+    @if not ($result) {
+        @if (equalz($value, "true", "false")) {
+            $result: true;
+        }
+    }
+    
+    @return $result;
+}
+
+@function len($obj) {
+    @return length($obj);
+}
+
+@function toCamelCase($str) {
+    $progress: $str;
+    $result: null;
+    $running: true;
+
+    @while $running {
+        $index: str-index($progress, " ");
+
+        @if $index {
+            $result: $result + toCapitalize(str-slice($progress, 1, $index));
+            $progress: str-slice($progress, ($index + 1));
+        }
+        @else {
+            $running: false;
+        }
+    }
+
+    @return $result;
+}
+
+@function toCapitalize($str) {
+    @return upper(str-slice($str, 1, 1)) + str-slice($str, 2);
+}
+
+@function listContains($list, $key) {
+    @return (false == index($list, $key));
+}
+
+@function toMapName($name) {
+    $result: null;
+
+    @each $n, $v in $mapIndex {
+        @if (equal($name, $n)) {
+            $result: $n;
+        }
+    }
+
+    @if not ($result) {
+        @error "Can't find map with name \"#{$name}\"";
+    }
+
+    @return $result;
+}
+
+@function toCPName($name) {
+    $result: null;
+
+    @each $n, $v in $CPs {
+        @if (equal($name, $n)) {
+            $result: $n;
+        }
+    }
+
+    @if not ($result) {
+        @error "Can't find Color Profile with name \"#{$name}\"";
+    }
+
+    @return $result;
+}
+
+@function toCPColorName($name) {
+    $result: null;
+
+    @each $val, $color in $cpDefault {
+        @if (equal($name, $val)) {
+            $result: $val;
+        }
+    }
+
+    @if not ($result) {
+        @error "Can't find Color Profile Color with name \"#{$name}\"";
+    }
+
+    @return $result;
+}

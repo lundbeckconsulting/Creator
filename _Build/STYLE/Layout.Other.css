@@ -1,0 +1,1540 @@
+.airy {
+  margin: getAiry(); }
+
+.airy-xs {
+  margin: 4px; }
+
+.airy-sm {
+  margin: 8px; }
+
+.airy-md {
+  margin: 16px; }
+
+.airy-lg {
+  margin: 28px; }
+
+.airy-xl {
+  margin: 44px; }
+
+.airy-xxl {
+  margin: 62px; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-vertical-top {
+  position: absolute;
+  top: 0; }
+
+.align-vertical-center, .align-vertical-center-50 {
+  position: absolute;
+  top: 50%; }
+
+.align-vertical-center-25 {
+  position: absolute;
+  top: 25%; }
+
+.align-vertical-center-75 {
+  position: absolute;
+  top: 75%; }
+
+.align-vertical-bottom {
+  position: absolute;
+  bottom: 0; }
+
+.width-xxs {
+  width: 26px; }
+  .width-xxs.airy-xs {
+    margin: 4px; }
+  .width-xxs-airy-xs {
+    width: 26px;
+    margin: 4px; }
+  .width-xxs.airy-sm {
+    margin: 8px; }
+  .width-xxs-airy-sm {
+    width: 26px;
+    margin: 8px; }
+  .width-xxs.airy-md {
+    margin: 16px; }
+  .width-xxs-airy-md {
+    width: 26px;
+    margin: 16px; }
+  .width-xxs.airy {
+    margin: 16px; }
+  .width-xxs-airy {
+    width: 26px;
+    margin: 16px; }
+  .width-xxs.airy-lg {
+    margin: 28px; }
+  .width-xxs-airy-lg {
+    width: 26px;
+    margin: 28px; }
+  .width-xxs.airy-xl {
+    margin: 44px; }
+  .width-xxs-airy-xl {
+    width: 26px;
+    margin: 44px; }
+  .width-xxs.airy-xxl {
+    margin: 62px; }
+  .width-xxs-airy-xxl {
+    width: 26px;
+    margin: 62px; }
+
+.width-xs {
+  width: 64px; }
+  .width-xs.airy-xs {
+    margin: 4px; }
+  .width-xs-airy-xs {
+    width: 64px;
+    margin: 4px; }
+  .width-xs.airy-sm {
+    margin: 8px; }
+  .width-xs-airy-sm {
+    width: 64px;
+    margin: 8px; }
+  .width-xs.airy-md {
+    margin: 16px; }
+  .width-xs-airy-md {
+    width: 64px;
+    margin: 16px; }
+  .width-xs.airy {
+    margin: 16px; }
+  .width-xs-airy {
+    width: 64px;
+    margin: 16px; }
+  .width-xs.airy-lg {
+    margin: 28px; }
+  .width-xs-airy-lg {
+    width: 64px;
+    margin: 28px; }
+  .width-xs.airy-xl {
+    margin: 44px; }
+  .width-xs-airy-xl {
+    width: 64px;
+    margin: 44px; }
+  .width-xs.airy-xxl {
+    margin: 62px; }
+  .width-xs-airy-xxl {
+    width: 64px;
+    margin: 62px; }
+
+.width-sm {
+  width: 104px; }
+  .width-sm.airy-xs {
+    margin: 4px; }
+  .width-sm-airy-xs {
+    width: 104px;
+    margin: 4px; }
+  .width-sm.airy-sm {
+    margin: 8px; }
+  .width-sm-airy-sm {
+    width: 104px;
+    margin: 8px; }
+  .width-sm.airy-md {
+    margin: 16px; }
+  .width-sm-airy-md {
+    width: 104px;
+    margin: 16px; }
+  .width-sm.airy {
+    margin: 16px; }
+  .width-sm-airy {
+    width: 104px;
+    margin: 16px; }
+  .width-sm.airy-lg {
+    margin: 28px; }
+  .width-sm-airy-lg {
+    width: 104px;
+    margin: 28px; }
+  .width-sm.airy-xl {
+    margin: 44px; }
+  .width-sm-airy-xl {
+    width: 104px;
+    margin: 44px; }
+  .width-sm.airy-xxl {
+    margin: 62px; }
+  .width-sm-airy-xxl {
+    width: 104px;
+    margin: 62px; }
+
+.width-md {
+  width: 232px; }
+  .width-md.airy-xs {
+    margin: 4px; }
+  .width-md-airy-xs {
+    width: 232px;
+    margin: 4px; }
+  .width-md.airy-sm {
+    margin: 8px; }
+  .width-md-airy-sm {
+    width: 232px;
+    margin: 8px; }
+  .width-md.airy-md {
+    margin: 16px; }
+  .width-md-airy-md {
+    width: 232px;
+    margin: 16px; }
+  .width-md.airy {
+    margin: 16px; }
+  .width-md-airy {
+    width: 232px;
+    margin: 16px; }
+  .width-md.airy-lg {
+    margin: 28px; }
+  .width-md-airy-lg {
+    width: 232px;
+    margin: 28px; }
+  .width-md.airy-xl {
+    margin: 44px; }
+  .width-md-airy-xl {
+    width: 232px;
+    margin: 44px; }
+  .width-md.airy-xxl {
+    margin: 62px; }
+  .width-md-airy-xxl {
+    width: 232px;
+    margin: 62px; }
+
+.width-lg {
+  width: 514px; }
+  .width-lg.airy-xs {
+    margin: 4px; }
+  .width-lg-airy-xs {
+    width: 514px;
+    margin: 4px; }
+  .width-lg.airy-sm {
+    margin: 8px; }
+  .width-lg-airy-sm {
+    width: 514px;
+    margin: 8px; }
+  .width-lg.airy-md {
+    margin: 16px; }
+  .width-lg-airy-md {
+    width: 514px;
+    margin: 16px; }
+  .width-lg.airy {
+    margin: 16px; }
+  .width-lg-airy {
+    width: 514px;
+    margin: 16px; }
+  .width-lg.airy-lg {
+    margin: 28px; }
+  .width-lg-airy-lg {
+    width: 514px;
+    margin: 28px; }
+  .width-lg.airy-xl {
+    margin: 44px; }
+  .width-lg-airy-xl {
+    width: 514px;
+    margin: 44px; }
+  .width-lg.airy-xxl {
+    margin: 62px; }
+  .width-lg-airy-xxl {
+    width: 514px;
+    margin: 62px; }
+
+.width-xl {
+  width: 788px; }
+  .width-xl.airy-xs {
+    margin: 4px; }
+  .width-xl-airy-xs {
+    width: 788px;
+    margin: 4px; }
+  .width-xl.airy-sm {
+    margin: 8px; }
+  .width-xl-airy-sm {
+    width: 788px;
+    margin: 8px; }
+  .width-xl.airy-md {
+    margin: 16px; }
+  .width-xl-airy-md {
+    width: 788px;
+    margin: 16px; }
+  .width-xl.airy {
+    margin: 16px; }
+  .width-xl-airy {
+    width: 788px;
+    margin: 16px; }
+  .width-xl.airy-lg {
+    margin: 28px; }
+  .width-xl-airy-lg {
+    width: 788px;
+    margin: 28px; }
+  .width-xl.airy-xl {
+    margin: 44px; }
+  .width-xl-airy-xl {
+    width: 788px;
+    margin: 44px; }
+  .width-xl.airy-xxl {
+    margin: 62px; }
+  .width-xl-airy-xxl {
+    width: 788px;
+    margin: 62px; }
+
+.width-xxl {
+  width: 974px; }
+  .width-xxl.airy-xs {
+    margin: 4px; }
+  .width-xxl-airy-xs {
+    width: 974px;
+    margin: 4px; }
+  .width-xxl.airy-sm {
+    margin: 8px; }
+  .width-xxl-airy-sm {
+    width: 974px;
+    margin: 8px; }
+  .width-xxl.airy-md {
+    margin: 16px; }
+  .width-xxl-airy-md {
+    width: 974px;
+    margin: 16px; }
+  .width-xxl.airy {
+    margin: 16px; }
+  .width-xxl-airy {
+    width: 974px;
+    margin: 16px; }
+  .width-xxl.airy-lg {
+    margin: 28px; }
+  .width-xxl-airy-lg {
+    width: 974px;
+    margin: 28px; }
+  .width-xxl.airy-xl {
+    margin: 44px; }
+  .width-xxl-airy-xl {
+    width: 974px;
+    margin: 44px; }
+  .width-xxl.airy-xxl {
+    margin: 62px; }
+  .width-xxl-airy-xxl {
+    width: 974px;
+    margin: 62px; }
+
+.width-doc {
+  width: 1366px; }
+  .width-doc.airy-xs {
+    margin: 4px; }
+  .width-doc-airy-xs {
+    width: 1366px;
+    margin: 4px; }
+  .width-doc.airy-sm {
+    margin: 8px; }
+  .width-doc-airy-sm {
+    width: 1366px;
+    margin: 8px; }
+  .width-doc.airy-md {
+    margin: 16px; }
+  .width-doc-airy-md {
+    width: 1366px;
+    margin: 16px; }
+  .width-doc.airy {
+    margin: 16px; }
+  .width-doc-airy {
+    width: 1366px;
+    margin: 16px; }
+  .width-doc.airy-lg {
+    margin: 28px; }
+  .width-doc-airy-lg {
+    width: 1366px;
+    margin: 28px; }
+  .width-doc.airy-xl {
+    margin: 44px; }
+  .width-doc-airy-xl {
+    width: 1366px;
+    margin: 44px; }
+  .width-doc.airy-xxl {
+    margin: 62px; }
+  .width-doc-airy-xxl {
+    width: 1366px;
+    margin: 62px; }
+
+.r {
+  width: 100%;
+  min-width: 0px;
+  max-width: 1366px; }
+  .r-full-height {
+    width: 100%;
+    min-width: 0px;
+    max-width: 1366px;
+    height: 100%; }
+    .r-full-height-center {
+      width: 100%;
+      min-width: 0px;
+      max-width: 1366px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 100%; }
+  .r-center {
+    width: 100%;
+    min-width: 0px;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto; }
+
+.container {
+  width: 100%;
+  min-width: 0px;
+  max-width: 1366px;
+  padding: 16px; }
+  .container-clean {
+    width: 100%;
+    min-width: 0px;
+    max-width: 1366px; }
+  .container-auto {
+    width: 100%;
+    min-width: 0px;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px; }
+    .container-auto-clean {
+      width: 100%;
+      min-width: 0px;
+      max-width: 1366px;
+      margin-left: auto;
+      margin-right: auto; }
+  .container-full {
+    width: 100%;
+    min-width: 0px;
+    max-width: 100%;
+    padding: 16px; }
+    .container-full-clean {
+      width: 100%;
+      min-width: 0px;
+      max-width: 100%; }
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+  .bg-cover.fixed, .bg-cover-fixed {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; }
+
+.fixed.top, .fixed-top {
+  position: fixed;
+  top: 0;
+  bottom: unset;
+  left: 0;
+  right: 0; }
+
+.fixed.bottom, .fixed-bottom {
+  position: fixed;
+  top: unset;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.fixed.left, .fixed-left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: unset; }
+
+.fixed.right, .fixed-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: unset;
+  right: 0; }
+
+.float.left, .float-left {
+  float: left; }
+
+.float.right, .float-right {
+  float: right; }
+
+.hide, .close, .invisible {
+  display: none; }
+
+.show, .block, .visible {
+  display: block; }
+
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
+
+.position-fixed {
+  position: fixed; }
+
+.position-static {
+  position: static; }
+
+.position-sticky {
+  position: sticky; }
+
+.position-center {
+  position: center; }
+
+.position-page {
+  position: page; }
+
+.o-1 {
+  opacity: 1; }
+
+.o-2 {
+  opacity: 0.2; }
+
+.o-3 {
+  opacity: 0.3; }
+
+.o-4 {
+  opacity: 0.4; }
+
+.o-5 {
+  opacity: 0.5; }
+
+.o-6 {
+  opacity: 0.6; }
+
+.o-7 {
+  opacity: 0.7; }
+
+.o-8 {
+  opacity: 0.8; }
+
+.o-9 {
+  opacity: 0.9; }
+
+.h1 {
+  font-size: 1.8rem;
+  font-weight: normal; }
+  .h1-bold {
+    font-size: 1.8rem;
+    font-weight: bold; }
+  .h1-airy-xs {
+    font-size: 1.8rem;
+    margin: 4px;
+    font-weight: normal; }
+  .h1-airy-xs-bold {
+    font-size: 1.8rem;
+    margin: 4px;
+    font-weight: bold; }
+  .h1-airy-sm {
+    font-size: 1.8rem;
+    margin: 8px;
+    font-weight: normal; }
+  .h1-airy-sm-bold {
+    font-size: 1.8rem;
+    margin: 8px;
+    font-weight: bold; }
+  .h1-airy-md {
+    font-size: 1.8rem;
+    margin: 16px;
+    font-weight: normal; }
+  .h1-airy-md-bold {
+    font-size: 1.8rem;
+    margin: 16px;
+    font-weight: bold; }
+  .h1-airy {
+    font-size: 1.8rem;
+    margin: getAiry();
+    font-weight: normal; }
+    .h1-airy-bold {
+      font-size: 1.8rem;
+      margin: getAiry();
+      font-weight: bold; }
+  .h1-airy-lg {
+    font-size: 1.8rem;
+    margin: 28px;
+    font-weight: normal; }
+  .h1-airy-lg-bold {
+    font-size: 1.8rem;
+    margin: 28px;
+    font-weight: bold; }
+  .h1-airy-xl {
+    font-size: 1.8rem;
+    margin: 44px;
+    font-weight: normal; }
+  .h1-airy-xl-bold {
+    font-size: 1.8rem;
+    margin: 44px;
+    font-weight: bold; }
+  .h1-airy-xxl {
+    font-size: 1.8rem;
+    margin: 62px;
+    font-weight: normal; }
+  .h1-airy-xxl-bold {
+    font-size: 1.8rem;
+    margin: 62px;
+    font-weight: bold; }
+
+.h2 {
+  font-size: 3.1rem;
+  font-weight: normal; }
+  .h2-bold {
+    font-size: 3.1rem;
+    font-weight: bold; }
+  .h2-airy-xs {
+    font-size: 3.1rem;
+    margin: 4px;
+    font-weight: normal; }
+  .h2-airy-xs-bold {
+    font-size: 3.1rem;
+    margin: 4px;
+    font-weight: bold; }
+  .h2-airy-sm {
+    font-size: 3.1rem;
+    margin: 8px;
+    font-weight: normal; }
+  .h2-airy-sm-bold {
+    font-size: 3.1rem;
+    margin: 8px;
+    font-weight: bold; }
+  .h2-airy-md {
+    font-size: 3.1rem;
+    margin: 16px;
+    font-weight: normal; }
+  .h2-airy-md-bold {
+    font-size: 3.1rem;
+    margin: 16px;
+    font-weight: bold; }
+  .h2-airy {
+    font-size: 3.1rem;
+    margin: getAiry();
+    font-weight: normal; }
+    .h2-airy-bold {
+      font-size: 3.1rem;
+      margin: getAiry();
+      font-weight: bold; }
+  .h2-airy-lg {
+    font-size: 3.1rem;
+    margin: 28px;
+    font-weight: normal; }
+  .h2-airy-lg-bold {
+    font-size: 3.1rem;
+    margin: 28px;
+    font-weight: bold; }
+  .h2-airy-xl {
+    font-size: 3.1rem;
+    margin: 44px;
+    font-weight: normal; }
+  .h2-airy-xl-bold {
+    font-size: 3.1rem;
+    margin: 44px;
+    font-weight: bold; }
+  .h2-airy-xxl {
+    font-size: 3.1rem;
+    margin: 62px;
+    font-weight: normal; }
+  .h2-airy-xxl-bold {
+    font-size: 3.1rem;
+    margin: 62px;
+    font-weight: bold; }
+
+.h3 {
+  font-size: 1.8rem;
+  font-weight: normal; }
+  .h3-bold {
+    font-size: 1.8rem;
+    font-weight: bold; }
+  .h3-airy-xs {
+    font-size: 1.8rem;
+    margin: 4px;
+    font-weight: normal; }
+  .h3-airy-xs-bold {
+    font-size: 1.8rem;
+    margin: 4px;
+    font-weight: bold; }
+  .h3-airy-sm {
+    font-size: 1.8rem;
+    margin: 8px;
+    font-weight: normal; }
+  .h3-airy-sm-bold {
+    font-size: 1.8rem;
+    margin: 8px;
+    font-weight: bold; }
+  .h3-airy-md {
+    font-size: 1.8rem;
+    margin: 16px;
+    font-weight: normal; }
+  .h3-airy-md-bold {
+    font-size: 1.8rem;
+    margin: 16px;
+    font-weight: bold; }
+  .h3-airy {
+    font-size: 1.8rem;
+    margin: getAiry();
+    font-weight: normal; }
+    .h3-airy-bold {
+      font-size: 1.8rem;
+      margin: getAiry();
+      font-weight: bold; }
+  .h3-airy-lg {
+    font-size: 1.8rem;
+    margin: 28px;
+    font-weight: normal; }
+  .h3-airy-lg-bold {
+    font-size: 1.8rem;
+    margin: 28px;
+    font-weight: bold; }
+  .h3-airy-xl {
+    font-size: 1.8rem;
+    margin: 44px;
+    font-weight: normal; }
+  .h3-airy-xl-bold {
+    font-size: 1.8rem;
+    margin: 44px;
+    font-weight: bold; }
+  .h3-airy-xxl {
+    font-size: 1.8rem;
+    margin: 62px;
+    font-weight: normal; }
+  .h3-airy-xxl-bold {
+    font-size: 1.8rem;
+    margin: 62px;
+    font-weight: bold; }
+
+.h4 {
+  font-size: 1.8rem;
+  font-weight: normal; }
+  .h4-bold {
+    font-size: 1.8rem;
+    font-weight: bold; }
+  .h4-airy-xs {
+    font-size: 1.8rem;
+    margin: 4px;
+    font-weight: normal; }
+  .h4-airy-xs-bold {
+    font-size: 1.8rem;
+    margin: 4px;
+    font-weight: bold; }
+  .h4-airy-sm {
+    font-size: 1.8rem;
+    margin: 8px;
+    font-weight: normal; }
+  .h4-airy-sm-bold {
+    font-size: 1.8rem;
+    margin: 8px;
+    font-weight: bold; }
+  .h4-airy-md {
+    font-size: 1.8rem;
+    margin: 16px;
+    font-weight: normal; }
+  .h4-airy-md-bold {
+    font-size: 1.8rem;
+    margin: 16px;
+    font-weight: bold; }
+  .h4-airy {
+    font-size: 1.8rem;
+    margin: getAiry();
+    font-weight: normal; }
+    .h4-airy-bold {
+      font-size: 1.8rem;
+      margin: getAiry();
+      font-weight: bold; }
+  .h4-airy-lg {
+    font-size: 1.8rem;
+    margin: 28px;
+    font-weight: normal; }
+  .h4-airy-lg-bold {
+    font-size: 1.8rem;
+    margin: 28px;
+    font-weight: bold; }
+  .h4-airy-xl {
+    font-size: 1.8rem;
+    margin: 44px;
+    font-weight: normal; }
+  .h4-airy-xl-bold {
+    font-size: 1.8rem;
+    margin: 44px;
+    font-weight: bold; }
+  .h4-airy-xxl {
+    font-size: 1.8rem;
+    margin: 62px;
+    font-weight: normal; }
+  .h4-airy-xxl-bold {
+    font-size: 1.8rem;
+    margin: 62px;
+    font-weight: bold; }
+
+.h5 {
+  font-size: 1.6rem;
+  font-weight: normal; }
+  .h5-bold {
+    font-size: 1.6rem;
+    font-weight: bold; }
+  .h5-airy-xs {
+    font-size: 1.6rem;
+    margin: 4px;
+    font-weight: normal; }
+  .h5-airy-xs-bold {
+    font-size: 1.6rem;
+    margin: 4px;
+    font-weight: bold; }
+  .h5-airy-sm {
+    font-size: 1.6rem;
+    margin: 8px;
+    font-weight: normal; }
+  .h5-airy-sm-bold {
+    font-size: 1.6rem;
+    margin: 8px;
+    font-weight: bold; }
+  .h5-airy-md {
+    font-size: 1.6rem;
+    margin: 16px;
+    font-weight: normal; }
+  .h5-airy-md-bold {
+    font-size: 1.6rem;
+    margin: 16px;
+    font-weight: bold; }
+  .h5-airy {
+    font-size: 1.6rem;
+    margin: getAiry();
+    font-weight: normal; }
+    .h5-airy-bold {
+      font-size: 1.6rem;
+      margin: getAiry();
+      font-weight: bold; }
+  .h5-airy-lg {
+    font-size: 1.6rem;
+    margin: 28px;
+    font-weight: normal; }
+  .h5-airy-lg-bold {
+    font-size: 1.6rem;
+    margin: 28px;
+    font-weight: bold; }
+  .h5-airy-xl {
+    font-size: 1.6rem;
+    margin: 44px;
+    font-weight: normal; }
+  .h5-airy-xl-bold {
+    font-size: 1.6rem;
+    margin: 44px;
+    font-weight: bold; }
+  .h5-airy-xxl {
+    font-size: 1.6rem;
+    margin: 62px;
+    font-weight: normal; }
+  .h5-airy-xxl-bold {
+    font-size: 1.6rem;
+    margin: 62px;
+    font-weight: bold; }
+
+.h6 {
+  font-size: 1.4rem;
+  font-weight: normal; }
+  .h6-bold {
+    font-size: 1.4rem;
+    font-weight: bold; }
+  .h6-airy-xs {
+    font-size: 1.4rem;
+    margin: 4px;
+    font-weight: normal; }
+  .h6-airy-xs-bold {
+    font-size: 1.4rem;
+    margin: 4px;
+    font-weight: bold; }
+  .h6-airy-sm {
+    font-size: 1.4rem;
+    margin: 8px;
+    font-weight: normal; }
+  .h6-airy-sm-bold {
+    font-size: 1.4rem;
+    margin: 8px;
+    font-weight: bold; }
+  .h6-airy-md {
+    font-size: 1.4rem;
+    margin: 16px;
+    font-weight: normal; }
+  .h6-airy-md-bold {
+    font-size: 1.4rem;
+    margin: 16px;
+    font-weight: bold; }
+  .h6-airy {
+    font-size: 1.4rem;
+    margin: getAiry();
+    font-weight: normal; }
+    .h6-airy-bold {
+      font-size: 1.4rem;
+      margin: getAiry();
+      font-weight: bold; }
+  .h6-airy-lg {
+    font-size: 1.4rem;
+    margin: 28px;
+    font-weight: normal; }
+  .h6-airy-lg-bold {
+    font-size: 1.4rem;
+    margin: 28px;
+    font-weight: bold; }
+  .h6-airy-xl {
+    font-size: 1.4rem;
+    margin: 44px;
+    font-weight: normal; }
+  .h6-airy-xl-bold {
+    font-size: 1.4rem;
+    margin: 44px;
+    font-weight: bold; }
+  .h6-airy-xxl {
+    font-size: 1.4rem;
+    margin: 62px;
+    font-weight: normal; }
+  .h6-airy-xxl-bold {
+    font-size: 1.4rem;
+    margin: 62px;
+    font-weight: bold; }
+
+.h7 {
+  font-size: 1.1rem;
+  font-weight: normal; }
+  .h7-bold {
+    font-size: 1.1rem;
+    font-weight: bold; }
+  .h7-airy-xs {
+    font-size: 1.1rem;
+    margin: 4px;
+    font-weight: normal; }
+  .h7-airy-xs-bold {
+    font-size: 1.1rem;
+    margin: 4px;
+    font-weight: bold; }
+  .h7-airy-sm {
+    font-size: 1.1rem;
+    margin: 8px;
+    font-weight: normal; }
+  .h7-airy-sm-bold {
+    font-size: 1.1rem;
+    margin: 8px;
+    font-weight: bold; }
+  .h7-airy-md {
+    font-size: 1.1rem;
+    margin: 16px;
+    font-weight: normal; }
+  .h7-airy-md-bold {
+    font-size: 1.1rem;
+    margin: 16px;
+    font-weight: bold; }
+  .h7-airy {
+    font-size: 1.1rem;
+    margin: getAiry();
+    font-weight: normal; }
+    .h7-airy-bold {
+      font-size: 1.1rem;
+      margin: getAiry();
+      font-weight: bold; }
+  .h7-airy-lg {
+    font-size: 1.1rem;
+    margin: 28px;
+    font-weight: normal; }
+  .h7-airy-lg-bold {
+    font-size: 1.1rem;
+    margin: 28px;
+    font-weight: bold; }
+  .h7-airy-xl {
+    font-size: 1.1rem;
+    margin: 44px;
+    font-weight: normal; }
+  .h7-airy-xl-bold {
+    font-size: 1.1rem;
+    margin: 44px;
+    font-weight: bold; }
+  .h7-airy-xxl {
+    font-size: 1.1rem;
+    margin: 62px;
+    font-weight: normal; }
+  .h7-airy-xxl-bold {
+    font-size: 1.1rem;
+    margin: 62px;
+    font-weight: bold; }
+
+@media (min-width: 768px) {
+  .h1 {
+    font-size: 5.2rem;
+    font-weight: normal; }
+    .h1-bold {
+      font-size: 5.2rem;
+      font-weight: bold; }
+    .h1-airy-xs {
+      font-size: 5.2rem;
+      margin: 4px;
+      font-weight: normal; }
+    .h1-airy-xs-bold {
+      font-size: 5.2rem;
+      margin: 4px;
+      font-weight: bold; }
+    .h1-airy-sm {
+      font-size: 5.2rem;
+      margin: 8px;
+      font-weight: normal; }
+    .h1-airy-sm-bold {
+      font-size: 5.2rem;
+      margin: 8px;
+      font-weight: bold; }
+    .h1-airy-md {
+      font-size: 5.2rem;
+      margin: 16px;
+      font-weight: normal; }
+    .h1-airy-md-bold {
+      font-size: 5.2rem;
+      margin: 16px;
+      font-weight: bold; }
+    .h1-airy {
+      font-size: 5.2rem;
+      margin: getAiry();
+      font-weight: normal; }
+      .h1-airy-bold {
+        font-size: 5.2rem;
+        margin: getAiry();
+        font-weight: bold; }
+    .h1-airy-lg {
+      font-size: 5.2rem;
+      margin: 28px;
+      font-weight: normal; }
+    .h1-airy-lg-bold {
+      font-size: 5.2rem;
+      margin: 28px;
+      font-weight: bold; }
+    .h1-airy-xl {
+      font-size: 5.2rem;
+      margin: 44px;
+      font-weight: normal; }
+    .h1-airy-xl-bold {
+      font-size: 5.2rem;
+      margin: 44px;
+      font-weight: bold; }
+    .h1-airy-xxl {
+      font-size: 5.2rem;
+      margin: 62px;
+      font-weight: normal; }
+    .h1-airy-xxl-bold {
+      font-size: 5.2rem;
+      margin: 62px;
+      font-weight: bold; }
+  .h2 {
+    font-size: 4.3rem;
+    font-weight: normal; }
+    .h2-bold {
+      font-size: 4.3rem;
+      font-weight: bold; }
+    .h2-airy-xs {
+      font-size: 4.3rem;
+      margin: 4px;
+      font-weight: normal; }
+    .h2-airy-xs-bold {
+      font-size: 4.3rem;
+      margin: 4px;
+      font-weight: bold; }
+    .h2-airy-sm {
+      font-size: 4.3rem;
+      margin: 8px;
+      font-weight: normal; }
+    .h2-airy-sm-bold {
+      font-size: 4.3rem;
+      margin: 8px;
+      font-weight: bold; }
+    .h2-airy-md {
+      font-size: 4.3rem;
+      margin: 16px;
+      font-weight: normal; }
+    .h2-airy-md-bold {
+      font-size: 4.3rem;
+      margin: 16px;
+      font-weight: bold; }
+    .h2-airy {
+      font-size: 4.3rem;
+      margin: getAiry();
+      font-weight: normal; }
+      .h2-airy-bold {
+        font-size: 4.3rem;
+        margin: getAiry();
+        font-weight: bold; }
+    .h2-airy-lg {
+      font-size: 4.3rem;
+      margin: 28px;
+      font-weight: normal; }
+    .h2-airy-lg-bold {
+      font-size: 4.3rem;
+      margin: 28px;
+      font-weight: bold; }
+    .h2-airy-xl {
+      font-size: 4.3rem;
+      margin: 44px;
+      font-weight: normal; }
+    .h2-airy-xl-bold {
+      font-size: 4.3rem;
+      margin: 44px;
+      font-weight: bold; }
+    .h2-airy-xxl {
+      font-size: 4.3rem;
+      margin: 62px;
+      font-weight: normal; }
+    .h2-airy-xxl-bold {
+      font-size: 4.3rem;
+      margin: 62px;
+      font-weight: bold; }
+  .h3 {
+    font-size: 3rem;
+    font-weight: normal; }
+    .h3-bold {
+      font-size: 3rem;
+      font-weight: bold; }
+    .h3-airy-xs {
+      font-size: 3rem;
+      margin: 4px;
+      font-weight: normal; }
+    .h3-airy-xs-bold {
+      font-size: 3rem;
+      margin: 4px;
+      font-weight: bold; }
+    .h3-airy-sm {
+      font-size: 3rem;
+      margin: 8px;
+      font-weight: normal; }
+    .h3-airy-sm-bold {
+      font-size: 3rem;
+      margin: 8px;
+      font-weight: bold; }
+    .h3-airy-md {
+      font-size: 3rem;
+      margin: 16px;
+      font-weight: normal; }
+    .h3-airy-md-bold {
+      font-size: 3rem;
+      margin: 16px;
+      font-weight: bold; }
+    .h3-airy {
+      font-size: 3rem;
+      margin: getAiry();
+      font-weight: normal; }
+      .h3-airy-bold {
+        font-size: 3rem;
+        margin: getAiry();
+        font-weight: bold; }
+    .h3-airy-lg {
+      font-size: 3rem;
+      margin: 28px;
+      font-weight: normal; }
+    .h3-airy-lg-bold {
+      font-size: 3rem;
+      margin: 28px;
+      font-weight: bold; }
+    .h3-airy-xl {
+      font-size: 3rem;
+      margin: 44px;
+      font-weight: normal; }
+    .h3-airy-xl-bold {
+      font-size: 3rem;
+      margin: 44px;
+      font-weight: bold; }
+    .h3-airy-xxl {
+      font-size: 3rem;
+      margin: 62px;
+      font-weight: normal; }
+    .h3-airy-xxl-bold {
+      font-size: 3rem;
+      margin: 62px;
+      font-weight: bold; }
+  .h4 {
+    font-size: 2.2rem;
+    font-weight: normal; }
+    .h4-bold {
+      font-size: 2.2rem;
+      font-weight: bold; }
+    .h4-airy-xs {
+      font-size: 2.2rem;
+      margin: 4px;
+      font-weight: normal; }
+    .h4-airy-xs-bold {
+      font-size: 2.2rem;
+      margin: 4px;
+      font-weight: bold; }
+    .h4-airy-sm {
+      font-size: 2.2rem;
+      margin: 8px;
+      font-weight: normal; }
+    .h4-airy-sm-bold {
+      font-size: 2.2rem;
+      margin: 8px;
+      font-weight: bold; }
+    .h4-airy-md {
+      font-size: 2.2rem;
+      margin: 16px;
+      font-weight: normal; }
+    .h4-airy-md-bold {
+      font-size: 2.2rem;
+      margin: 16px;
+      font-weight: bold; }
+    .h4-airy {
+      font-size: 2.2rem;
+      margin: getAiry();
+      font-weight: normal; }
+      .h4-airy-bold {
+        font-size: 2.2rem;
+        margin: getAiry();
+        font-weight: bold; }
+    .h4-airy-lg {
+      font-size: 2.2rem;
+      margin: 28px;
+      font-weight: normal; }
+    .h4-airy-lg-bold {
+      font-size: 2.2rem;
+      margin: 28px;
+      font-weight: bold; }
+    .h4-airy-xl {
+      font-size: 2.2rem;
+      margin: 44px;
+      font-weight: normal; }
+    .h4-airy-xl-bold {
+      font-size: 2.2rem;
+      margin: 44px;
+      font-weight: bold; }
+    .h4-airy-xxl {
+      font-size: 2.2rem;
+      margin: 62px;
+      font-weight: normal; }
+    .h4-airy-xxl-bold {
+      font-size: 2.2rem;
+      margin: 62px;
+      font-weight: bold; }
+  .h5 {
+    font-size: 1.8rem;
+    font-weight: normal; }
+    .h5-bold {
+      font-size: 1.8rem;
+      font-weight: bold; }
+    .h5-airy-xs {
+      font-size: 1.8rem;
+      margin: 4px;
+      font-weight: normal; }
+    .h5-airy-xs-bold {
+      font-size: 1.8rem;
+      margin: 4px;
+      font-weight: bold; }
+    .h5-airy-sm {
+      font-size: 1.8rem;
+      margin: 8px;
+      font-weight: normal; }
+    .h5-airy-sm-bold {
+      font-size: 1.8rem;
+      margin: 8px;
+      font-weight: bold; }
+    .h5-airy-md {
+      font-size: 1.8rem;
+      margin: 16px;
+      font-weight: normal; }
+    .h5-airy-md-bold {
+      font-size: 1.8rem;
+      margin: 16px;
+      font-weight: bold; }
+    .h5-airy {
+      font-size: 1.8rem;
+      margin: getAiry();
+      font-weight: normal; }
+      .h5-airy-bold {
+        font-size: 1.8rem;
+        margin: getAiry();
+        font-weight: bold; }
+    .h5-airy-lg {
+      font-size: 1.8rem;
+      margin: 28px;
+      font-weight: normal; }
+    .h5-airy-lg-bold {
+      font-size: 1.8rem;
+      margin: 28px;
+      font-weight: bold; }
+    .h5-airy-xl {
+      font-size: 1.8rem;
+      margin: 44px;
+      font-weight: normal; }
+    .h5-airy-xl-bold {
+      font-size: 1.8rem;
+      margin: 44px;
+      font-weight: bold; }
+    .h5-airy-xxl {
+      font-size: 1.8rem;
+      margin: 62px;
+      font-weight: normal; }
+    .h5-airy-xxl-bold {
+      font-size: 1.8rem;
+      margin: 62px;
+      font-weight: bold; }
+  .h6 {
+    font-size: 1.4rem;
+    font-weight: normal; }
+    .h6-bold {
+      font-size: 1.4rem;
+      font-weight: bold; }
+    .h6-airy-xs {
+      font-size: 1.4rem;
+      margin: 4px;
+      font-weight: normal; }
+    .h6-airy-xs-bold {
+      font-size: 1.4rem;
+      margin: 4px;
+      font-weight: bold; }
+    .h6-airy-sm {
+      font-size: 1.4rem;
+      margin: 8px;
+      font-weight: normal; }
+    .h6-airy-sm-bold {
+      font-size: 1.4rem;
+      margin: 8px;
+      font-weight: bold; }
+    .h6-airy-md {
+      font-size: 1.4rem;
+      margin: 16px;
+      font-weight: normal; }
+    .h6-airy-md-bold {
+      font-size: 1.4rem;
+      margin: 16px;
+      font-weight: bold; }
+    .h6-airy {
+      font-size: 1.4rem;
+      margin: getAiry();
+      font-weight: normal; }
+      .h6-airy-bold {
+        font-size: 1.4rem;
+        margin: getAiry();
+        font-weight: bold; }
+    .h6-airy-lg {
+      font-size: 1.4rem;
+      margin: 28px;
+      font-weight: normal; }
+    .h6-airy-lg-bold {
+      font-size: 1.4rem;
+      margin: 28px;
+      font-weight: bold; }
+    .h6-airy-xl {
+      font-size: 1.4rem;
+      margin: 44px;
+      font-weight: normal; }
+    .h6-airy-xl-bold {
+      font-size: 1.4rem;
+      margin: 44px;
+      font-weight: bold; }
+    .h6-airy-xxl {
+      font-size: 1.4rem;
+      margin: 62px;
+      font-weight: normal; }
+    .h6-airy-xxl-bold {
+      font-size: 1.4rem;
+      margin: 62px;
+      font-weight: bold; }
+  .h7 {
+    font-size: 1.1rem;
+    font-weight: normal; }
+    .h7-bold {
+      font-size: 1.1rem;
+      font-weight: bold; }
+    .h7-airy-xs {
+      font-size: 1.1rem;
+      margin: 4px;
+      font-weight: normal; }
+    .h7-airy-xs-bold {
+      font-size: 1.1rem;
+      margin: 4px;
+      font-weight: bold; }
+    .h7-airy-sm {
+      font-size: 1.1rem;
+      margin: 8px;
+      font-weight: normal; }
+    .h7-airy-sm-bold {
+      font-size: 1.1rem;
+      margin: 8px;
+      font-weight: bold; }
+    .h7-airy-md {
+      font-size: 1.1rem;
+      margin: 16px;
+      font-weight: normal; }
+    .h7-airy-md-bold {
+      font-size: 1.1rem;
+      margin: 16px;
+      font-weight: bold; }
+    .h7-airy {
+      font-size: 1.1rem;
+      margin: getAiry();
+      font-weight: normal; }
+      .h7-airy-bold {
+        font-size: 1.1rem;
+        margin: getAiry();
+        font-weight: bold; }
+    .h7-airy-lg {
+      font-size: 1.1rem;
+      margin: 28px;
+      font-weight: normal; }
+    .h7-airy-lg-bold {
+      font-size: 1.1rem;
+      margin: 28px;
+      font-weight: bold; }
+    .h7-airy-xl {
+      font-size: 1.1rem;
+      margin: 44px;
+      font-weight: normal; }
+    .h7-airy-xl-bold {
+      font-size: 1.1rem;
+      margin: 44px;
+      font-weight: bold; }
+    .h7-airy-xxl {
+      font-size: 1.1rem;
+      margin: 62px;
+      font-weight: normal; }
+    .h7-airy-xxl-bold {
+      font-size: 1.1rem;
+      margin: 62px;
+      font-weight: bold; } }
+
+.clean {
+  padding: unset; }
+
+.clean-mrg {
+  margin: unset; }
+
+.clean-all {
+  padding: unset;
+  margin: unset; }
+
+.bg-white {
+  background-color: white; }
+
+.bg-black {
+  background-color: white; }
+
+.bg-default {
+  background-color: black; }
+
+.bg-primary {
+  background-color: #8b480e; }
+
+.bg-success {
+  background-color: #195f34; }
+
+.bg-danger {
+  background-color: #8c101b; }
+
+.bg-warning {
+  background-color: #ffbf00; }
+
+.bg-info {
+  background-color: #2894aa; }
+
+.bg-light {
+  background-color: #a19b9b; }
+
+.bg-dark {
+  background-color: #161616; }
+
+.bg-antan {
+  background-color: #fe2f00; }
+
+.bg-notify {
+  background-color: #07294e; }
+
+.color-white {
+  color: white; }
+
+.color-black {
+  color: black; }
+
+.color-default {
+  color: black; }
+
+.color-primary {
+  color: #8b480e; }
+
+.color-success {
+  color: #195f34; }
+
+.color-danger {
+  color: #8c101b; }
+
+.color-warning {
+  color: #ffbf00; }
+
+.color-info {
+  color: #2894aa; }
+
+.color-light {
+  color: #a19b9b; }
+
+.color-dark {
+  color: #161616; }
+
+.color-antan {
+  color: #fe2f00; }
+
+.color-notify {
+  color: #07294e; }
+
+.border-white {
+  border-color: white; }
+
+.border-black {
+  border-color: black; }
+
+.border-default {
+  border-color: black; }
+
+.border-primary {
+  border-color: #8b480e; }
+
+.border-success {
+  border-color: #195f34; }
+
+.border-danger {
+  border-color: #8c101b; }
+
+.border-warning {
+  border-color: #ffbf00; }
+
+.border-info {
+  border-color: #2894aa; }
+
+.border-light {
+  border-color: #a19b9b; }
+
+.border-dark {
+  border-color: #161616; }
+
+.border-antan {
+  border-color: #fe2f00; }
+
+.border-notify {
+  border-color: #07294e; }
+
+.dis-table {
+  display: table; }
+
+.dis-inline-table {
+  display: inline-table; }
+
+.dis-block {
+  display: block; }
+
+.dis-inline-block {
+  display: inline-block; }
+
+.dis-normal {
+  display: normal; }
+
+.dis-none {
+  display: none; }
+
+.ws-nowrap {
+  white-space: nowrap; }
+
+.ws-normal {
+  white-space: normal; }
+
+.ws-pre {
+  white-space: pre; }
+
+.ws-normal {
+  white-space: normal; }
+
+.table-auto {
+  display: table;
+  margin-left: auto;
+  margin-right: auto; }
+
+.fill {
+  min-width: 100%;
+  min-height: 100%; }

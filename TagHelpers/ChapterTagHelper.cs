@@ -1,5 +1,5 @@
-﻿using LC.Assets.Components.Extensions;
-using LC.Creator.Code;
+﻿using LC.Assets;
+using LC.Assets.Components.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -143,7 +143,7 @@ namespace LC.Creator.TagHelpers
         /// The breakpoint where all text is displayed
         /// </summary>
         [HtmlAttributeName("breakpoint")]
-        public Breakpoints Breakpoint { get; set; } = Breakpoints.MD;
+        public MediaBreakpoints Breakpoint { get; set; } = MediaBreakpoints.MD;
 
         /// <summary>
         /// Border style on main tag

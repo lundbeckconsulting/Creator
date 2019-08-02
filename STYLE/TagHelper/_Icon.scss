@@ -1,0 +1,22 @@
+﻿@import "..\\_Shared\\Config";
+@import "..\\_Shared\\Function";
+
+.creator.icon {
+    &.clickable {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    & > .wrap {
+        & > .label {
+            margin-left: 6px;
+        }
+
+        @each $name, $val in $CPs {
+            &-#{lower($name)} {
+                color: color($name, Primary);
+            }
+        }
+    }
+}

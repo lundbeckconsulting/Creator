@@ -1,0 +1,1 @@
+{"version":3,"sources":["Element.Layout.Other.js"],"names":["$","parent","css"],"mappings":"AAAAA,CAAC,CAAC,YAAY;AACVA,EAAAA,CAAC,CAAC,4BAAD,CAAD,CAAgCC,MAAhC,GAAyCC,GAAzC,CAA6C,UAA7C,EAAyD,UAAzD;AACH,CAFA,CAAD","sourcesContent":["$(function () {\r\n    $(\"[class^='align-vertical-']\").parent().css(\"position\", \"relative\");\r\n});"],"file":"Element.Layout.Other.js"}

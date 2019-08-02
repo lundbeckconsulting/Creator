@@ -1,0 +1,34 @@
+﻿@import "..\\_Shared\\ColorProfiles";
+@import "..\\_Shared\\Function";
+
+@mixin Foo($type: Default) {
+    $name: cp;
+    $prop: color;
+
+    @if (equal($type, BG)) {
+        $name: cp-bg;
+        $prop: background-color;
+    }
+
+    .#{$name} {
+        @each $id, $mapName in $CPs {
+            $map: cp($id);
+
+            @each $name, $color in $map {
+                &-#{lower($id)} {
+                    @if (equal($name, Primary)) {
+                        #{$prop}: $color;
+                    }
+                    @else {
+                        &-#{lower($name)} {
+                            #{$prop}: $color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include Foo();
+@include Foo(BG);
