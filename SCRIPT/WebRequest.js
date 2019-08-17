@@ -1,67 +1,90 @@
-﻿$(() => {
-    var RequestModes = {
-        SameOrigin: "same-origin",
-        NoCors: "no-cors",
-        Cors: "cors"
-    };
+﻿const RequestModes = {
+	SameOrigin: "SAME-ORIGIN",
+	NoCors: "NO-CORS",
+	Cors: "CORS",
+};
 
-    var RequestMethods = {
-        GET: 0,
-        POST: 1,
-        PUT: 2,
-        DELETE: 3
-    };
+const RequestMethods = {
+	GET: "GET",
+	POST: "POST",
+	PUT: "PUT",
+	DELETE: "DELETE",
+};
 
-    var RequestCredentials = {
-        Include: "include",
-        Omit: "omit",
-        SameOrigin: "same-origin"
-    };
+const RequestCredentials = {
+	Include: "INCLUDE",
+	Omit: "OMIT",
+	SameOrigin: "SAME-ORIGIN",
+};
 
-    const RequestResult = (rsp, dt) => {
-        var response = rsp;
-        var data = dt;
-        var success = rsp.ok;
-        var status = rsp.status;
-        var statusText = rsp.statusText;
-    };
+class RequestResult {
+	constructor (response) {
+		this.resp = response;
+	}
 
-    class WebRequest {
-        static async Call(controller, action, query = {}, data = {}, method = RequestMethods.POST, mode = RequestModes.SameOrigin, credentials = RequestCredentials.SameOrigin) {
-            var response = await fetch(WebRequest.GetUrl(controller, action, query), {
-                method: method.toUpperCase(),
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                credentials: credentials,
-                body: JSON.stringify(data),
-                mode: mode
-            });
+	response () {
+		return this.resp;
+	}
 
-            response.json()
-                .then(function (data) {
-                    return RequestResult(response, data);
-                });
-        }
+	success () {
+		return this.resp.ok;
+	}
 
-        static GetUrl(controller, action, query = {}) {
-            var result = "/" + controller + "/" + action;
+	status () {
+		return this.resp.status;
+	}
 
-            var i = 0;
-            for (var q in query) {
-                if (i === 0) {
-                    result += "?";
-                }
-                else {
-                    result += "&";
-                }
+	statusText () {
+		return this.resp.statusText;
+	}
+}
 
-                result += q[0] + "=" + q[1];
+const WebRequest = async (
+	controller = "API",
+	action,
+	query = {},
+	data = {},
+	method = RequestMethods.POST,
+	mode = RequestModes.SameOrigin,
+	creds = RequestCredentials.SameOrigin,
+	headers = { "Content-Type": "application/json", "Accept": "application/json" }) => {
+	const GetUrl = () => {
+		var result = "/" + controller + "/" + action;
+		var i = 0;
 
-                i++;
-            }
+		for (var q in query) {
+			if (i === 0) {
+				result += "?";
+			} else {
+				result += "&";
+			}
 
-            return result;
-        }
-    }
-});
+			result += q[0] + "=" + q[1];
+
+			i++;
+		}
+
+		return result;
+	}
+
+	await fetch(GetUrl(), {
+		method: method,
+		headers: headers,
+		// @ts-ignore
+		credentials: creds.toLowerCase(),
+		// @ts-ignore
+		body: data,
+		// @ts-ignore
+		mode: mode.toLowerCase(),
+	})
+		.then(response => {
+			if (response.ok) {
+				return new RequestResult(response);
+			} else {
+				throw new Error("Request failed: " + response.status + "; " + response.statusText);
+			}
+		})
+		.catch(error => {
+			throw new Error("Error: " + error.statusText);
+		});
+};

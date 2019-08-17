@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"checkJs": true,
+		"pretty": true
+	},
+	"include": ["**/*.js"],
+	"exclude": ["node_modules", "dist", "bower_components", "tmp", "temp", "jspom_packages"]
+}

@@ -1,3 +1,1 @@
-﻿$(function () {
-    $("[class^='align-vertical-']").parent().css("position", "relative");
-});
+﻿$("[class^='align-vertical-']").parent().css("position", "relative");

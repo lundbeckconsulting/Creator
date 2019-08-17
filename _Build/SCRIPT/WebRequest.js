@@ -1,63 +1,81 @@
-$(() => {
-  var RequestModes = {
-    SameOrigin: "same-origin",
-    NoCors: "no-cors",
-    Cors: "cors"
-  };
-  var RequestMethods = {
-    GET: 0,
-    POST: 1,
-    PUT: 2,
-    DELETE: 3
-  };
-  var RequestCredentials = {
-    Include: "include",
-    Omit: "omit",
-    SameOrigin: "same-origin"
-  };
+const RequestModes = {
+  SameOrigin: "same-origin",
+  NoCors: "no-cors",
+  Cors: "cors"
+};
 
-  const RequestResult = (rsp, dt) => {
-    var response = rsp;
-    var data = dt;
-    var success = rsp.ok;
-    var status = rsp.status;
-    var statusText = rsp.statusText;
-  };
+const RequestMethods = {
+  GET: "GET",
+  POST: "POST",
+  PUT: "PUT",
+  DELETE: "DELETE"
+};
 
-  class WebRequest {
-    static async Call(controller, action, query = {}, data = {}, method = RequestMethods.POST, mode = RequestModes.SameOrigin, credentials = RequestCredentials.SameOrigin) {
-      var response = await fetch(WebRequest.GetUrl(controller, action, query), {
-        method: method.toUpperCase(),
-        headers: {
-          "Content-Type": "application/json"
-        },
-        credentials: credentials,
-        body: JSON.stringify(data),
-        mode: mode
-      });
-      response.json().then(function (data) {
-        return RequestResult(response, data);
-      });
-    }
+const RequestCredentials = {
+  Include: "include",
+  Omit: "omit",
+  SameOrigin: "same-origin"
+};
 
-    static GetUrl(controller, action, query = {}) {
-      var result = "/" + controller + "/" + action;
-      var i = 0;
+export const Enums = () => {
+  get: () => RequestMethods;
+  get: () => RequestModes;
+  get: () => RequestCredentials;
+}
 
-      for (var q in query) {
-        if (i === 0) {
-          result += "?";
-        } else {
-          result += "&";
-        }
+export const RequestResult = rsp => {
+  var response = null;
 
-        result += q[0] + "=" + q[1];
-        i++;
+  get: Response = () => response;
+  get: Success = () => this.Response.ok;
+  get: Status = () => this.Response.status;
+  get: StatusText = () => this.Response.statusText;
+
+  set: Response = rsp => response = rsp;
+};
+
+export const WebRequest = async (controller = "API", action, query = {}, data = {}, method = RequestMethods.POST, mode = RequestModes.SameOrigin, creds = RequestCredentials.SameOrigin, headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  }) => {
+  await fetch(GetUrl(), {
+    method: method,
+    headers: headers,
+    credentials: creds,
+    body: data,
+    mode: mode
+  })
+    .then(response => {
+      if (response.ok) {
+        return RequestResult(response);
+      } else {
+        throw new Error("Request failed: " + response.status + "; " + response.statusText);
+      }
+    })
+    .catch(error => {
+      throw new Error("Error: " + error.statusText, error)
+    });
+
+  function GetUrl() {
+    var result = "/" + controller + "/" + action;
+
+    var i = 0;
+    for (var q in query) {
+      if (i === 0) {
+        result += "?";
+      } else {
+        result += "&";
       }
 
-      return result;
+      result += q[0] + "=" + q[1];
+
+      i++;
     }
 
+    return result;
   }
-});
+}
+
+//# sourceMappingURL=WebRequest.js.map
+
 //# sourceMappingURL=WebRequest.js.map

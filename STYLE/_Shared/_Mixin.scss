@@ -324,57 +324,60 @@
     }
 }
 
-@mixin formControlHover($cpName: Default) {
+@mixin formControlHover($cpName: Default, $gradient: false) {
     &:hover {
-        $cpName: toCPName($cpName);
-        $back: darken(color($cpName), 18%);
-        $fore: color($cpName, Fifth);
         $cursor: pointer;
 
-        @if (equal($cpName, Warning)) {
-            $fore: white;
+        @if ($gradient) {
+            $start: color($cpName, Fifth);
+            $end: color($cpName, Second);
+
+            background: linear-gradient($start, $end);
         }
-        @else if (equal($cpName, Dark)) {
-            $fore: #6d6d6d;
+        @else {
+            $cpName: toCPName($cpName);
+            $back: darken(color($cpName), 18%);
+            $fore: color($cpName, Fifth);
+            
+
+            @if (equal($cpName, Warning)) {
+                $fore: white;
+            }
+            @else if (equal($cpName, Dark)) {
+                $fore: #6d6d6d;
+            }
+
+            color: $fore;
+            background-color: $back;
         }
 
-        cursor: $cursor;
-        color: $fore;
-        background-color: $back;
+        cursor: $cursor;        
     }
 }
 
-@mixin formTextbox($cpName: Default, $border: false, $glow: true) {
+@mixin formTextbox($cpName: Default, $glow: true) {
     $color: color(toCPName($cpName));
 
     @if (equal($cpName, Default)) {
-        $border: true;
         $color: #a5a5a5;
     }
 
-    @include formControl($cpName, $border);
+    @include formControl($cpName, true);
 
     @if ($glow) {
         @include boxGlow($cpName);
     }
 
-    @if ($border) {
-        @if (equal($cpName, Default)) {
-            $color: #272727;
-        }
-
-        border: 2px solid darken($color, 14%);
-    }
-
-    $bgColor: lighten($color, 8%);
-
     @if (equal($cpName, Default)) {
-        $bgColor: #d4d4d4;
+            $color: #272727;
     }
+
+    font-size: 1.6rem;
+    border: 2px solid #343434;
+    padding: 6px;
 
     &:hover {
-        background-color: $bgColor;
-        border: 2px solid lighten($color, 6%);
+        background-color: #e4e1cf;
     }
 }
 
@@ -386,7 +389,7 @@
     $mrg: 2px;
 
     @if (equal($cpName, Default)) {
-        $fore: black;
+        $fore: color(Default, Third);
         $back: white;
         $border: true;
         $borderColor: #2a2a2a;
@@ -405,7 +408,6 @@
     }
 
     @include formControl($cpName, false, 22px);
-    @include formControlHover($cpName);
 
     @if ($gradient) {
         background: linear-gradient($fore, $back);
@@ -433,6 +435,10 @@
         }   
     }
 
+    @if (equal($cpName, Default)) {
+        $fore: black;
+    }
+
     display: inline-block;
     margin-left: $mrg;
     margin-right: $mrg;
@@ -441,10 +447,12 @@
 
 @mixin formButtonSolid($cpName: Default, $border: false) {
     @include formButtonBase($cpName, $border);
+    @include formControlHover($cpName);
 }
 
 @mixin formButtonGradient($cpName: Default, $border: false) {
     @include formButtonBase($cpName, $border, true);
+    @include formControlHover($cpName, true);
 }
 
 @mixin boxGlow($cpName: Default, $size: 18px, $borderCpName: None) {
@@ -475,7 +483,7 @@
             -moz-box-shadow: 0 0 $size 0 $color;
             box-shadow: 0 0 $size $color;
             outline: none;
-            background-color: lighten($color, 6%);
+            background-color: color(Light, Fourth);
         }
     }
 }

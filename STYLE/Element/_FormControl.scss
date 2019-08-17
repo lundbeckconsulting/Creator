@@ -2,73 +2,69 @@
 @import "..\\_Shared/Function";
 
 @each $name, $map in $CPs {
-    $name: lower($name);
+  $name: lower($name);
 
-    .#{GET(KW, TextBox) + "-" + $name}, .#{GET(KW, Textarea) + "-" + $name} {
-        @include formTextbox($name, false, false);
-        @include boxGlow($name);
+  .#{GET(KW, TextBox) + "-" + $name},
+  .#{GET(KW, Textarea) + "-" + $name} {
+    @include formTextbox($name);
 
-        &-border {
-            @include formTextbox($name, true);
-        }
+    &-shadow {
+      $color: lighten(color($name), 28%);
 
-        &-shadow {
-            $color: lighten(color($name), 28%);
+      @if (equal($name, Dark)) {
+        $color: black;
+      }
 
-            @if (equal($name, Dark)) {
-                $color: black;
-            }
-
-            @include formTextbox($name);
-            @include shadow(3px, $color);
-        }
-
-        &.#{GET(KW, ValidateError)} {
-            @include boxGlow(Danger, 18px, Danger);
-            background-color: lighten(color(Danger), 62%) !important;
-        }
-        
-        &.#{GET(KW, ValidatedForm)} {
-            @include boxGlow(Success, 14px, Success);
-            background-color: lighten(color(Success), 54%) !important;
-        }
+      @include formTextbox($name);
+      @include shadow(3px, $color);
     }
 
-    .#{GET(KW, Button) + "-" + $name} {
-        @include formButtonSolid($name);
-
-        &-border {
-            @include formButtonSolid($name, true);
-        }
-
-        &-shadow {
-            @include formButtonSolid($name);
-            @include shadow();
-        }
-
-        &-bs {
-            @include formButtonSolid($name, true);
-            @include shadow();
-        }
+    &.#{GET(KW, ValidateError)} {
+      @include boxGlow(Danger, 18px, Danger);
+      background-color: lighten(color(Danger), 62%) !important;
     }
 
-    .#{GET(KW, Button) + "-" + $name} {
-        &-gradient {
-            @include formButtonGradient($name, false);
-
-            &-border {
-                @include formButtonGradient($name, true);
-            }
-
-            &-shadow {
-                @include formButtonGradient($name, false);
-                @include shadow();
-            }
-
-            &-bs {
-                @include formButtonGradient($name, true);
-                @include shadow();
-            }
-        }
+    &.#{GET(KW, ValidatedForm)} {
+      @include boxGlow(Success, 14px, Success);
+      background-color: lighten(color(Success), 54%) !important;
     }
+  }
+
+  .#{GET(KW, Button) + "-" + $name} {
+    @include formButtonSolid($name);
+
+    &-border {
+      @include formButtonSolid($name, true);
+    }
+
+    &-shadow {
+      @include formButtonSolid($name);
+      @include shadow();
+    }
+
+    &-bs {
+      @include formButtonSolid($name, true);
+      @include shadow();
+    }
+  }
+
+  .#{GET(KW, Button) + "-" + $name} {
+    &-gradient {
+      @include formButtonGradient($name, false);
+
+      &-border {
+        @include formButtonGradient($name, true);
+      }
+
+      &-shadow {
+        @include formButtonGradient($name, false);
+        @include shadow();
+      }
+
+      &-bs {
+        @include formButtonGradient($name, true);
+        @include shadow();
+      }
+    }
+  }
 }
