@@ -1,14 +1,16 @@
-Creator is a framework for modern responsive web development.
-The framework makes it easy to universally style a complete web site without writing any CSS.
+# Creator framework - lightweight responsive design
 
-It replicates Row and Columns found in Bootstrap without the need of a parent Container with most of the same features.
+Creator is a CSS and JavaScript based framework for modern responsive web development.
+The framework makes it easy to universally style a complete web site with just adding class names to your tags.
 
-The framework is small and easy to reference. You only need to reference two files, one CSS and JS file which makes it very easy to implement.
+It contain features as Row and Column, modal dialogs, styled input elements, a collection of Color Profiles with let's you style all elements.
+
+The framework is small and easy to include in your project.
+
+* [Installation example](https://github.com/lundbeckconsulting/Creator-Distro/blob/master/README.md)
 
 
 UPDATE: The framework is currently being rewritten to fix bugs and add new features. Stay tuned for version 2.0
 
-
-https://creatorframework.com/
-
--Stein
+****
+https://creatorframework.com | https://github.com/lundbeckconsulting/Creator-Distro | http://lundbeckconsulting.com
