@@ -1,8 +1,8 @@
 .row {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, auto); }
-  .row > div[class^='col-'] {
+  .row > div[class^="col-"] {
     grid-row: auto;
     grid-column: 1/-1; }
 
@@ -255,9 +255,5 @@
     grid-row: 1 !important;
     grid-column: auto/span 12 !important;
     padding: 6px; } }
-
-@media (min-width: 576px) {
-  .row {
-    grid-template-columns: repeat(12, 1fr); } }
 
 /*# sourceMappingURL=Layout.Row.css.map */

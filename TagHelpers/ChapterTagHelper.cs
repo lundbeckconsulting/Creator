@@ -1,5 +1,8 @@
 ﻿using LC.Assets;
+using LC.Assets.Components;
 using LC.Assets.Components.Extensions;
+using LC.Assets.Core.Components.TagHelpers;
+using LC.Assets.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,18 +18,18 @@ namespace LC.Creator.TagHelpers
     [RestrictChildren("content")]
     public class ChapterTagHelper : TagHelperBase
     {
-        public ChapterTagHelper(IHostingEnvironment env, IHtmlHelper html) : base(env, html)
+        public ChapterTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
         { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, ref output);
+            base.PreProcess(context, output);
 
             ChapterContext cntx = new ChapterContext();
             context.Items.Add(typeof(ChapterTagHelper), cntx);
             await output.GetChildContentAsync();
 
-            TagBuilder tag = GetTagBuilder("div");
+            TagBuilder tag = new TagBuilder("div");
             tag.AddCssClass("chapter");
             tag.AddCssClass("cp-" + this.Color.ToString().ToLower());
 
@@ -49,7 +52,7 @@ namespace LC.Creator.TagHelpers
 
             if (this.LinkStyle.Equals(ChapterLinkStyles.Link))
             {
-                pre += " " + GetReadMoreLink().ToZtring();
+                pre += " " + GetReadMoreLink().ToStringValue();
             }
 
             tag.InnerHtml.AppendLine(GetContentTag(ChapterContentTypes.Pre, pre));
@@ -148,11 +151,13 @@ namespace LC.Creator.TagHelpers
         /// <summary>
         /// Border style on main tag
         /// </summary>
+        [HtmlAttributeNotBound]
         public ChapterBorderStyles Border { get; set; } = ChapterBorderStyles.None;
 
         /// <summary>
         /// The type of element that displays Main
         /// </summary>
+        [HtmlAttributeNotBound]
         public ChapterLinkStyles LinkStyle { get; set; } = ChapterLinkStyles.Button;
     }
 

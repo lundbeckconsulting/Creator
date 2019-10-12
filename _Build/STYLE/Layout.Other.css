@@ -417,44 +417,54 @@
     background-size: cover;
     background-attachment: fixed; }
 
-.fixed.top, .fixed-top {
+.fixed.top,
+.fixed-top {
   position: fixed;
   top: 0;
   bottom: unset;
   left: 0;
   right: 0; }
 
-.fixed.bottom, .fixed-bottom {
+.fixed.bottom,
+.fixed-bottom {
   position: fixed;
   top: unset;
   left: 0;
   right: 0;
   bottom: 0; }
 
-.fixed.left, .fixed-left {
+.fixed.left,
+.fixed-left {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: unset; }
 
-.fixed.right, .fixed-right {
+.fixed.right,
+.fixed-right {
   position: fixed;
   top: 0;
   bottom: 0;
   left: unset;
   right: 0; }
 
-.float.left, .float-left {
+.float.left,
+.float-left {
   float: left; }
 
-.float.right, .float-right {
+.float.right,
+.float-right {
   float: right; }
 
-.hide, .close, .invisible {
+.hide,
+.close,
+.invisible {
   display: none; }
 
-.show, .block, .visible {
+.show,
+.block,
+.visible {
   display: block; }
 
 .position-relative {

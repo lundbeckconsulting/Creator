@@ -1,11 +1,11 @@
 .pad-clean {
   padding: 16px;
-  padding: 0px !important; }
+  padding: 0 !important; }
 
 .pad-mrg-clean {
   padding: 16px;
-  padding: 0px !important;
-  margin: 0px; }
+  padding: 0 !important;
+  margin: 0 !important; }
 
 .pad-doc {
   padding: 16px;
@@ -15,75 +15,75 @@
   padding: 2px; }
   .pad-xxs-clean {
     padding: 2px;
-    padding: 0px !important; }
+    padding: 0 !important; }
   .pad-xxs-mrg-clean {
     padding: 2px;
-    padding: 0px !important;
-    margin: 0px; }
+    padding: 0 !important;
+    margin: 0 !important; }
 
 .pad-xs {
   padding: 4px; }
   .pad-xs-clean {
     padding: 4px;
-    padding: 0px !important; }
+    padding: 0 !important; }
   .pad-xs-mrg-clean {
     padding: 4px;
-    padding: 0px !important;
-    margin: 0px; }
+    padding: 0 !important;
+    margin: 0 !important; }
 
 .pad-sm {
   padding: 10px; }
   .pad-sm-clean {
     padding: 10px;
-    padding: 0px !important; }
+    padding: 0 !important; }
   .pad-sm-mrg-clean {
     padding: 10px;
-    padding: 0px !important;
-    margin: 0px; }
+    padding: 0 !important;
+    margin: 0 !important; }
 
 .pad-md {
   padding: 16px; }
   .pad-md-clean {
     padding: 16px;
-    padding: 0px !important; }
+    padding: 0 !important; }
   .pad-md-mrg-clean {
     padding: 16px;
-    padding: 0px !important;
-    margin: 0px; }
+    padding: 0 !important;
+    margin: 0 !important; }
 
 .pad-lg {
   padding: 30px; }
   .pad-lg-clean {
     padding: 30px;
-    padding: 0px !important; }
+    padding: 0 !important; }
   .pad-lg-mrg-clean {
     padding: 30px;
-    padding: 0px !important;
-    margin: 0px; }
+    padding: 0 !important;
+    margin: 0 !important; }
 
 .pad-xl {
   padding: 54px; }
   .pad-xl-clean {
     padding: 54px;
-    padding: 0px !important; }
+    padding: 0 !important; }
   .pad-xl-mrg-clean {
     padding: 54px;
-    padding: 0px !important;
-    margin: 0px; }
+    padding: 0 !important;
+    margin: 0 !important; }
 
 .pad-xxl {
   padding: 72px; }
   .pad-xxl-clean {
     padding: 72px;
-    padding: 0px !important; }
+    padding: 0 !important; }
   .pad-xxl-mrg-clean {
     padding: 72px;
-    padding: 0px !important;
-    margin: 0px; }
+    padding: 0 !important;
+    margin: 0 !important; }
 
 .mrg-clean {
   margin: 18px;
-  margin: 0px; }
+  margin: 0 !important; }
 
 .mrg-auto {
   margin-left: auto;
@@ -91,7 +91,7 @@
 
 .mrg-clean-auto {
   margin: 18px;
-  margin: 0px;
+  margin: 0 !important;
   margin-left: auto;
   margin-right: auto; }
 

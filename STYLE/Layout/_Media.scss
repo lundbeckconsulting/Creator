@@ -1,37 +1,52 @@
-﻿@import "..\\_Shared\\Media";
-@import "..\\_Shared\\Function";
-@import "..\\_Shared\\Config";
+﻿@import "Mixin";
+@import "..\\Shared\\Media";
+@import "..\\Shared\\Function";
+@import "..\\Shared\\Config";
 
-[class^="show-from-"] {
-    display: none;
+[class^="show-"] {
+  display: none;
+}
+
+/*
+  [class^="hide-"] {
+    display: block;
+  }
+*/
+
+.show {
+  display: block;
+
+  &-inline {
+    display: inline-block;
+  }
+}
+
+.hide {
+  display: none;
 }
 
 @each $name, $val in $mediaBreakpoints {
-    @if not (equal($name, XS)) {
-        $name: lower($name);
+  @if not(equal($name, XS)) {
+    @include media($name) {
+      $name: lower($name);
 
-        .show-#{$name} {
-            display: none;
+      .hide-#{$name} {
+        display: none;
+      }
+
+      .show-#{$name} {
+        display: block;
+
+        &-inline {
+          display: inline-block;
         }
+      }
 
-        .hide-#{$name} {
-            display: block;
+      @each $n, $v in $headSyno {
+        .#{"h" + $n + "-" + $name} {
+          font-size: get(Head, $v);
         }
-
-        @include media($name) {
-            .hide-#{lower($name)} {
-                display: none;
-            }
-
-            .show-#{lower($name)} {
-                display: block !important;
-            }
-
-            @each $n, $v in $headSyno {
-                .#{"h" + $n + "-" + $name} {
-                    font-size: GET(Head, $v) !important;
-                }
-            }
-        }
+      }
     }
+  }
 }

@@ -1,81 +1,81 @@
-﻿@import "..\\_Shared\\Function";
-@import "..\\_Shared\\Mixin";
+﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\Mixin";
 
 .pad {
-    &-clean {
-        padding: $defaultPad;
-        @include cleanBase(true, false, false);
-    }
+  &-clean {
+    padding: $defaultPad;
+    @include cleanBase(true, false, false);
+  }
 
-    &-mrg-clean {
-        padding: $defaultPad;
-        @include cleanBase();
-    }
+  &-mrg-clean {
+    padding: $defaultPad;
+    @include cleanBase();
+  }
 
-    &-doc {
-        padding: $defaultPad;
-        padding: $defaultPad;
-    }
+  &-doc {
+    padding: $defaultPad;
+    padding: $defaultPad;
+  }
 }
 
 @each $n, $v in $padValues {
-    .#{"pad-" + lower($n)} {
-        padding: $v;
+  .#{"pad-" + lower($n)} {
+    padding: $v;
 
-        &-clean {
-            padding: $v;
-            @include cleanBase(true, false, false);
-        }
-
-        &-mrg-clean {
-            padding: $v;
-            @include cleanBase();
-        }
+    &-clean {
+      padding: $v;
+      @include cleanBase(true, false, false);
     }
+
+    &-mrg-clean {
+      padding: $v;
+      @include cleanBase();
+    }
+  }
 }
 
 .mrg {
-    &-clean {
-        margin: GET(Margin, SM);
-        @include cleanBase(false, true, false);
+  &-clean {
+    margin: get(Margin, SM);
+    @include cleanBase(false, true, false);
+  }
+
+  &-auto {
+    @include autoMargin();
+  }
+
+  &-clean-auto {
+    margin: get(Margin, SM);
+    @include cleanBase(false, true, false);
+    @include autoMargin();
+  }
+
+  @each $n, $v in $marginValues {
+    $n: lower($n);
+
+    &-#{$n} {
+      margin: $v;
     }
 
-    &-auto {
-        @include autoMargin();
+    &-#{$n + "-left"} {
+      margin-left: $v;
     }
 
-    &-clean-auto {
-        margin: GET(Margin, SM);
-        @include cleanBase(false, true, false);
-        @include autoMargin();
+    &-#{$n + "-right"} {
+      margin-right: $v;
     }
 
-    @each $n, $v in $marginValues {
-        $n: lower($n);
-
-        &-#{$n} {
-            margin: $v;
-        }
-
-        &-#{$n + "-left"} {
-            margin-left: $v;
-        }
-
-        &-#{$n + "-right"} {
-            margin-right: $v;
-        }
-
-        &-#{$n + "-top"} {
-            margin-top: $v;
-        }
-
-        &-#{$n + "-bottom"} {
-            margin-bottom: $v;
-        }
-
-        &-#{$n + "-both"} {
-            margin-left: $v;
-            margin-right: $v;
-        }
+    &-#{$n + "-top"} {
+      margin-top: $v;
     }
+
+    &-#{$n + "-bottom"} {
+      margin-bottom: $v;
+    }
+
+    &-#{$n + "-both"} {
+      margin-left: $v;
+      margin-right: $v;
+    }
+  }
 }

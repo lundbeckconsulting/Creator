@@ -1,4 +1,7 @@
-﻿using LC.Assets.Components.Extensions;
+﻿using LC.Assets;
+using LC.Assets.Components.Extensions;
+using LC.Assets.Core.Components.TagHelpers;
+using LC.Assets.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,14 +13,14 @@ namespace LC.Creator.TagHelpers
     [HtmlTargetElement("img-over", Attributes = "src", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class ImageOverTagHelper : TagHelperBase
     {
-        public ImageOverTagHelper(IHostingEnvironment environment, IHtmlHelper html) : base(environment, html)
+        public ImageOverTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
         {
             
         }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, ref output);
+            base.PreProcess(context, output);
 
             string clss = context.AllAttributes.ContainsName("class") ? context.AllAttributes["class"].Value.ToString() : default;
 

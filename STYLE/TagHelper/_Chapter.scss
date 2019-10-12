@@ -1,71 +1,71 @@
-﻿@import "..\\_Shared\\Config";
-@import "..\\_Shared\\Function";
-@import "..\\_Shared\\Mixin";
+﻿@import "..\\Shared\\Config";
+@import "..\\Shared\\Function";
+@import "..\\Shared\\Mixin";
 
 .chapter {
-    @each $name, $val in $CPs {
-        &-#{lower($name)} {
-            $borderColor: color($name);
-            $color: $borderColor;
+  @each $name, $val in $CPs {
+    &-#{lower($name)} {
+      $borderColor: color($name);
+      $color: $borderColor;
 
-            padding: $defaultPad;
-            border-radius: GET(SYS, BorderRadius);
-            margin: $defaultMargin;
-            color: $color;
+      padding: $defaultPad;
+      border-radius: get(SYS, BorderRadius);
+      margin: $defaultMargin;
+      color: $color;
 
-            & a {
-                color: $color;
+      & a {
+        color: $color;
 
-                &:hover {
-                    text-decoration: none;
-                    color: rgba($color, 0.8);
-                }
-            }
-
-            &.glow {
-                @include boxGlow($name, 18px, $name);
-            }
-
-            &.solid {
-                border: 2px solid $borderColor;
-            }
+        &:hover {
+          text-decoration: none;
+          color: rgba($color, 0.8);
         }
+      }
+
+      &.glow {
+        @include boxGlow($name, 18px, $name);
+      }
+
+      &.solid {
+        border: 2px solid $borderColor;
+      }
+    }
+  }
+
+  & > .content {
+    &-pre {
+      padding: $defaultPad;
+      background-color: color(Light, Third);
+      border-radius: get(Sys, BorderRadius);
+
+      & > .more-link {
+        display: inline-block;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: none;
+          opacity: 0.8;
+        }
+      }
     }
 
-    & > .content {
-        &-pre {
-            padding: $defaultPad;
-            background-color: color(Light, Third);
-            border-radius: GET(Sys, BorderRadius);
+    &-main {
+      @each $s in $commonSizesExtended {
+        $p: get(Pad, $s);
 
-            & > .more-link {
-                display: inline-block;
-                font-weight: 600;
-
-                &:hover {
-                    text-decoration: none;
-                    opacity: 0.8;
-                }
-            }
+        &-#{lower($s)} {
+          padding: $p;
+          display: none;
         }
 
-        &-main {
-            @each $s in $commonSizesExtended {
-                $p: GET(Pad, $s);
-
-                &-#{lower($s)} {
-                    padding: $p;
-                    display: none;
-                }
-
-                @if (equal($s, MD)) {
-                    padding: $p;
-                }
-            }
+        @if (equal($s, MD)) {
+          padding: $p;
         }
+      }
     }
+  }
 
-    & > .more.wrap {
-        display: block;
-    }
+  & > .more.wrap {
+    display: block;
+  }
 }

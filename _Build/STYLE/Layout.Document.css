@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit; }
@@ -11,7 +13,7 @@ html.creator {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
   html.creator > body.creator {
-    margin: 0px;
+    margin: 0;
     font-size: 1.6rem; }
     html.creator > body.creator header.creator {
       width: 100%;
@@ -20,7 +22,7 @@ html.creator {
       margin-left: auto;
       margin-right: auto;
       padding: 16px; }
-    html.creator > body.creator .main-nav {
+    html.creator > body.creator nav.creator {
       width: 100%;
       min-width: 0px;
       max-width: 1366px;
@@ -41,8 +43,8 @@ html.creator {
       margin-left: auto;
       margin-right: auto;
       padding: 16px; }
-    html.creator > body.creator footer.sticky.creator {
-      flex: 0 0 auto;
-      padding: 8px; }
+      html.creator > body.creator footer.creator-sticky {
+        flex: 0 0 auto;
+        padding: 8px; }
 
 /*# sourceMappingURL=Layout.Document.css.map */

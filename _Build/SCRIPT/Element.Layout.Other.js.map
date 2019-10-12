@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["Element.Layout.Other.js"],"sourcesContent":["$(\"[class^='align-vertical-']\").parent().css(\"position\", \"relative\");\n//# sourceMappingURL=Element.Layout.Other.js.map\n"],"file":"Element.Layout.Other.js"}

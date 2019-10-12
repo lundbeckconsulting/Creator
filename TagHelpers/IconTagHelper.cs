@@ -1,4 +1,7 @@
-﻿using LC.Assets.Components.Extensions;
+﻿using LC.Assets;
+using LC.Assets.Components.Extensions;
+using LC.Assets.Core.Components.TagHelpers;
+using LC.Assets.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -9,11 +12,12 @@ namespace LC.Creator.TagHelpers
     [HtmlTargetElement("icon", Attributes = "type", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class IconTagHelper : TagHelperBase
     {
-        public IconTagHelper(IHostingEnvironment env, IHtmlHelper html) : base(env, html) { }
+        public IconTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, ref output);
+            base.PreProcess(context, output);
 
             output.SuppressOutput();
             output.PostContent.AppendHtml(GetTag());
@@ -24,7 +28,7 @@ namespace LC.Creator.TagHelpers
         public TagBuilder GetTag()
         {
             TagBuilder result = default;
-            TagBuilder tag = GetTagBuilder("span");
+            TagBuilder tag = new TagBuilder("span");
             tag.AddCssClass("wrap");
             tag.InnerHtml.AppendHtml(GetSymbol());
 
@@ -40,20 +44,20 @@ namespace LC.Creator.TagHelpers
 
             if (this.Out.Equals(SymbolOutputs.Button))
             {
-                result = GetTagBuilder("button");
+                result = new TagBuilder("button");
             }
             else if (this.Out.Equals(SymbolOutputs.Href))
             {
-                result = GetTagBuilder("a");
+                result = new TagBuilder("a");
                 result.Attributes.Add("href", this.Href);
             }
             else if (this.Out.Equals(SymbolOutputs.Div))
             {
-                result = GetTagBuilder("div");
+                result = new TagBuilder("div");
             }
             else if (this.Out.Equals(SymbolOutputs.Span))
             {
-                result = GetTagBuilder("span");
+                result = new TagBuilder("span");
             }
 
             result.AddCssClass("creator");
@@ -312,11 +316,6 @@ namespace LC.Creator.TagHelpers
                     name = "mobile";
                     break;
 
-                case Symbols.Facebook:
-                    pre = "fab";
-                    name = "facebook-square";
-                    break;
-
                 case Symbols.Messenger:
                     pre = "fab";
                     name = "facebook-messenger";
@@ -482,7 +481,7 @@ namespace LC.Creator.TagHelpers
                     name = "plus-circle";
                     break;
 
-                case Symbols.ShoppingBasket:        
+                case Symbols.ShoppingBasket:
                     pre = "fas";
                     name = "shopping-basket";
                     break;
@@ -713,6 +712,31 @@ namespace LC.Creator.TagHelpers
                     pre = "fas";
                     name = "thumbstick";
                     break;
+
+                case Symbols.FacebookLogo:
+                    pre = "fab";
+                    name = "facebook-f";
+                    break;
+
+                case Symbols.FacebookLogoCircle:
+                    pre = "fab";
+                    name = "facebook";
+                    break;
+
+                case Symbols.FacebookLogoSquare:
+                    pre = "fab";
+                    name = "facebook-square";
+                    break;
+
+                case Symbols.LinkedInLogo:
+                    pre = "fab";
+                    name = "linkedin-in";
+                    break;
+
+                case Symbols.LinkedInLogoSquare:
+                    pre = "fab";
+                    name = "linkedin";
+                    break;
             }
 
             switch (this.Size)
@@ -846,14 +870,6 @@ namespace LC.Creator.TagHelpers
                     case Symbols.MobileFull:
                         result = GetTextByLanguage("Ring", "Call");
                         result = TextDeluxe ? GetTextByLanguage("Trykk for å ringe", "Click to call") : GetTextByLanguage("Ring", "Call");
-                        break;
-
-                    case Symbols.Facebook:
-                        result = "Facebook";
-                        break;
-
-                    case Symbols.Messenger:
-                        result = "Messenger";
                         break;
 
                     case Symbols.DocCode:
@@ -997,6 +1013,17 @@ namespace LC.Creator.TagHelpers
                     case Symbols.Search:
                         result = TextDeluxe ? GetTextByLanguage("Trykk for å søke", "Click to search") : GetTextByLanguage("Søk", "Search");
                         break;
+
+                    case Symbols.FacebookLogo:
+                    case Symbols.FacebookLogoCircle:
+                    case Symbols.FacebookLogoSquare:
+                        result = "Facebook";
+                        break;
+
+                    case Symbols.LinkedInLogo:
+                    case Symbols.LinkedInLogoSquare:
+                        result = "LinkedIn";
+                        break;
                 }
             }
 
@@ -1105,7 +1132,7 @@ namespace LC.Creator.TagHelpers
 
                 if (this.Language.Equals(SymbolLanguages.Auto))
                 {
-                    if (this.CurrentCulture.Name.Equals("no-NB", "no-NN"))
+                    if (this.Culture.Name.Equal("no-NB", "no-NN"))
                     {
                         result = SymbolLanguages.Norwegian;
                     }
@@ -1173,7 +1200,6 @@ namespace LC.Creator.TagHelpers
         PhoneFull,
         Mobile,
         MobileFull,
-        Facebook,
         Messenger,
         LaptopCode,
         Comment,
@@ -1259,7 +1285,12 @@ namespace LC.Creator.TagHelpers
         SearchLocation,
         Shield,
         UserLock,
-        Thumbstick
+        Thumbstick,
+        FacebookLogo,
+        FacebookLogoCircle,
+        FacebookLogoSquare,
+        LinkedInLogo,
+        LinkedInLogoSquare
     }
 
     public enum SymbolOutputs

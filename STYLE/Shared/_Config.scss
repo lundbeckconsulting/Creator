@@ -1,0 +1,258 @@
+﻿@import "ColorProfiles";
+
+$deviceMediaBreakpoints: (
+  Phone: XS,
+  Tablet: SM,
+  Computer: LG,
+  Screen: XL
+);
+$mediaBreakpoints: (
+  XS: 0px,
+  SM: 576px,
+  MD: 768px,
+  LG: 992px,
+  XL: 1200px
+);
+$mediaOrientation: (
+  0: Any,
+  1: Portrait,
+  2: Landscape
+);
+$marginValues: (
+  XS: 4px,
+  SM: 18px,
+  MD: 28px,
+  LG: 42px,
+  XL: 60px,
+  XXL: 82px,
+  Auto: null
+);
+$docValues: (
+  XS: 298px,
+  SM: 444px,
+  MD: 598px,
+  LG: 878px,
+  XL: 1366px
+);
+$padValues: (
+  XXS: 2px,
+  XS: 4px,
+  SM: 10px,
+  MD: 16px,
+  LG: 30px,
+  XL: 54px,
+  XXL: 72px
+);
+$airyValues: (
+  XS: 4px,
+  SM: 8px,
+  MD: 16px,
+  LG: 28px,
+  XL: 44px,
+  XXL: 62px
+);
+$defaultDirections: (Left, Top, Right, Bottom);
+$padDirections: append($defaultDirections, "LeftRight, TopBottom", comma);
+$widthSizes: (
+  XXS: 26px,
+  XS: 64px,
+  SM: 104px,
+  MD: 232px,
+  LG: 514px,
+  XL: 788px,
+  XXL: 974px,
+  DOC: map-get($docValues, XL)
+);
+$headSizes: (
+  XXS: 1.1rem,
+  XS: 1.4rem,
+  SM: 1.8rem,
+  MD: 2.2rem,
+  LG: 3rem,
+  XL: 4.3rem,
+  XXL: 5.2rem
+);
+$headSyno: (
+  1: XXL,
+  2: XL,
+  3: LG,
+  4: MD,
+  5: SM,
+  6: XS,
+  7: XXS
+);
+$fontSizes: (
+  1: 0.8rem,
+  2: 1.4rem,
+  3: 1.8rem,
+  4: 2.5rem,
+  5: 2.9rem,
+  6: 3.2rem,
+  7: 3.8rem,
+  8: 4.2rem,
+  9: 4.6rem,
+  10: 5.2rem
+);
+$modalSizes: (
+  SM: 384px,
+  MD: 522px,
+  LG: 734px,
+  XL: 998px
+);
+$commonSizes: (XS, SM, MD, LG, XL);
+$commonSizesExtended: (XXS, XS, SM, MD, LG, XL, XXL);
+$flexAlignItems: (
+  Base: baseline,
+  Center: center,
+  End: flex-end,
+  Start: flex-start,
+  Stretch: stretch
+);
+$flexJustifyItems: (
+  Center: center,
+  End: flex-end,
+  Start: flex-start,
+  Around: space-around,
+  Between: space-between
+);
+$gridItemSizes: (
+  XS: 8px,
+  SM: 60px,
+  MD: 144px,
+  LG: 366px,
+  XL: 536px,
+  XXL: 768px
+);
+$gridGapSizes: (
+  XS: 2px,
+  SM: 4px,
+  MD: 8px,
+  LG: 16px,
+  XL: 30px,
+  XXL: 1fr
+);
+$notifyStyles: (Bar, Box, Circle);
+$notifyPositions: (
+  Top,
+  Middle,
+  Bottom,
+  LeftTop,
+  LeftMiddle,
+  LeftBottom,
+  RightTop,
+  RightMiddle,
+  RightBottom,
+  CenterTop,
+  CenterBottom,
+  CenterMiddle
+);
+
+$miscSettings: (
+  NotifyBoxWidth: 548px,
+  NotifyDefaultPadding: 14px
+);
+
+$keywords: (
+  BG-Cover: bg-cover,
+  BG-Repeat-X: bg-repeat-x,
+  BG-Repeat-Y: bg-repeat-y,
+  BG-NoRepeat: bg-norepeat,
+  Font: f,
+  Head: h,
+  Col: col-,
+  Responsive: r,
+  Image: img,
+  Button: btn,
+  AlignVertical: align-vertical,
+  TextBox: txt,
+  Textarea: txt-area,
+  ValidateError: validate-error,
+  ValidatedForm: form-validated,
+  WhiteSpace: ws
+);
+
+$systemValues: (
+  BorderRadius: 6px,
+  PadBase: map-get($padValues, MD),
+  Margin: map-get($marginValues, MD),
+  Font: map-get($fontSizes, 3),
+  Width: map-get($docValues, MD),
+  BorderWidth: 6px,
+  ModalBackgroundColor: white
+);
+
+$contentMaxWidth: map-get($widthSizes, DOC);
+$defaultPad: map-get($padValues, MD);
+$defaultMargin: 12px;
+
+$mapIndex: (
+  Pad: (
+    Data: $padValues
+  ),
+  Width: (
+    Data: $widthSizes
+  ),
+  DeviceMedia: (
+    Data: $deviceMediaBreakpoints
+  ),
+  Media: (
+    Data: $mediaBreakpoints
+  ),
+  MediaOrientation: (
+    Data: $mediaOrientation
+  ),
+  Margin: (
+    Data: $marginValues
+  ),
+  CP: (
+    Data: $CPs
+  ),
+  Modal: (
+    Data: $modalSizes
+  ),
+  Sys: (
+    Data: $systemValues
+  ),
+  PadDirection: (
+    Data: $padDirections
+  ),
+  Keyword: (
+    Data: $keywords
+  ),
+  KW: (
+    Data: $keywords
+  ),
+  FontSize: (
+    Data: $fontSizes
+  ),
+  Doc: (
+    Data: $docValues
+  ),
+  Airy: (
+    Data: $airyValues
+  ),
+  Head: (
+    Data: $headSizes
+  ),
+  FlexAlign: (
+    Data: $flexAlignItems
+  ),
+  FlexJustify: (
+    Data: $flexJustifyItems
+  ),
+  Grid: (
+    Data: $gridItemSizes
+  ),
+  GridGap: (
+    Data: $gridGapSizes
+  ),
+  Common: (
+    Data: $commonSizes
+  ),
+  SizeExtended: (
+    Data: $commonSizesExtended
+  ),
+  MiscSettings: (
+    Data: $miscSettings
+  )
+);

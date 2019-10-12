@@ -1,346 +1,356 @@
-﻿@import "..\\_Shared\\Function";
-@import "..\\_Shared\\Media";
-@import "..\\_Shared\\Config";
-@import "..\\_Shared\\Mixin";
+﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\Media";
+@import "..\\Shared\\Config";
+@import "..\\Shared\\Mixin";
 @import "Mixin";
 
 .airy {
-    margin: getAiry();
+  margin: getAiry();
 }
 
 @each $n, $v in $airyValues {
-    .#{"airy-" + lower($n)} {
-        margin: $v;
-    }
+  .#{"airy-" + lower($n)} {
+    margin: $v;
+  }
 }
 
 .align {
-    &-left {
-        text-align: left;
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-vertical {
+    &-top {
+      position: absolute;
+      top: 0;
     }
 
-    &-right {
-        text-align: right;
+    &-center,
+    &-center-50 {
+      position: absolute;
+      top: 50%;
     }
 
-    &-center {
-        text-align: center;
+    &-center-25 {
+      position: absolute;
+      top: 25%;
     }
 
-    &-vertical {
-        &-top {
-            position: absolute;
-            top: 0;
-        }
-
-        &-center, &-center-50 {
-            position: absolute;
-            top: 50%;
-        }
-
-        &-center-25 {
-            position: absolute;
-            top: 25%;
-        }
-
-        &-center-75 {
-            position: absolute;
-            top: 75%;
-        }
-
-        &-bottom {
-            position: absolute;
-            bottom: 0;
-        }
+    &-center-75 {
+      position: absolute;
+      top: 75%;
     }
+
+    &-bottom {
+      position: absolute;
+      bottom: 0;
+    }
+  }
 }
 
 @each $name, $val in $widthSizes {
-    .#{"width-" + lower($name)} {
+  .#{"width-" + lower($name)} {
+    width: $val;
+
+    @each $n, $v in $airyValues {
+      &.#{"airy-" + lower($n)} {
+        margin: $v;
+      }
+
+      &-#{"airy-" + lower($n)} {
         width: $val;
+        margin: $v;
+      }
 
-        @each $n, $v in $airyValues {
-            &.#{"airy-" + lower($n)} {
-                margin: $v;
-            }
-
-            &-#{"airy-" + lower($n)} {
-                width: $val;
-                margin: $v;
-            }
-
-            @if (equal($n, MD)) {
-                &.airy {
-                    margin: $v;
-                }
-
-                &-airy {
-                    width: $val;
-                    margin: $v;
-                }
-            }
+      @if (equal($n, MD)) {
+        &.airy {
+          margin: $v;
         }
+
+        &-airy {
+          width: $val;
+          margin: $v;
+        }
+      }
     }
+  }
 }
 
-.#{GET(KW, Responsive)} {
+.#{get(KW, Responsive)} {
+  @include responsive(true, false);
+
+  &-full-height {
     @include responsive(true, false);
-
-    &-full-height {
-        @include responsive(true, false);
-        height: 100%;
-
-        &-center {
-            @include responsive(true);
-            height: 100%;
-        }
-    }
+    height: 100%;
 
     &-center {
-        @include responsive(true);
+      @include responsive(true);
+      height: 100%;
     }
+  }
+
+  &-center {
+    @include responsive(true);
+  }
 }
 
 .container {
-    @include responsive(true, false, true);
+  @include responsive(true, false, true);
+
+  &-clean {
+    @include responsive(true, false, false);
+  }
+
+  &-auto {
+    @include responsive(true, true, true);
 
     &-clean {
-        @include responsive(true, false, false);
+      @include responsive(true, true, false);
     }
+  }
 
-    &-auto {
-        @include responsive(true, true, true);
+  &-full {
+    @include responsive(false, false, true);
 
-        &-clean {
-            @include responsive(true, true, false);
-        }
+    &-clean {
+      @include responsive(false, false, false);
     }
-
-    &-full {
-        @include responsive(false, false, true);
-
-        &-clean {
-            @include responsive(false, false, false);
-        }
-    }
+  }
 }
 
-.#{GET(KW, BG-Cover)} {
-    @include bgCover();
+.#{get(KW, BG-Cover)} {
+  @include bgCover();
 
-    &.fixed, &-fixed {
-        @include bgCover(true);
-    }
+  &.fixed,
+  &-fixed {
+    @include bgCover(true);
+  }
 }
 
-.fixed.top, .fixed-top {
-    position: fixed;
-    top: 0;
-    bottom: unset;
-    left: 0;
-    right: 0;
+.fixed.top,
+.fixed-top {
+  position: fixed;
+  top: 0;
+  bottom: unset;
+  left: 0;
+  right: 0;
 }
 
-.fixed.bottom, .fixed-bottom {
-    position: fixed;
-    top: unset;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.fixed.bottom,
+.fixed-bottom {
+  position: fixed;
+  top: unset;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.fixed.left, .fixed-left {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: unset;
+.fixed.left,
+.fixed-left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: unset;
 }
 
-.fixed.right, .fixed-right {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: unset;
-    right: 0;
+.fixed.right,
+.fixed-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: unset;
+  right: 0;
 }
 
-.float.left, .float-left {
-    float: left;
+.float.left,
+.float-left {
+  float: left;
 }
 
-.float.right, .float-right {
-    float: right;
+.float.right,
+.float-right {
+  float: right;
 }
 
-.hide, .close, .invisible {
-    display: none;
+.hide,
+.close,
+.invisible {
+  display: none;
 }
 
-.show, .block, .visible {
-    display: block;
+.show,
+.block,
+.visible {
+  display: block;
 }
 
 .position {
-    &-relative {
-        position: relative;
-    }
+  &-relative {
+    position: relative;
+  }
 
-    &-absolute {
-        position: absolute;
-    }
+  &-absolute {
+    position: absolute;
+  }
 
-    &-fixed {
-        position: fixed;
-    }
+  &-fixed {
+    position: fixed;
+  }
 
-    &-static {
-        position: static;
-    }
+  &-static {
+    position: static;
+  }
 
-    &-sticky {
-        position: sticky;
-    }
+  &-sticky {
+    position: sticky;
+  }
 
-    &-center {
-        position: center;
-    }
+  &-center {
+    position: center;
+  }
 
-    &-page {
-        position: page;
-    }
+  &-page {
+    position: page;
+  }
 }
 
 @for $i from 1 through 9 {
-    .o-#{$i} {
-
-        @if ($i == 1) {
-            opacity: 1;
-        }
-        @else {
-            opacity: #{"0." + $i};
-        }
+  .o-#{$i} {
+    @if ($i == 1) {
+      opacity: 1;
+    } @else {
+      opacity: #{"0." + $i};
     }
+  }
 }
 
 @include head(true);
 
 @include media() {
-    @include head();
+  @include head();
 }
 
 .clean {
-    padding: unset;
+  padding: unset;
 }
 
 .clean-mrg {
-    margin: unset;
+  margin: unset;
 }
 
 .clean-all {
-    padding: unset;
-    margin: unset;
+  padding: unset;
+  margin: unset;
 }
 
 .bg {
-    &-white {
-        background-color: white;
-    }
+  &-white {
+    background-color: white;
+  }
 
-    &-black {
-        background-color: white;
-    }
+  &-black {
+    background-color: white;
+  }
 
-    @each $n, $v in $CPs {
-        &-#{lower($n)} {
-            background-color: color($n);
-        }
+  @each $n, $v in $CPs {
+    &-#{lower($n)} {
+      background-color: color($n);
     }
+  }
 }
 
 .color {
-    &-white {
-        color: white;
-    }
+  &-white {
+    color: white;
+  }
 
-    &-black {
-        color: black;
-    }
+  &-black {
+    color: black;
+  }
 
-    @each $n, $v in $CPs {
-        &-#{lower($n)} {
-            color: color($n);
-        }
+  @each $n, $v in $CPs {
+    &-#{lower($n)} {
+      color: color($n);
     }
+  }
 }
 
 .border {
-    &-white {
-        border-color: white;
-    }
+  &-white {
+    border-color: white;
+  }
 
-    &-black {
-        border-color: black;
-    }
+  &-black {
+    border-color: black;
+  }
 
-    @each $n, $v in $CPs {
-        &-#{lower($n)} {
-            border-color: color($n);
-        }
+  @each $n, $v in $CPs {
+    &-#{lower($n)} {
+      border-color: color($n);
     }
+  }
 }
 
 .dis {
-    &-table {
-        display: table;
-    }
+  &-table {
+    display: table;
+  }
 
-    &-inline-table {
-        display: inline-table;
-    }
+  &-inline-table {
+    display: inline-table;
+  }
 
-    &-block {
-        display: block;
-    }
+  &-block {
+    display: block;
+  }
 
-    &-inline-block {
-        display:  inline-block;
-    }
+  &-inline-block {
+    display: inline-block;
+  }
 
-    &-normal {
-        display: normal;
-    }
+  &-normal {
+    display: normal;
+  }
 
-    &-none {
-        display: none;
-    }
+  &-none {
+    display: none;
+  }
 }
 
-.#{GET(KW, WhiteSpace)} {
-    &-nowrap {
-        white-space: nowrap;
-    }
+.#{get(KW, WhiteSpace)} {
+  &-nowrap {
+    white-space: nowrap;
+  }
 
-    &-normal {
-        white-space: normal;
-    }
+  &-normal {
+    white-space: normal;
+  }
 
-    &-pre {
-        white-space: pre;
-    }
+  &-pre {
+    white-space: pre;
+  }
 
-    &-normal {
-        white-space: normal;
-    }
+  &-normal {
+    white-space: normal;
+  }
 }
 
 .table-auto {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fill {
-    min-width: 100%;
-    min-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }

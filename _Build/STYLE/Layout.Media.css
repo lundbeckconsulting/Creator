@@ -1,108 +1,105 @@
-[class^="show-from-"] {
+[class^="show-"] {
   display: none; }
 
-.show-sm {
-  display: none; }
-
-.hide-sm {
+/*
+  [class^="hide-"] {
+    display: block;
+  }
+*/
+.show {
   display: block; }
+  .show-inline {
+    display: inline-block; }
+
+.hide {
+  display: none; }
 
 @media (min-width: 576px) {
   .hide-sm {
     display: none; }
   .show-sm {
-    display: block !important; }
+    display: block; }
+    .show-sm-inline {
+      display: inline-block; }
   .h1-sm {
-    font-size: 5.2rem !important; }
+    font-size: 5.2rem; }
   .h2-sm {
-    font-size: 4.3rem !important; }
+    font-size: 4.3rem; }
   .h3-sm {
-    font-size: 3rem !important; }
+    font-size: 3rem; }
   .h4-sm {
-    font-size: 2.2rem !important; }
+    font-size: 2.2rem; }
   .h5-sm {
-    font-size: 1.8rem !important; }
+    font-size: 1.8rem; }
   .h6-sm {
-    font-size: 1.4rem !important; }
+    font-size: 1.4rem; }
   .h7-sm {
-    font-size: 1.1rem !important; } }
-
-.show-md {
-  display: none; }
-
-.hide-md {
-  display: block; }
+    font-size: 1.1rem; } }
 
 @media (min-width: 768px) {
   .hide-md {
     display: none; }
   .show-md {
-    display: block !important; }
+    display: block; }
+    .show-md-inline {
+      display: inline-block; }
   .h1-md {
-    font-size: 5.2rem !important; }
+    font-size: 5.2rem; }
   .h2-md {
-    font-size: 4.3rem !important; }
+    font-size: 4.3rem; }
   .h3-md {
-    font-size: 3rem !important; }
+    font-size: 3rem; }
   .h4-md {
-    font-size: 2.2rem !important; }
+    font-size: 2.2rem; }
   .h5-md {
-    font-size: 1.8rem !important; }
+    font-size: 1.8rem; }
   .h6-md {
-    font-size: 1.4rem !important; }
+    font-size: 1.4rem; }
   .h7-md {
-    font-size: 1.1rem !important; } }
-
-.show-lg {
-  display: none; }
-
-.hide-lg {
-  display: block; }
+    font-size: 1.1rem; } }
 
 @media (min-width: 992px) {
   .hide-lg {
     display: none; }
   .show-lg {
-    display: block !important; }
+    display: block; }
+    .show-lg-inline {
+      display: inline-block; }
   .h1-lg {
-    font-size: 5.2rem !important; }
+    font-size: 5.2rem; }
   .h2-lg {
-    font-size: 4.3rem !important; }
+    font-size: 4.3rem; }
   .h3-lg {
-    font-size: 3rem !important; }
+    font-size: 3rem; }
   .h4-lg {
-    font-size: 2.2rem !important; }
+    font-size: 2.2rem; }
   .h5-lg {
-    font-size: 1.8rem !important; }
+    font-size: 1.8rem; }
   .h6-lg {
-    font-size: 1.4rem !important; }
+    font-size: 1.4rem; }
   .h7-lg {
-    font-size: 1.1rem !important; } }
-
-.show-xl {
-  display: none; }
-
-.hide-xl {
-  display: block; }
+    font-size: 1.1rem; } }
 
 @media (min-width: 1200px) {
   .hide-xl {
     display: none; }
   .show-xl {
-    display: block !important; }
+    display: block; }
+    .show-xl-inline {
+      display: inline-block; }
   .h1-xl {
-    font-size: 5.2rem !important; }
+    font-size: 5.2rem; }
   .h2-xl {
-    font-size: 4.3rem !important; }
+    font-size: 4.3rem; }
   .h3-xl {
-    font-size: 3rem !important; }
+    font-size: 3rem; }
   .h4-xl {
-    font-size: 2.2rem !important; }
+    font-size: 2.2rem; }
   .h5-xl {
-    font-size: 1.8rem !important; }
+    font-size: 1.8rem; }
   .h6-xl {
-    font-size: 1.4rem !important; }
+    font-size: 1.4rem; }
   .h7-xl {
-    font-size: 1.1rem !important; } }
+    font-size: 1.1rem; } }
 
 /*# sourceMappingURL=Layout.Media.css.map */

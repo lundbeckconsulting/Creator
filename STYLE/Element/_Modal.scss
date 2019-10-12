@@ -1,58 +1,58 @@
-﻿@import "..\\_Shared\\Mixin";
-@import "..\\_Shared\\Config";
-@import "..\\_Shared\\Function";
+﻿@import "..\\Shared\\Mixin";
+@import "..\\Shared\\Config";
+@import "..\\Shared\\Function";
 
 @each $cp, $c in $CPs {
-    @each $sizeName, $size in $modalSizes {
-        $colorTitle: color($cp);
-        $closeIconColor: #800505;
+  @each $sizeName, $size in $modalSizes {
+    $colorTitle: color($cp);
+    $closeIconColor: #800505;
 
-        .#{"modal-" + lower($cp) + "-" + lower($sizeName)} {
-            @include modal($sizeName, $cp);
+    .#{"modal-" + lower($cp) + "-" + lower($sizeName)} {
+      @include modal($sizeName, $cp);
 
-            & > content {
-                & > header {
-                    @include modalHeader($cp);
+      & > content {
+        & > header {
+          @include modalHeader($cp);
 
-                    & > span.title {
-                        flex: 1 1 auto;
-                        color: $colorTitle;
-                        font-size: 1rem;
-                        font-weight: 600;
+          & > span.title {
+            flex: 1 1 auto;
+            color: $colorTitle;
+            font-size: 1rem;
+            font-weight: 600;
 
-                        @include noOverflow();
-                    }
+            @include noOverflow();
+          }
 
-                    & > .hide-modal {
-                        flex: 0 0 26px;
+          & > .hide-modal {
+            flex: 0 0 26px;
 
-                        & > .icon {
-                            color: $closeIconColor;
-                            margin: 4px;
-                            font-size: 1.1rem;
+            & > .icon {
+              color: $closeIconColor;
+              margin: 4px;
+              font-size: 1.1rem;
 
-                            &:hover {
-                                color: lighten($closeIconColor, 8%);
-                            }
-                        }
-                    }
-                }
-
-                & > .body {
-                    @include modalBody();
-                }
+              &:hover {
+                color: lighten($closeIconColor, 8%);
+              }
             }
+          }
         }
+
+        & > .body {
+          @include modalBody();
+        }
+      }
     }
+  }
 }
 
 #modalBackground {
-    display: none;
-    background-color: rgba(black, 0.8);
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 98;
+  display: none;
+  background-color: rgba(black, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 98;
 }

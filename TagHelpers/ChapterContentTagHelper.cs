@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using LC.Assets;
+using LC.Assets.Core.Components.TagHelpers;
+using LC.Assets.Data;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System.Threading.Tasks;
@@ -8,11 +11,13 @@ namespace LC.Creator.TagHelpers
     [HtmlTargetElement("content", Attributes = "type", ParentTag = "chapter", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class ChapterContentTagHelper : TagHelperBase
     {
-        public ChapterContentTagHelper(IHostingEnvironment env, IHtmlHelper html) : base(env, html)
+        public ChapterContentTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
         { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
+            base.PreProcess(context, output);
+
             ChapterContext cntx = (ChapterContext)context.Items[typeof(ChapterTagHelper)];
             TagHelperContent child = await output.GetChildContentAsync();
             string inner = child.GetContent();
@@ -29,6 +34,8 @@ namespace LC.Creator.TagHelpers
             }
 
             output.SuppressOutput();
+
+            await base.ProcessAsync(context, output);
         }
 
         [HtmlAttributeName("type")]

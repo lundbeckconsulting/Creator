@@ -1,4 +1,7 @@
-﻿using LC.Assets.Components.Extensions;
+﻿using LC.Assets;
+using LC.Assets.Components.Extensions;
+using LC.Assets.Core.Components.TagHelpers;
+using LC.Assets.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -9,13 +12,12 @@ namespace LC.Creator.TagHelpers
     [HtmlTargetElement("modal", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class ModalTagHelper : TagHelperBase
     {
-        private readonly TagHelperRepo _helper = new TagHelperRepo();
-
-        public ModalTagHelper(IHostingEnvironment env, IHtmlHelper html) : base(env, html) { }
+        public ModalTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, ref output);
+            base.PreProcess(context, output);
 
             TagBuilder tmp = GetTag();
 
@@ -26,8 +28,8 @@ namespace LC.Creator.TagHelpers
 
             TagBuilder GetTag()
             {
-                TagBuilder result = GetTagBuilder("dialog");
-                TagBuilder content = GetTagBuilder("content");
+                TagBuilder result = new TagBuilder("dialog");
+                TagBuilder content = new TagBuilder("content");
                 TagBuilder header = new TagBuilder("header");
                 TagBuilder title = new TagBuilder("span");
                 TagBuilder closeIcon = new TagBuilder("span");
@@ -40,7 +42,7 @@ namespace LC.Creator.TagHelpers
                     title.InnerHtml.Append(this.Title);
                     title.AddCssClass("title");
                     header.InnerHtml.AppendHtml(title);
-                    closeIcon.InnerHtml.AppendHtml(_helper.GetIconTag(Symbols.CloseFull, SymbolOutputs.Span, SymbolSizes.None, SymbolLanguages.Auto, default, "Lukk", "#", true, false, false, ColorProfiles.Danger));
+                    // closeIcon.InnerHtml.AppendHtml()
                     closeIcon.AddCssClass("hide-modal");
                     header.InnerHtml.AppendHtml(closeIcon);
                     content.InnerHtml.AppendHtml(header);

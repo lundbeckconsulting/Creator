@@ -1,4 +1,7 @@
-﻿using LC.Assets.Components.Extensions;
+﻿using LC.Assets;
+using LC.Assets.Components.Extensions;
+using LC.Assets.Core.Components.TagHelpers;
+using LC.Assets.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -9,12 +12,12 @@ namespace LC.Creator.TagHelpers
     [HtmlTargetElement("fa", Attributes = "name", TagStructure = TagStructure.WithoutEndTag)]
     public class FontAwesomeTagHelper : TagHelperBase
     {
-        public FontAwesomeTagHelper(IHostingEnvironment env, IHtmlHelper html) : base(env, html)
+        public FontAwesomeTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
         { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, ref output);
+            base.PreProcess(context, output);
 
             output.TagName = "i";
             output.TagMode = TagMode.StartTagAndEndTag;

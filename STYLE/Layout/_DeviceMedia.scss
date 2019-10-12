@@ -1,0 +1,58 @@
+@import "..\\Shared\\Config";
+@import "..\\Shared\\Function";
+@import "..\\Shared\\Media";
+
+@each $name, $break in get(DeviceMedia) {
+  $index: indexOf(get(DeviceMedia), $name);
+  $name: lower($name);
+  $min: get(Media, $break);
+  $max: null;
+
+  @if not(equal($index, len(get(DeviceMedia)))) {
+    $idx: $index + 1;
+    $max: get(Media, get(DeviceMedia, $idx));
+  }
+
+  @include media($break, Any, Only, $min, $max) {
+    .show-#{$name} {
+      display: block !important;
+
+      &-inline {
+        display: inline-block !important;
+      }
+    }
+
+    .hide-#{$name} {
+      display: none;
+    }
+  }
+
+  @if not(equal($index, len(get(DeviceMedia)))) {
+    @each $nm, $bp in get(DeviceMedia) {
+      $i: indexOf(get(DeviceMedia), $nm);
+      $mode: Only;
+
+      @if ($i > $index) {
+        $nm: lower($nm);
+        $max: get(Media, get(DeviceMedia, $i));
+
+        @if not(equal($i, len(get(DeviceMedia)))) {
+          $max: get(Media, get(DeviceMedia, $i + 1));
+        } @else {
+          $mode: Up;
+          $max: null;
+        }
+
+        @include media($break, Any, $mode, $min, $max) {
+          .show-#{$name}-#{$nm} {
+            display: block !important;
+
+            &-inline {
+              display: inline-block !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

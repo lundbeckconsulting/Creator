@@ -1,74 +1,94 @@
-﻿@import "..\\_Shared\\Function";
-@import "..\\_Shared\\Config";
+﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\Config";
 
 @mixin flexEven() {
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: center;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
 
-    & > * {
-        flex: 1 1 auto;
-    }
+  & > * {
+    flex: 1 1 auto;
+  }
 }
 
 @mixin head($resize: false) {
-    @each $name, $val in $headSyno {
-        $size: GET(Head, $val);
+  @each $name, $val in $headSyno {
+    $size: get(Head, $val);
 
-        @if ($resize) {
-            @if (equal($name, 1)) {
-                $size: $size - 3.4rem;
-            }
-            @else if (equal($name, 2)) {
-                $size: $size - 1.2rem;
-            }
-            @else if (equal($name, 3)) {
-                $size: $size - 1.2rem;
-            }
-            @else if (equal($name, 4)) {
-                $size: $size - 0.4rem;
-            }
-            @else if (equal($name, 5)) {
-                $size: $size - 0.2rem;
-            }
+    @if ($resize) {
+      @if (equal($name, 1)) {
+        $size: $size - 3.4rem;
+      } @else if (equal($name, 2)) {
+        $size: $size - 1.2rem;
+      } @else if (equal($name, 3)) {
+        $size: $size - 1.2rem;
+      } @else if (equal($name, 4)) {
+        $size: $size - 0.4rem;
+      } @else if (equal($name, 5)) {
+        $size: $size - 0.2rem;
+      }
+    }
+
+    .h#{$name} {
+      font-size: $size;
+      font-weight: normal;
+
+      &-bold {
+        font-size: $size;
+        font-weight: bold;
+      }
+
+      @each $s, $v in $airyValues {
+        &-#{"airy-" + lower($s)} {
+          font-size: $size;
+          margin: $v;
+          font-weight: normal;
         }
 
-        .h#{$name} {
+        &-#{"airy-" + lower($s) + "-bold"} {
+          font-size: $size;
+          margin: $v;
+          font-weight: bold;
+        }
+
+        @if (equal($s, MD)) {
+          &-airy {
             font-size: $size;
+            margin: getAiry();
             font-weight: normal;
 
             &-bold {
-                font-size: $size;
-                font-weight: bold;
+              font-size: $size;
+              margin: getAiry();
+              font-weight: bold;
             }
-
-            @each $s, $v in $airyValues {
-                &-#{"airy-" + lower($s)} {
-                    font-size: $size;
-                    margin: $v;
-                    font-weight: normal;
-                }
-
-                &-#{"airy-" + lower($s) + "-bold"} {
-                    font-size: $size;
-                    margin: $v;
-                    font-weight: bold;
-                }
-
-                @if (equal($s, MD)) {
-                    &-airy {
-                        font-size: $size;
-                        margin: getAiry();
-                        font-weight: normal;
-
-                        &-bold {
-                            font-size: $size;
-                            margin: getAiry();
-                            font-weight: bold;
-                        }
-                    }
-                }
-            }
+          }
         }
+      }
     }
+  }
+}
+
+@mixin EachDevice($index, $inline: false) {
+  $tag: null;
+
+  @each $nm, $vl in $deviceMediaBreakpoints {
+    $i: IndexOf(DeviceMedia, $nm);
+
+    @if ($index > $i) {
+      @if (isNull($tag)) {
+        $tag: &-#{lower($nm)};
+      } @else {
+        $tag: $tag + "-" + #{lower($nm)};
+      }
+
+      .#{$tag} {
+        display: block;
+      }
+
+      .#{$tag}-inline {
+        display: inline-block;
+      }
+    }
+  }
 }

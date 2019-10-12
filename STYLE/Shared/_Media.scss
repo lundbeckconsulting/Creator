@@ -1,0 +1,47 @@
+﻿@import "Function";
+@import "Config";
+
+@mixin media($size: MD, $orientation: Any, $mode: Up, $minWidth: null, $maxWidth: null) {
+  $size: upper($size);
+  $width: get(Media, $size);
+  $query: null;
+
+  @if ($minWidth) {
+    $width: $minWidth;
+  }
+
+  @if (equal($mode, UP)) {
+    $query: "(min-width: " + $width + ")";
+  } @else if (equal($mode, DOWN)) {
+    $query: "(max-width: " + $width + ")";
+  } @else if (equal($mode, ONLY)) {
+    $query: "(min-width: " + $width + ")";
+    $max: null;
+
+    @if ($maxWidth) {
+      $max: $maxWidth;
+    } @else {
+      @if (equal($size, XS)) {
+        $max: map-get($mediaBreakpoints, SM);
+      } @else if (equal($size, SM)) {
+        $max: map-get($mediaBreakpoints, MD);
+      } @else if (equal($size, MD)) {
+        $max: map-get($mediaBreakpoints, LG);
+      } @else if (equal($size, LG)) {
+        $max: map-get($mediaBreakpoints, XL);
+      }
+    }
+
+    @if ($max) {
+      $query: $query + " and (max-width: " + $max + ")";
+    }
+  }
+
+  @if not(equal($orientation, Any)) {
+    $query: $query + " and (orientation: " + lower($orientation) + ")";
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}

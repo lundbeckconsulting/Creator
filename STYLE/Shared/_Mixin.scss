@@ -1,0 +1,543 @@
+﻿@import "Config";
+@import "Function";
+
+@mixin modal($size, $cp) {
+  $center: -16%;
+
+  @if (equal($size, SM)) {
+    $center: -118%;
+  } @else if (equal($size, MD)) {
+    $center: -74%;
+  } @else if (equal($size, LG)) {
+    $center: -54%;
+  } @else if (equal($size, XL)) {
+    $center: -50%; //yes kcvmsdj vsvs fvvd fs jksdk dcs ksks cas kdsid jjiuj d cds sa s a  csjnsk fvdjkls s asd csjs dsjsj cvzsdc ds
+  }
+
+  width: 100%;
+  max-width: get(Modal, $size);
+  max-height: 84%;
+  border: 4px solid color($cp, Primary);
+  border-radius: get(Sys, BorderRadius);
+  padding: 0px;
+  z-index: 99;
+  position: fixed;
+  top: 18px;
+
+  @include shadow();
+  @include absoluteCenter($center);
+}
+
+@mixin modalHeader($cp) {
+  $colorMain: color($cp, Primary);
+  $colorSub: color($cp, Second);
+  $colorBG: color($cp, Fifth);
+
+  @if (equal($cp, Primary)) {
+    $colorMain: darken($colorMain, 20%);
+    $colorBG: lighten($colorBG, 10%);
+  } @else if (equal($cp, Success)) {
+    $colorMain: darken($colorMain, 8%);
+    $colorBG: lighten($colorBG, 18%);
+  } @else if (equal($cp, Danger)) {
+    $colorBG: lighten($colorBG, 8%);
+  } @else if (equal($cp, Warning)) {
+    $colorMain: darken($colorMain, 24%);
+  } @else if (equal($cp, Info)) {
+    $colorMain: darken($colorMain, 18%);
+    $colorBG: lighten($colorBG, 14%);
+  } @else if (equal($cp, Dark)) {
+    $colorMain: color($cp, Fifth);
+    $colorBG: $colorSub;
+  } @else if (equal($cp, Antan)) {
+    $colorBG: lighten($colorBG, 14%);
+  }
+
+  display: flex;
+  align-items: center;
+  color: $colorMain;
+  padding: 4px;
+  border-bottom: 2px solid $colorSub;
+  background-color: $colorBG;
+  font-size: 1.6rem;
+
+  & > .close-modal {
+    $iconColor: color(Danger);
+
+    @if (equal($cp, Dark)) {
+      $iconColor: lighten(color($cp, Fifth), 8%);
+    }
+
+    color: $iconColor;
+  }
+}
+
+@mixin modalBody() {
+  padding: $defaultPad;
+  background-color: get(SYS, ModalBackgroundColor);
+}
+
+@mixin airy($size: MD, $inside: false) {
+  $val: get(Airy, $size);
+
+  @if ($inside) {
+    padding: $val;
+  } @else {
+    margin: $val;
+  }
+}
+
+@mixin font($size: MD, $bold: false) {
+  font-size: get(Font, $size);
+
+  @if ($bold) {
+    font-weight: bold;
+  }
+}
+
+@mixin responsive($restrain: true, $center: true, $pad: false) {
+  $min: 0px;
+  $max: 100%;
+
+  @if ($restrain) {
+    $max: get(Width, DOC);
+  }
+
+  width: 100%;
+  min-width: $min;
+  max-width: $max;
+
+  @if ($center) {
+    @include autoMargin();
+  }
+
+  @if ($pad) {
+    padding: $defaultPad;
+  }
+}
+
+@mixin color($cpName: Default, $clrName: Primary, $font: false, $bg: false) {
+  $clr: map-get($CPs, toCPName($cpName));
+  $color: map-get($clr, toPCColorName($clrName));
+
+  @if ($font) {
+    color: $color;
+  }
+
+  @if ($bg) {
+    background-color: $color;
+  }
+}
+
+@mixin absoluteCenter($val: -50%) {
+  left: 50%;
+  transform: translate($val);
+}
+
+@mixin autoMargin() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin bgCover($fixed: false, $img: None) {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @if ($fixed) {
+    background-attachment: fixed;
+  }
+
+  @if not(equal($img, None)) {
+    background-image: url($img);
+  }
+}
+
+@mixin bgRepeat() {
+  background-repeat: repeat;
+}
+
+@mixin bgRepeatY() {
+  background-position-y: left;
+  background-position-x: unset;
+}
+
+@mixin bgRepeatX() {
+  background-position-x: top;
+  background-position-y: unset;
+}
+
+@mixin cleanBase($pad: true, $mrg: true, $border: false, $table: false, $td: false) {
+  @if ($pad) {
+    padding: 0 !important;
+  }
+
+  @if ($mrg) {
+    margin: 0 !important;
+  }
+
+  @if ($border) {
+    border: none !important;
+  }
+
+  @if ($table) {
+    border: none !important;
+    margin: inherit;
+  }
+
+  @if ($td) {
+    td {
+      border: none !important;
+      padding: initial;
+    }
+  }
+}
+
+@mixin table($cpName: Default, $border: true, $fat: false, $airy: false, $autoMargin: false) {
+  display: table;
+  border-collapse: collapse;
+
+  @if ($autoMargin) {
+    @include autoMargin();
+  }
+}
+
+@mixin tableAlternate($cpName: Default) {
+  tr:nth-child(even) {
+    $clr: color($cpName, Fifth);
+
+    @if (equal($cpName, Light)) {
+      $clr: #e8e8e8;
+    }
+
+    background-color: $clr;
+  }
+}
+
+@mixin bgCover($fixed: false, $img: null) {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @if ($fixed) {
+    background-attachment: fixed;
+  }
+
+  @if not(isNull($img)) {
+    background-image: url($img);
+  }
+}
+
+@mixin noOverflow() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin table($cpName: Default, $td: true, $airy: false, $fat: false, $border: true) {
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  thead {
+    padding: 8px;
+    background-color: color($cpName, Third);
+    font-weight: bold;
+    color: color($cpName);
+  }
+
+  @if ($td) {
+    @include tableTd($cpName, $airy, $fat, $border);
+  }
+}
+
+@mixin tableTd($cpName: Default, $airy: false, $fat: false, $border: true) {
+  td {
+    $clr: color($cpName);
+    $pad: 6px;
+    $borderWidth: 2px;
+    $borderColor: rgba($clr, 0.4);
+
+    @if ($airy) {
+      $pad: 14px;
+    }
+
+    @if ($fat) {
+      $borderWidth: 6px;
+    }
+
+    @if ($border) {
+      border: $borderWidth solid $borderColor;
+    }
+
+    color: $clr;
+    padding: $pad;
+
+    &:first-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@mixin tableAlternate($cpName: Default) {
+  tr:nth-child(even) {
+    $clr: color($cpName, Fifth);
+
+    @if (equal($cpName, Light)) {
+      $clr: #e8e8e8;
+    }
+
+    background-color: rgba($clr, 0.8);
+  }
+}
+
+@mixin formControl($cpName: Default, $glowFocus: false, $padHori: 12px) {
+  $cpName: toCPName($cpName);
+  $fore: color($cpName, Fifth);
+  $padVertical: 6px;
+  $padHorizontal: $padHori;
+  $margin: 4px;
+
+  border-radius: get(Sys, BorderRadius);
+  padding-top: $padVertical;
+  padding-bottom: $padVertical;
+  padding-left: $padHorizontal;
+  padding-right: $padHorizontal;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: $margin;
+  margin-bottom: $margin;
+
+  @if ($glowFocus) {
+    @include boxGlow($cpName);
+  }
+}
+
+@mixin formControlHover($cpName: Default, $gradient: false) {
+  &:hover {
+    $cursor: pointer;
+
+    @if ($gradient) {
+      $start: color($cpName, Fifth);
+      $end: color($cpName, Second);
+
+      background: linear-gradient($start, $end);
+    } @else {
+      $cpName: toCPName($cpName);
+      $back: darken(color($cpName), 18%);
+      $fore: color($cpName, Fifth);
+
+      @if (equal($cpName, Warning)) {
+        $fore: white;
+      } @else if (equal($cpName, Dark)) {
+        $fore: #6d6d6d;
+      }
+
+      color: $fore;
+      background-color: $back;
+    }
+
+    cursor: $cursor;
+  }
+}
+
+@mixin formTextbox($cpName: Default, $glow: true) {
+  $color: color(toCPName($cpName));
+
+  @if (equal($cpName, Default)) {
+    $color: #a5a5a5;
+  }
+
+  @include formControl($cpName, true);
+
+  @if ($glow) {
+    @include boxGlow($cpName);
+  }
+
+  @if (equal($cpName, Default)) {
+    $color: #272727;
+  }
+
+  font-size: 1.6rem;
+  border: 2px solid #343434;
+  padding: 6px;
+
+  &:hover {
+    background-color: #e4e1cf;
+  }
+}
+
+@mixin formButtonBase($cpName: Default, $border: false, $gradient: false) {
+  $cpName: toCPName($cpName);
+  $fore: color($cpName, Fifth);
+  $back: color($cpName);
+  $borderColor: $back;
+  $mrg: 2px;
+
+  @if (equal($cpName, Default)) {
+    $fore: color(Default, Third);
+    $back: white;
+    $border: true;
+    $borderColor: #2a2a2a;
+  } @else if (equal($cpName, Warning)) {
+    @if ($gradient) {
+      $fore: color($cpName, Fifth);
+    }
+  } @else if (equal($cpName, Dark)) {
+    $fore: gray;
+  }
+
+  @if (equal($cpName, Default)) {
+    $border: true;
+  }
+
+  @include formControl($cpName, false, 22px);
+
+  @if ($gradient) {
+    background: linear-gradient($fore, $back);
+  } @else {
+    background-color: $back;
+  }
+
+  @if ($border) {
+    border: 2px solid $borderColor;
+  }
+
+  @if (equal($cpName, Warning)) {
+    $fore: #86291c;
+  } @else if ($gradient and equal($cpName, Info)) {
+    $fore: #0c436e;
+  } @else if ($gradient and equal($cpName, Dark)) {
+    $fore: white;
+  } @else if ($gradient) {
+    @if (equalz($cpName, Primary, Success, Danger, Light, Antan, Notify)) {
+      $fore: darken(color($cpName), 22%);
+    }
+  }
+
+  @if (equal($cpName, Default)) {
+    $fore: black;
+  }
+
+  display: inline-block;
+  margin-left: $mrg;
+  margin-right: $mrg;
+  color: $fore;
+}
+
+@mixin formButtonSolid($cpName: Default, $border: false) {
+  @include formButtonBase($cpName, $border);
+  @include formControlHover($cpName);
+}
+
+@mixin formButtonGradient($cpName: Default, $border: false) {
+  @include formButtonBase($cpName, $border, true);
+  @include formControlHover($cpName, true);
+}
+
+@mixin boxGlow($cpName: Default, $size: 18px, $borderCpName: None) {
+  $cpName: toCPName($cpName);
+  $color: color($cpName);
+  $borderColor: unset;
+
+  @if (equal($cpName, Default)) {
+    $color: #b9b9b9;
+  }
+
+  @if not(equal($borderCpName, None)) {
+    $borderCpName: toCPName($borderCpName);
+    $borderColor: color($borderCpName);
+
+    box-shadow: 0 0 $size $borderColor;
+    -webkit-box-shadow: 0 0 $size 0 $borderColor;
+    -moz-box-shadow: 0 0 $size 0 $borderColor;
+    border: 2px solid $borderColor;
+  } @else {
+    border: 2px solid rgba(white, 0);
+
+    &:focus:not(#{get(KW, ValidateError)}) {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -webkit-box-shadow: 0 0 $size 0 $color;
+      -moz-box-shadow: 0 0 $size 0 $color;
+      box-shadow: 0 0 $size $color;
+      outline: none;
+      background-color: color(Light, Fourth);
+    }
+  }
+}
+
+@mixin textGlow($color: #002155, $x: 1px, $y: 1px, $blur: 10px) {
+  text-shadow: $x $y $blur $color, $x $y $blur $color;
+}
+
+@mixin textOutline($size: 4px, $color: #4073c4, $outlineColor: #8d0000) {
+  color: $color;
+  -webkit-text-stroke-width: $size;
+  -webkit-text-stroke-color: $outlineColor;
+}
+
+@mixin textShadow($size: 2px, $color: color(Default)) {
+  text-shadow: $size $size $color;
+}
+
+@mixin shadow($size: 3px, $color: lighten(color(Default), 28%)) {
+  box-shadow: $size $size $color;
+}
+
+@mixin rotate($degrees: 90deg) {
+  transform: rotate($degrees);
+}
+
+@mixin rotate3D($x: 90, $y: 90, $z: 90, $angle: 90deg) {
+  transform: rotate3d($x, $y, $z, $angle);
+}
+
+@mixin rotateX($angle: 90deg) {
+  transform: rotateX($angle);
+}
+
+@mixin rotateY($angle: 90deg) {
+  transform: rotateY($angle);
+}
+
+@mixin rotateZ($angle: 90deg) {
+  transform: rotateZ($angle);
+}
+
+@mixin scale($x: 4, $y: 4) {
+  transform: scale($x, $y);
+}
+
+@mixin scaleX($scale: 4) {
+  transform: scaleX($scale);
+}
+
+@mixin scaleY($scale: 4) {
+  transform: scaleY($scale);
+}
+
+@mixin skew($x: 90deg, $y: 90deg) {
+  transform: skew($x, $y);
+}
+
+@mixin skewX($angel: 90deg) {
+  transform: skewX($angel);
+}
+
+@mixin skewY($angel: 90deg) {
+  transform: skewY($angel);
+}
+
+@mixin translate($x: 60px, $y: 100px) {
+  transform: translate($x, $y);
+}
+
+@mixin translateX($val: 60px) {
+  transform: translateX($val);
+}
+
+@mixin translateY($val: 100px) {
+  transform: translateY($val);
+}

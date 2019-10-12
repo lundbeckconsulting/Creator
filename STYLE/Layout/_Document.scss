@@ -1,10 +1,12 @@
-﻿@import "..\\_Shared\\Mixin";
-@import "..\\_shared\\Config";
+﻿@import "..\\Shared\\Mixin";
+@import "..\\Shared\\Config";
 
-*, *:before, *:after {
-    box-sizing: inherit;
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
 }
 
 html.creator {
@@ -16,14 +18,14 @@ html.creator {
     -moz-box-sizing: border-box;
 
     & > body.creator {
-        margin: 0px;
+        margin: 0;
         font-size: 1.6rem;
 
         & header.creator {
             @include responsive(true, true, true);
         }
 
-        & .main-nav {
+        & nav.creator {
             @include responsive(true, true, true);
         }
 
@@ -33,11 +35,11 @@ html.creator {
 
         & footer.creator {
             @include responsive(true, true, true);
-        }
 
-        & footer.sticky.creator {
-            flex: 0 0 auto;
-            @include airy(SM, true);
+            &-sticky {
+                flex: 0 0 auto;
+                @include airy(SM, true);
+            }
         }
     }
 }

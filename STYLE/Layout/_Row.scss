@@ -1,34 +1,30 @@
-﻿@import "..\\_Shared\\Function";
-@import "..\\_Shared\\Media";
-@import "..\\_Shared\\Config";
+﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\Media";
+@import "..\\Shared\\Config";
+
+$base: 12;
 
 .row {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
+  display: grid;
+  grid-template-columns: repeat($base, 1fr);
+  grid-template-rows: repeat(2, auto);
 
-    & > div[class^='col-'] {
-        grid-row: auto;
-        grid-column: 1/-1;
-    }
+  & > div[class^="col-"] {
+    grid-row: auto;
+    grid-column: 1/-1;
+  }
 }
 
 @each $size in $commonSizes {
-    @include media($size) {
-        @for $c from 1 through 12 {
-            .col-#{lower($size)}-#{$c} {
-                $span: $c;
+  @include media($size) {
+    @for $c from 1 through $base {
+      .col-#{lower($size)}-#{$c} {
+        $span: $c;
 
-                grid-row: 1 !important;
-                grid-column: auto / span $span !important;
-                padding: 6px;
-            }
-        }
+        grid-row: 1 !important;
+        grid-column: auto / span $span !important;
+        padding: 6px;
+      }
     }
-}
-
-@include media(SM) {
-    .row {
-        grid-template-columns: repeat(12, 1fr);
-    }
+  }
 }
