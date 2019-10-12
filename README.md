@@ -12,5 +12,11 @@ The framework is small and easy to include in your project.
 
 UPDATE: The framework is currently being rewritten to fix bugs and add new features. Stay tuned for version 2.0
 
+* Device Media: define devices an element should be visible on
+* Row/Column: now CSS only, no JavaScript
+* Color Profile: full color schema for all colors, allowing for easy styling of all elements
+* New Antan Color Profile
+* Flex and Grid rewritten
+
 ****
 https://creatorframework.com | https://github.com/lundbeckconsulting/Creator-Distro | http://lundbeckconsulting.com
