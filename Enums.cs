@@ -1,4 +1,9 @@
-﻿namespace LC.Creator
+﻿/*
+    @Date			: 10.12.2019
+    @Author         : Stein Lundbeck
+*/
+
+namespace Creator
 {
     public enum CommonSizes
     {

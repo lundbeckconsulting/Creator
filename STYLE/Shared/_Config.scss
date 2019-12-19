@@ -1,6 +1,6 @@
 ﻿@import "ColorProfiles";
 
-$deviceMediaBreakpoints: (
+$mediaDevices: (
   Phone: XS,
   Tablet: SM,
   Computer: LG,
@@ -23,9 +23,7 @@ $marginValues: (
   SM: 18px,
   MD: 28px,
   LG: 42px,
-  XL: 60px,
-  XXL: 82px,
-  Auto: null
+  XL: 60px
 );
 $docValues: (
   XS: 298px,
@@ -35,13 +33,11 @@ $docValues: (
   XL: 1366px
 );
 $padValues: (
-  XXS: 2px,
   XS: 4px,
-  SM: 10px,
-  MD: 16px,
-  LG: 30px,
-  XL: 54px,
-  XXL: 72px
+  SM: 6px,
+  MD: 10px,
+  LG: 16px,
+  XL: 24px
 );
 $airyValues: (
   XS: 4px,
@@ -146,12 +142,10 @@ $notifyPositions: (
   CenterBottom,
   CenterMiddle
 );
-
 $miscSettings: (
   NotifyBoxWidth: 548px,
   NotifyDefaultPadding: 14px
 );
-
 $keywords: (
   BG-Cover: bg-cover,
   BG-Repeat-X: bg-repeat-x,
@@ -170,7 +164,6 @@ $keywords: (
   ValidatedForm: form-validated,
   WhiteSpace: ws
 );
-
 $systemValues: (
   BorderRadius: 6px,
   PadBase: map-get($padValues, MD),
@@ -180,11 +173,9 @@ $systemValues: (
   BorderWidth: 6px,
   ModalBackgroundColor: white
 );
-
 $contentMaxWidth: map-get($widthSizes, DOC);
 $defaultPad: map-get($padValues, MD);
 $defaultMargin: 12px;
-
 $mapIndex: (
   Pad: (
     Data: $padValues
@@ -192,8 +183,8 @@ $mapIndex: (
   Width: (
     Data: $widthSizes
   ),
-  DeviceMedia: (
-    Data: $deviceMediaBreakpoints
+  Device: (
+    Data: $mediaDevices
   ),
   Media: (
     Data: $mediaBreakpoints

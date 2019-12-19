@@ -1,81 +1,30 @@
 ﻿@import "..\\Shared\\Function";
 @import "..\\Shared\\Mixin";
+@import "..\\Shared\\Media";
 
 .pad {
-  &-clean {
-    padding: $defaultPad;
-    @include cleanBase(true, false, false);
-  }
+    @include paddingMargin(Padding);
 
-  &-mrg-clean {
-    padding: $defaultPad;
-    @include cleanBase();
-  }
-
-  &-doc {
-    padding: $defaultPad;
-    padding: $defaultPad;
-  }
-}
-
-@each $n, $v in $padValues {
-  .#{"pad-" + lower($n)} {
-    padding: $v;
-
-    &-clean {
-      padding: $v;
-      @include cleanBase(true, false, false);
+    &-doc {
+        padding: $defaultPad;
+        padding: $defaultPad;
     }
 
     &-mrg-clean {
-      padding: $v;
-      @include cleanBase();
+        padding: 0;
+        margin: 0;
+
+        &-force {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
     }
-  }
 }
 
 .mrg {
-  &-clean {
-    margin: get(Margin, SM);
-    @include cleanBase(false, true, false);
-  }
+    @include paddingMargin(Margin);
 
-  &-auto {
-    @include autoMargin();
-  }
-
-  &-clean-auto {
-    margin: get(Margin, SM);
-    @include cleanBase(false, true, false);
-    @include autoMargin();
-  }
-
-  @each $n, $v in $marginValues {
-    $n: lower($n);
-
-    &-#{$n} {
-      margin: $v;
+    &-auto {
+        @include autoMargin();
     }
-
-    &-#{$n + "-left"} {
-      margin-left: $v;
-    }
-
-    &-#{$n + "-right"} {
-      margin-right: $v;
-    }
-
-    &-#{$n + "-top"} {
-      margin-top: $v;
-    }
-
-    &-#{$n + "-bottom"} {
-      margin-bottom: $v;
-    }
-
-    &-#{$n + "-both"} {
-      margin-left: $v;
-      margin-right: $v;
-    }
-  }
 }

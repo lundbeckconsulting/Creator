@@ -50,7 +50,7 @@
     }
 
     &-main {
-      @each $s in $commonSizesExtended {
+      @each $s in $commonSizes {
         $p: get(Pad, $s);
 
         &-#{lower($s)} {

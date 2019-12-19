@@ -1,4 +1,9 @@
-﻿using LC.Assets;
+﻿/*
+    @Date			: 10.12.2019
+    @Author         : Stein Lundbeck
+*/
+
+using LC.Assets;
 using LC.Assets.Components.Extensions;
 using LC.Assets.Core.Components.TagHelpers;
 using LC.Assets.Data;
@@ -6,8 +11,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
-namespace LC.Creator.TagHelpers
+namespace Creator.TagHelpers
 {
     [HtmlTargetElement("icon", Attributes = "type", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class IconTagHelper : TagHelperBase
@@ -18,11 +24,9 @@ namespace LC.Creator.TagHelpers
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
             base.PreProcess(context, output);
+            base.AddContent(GetTag());
 
-            output.SuppressOutput();
-            output.PostContent.AppendHtml(GetTag());
-
-            await base.ProcessAsync(context, output);
+            await base.ProcessAsync();
         }
 
         public TagBuilder GetTag()
@@ -30,7 +34,7 @@ namespace LC.Creator.TagHelpers
             TagBuilder result = default;
             TagBuilder tag = new TagBuilder("span");
             tag.AddCssClass("wrap");
-            tag.InnerHtml.AppendHtml(GetSymbol());
+            tag.InnerHtml.AppendHtml(GetSymbol(this.Type, this.Out, this.Size));
 
             if (!this.NoColor)
             {
@@ -111,14 +115,276 @@ namespace LC.Creator.TagHelpers
             return result;
         }
 
-        private TagBuilder GetSymbol()
+        private string GetColorProfile()
+        {
+            string result = this.Color.ToString().ToLower();
+
+            switch (this.Type)
+            {
+                case Symbols.Close:
+                case Symbols.CloseFull:
+                case Symbols.CloseCircle:
+                case Symbols.CloseCircleFull:
+                    result = ColorProfiles.Danger.ToString();
+                    break;
+            }
+
+            Debug.WriteLine($"color profile { result.ToUpper() } returned");
+
+            return "cp-" + result.ToLower();
+        }
+
+        private string GetCaption(CaptionTypes type = CaptionTypes.Content)
+        {
+            string result = default;
+
+            if (this.Text.IsNull())
+            {
+                switch (this.Type)
+                {
+                    case Symbols.Save:
+                    case Symbols.SaveFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å lagre", "Click to save") : GetTextByLanguage("Lagre", "Save");
+                        break;
+
+                    case Symbols.Close:
+                    case Symbols.CloseFull:
+                    case Symbols.CloseCircle:
+                    case Symbols.CloseCircleFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å lukke", "Click to close") : GetTextByLanguage("Lukk", "Close");
+                        break;
+
+                    case Symbols.SignIn:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å logge inn", "Click to sign in") : GetTextByLanguage("Logg inn", "Sign in");
+                        break;
+
+                    case Symbols.SignOut:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å logge ut", "Click to sign out") : GetTextByLanguage("Logg ut", "Sign out");
+                        break;
+
+                    case Symbols.FileUpload:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp", "Click to upload") : GetTextByLanguage("Last opp", "Upload");
+                        break;
+
+                    case Symbols.FileDownload:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fil", "Click to download file") : GetTextByLanguage("Last ned", "Download");
+                        break;
+
+                    case Symbols.FileExport:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste eksportere", "Click to export") : GetTextByLanguage("Eksporter", "Export");
+                        break;
+
+                    case Symbols.DocImage:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se bilde", "Click to see image") : GetTextByLanguage("Se bilde", "See image");
+                        break;
+
+                    case Symbols.Edit:
+                    case Symbols.EditFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å rediger", "Click to edit") : GetTextByLanguage("Rediger", "Edit");
+                        break;
+
+                    case Symbols.Copy:
+                    case Symbols.CopyFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å kopiere", "Click to copy") : GetTextByLanguage("Kopier", "Copy");
+                        break;
+
+                    case Symbols.AddressCard:
+                    case Symbols.AddressCardFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se adresse", "Click to see address") : GetTextByLanguage("Adresse", "Address");
+                        break;
+
+                    case Symbols.Calendar:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kalender", "Click to see calendar") : GetTextByLanguage("Kalender", "Calendar");
+                        break;
+
+                    case Symbols.Envelope:
+                    case Symbols.EnvelopeFull:
+                        result = GetTextByLanguage("E-post", "Email");
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å ende e-post", "Click to send email") : GetTextByLanguage("E-post", "Email");
+                        break;
+
+                    case Symbols.Phone:
+                    case Symbols.Mobile:
+                    case Symbols.MobileFull:
+                        result = GetTextByLanguage("Ring", "Call");
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å ringe", "Click to call") : GetTextByLanguage("Ring", "Call");
+                        break;
+
+                    case Symbols.DocCode:
+                        result = GetTextByLanguage("Kode", "Code");
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kode", "Click to see code") : GetTextByLanguage("Kode", "Code");
+                        break;
+
+                    case Symbols.Comment:
+                    case Symbols.CommentFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å skrive kommentar", "Click to leave comment") : GetTextByLanguage("Kommenter", "Comment");
+                        break;
+
+                    case Symbols.Comments:
+                    case Symbols.CommentsFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kommentarer", "Click to see comments") : GetTextByLanguage("Kommentarer", "Comments");
+                        break;
+
+                    case Symbols.Like:
+                    case Symbols.LikeFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å like", "Click to like") : GetTextByLanguage("Lik", "Like");
+                        break;
+
+                    case Symbols.Home:
+                    case Symbols.HomeDamage:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å gå til hovedside", "Click to go to start page") : GetTextByLanguage("Hjem", "Home");
+                        break;
+
+                    case Symbols.GitHub:
+                        result = "GitHub";
+                        break;
+
+                    case Symbols.Folder:
+                    case Symbols.FolderFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å åpne mappe", "Click to open folder") : GetTextByLanguage("Mappe", "Folder");
+                        break;
+
+                    case Symbols.Add:
+                    case Symbols.AddFull:
+                    case Symbols.AddCircle:
+                    case Symbols.AddCircleFull:
+                        result = GetTextByLanguage("Legg til", "Add");
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til", "Click to add") : GetTextByLanguage("Legg til", "Add");
+                        break;
+
+                    case Symbols.ShoppingBasket:
+                    case Symbols.ShoppingCart:
+                    case Symbols.ShoppingBag:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se handlekurv", "Click to se cart") : GetTextByLanguage("Handlekurv", "Cart");
+                        break;
+
+                    case Symbols.ShoppingCartPlus:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til i handlekurv", "Click to add to cart") : GetTextByLanguage("Legg til handlekurv", "Add to cart");
+                        break;
+
+                    case Symbols.Handshake:
+                    case Symbols.HandshakeFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bekrefte", "Click to confirm") : GetTextByLanguage("Bekreft", "Confirm");
+                        break;
+
+                    case Symbols.ThumbsUp:
+                    case Symbols.ThumbsUpFull:
+                        result = GetTextByLanguage("Tommel opp", "Thumbs up");
+                        break;
+
+                    case Symbols.ThumbsDown:
+                    case Symbols.ThumbsDownFull:
+                        result = GetTextByLanguage("Tommel ned", "Thumbs down");
+                        break;
+
+                    case Symbols.Visa:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Visa", "Click to use Visa") : "Visa";
+                        break;
+
+                    case Symbols.Stripe:
+                        result = "Stripe";
+                        break;
+
+                    case Symbols.PayPal:
+                    case Symbols.PayPalIcon:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke PayPal", "Click to use PayPal") : "PayPal";
+                        break;
+
+                    case Symbols.Mastercard:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Mastercard", "Click to use Mastercard") : "Mastercard";
+                        break;
+
+                    case Symbols.ApplePay:
+                    case Symbols.ApplePayIcon:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Apple Pay", "Click to use Apple Pay") : "Apple Pay";
+                        break;
+
+                    case Symbols.AmericanExpress:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke American Express", "Click to use American Express") : "American Express";
+                        break;
+
+                    case Symbols.AmazonPay:
+                    case Symbols.AmazonPayIcon:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Amazon Pay", "Click to use Amazon Pay") : "Amazon Pay";
+                        break;
+
+                    case Symbols.GoogleWallet:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Google Wallet", "Click to use Google Wallet") : "Google Wallet";
+                        break;
+
+                    case Symbols.Bullhorn:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å kommentere", "Click to comment") : GetTextByLanguage("kommenter", "Comment");
+                        break;
+
+                    case Symbols.Upload:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp", "Click to upload") : GetTextByLanguage("Last opp", "Upload");
+                        break;
+
+                    case Symbols.Download:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned", "Click to download") : GetTextByLanguage("Last ned", "Download");
+                        break;
+
+                    case Symbols.UploadCloud:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp til skyen", "Click to upload to the cloud") : GetTextByLanguage("Last opp", "Upload");
+                        break;
+
+                    case Symbols.DownloadCloud:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fra skyen", "Click to download from the cloud") : GetTextByLanguage("Last ned", "Download");
+                        break;
+
+                    case Symbols.FileArchive:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se arkiv", "Click to see archive") : GetTextByLanguage("Arkiv", "Archive");
+                        break;
+
+                    case Symbols.FileArchiveFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fra skyen", "Click to download from the cloud") : GetTextByLanguage("Last ned", "Download");
+                        break;
+
+                    case Symbols.Bars:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se meny", "Click to see meny") : GetTextByLanguage("Meny", "Menu");
+                        break;
+
+                    case Symbols.UserPlusFull:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til ny bruker", "Click to create new user") : GetTextByLanguage("Legg til bruker", "Add user");
+                        break;
+
+                    case Symbols.Search:
+                        result = TextDeluxe ? GetTextByLanguage("Trykk for å søke", "Click to search") : GetTextByLanguage("Søk", "Search");
+                        break;
+
+                    case Symbols.FacebookLogo:
+                    case Symbols.FacebookLogoCircle:
+                    case Symbols.FacebookLogoSquare:
+                        result = "Facebook";
+                        break;
+
+                    case Symbols.LinkedInLogo:
+                    case Symbols.LinkedInLogoSquare:
+                        result = "LinkedIn";
+                        break;
+                }
+            }
+
+            string GetTextByLanguage(string no, string us)
+            {
+                string rslt = this.Lang.Equals(SymbolLanguages.Norwegian) ? no : us;
+
+                return rslt;
+            }
+
+            Debug.WriteLine($"caption {result}");
+
+            return result;
+        }
+
+        public static TagBuilder GetSymbol(Symbols symbol, SymbolOutputs output, SymbolSizes size)
         {
             TagBuilder result = new TagBuilder("i");
 
             string pre = "far";
             string name = default;
 
-            switch (this.Type)
+            switch (symbol)
             {
                 case Symbols.Save:
                     name = "save";
@@ -739,7 +1005,7 @@ namespace LC.Creator.TagHelpers
                     break;
             }
 
-            switch (this.Size)
+            switch (size)
             {
                 case SymbolSizes.XXS:
                     result.AddCssClass("fa-xs");
@@ -776,262 +1042,15 @@ namespace LC.Creator.TagHelpers
             result.AddCssClass(pre);
             result.AddCssClass(name);
 
-            return result;
-        }
-
-        private string GetColorProfile()
-        {
-            string result = this.Color.ToString().ToLower();
-
-            switch (this.Type)
+            if (output == SymbolOutputs.Button)
             {
-                case Symbols.Close:
-                case Symbols.CloseFull:
-                case Symbols.CloseCircle:
-                case Symbols.CloseCircleFull:
-                    result = ColorProfiles.Danger.ToString();
-                    break;
-            }
+                TagBuilder tmp = new TagBuilder("div");
+                tmp.InnerHtml.AppendHtml(result);
 
-            return "cp-" + result.ToLower();
-        }
+                result = tmp;
 
-        private string GetCaption(CaptionTypes type = CaptionTypes.Content)
-        {
-            string result = default;
-
-            if (this.Text.IsNull())
-            {
-                switch (this.Type)
-                {
-                    case Symbols.Save:
-                    case Symbols.SaveFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å lagre", "Click to save") : GetTextByLanguage("Lagre", "Save");
-                        break;
-
-                    case Symbols.Close:
-                    case Symbols.CloseFull:
-                    case Symbols.CloseCircle:
-                    case Symbols.CloseCircleFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å lukke", "Click to close") : GetTextByLanguage("Lukk", "Close");
-                        break;
-
-                    case Symbols.SignIn:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å logge inn", "Click to sign in") : GetTextByLanguage("Logg inn", "Sign in");
-                        break;
-
-                    case Symbols.SignOut:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å logge ut", "Click to sign out") : GetTextByLanguage("Logg ut", "Sign out");
-                        break;
-
-                    case Symbols.FileUpload:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp", "Click to upload") : GetTextByLanguage("Last opp", "Upload");
-                        break;
-
-                    case Symbols.FileDownload:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fil", "Click to download file") : GetTextByLanguage("Last ned", "Download");
-                        break;
-
-                    case Symbols.FileExport:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste eksportere", "Click to export") : GetTextByLanguage("Eksporter", "Export");
-                        break;
-
-                    case Symbols.DocImage:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se bilde", "Click to see image") : GetTextByLanguage("Se bilde", "See image");
-                        break;
-
-                    case Symbols.Edit:
-                    case Symbols.EditFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å rediger", "Click to edit") : GetTextByLanguage("Rediger", "Edit");
-                        break;
-
-                    case Symbols.Copy:
-                    case Symbols.CopyFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å kopiere", "Click to copy") : GetTextByLanguage("Kopier", "Copy");
-                        break;
-
-                    case Symbols.AddressCard:
-                    case Symbols.AddressCardFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se adresse", "Click to see address") : GetTextByLanguage("Adresse", "Address");
-                        break;
-
-                    case Symbols.Calendar:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kalender", "Click to see calendar") : GetTextByLanguage("Kalender", "Calendar");
-                        break;
-
-                    case Symbols.Envelope:
-                    case Symbols.EnvelopeFull:
-                        result = GetTextByLanguage("E-post", "Email");
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å ende e-post", "Click to send email") : GetTextByLanguage("E-post", "Email");
-                        break;
-
-                    case Symbols.Phone:
-                    case Symbols.Mobile:
-                    case Symbols.MobileFull:
-                        result = GetTextByLanguage("Ring", "Call");
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å ringe", "Click to call") : GetTextByLanguage("Ring", "Call");
-                        break;
-
-                    case Symbols.DocCode:
-                        result = GetTextByLanguage("Kode", "Code");
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kode", "Click to see code") : GetTextByLanguage("Kode", "Code");
-                        break;
-
-                    case Symbols.Comment:
-                    case Symbols.CommentFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å skrive kommentar", "Click to leave comment") : GetTextByLanguage("Kommenter", "Comment");
-                        break;
-
-                    case Symbols.Comments:
-                    case Symbols.CommentsFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se kommentarer", "Click to see comments") : GetTextByLanguage("Kommentarer", "Comments");
-                        break;
-
-                    case Symbols.Like:
-                    case Symbols.LikeFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å like", "Click to like") : GetTextByLanguage("Lik", "Like");
-                        break;
-
-                    case Symbols.Home:
-                    case Symbols.HomeDamage:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å gå til hovedside", "Click to go to start page") : GetTextByLanguage("Hjem", "Home");
-                        break;
-
-                    case Symbols.GitHub:
-                        result = "GitHub";
-                        break;
-
-                    case Symbols.Folder:
-                    case Symbols.FolderFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å åpne mappe", "Click to open folder") : GetTextByLanguage("Mappe", "Folder");
-                        break;
-
-                    case Symbols.Add:
-                    case Symbols.AddFull:
-                    case Symbols.AddCircle:
-                    case Symbols.AddCircleFull:
-                        result = GetTextByLanguage("Legg til", "Add");
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til", "Click to add") : GetTextByLanguage("Legg til", "Add");
-                        break;
-
-                    case Symbols.ShoppingBasket:
-                    case Symbols.ShoppingCart:
-                    case Symbols.ShoppingBag:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se handlekurv", "Click to se cart") : GetTextByLanguage("Handlekurv", "Cart");
-                        break;
-
-                    case Symbols.ShoppingCartPlus:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til i handlekurv", "Click to add to cart") : GetTextByLanguage("Legg til handlekurv", "Add to cart");
-                        break;
-
-                    case Symbols.Handshake:
-                    case Symbols.HandshakeFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bekrefte", "Click to confirm") : GetTextByLanguage("Bekreft", "Confirm");
-                        break;
-
-                    case Symbols.ThumbsUp:
-                    case Symbols.ThumbsUpFull:
-                        result = GetTextByLanguage("Tommel opp", "Thumbs up");
-                        break;
-
-                    case Symbols.ThumbsDown:
-                    case Symbols.ThumbsDownFull:
-                        result = GetTextByLanguage("Tommel ned", "Thumbs down");
-                        break;
-
-                    case Symbols.Visa:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Visa", "Click to use Visa") : "Visa";
-                        break;
-
-                    case Symbols.Stripe:
-                        result = "Stripe";
-                        break;
-
-                    case Symbols.PayPal:
-                    case Symbols.PayPalIcon:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke PayPal", "Click to use PayPal") : "PayPal";
-                        break;
-
-                    case Symbols.Mastercard:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Mastercard", "Click to use Mastercard") : "Mastercard";
-                        break;
-
-                    case Symbols.ApplePay:
-                    case Symbols.ApplePayIcon:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Apple Pay", "Click to use Apple Pay") : "Apple Pay";
-                        break;
-
-                    case Symbols.AmericanExpress:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke American Express", "Click to use American Express") : "American Express";
-                        break;
-
-                    case Symbols.AmazonPay:
-                    case Symbols.AmazonPayIcon:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Amazon Pay", "Click to use Amazon Pay") : "Amazon Pay";
-                        break;
-
-                    case Symbols.GoogleWallet:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å bruke Google Wallet", "Click to use Google Wallet") : "Google Wallet";
-                        break;
-
-                    case Symbols.Bullhorn:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å kommentere", "Click to comment") : GetTextByLanguage("kommenter", "Comment");
-                        break;
-
-                    case Symbols.Upload:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp", "Click to upload") : GetTextByLanguage("Last opp", "Upload");
-                        break;
-
-                    case Symbols.Download:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned", "Click to download") : GetTextByLanguage("Last ned", "Download");
-                        break;
-
-                    case Symbols.UploadCloud:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste opp til skyen", "Click to upload to the cloud") : GetTextByLanguage("Last opp", "Upload");
-                        break;
-
-                    case Symbols.DownloadCloud:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fra skyen", "Click to download from the cloud") : GetTextByLanguage("Last ned", "Download");
-                        break;
-
-                    case Symbols.FileArchive:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se arkiv", "Click to see archive") : GetTextByLanguage("Arkiv", "Archive");
-                        break;
-
-                    case Symbols.FileArchiveFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å laste ned fra skyen", "Click to download from the cloud") : GetTextByLanguage("Last ned", "Download");
-                        break;
-
-                    case Symbols.Bars:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å se meny", "Click to see meny") : GetTextByLanguage("Meny", "Menu");
-                        break;
-
-                    case Symbols.UserPlusFull:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å legge til ny bruker", "Click to create new user") : GetTextByLanguage("Legg til bruker", "Add user");
-                        break;
-
-                    case Symbols.Search:
-                        result = TextDeluxe ? GetTextByLanguage("Trykk for å søke", "Click to search") : GetTextByLanguage("Søk", "Search");
-                        break;
-
-                    case Symbols.FacebookLogo:
-                    case Symbols.FacebookLogoCircle:
-                    case Symbols.FacebookLogoSquare:
-                        result = "Facebook";
-                        break;
-
-                    case Symbols.LinkedInLogo:
-                    case Symbols.LinkedInLogoSquare:
-                        result = "LinkedIn";
-                        break;
-                }
-            }
-
-            string GetTextByLanguage(string no, string us)
-            {
-                string rslt = this.Lang.Equals(SymbolLanguages.Norwegian) ? no : us;
-
-                return rslt;
+                Debug.WriteLine("ICON is button. ICON wrapped in div tag");
+                Debug.WriteLine(result.ToStringValue());
             }
 
             return result;
@@ -1120,6 +1139,18 @@ namespace LC.Creator.TagHelpers
         /// </summary>
         [HtmlAttributeName("text-deluxe")]
         public bool TextDeluxe { get; set; } = false;
+
+        /// <summary>
+        /// The type of button
+        /// </summary>
+        [HtmlAttributeName("button-type")]
+        public ButtonTypes ButtonType { get; set; } = ButtonTypes.Submit;
+
+        /// <summary>
+        /// Button type of form method
+        /// </summary>
+        [HtmlAttributeName("button-form")]
+        public ButtonFormMethods ButtonFormMethod { get; set; } = ButtonFormMethods.Post;
 
         /// <summary>
         /// Processed Language
@@ -1318,5 +1349,20 @@ namespace LC.Creator.TagHelpers
         Auto,
         Norwegian,
         English
+    }
+
+    public enum ButtonTypes
+    {
+        Button,
+        Reset,
+        Submit
+    }
+
+    public enum ButtonFormMethods
+    {
+        Delete,
+        Get,
+        Post,
+        Put
     }
 }

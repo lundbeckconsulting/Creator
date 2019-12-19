@@ -1,5 +1,6 @@
 ﻿@import "Config";
 @import "Function";
+@import "Media";
 
 @mixin modal($size, $cp) {
   $center: -16%;
@@ -540,4 +541,129 @@
 
 @mixin translateY($val: 100px) {
   transform: translateY($val);
+}
+
+@mixin paddingMargin($prefix: Padding) {
+    $prefix: lower($prefix);
+    $map: ();
+
+    @if (equal($prefix, Padding)) {
+        $map: $padValues;
+    }
+    @else if (equal($prefix, Margin)) {
+        $map: $marginValues;
+    }
+    @else {
+        @error "#{$prefix} is not a valid prefix value. Names Padding and Margin supported";
+    }
+
+    @each $baseName, $baseValue in $map {
+        $baseName: lower($baseName);
+
+        &-#{lower($baseName)} {
+            #{$prefix}: $baseValue;
+
+            &-force {
+                #{$prefix}: $baseValue !important;
+            }
+
+            @each $dir in $defaultDirections {
+                $dir: lower($dir);
+
+                &-#{$dir} {
+                    #{$prefix}-#{$dir}: $baseValue;
+
+                    &-force {
+                        #{$prefix}-#{$dir}: $baseValue !important;
+                    }
+                }
+            }
+        }
+
+        @each $mediaName, $mediaValue in $mediaBreakpoints {
+            @if not (equal($mediaName, XS)) {
+                &-#{lower($mediaName)}-#{lower($baseName)} {
+                    @include media($mediaName) {
+                        #{$prefix}: $baseValue;
+                    }
+
+                    &-force {
+                        @include media($mediaName) {
+                            #{$prefix}: $baseValue !important;
+                        }
+                    }
+                }
+
+                @each $dir in $defaultDirections {
+                    &-#{lower($mediaName)}-#{lower($dir)} {
+                        @include media($mediaName) {
+                            #{$prefix}-#{lower($dir)}: $baseValue;
+                        }
+                    }
+
+                    &-#{lower($mediaName)}-#{lower($dir)}-force {
+                        @include media($mediaName) {
+                            #{$prefix}-#{lower($dir)}: $baseValue !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        @each $deviceName, $deviceValue in $mediaDevices {
+            &-#{lower($deviceName)}-#{lower($baseName)} {
+                @include media($deviceValue) {
+                    #{$prefix}: $baseValue;
+                }
+            }
+
+            &-#{lower($deviceName)}-#{lower($baseName)}-force {
+                @include media($deviceValue) {
+                    #{$prefix}: $baseValue !important;
+                }
+            }
+
+            @each $dir in $defaultDirections {
+                &-#{lower($deviceName)}-#{lower($baseName)}-#{lower($dir)} {
+                    @include media($deviceValue) {
+                        #{$prefix}-#{lower($dir)}: $baseValue;
+                    }
+                }
+
+                &-#{lower($deviceName)}-#{lower($baseName)}-#{lower($dir)}-force {
+                    @include media($deviceValue) {
+                        #{$prefix}-#{lower($dir)}: $baseValue !important;
+                    }
+                }
+            }
+        }
+
+        &-#{$baseName}-horizontal {
+            #{$prefix}-left: $baseValue;
+            #{$prefix}-right: $baseValue;
+
+            &-force {
+                #{$prefix}-left: $baseValue !important;
+                #{$prefix}-right: $baseValue !important;
+            }
+        }
+
+        &-#{$baseName}-vertical {
+            #{$prefix}-top: $baseValue;
+            #{$prefix}-bottom: $baseValue;
+
+            &-force {
+                #{$prefix}-top: $baseValue !important;
+                #{$prefix}-bottom: $baseValue !important;
+            }
+        }
+    }
+
+    &-clean {
+        #{$prefix}: 0;
+
+        &-force {
+            #{$prefix}: 0 !important;
+        }
+    }
 }

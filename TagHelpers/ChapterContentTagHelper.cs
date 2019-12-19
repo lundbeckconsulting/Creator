@@ -1,4 +1,9 @@
-﻿using LC.Assets;
+﻿/*
+    @Date			: 10.12.2019
+    @Author         : Stein Lundbeck
+*/
+
+using LC.Assets;
 using LC.Assets.Core.Components.TagHelpers;
 using LC.Assets.Data;
 using Microsoft.AspNetCore.Hosting;
@@ -6,7 +11,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System.Threading.Tasks;
 
-namespace LC.Creator.TagHelpers
+namespace Creator.TagHelpers
 {
     [HtmlTargetElement("content", Attributes = "type", ParentTag = "chapter", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class ChapterContentTagHelper : TagHelperBase

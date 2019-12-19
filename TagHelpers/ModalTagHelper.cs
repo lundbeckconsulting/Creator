@@ -1,4 +1,9 @@
-﻿using LC.Assets;
+﻿/*
+    @Date			: 10.12.2019
+    @Author         : Stein Lundbeck
+*/
+
+using LC.Assets;
 using LC.Assets.Components.Extensions;
 using LC.Assets.Core.Components.TagHelpers;
 using LC.Assets.Data;
@@ -7,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System.Threading.Tasks;
 
-namespace LC.Creator.TagHelpers
+namespace Creator.TagHelpers
 {
     [HtmlTargetElement("modal", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class ModalTagHelper : TagHelperBase

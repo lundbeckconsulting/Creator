@@ -1,4 +1,9 @@
-﻿using LC.Assets;
+﻿/*
+    @Date			: 10.12.2019
+    @Author         : Stein Lundbeck
+*/
+
+using LC.Assets;
 using LC.Assets.Components;
 using LC.Assets.Components.Extensions;
 using LC.Assets.Core.Components.TagHelpers;
@@ -8,11 +13,9 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace LC.Creator.TagHelpers
+namespace Creator.TagHelpers
 {
     [HtmlTargetElement("chapter", TagStructure = TagStructure.NormalOrSelfClosing)]
     [RestrictChildren("content")]
