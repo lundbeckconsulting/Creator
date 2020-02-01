@@ -1,0 +1,112 @@
+﻿@import "..\\Shared\\Mixin";
+@import "..\\Shared\\Function";
+
+@each $name, $val in $CPs {
+  $name: lower($name);
+  $color: rgba(color($name, Primary), 0.6);
+
+  .#{"table" + "-" + $name} {
+    @include table($name, false);
+    @include tableTd($name);
+
+    &-airy {
+      @include table($name, false, true);
+      @include tableTd($name, true);
+
+      &-fat {
+        @include table($name, false);
+        @include tableTd($name, true, true);
+
+        &-clean {
+          @include table($name, false);
+          @include tableTd($name, true, true, false);
+
+          &-alternating {
+            @include table($name, false);
+            @include tableTd($name, true, true, false);
+            @include tableAlternate($name);
+          }
+        }
+
+        &-alternating {
+          @include table($name, false, true, true);
+          @include tableTd($name, true, true);
+          @include tableAlternate($name);
+        }
+      }
+
+      &-clean {
+        @include table($name, false);
+        @include tableTd($name, true, false, false);
+
+        &-alternating {
+          @include table($name, false, true, true);
+          @include tableTd($name, true, true);
+          @include tableAlternate($name);
+        }
+      }
+
+      &-alternating {
+        @include table($name, false, true);
+        @include tableTd($name, true);
+        @include tableAlternate($name);
+      }
+    }
+
+    &.clean {
+      @include tableTd($name, false, false, false);
+
+      &.alternating {
+        @include tableAlternate($name);
+      }
+    }
+
+    &-clean {
+      @include table($name, false);
+      @include tableTd($name, false, false, false);
+
+      &-alternating {
+        @include table($name, false);
+        @include tableTd($name, false, false, false);
+        @include tableAlternate($name);
+      }
+    }
+
+    &-fat {
+      @include table($name, false, false, true);
+      @include tableTd($name, false, true);
+
+      &-alternating {
+        @include table($name, false);
+        @include tableTd($name, false, true);
+        @include tableAlternate($name);
+      }
+
+      &-clean {
+        @include table($name, false);
+        @include tableTd($name, false, true, false);
+
+        &-alternating {
+          @include table($name, false);
+          @include tableTd($name, false, true, false);
+          @include tableAlternate($name);
+        }
+      }
+    }
+
+    &-alternating {
+      @include table($name, false);
+      @include tableTd($name);
+      @include tableAlternate($name);
+    }
+  }
+
+  .#{get(KW, Font) + "-black"} td {
+    color: black;
+
+    &-bold {
+      color: black;
+      font-weight: bold;
+    }
+  }
+}

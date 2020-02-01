@@ -1,0 +1,70 @@
+﻿@import "..\\Shared/Mixin";
+@import "..\\Shared/Function";
+
+@each $name, $map in $CPs {
+  $name: lower($name);
+
+  .#{get(KW, TextBox) + "-" + $name},
+  .#{get(KW, Textarea) + "-" + $name} {
+    @include formTextbox($name);
+
+    &-shadow {
+      $color: lighten(color($name), 28%);
+
+      @if (equal($name, Dark)) {
+        $color: black;
+      }
+
+      @include formTextbox($name);
+      @include shadow(3px, $color);
+    }
+
+    &.#{get(KW, ValidateError)} {
+      @include boxGlow(Danger, 18px, Danger);
+      background-color: lighten(color(Danger), 62%) !important;
+    }
+
+    &.#{get(KW, ValidatedForm)} {
+      @include boxGlow(Success, 14px, Success);
+      background-color: lighten(color(Success), 54%) !important;
+    }
+  }
+
+  .#{get(KW, Button) + "-" + $name} {
+    @include formButtonSolid($name);
+
+    &-border {
+      @include formButtonSolid($name, true);
+    }
+
+    &-shadow {
+      @include formButtonSolid($name);
+      @include shadow();
+    }
+
+    &-bs {
+      @include formButtonSolid($name, true);
+      @include shadow();
+    }
+  }
+
+  .#{get(KW, Button) + "-" + $name} {
+    &-gradient {
+      @include formButtonGradient($name, false);
+
+      &-border {
+        @include formButtonGradient($name, true);
+      }
+
+      &-shadow {
+        @include formButtonGradient($name, false);
+        @include shadow();
+      }
+
+      &-bs {
+        @include formButtonGradient($name, true);
+        @include shadow();
+      }
+    }
+  }
+}

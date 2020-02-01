@@ -1,0 +1,57 @@
+﻿@import "Mixin";
+@import "..\\Shared\\Media";
+@import "..\\Shared\\Function";
+@import "..\\Shared\\Config";
+
+[class^="show-"] {
+  display: none;
+}
+
+[class^="device-"] {
+    display: none;
+}
+
+[class^="retina-"] {
+    display: none;
+}
+
+.show {
+  display: block;
+
+  &-inline {
+    display: inline-block;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@each $name, $val in $mediaBreakpoints {
+  @if not(equal($name, XS)) {
+    @include media($name) {
+      $name: lower($name);
+
+      .hide-#{$name} {
+        display: none;
+      }
+
+      .show-#{$name} {
+        display: block;
+
+        &-inline {
+          display: inline-block;
+        }
+      }
+
+      @each $n, $v in $headSyno {
+        .#{"h" + $n + "-" + $name} {
+          font-size: get(Head, $v);
+        }
+      }
+    }
+  }
+}
+
+@include mediaDevice();
+@include mediaRetina();

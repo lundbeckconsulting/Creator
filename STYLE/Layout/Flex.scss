@@ -1,0 +1,56 @@
+﻿@import "..\\Shared\\Config";
+@import "..\\Shared\\Function";
+@import "Mixin";
+
+.flex {
+  display: flex;
+
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-no-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &-reverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  &-even {
+    display: flex;
+
+    @include flexEven();
+  }
+
+  @each $show, $full in $flexJustifyItems {
+    $just: $show;
+    $tag: $show;
+
+    @if (equalz($just, start, end)) {
+      $just: $full;
+    }
+
+    @if (equal($just, around)) {
+      $just: space-around;
+    } @else if (equal($just, between)) {
+      $just: space-between;
+    }
+
+    &-#{lower($tag)} {
+      display: flex;
+      justify-content: lower($just);
+
+      @each $alignName, $alignVal in $flexAlignItems {
+        &-#{lower($alignName)} {
+          display: flex;
+          justify-content: lower($just);
+          align-items: lower($alignVal);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+﻿[
+  {
+    "inputFile": "STYLE/Element/Footer.scss",
+    "outputFile": "_Build/STYLE/Element.Footer.css"
+  },
+  {
+    "inputFile": "STYLE/Element/FormControl.scss",
+    "outputFile": "_Build/STYLE/Element.FormControl.css"
+  },
+  {
+    "inputFile": "STYLE/Element/Modal.scss",
+    "outputFile": "_Build/STYLE/Element.Modal.css"
+  },
+  {
+    "inputFile": "STYLE/Element/Notify.scss",
+    "outputFile": "_Build/STYLE/Element.Notify.css"
+  },
+  {
+    "inputFile": "STYLE/Element/Table.scss",
+    "outputFile": "_Build/STYLE/Element.Table.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/ColorProfile.scss",
+    "outputFile": "_Build/STYLE/Layout.ColorProfile.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/Document.scss",
+    "outputFile": "_Build/STYLE/Layout.Document.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/Flex.scss",
+    "outputFile": "_Build/STYLE/Layout.Flex.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/Grid.scss",
+    "outputFile": "_Build/STYLE/Layout.Grid.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/Media.scss",
+    "outputFile": "_Build/STYLE/Layout.Media.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/Other.scss",
+    "outputFile": "_Build/STYLE/Layout.Other.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/PaddingAndMargin.scss",
+    "outputFile": "_Build/STYLE/Layout.PaddingAndMargin.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/Row.scss",
+    "outputFile": "_Build/STYLE/Layout.Row.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/Typography.scss",
+    "outputFile": "_Build/STYLE/Layout.Typography.css"
+  },
+  {
+    "inputFile": "STYLE/TagHelper/Chapter.scss",
+    "outputFile": "_Build/STYLE/TagHelper.Chapter.css"
+  },
+  {
+    "inputFile": "STYLE/TagHelper/Icon.scss",
+    "outputFile": "_Build/STYLE/TagHelper.Icon.css"
+  }
+]

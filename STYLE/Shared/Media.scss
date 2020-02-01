@@ -1,0 +1,164 @@
+﻿@import "Function";
+@import "Config";
+
+@mixin media($size: MD, $orientation: Any, $mode: Up, $minWidth: null, $maxWidth: null) {
+    $size: upper($size);
+    $width: get(Media, $size);
+    $query: null;
+
+    @if ($minWidth) {
+        $width: $minWidth;
+    }
+
+    @if (equal($mode, UP)) {
+        $query: "(min-width: " + $width + ")";
+    }
+    @else if (equal($mode, DOWN)) {
+        $query: "(max-width: " + $width + ")";
+    }
+    @else if (equal($mode, ONLY)) {
+        $query: "(min-width: " + $width + ")";
+        $max: null;
+
+        @if ($maxWidth) {
+            $max: $maxWidth;
+        }
+        @else {
+            @if (equal($size, XS)) {
+                $max: map-get($mediaBreakpoints, SM);
+            }
+            @else if (equal($size, SM)) {
+                $max: map-get($mediaBreakpoints, MD);
+            }
+            @else if (equal($size, MD)) {
+                $max: map-get($mediaBreakpoints, LG);
+            }
+            @else if (equal($size, LG)) {
+                $max: map-get($mediaBreakpoints, XL);
+            }
+        }
+
+        @if ($max) {
+            $query: $query + " and (max-width: " + $max + ")";
+        }
+    }
+
+    @if not(equal($orientation, Any)) {
+        $query: $query + " and (orientation: " + lower($orientation) + ")";
+    }
+
+    @media #{$query} {
+        @content;
+    }
+}
+
+@mixin mediaDevice() {
+    [class^="device-"] {
+        display: none;
+    }
+
+    @each $name, $break in get(Device) {
+        $index: indexOf(get(Device), $name);
+        $name: lower($name);
+        $min: get(Media, $break);
+        $max: null;
+
+        @if not(equal($index, len(get(Device)))) {
+            $max: get(Media, get(Device, $index + 1));
+        }
+
+        @include media($break, Any, Only, $min, $max) {
+            .device-#{$name} {
+                display: block;
+
+                &-inline {
+                    display: inline-block;
+                }
+
+                &-hide {
+                    display: none;
+                }
+            }
+        }
+
+        @if not(isLast(Device, $index)) {
+            @each $nm, $bp in get(Device) {
+                $i: indexOf(get(Device), $nm);
+                $mode: Only;
+
+                @if ($i > $index) {
+                    $nm: lower($nm);
+                    $max: get(Media, get(Device, $i));
+
+                    @if not(equal($i, len(get(Device)))) {
+                        $max: get(Media, get(Device, $i + 1));
+                    }
+                    @else {
+                        $mode: Up;
+                        $max: null;
+                    }
+
+                    @include media($break, Any, $mode, $min, $max) {
+                        .device-#{$name}-#{$nm} {
+                            display: block;
+
+                            &-inline {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin mediaRetina($ratio: null) {
+    $query: "only screen";
+    $queryAll: null;
+    $part: "(-webkit-min-device-pixel-ratio: $ratio), (min-resolution: $resolution)";
+    $style: "retina-$ratio";
+    $i: 0;
+
+    @each $rat, $res in get(MediaRetina) {
+        $tmp: replace($part, "$ratio", $rat);
+        $tmp: replace($tmp, "$resolution", $res);
+        $q: $query + " and " + $tmp;
+
+        @if ($ratio) {
+            $query: $query + " and " + $tmp;
+        }
+        @else if not ($ratio) {
+            @if not ($queryAll) {
+                $queryAll: $q;
+            }
+            @else {
+                $queryAll: $queryAll + " and " + $tmp;
+            }
+
+            @media #{$q} {
+                .#{replace($style, "$ratio", replace($rat, "."))} {
+                    display: block;
+
+                    &-inline {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        $i: $i + 1;
+    }
+
+    @if ($queryAll) {
+        .retina {
+            @media #{$queryAll} {
+                display: block;
+
+                &-inline {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

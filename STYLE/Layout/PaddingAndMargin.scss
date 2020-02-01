@@ -1,0 +1,30 @@
+﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\Mixin";
+@import "..\\Shared\\Media";
+
+.pad {
+    @include paddingMargin(Padding);
+
+    &-doc {
+        padding: $defaultPad;
+        padding: $defaultPad;
+    }
+
+    &-mrg-clean {
+        padding: 0;
+        margin: 0;
+
+        &-force {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+}
+
+.mrg {
+    @include paddingMargin(Margin);
+
+    &-auto {
+        @include autoMargin();
+    }
+}

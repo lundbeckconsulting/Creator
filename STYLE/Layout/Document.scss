@@ -1,0 +1,177 @@
+﻿@import "..\\Shared\\Mixin";
+@import "..\\Shared\\Config";
+@import "..\\Shared\\Media";
+
+$margin: 0;
+$fontSize: 2rem;
+
+html.creator {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+
+    & > body {
+        &.creator {
+            margin: $margin;
+            font-size: $fontSize;
+
+            & header.creator {
+                @include responsive(true, true, true);
+            }
+
+            & nav.creator {
+                @include responsive(true, true, true);
+            }
+
+            & main.creator {
+                @include responsive(true, true, true);
+            }
+
+            & footer.creator {
+                @include responsive(true, true, true);
+
+                &-sticky {
+                    flex: 0 0 auto;
+                    @include airy(SM, true);
+                }
+            }
+        }
+
+        &.creator-no-pad {
+            margin: $margin;
+            font-size: $fontSize;
+
+            & header.creator {
+                @include responsive(true, true, false);
+            }
+
+            & nav.creator {
+                @include responsive(true, true, false);
+            }
+
+            & main.creator {
+                @include responsive(true, true, false);
+            }
+
+            & footer.creator {
+                @include responsive(true, true, false);
+
+                &-sticky {
+                    flex: 0 0 auto;
+                    @include airy(SM, true);
+                }
+            }
+        }
+
+        &.creator-no-pad-cover {
+            margin: $margin;
+            font-size: $fontSize;
+
+            & header.creator {
+                @include responsive(false, true, false);
+            }
+
+            & nav.creator {
+                @include responsive(false, true, false);
+            }
+
+            & main.creator {
+                @include responsive(false, true, false);
+            }
+
+            & footer.creator {
+                @include responsive(false, true, false);
+
+                &-sticky {
+                    flex: 0 0 auto;
+                    @include airy(SM, true);
+                }
+            }
+        }
+
+        @each $name, $size in get(Media) {
+            @if not ($name == XS) {
+                &.creator-#{lower($name)} {
+                    @include media($name) {
+                        margin: $margin;
+                        padding: 0;
+                        font-size: $fontSize;
+
+                        & header.creator {
+                            @include responsive(true, true, true);
+                        }
+
+                        & nav.creator {
+                            @include responsive(true, true, true);
+                        }
+
+                        & main.creator {
+                            @include responsive(true, true, true);
+                        }
+
+                        & footer.creator {
+                            @include responsive(true, true, true);
+
+                            &-sticky {
+                                flex: 0 0 auto;
+                                @include airy(SM, true);
+                            }
+                        }
+
+                        &-no-pad {
+                            margin: $margin;
+                            font-size: $fontSize;
+
+                            & header.creator {
+                                @include responsive(true, true, false);
+                            }
+
+                            & nav.creator {
+                                @include responsive(true, true, false);
+                            }
+
+                            & main.creator {
+                                @include responsive(true, true, false);
+                            }
+
+                            & footer.creator {
+                                @include responsive(true, true, false);
+
+                                &-sticky {
+                                    flex: 0 0 auto;
+                                    @include airy(SM, true);
+                                }
+                            }
+
+                            &-cover {
+                                margin: $margin;
+                                font-size: $fontSize;
+
+                                & header.creator {
+                                    @include responsive(false, true, false);
+                                }
+
+                                & nav.creator {
+                                    @include responsive(false, true, false);
+                                }
+
+                                & main.creator {
+                                    @include responsive(false, true, false);
+                                }
+
+                                & footer.creator {
+                                    @include responsive(false, true, false);
+
+                                    &-sticky {
+                                        flex: 0 0 auto;
+                                        @include airy(SM, true);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
