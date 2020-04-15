@@ -295,23 +295,14 @@
   }
 }
 
-@mixin formControl($cpName: Default, $glowFocus: false, $padHori: 12px) {
+@mixin formControl($cpName: Default, $glowFocus: false) {
   $cpName: toCPName($cpName);
   $fore: color($cpName, Fifth);
-  $padVertical: 6px;
-  $padHorizontal: $padHori;
-  $margin: 4px;
 
   border-radius: get(Sys, BorderRadius);
-  padding-top: $padVertical;
-  padding-bottom: $padVertical;
-  padding-left: $padHorizontal;
-  padding-right: $padHorizontal;
-  font-size: 1.8rem;
+  font-size: 0.7rem;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-  margin-top: $margin;
-  margin-bottom: $margin;
 
   @if ($glowFocus) {
     @include boxGlow($cpName);
@@ -347,29 +338,31 @@
 }
 
 @mixin formTextbox($cpName: Default, $glow: true) {
-  $color: color(toCPName($cpName));
+    $color: color(toCPName($cpName));
 
-  @if (equal($cpName, Default)) {
-    $color: #a5a5a5;
-  }
+    @if (equal($cpName, Default)) {
+        $color: #a5a5a5;
+    }
 
-  @include formControl($cpName, true);
+    @include formControl($cpName, true);
 
-  @if ($glow) {
-    @include boxGlow($cpName);
-  }
+    @if ($glow) {
+        @include boxGlow($cpName);
+    }
 
-  @if (equal($cpName, Default)) {
-    $color: #272727;
-  }
+    @if (equal($cpName, Default)) {
+        $color: #272727;
+    }
 
-  font-size: 1.6rem;
-  border: 2px solid #343434;
-  padding: 6px;
+    border: 2px solid #343434;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
 
-  &:hover {
-    background-color: #e4e1cf;
-  }
+    &:hover {
+        background-color: #e4e1cf;
+    }
 }
 
 @mixin formButtonBase($cpName: Default, $border: false, $gradient: false) {
@@ -378,6 +371,8 @@
   $back: color($cpName);
   $borderColor: $back;
   $mrg: 2px;
+  $padHori: 12px;
+  $padVert: 6px;
 
   @if (equal($cpName, Default)) {
     $fore: color(Default, Third);
@@ -396,7 +391,7 @@
     $border: true;
   }
 
-  @include formControl($cpName, false, 22px);
+  @include formControl($cpName, false);
 
   @if ($gradient) {
     background: linear-gradient($fore, $back);
@@ -427,6 +422,10 @@
   display: inline-block;
   margin-left: $mrg;
   margin-right: $mrg;
+  padding-top: $padVert;
+  padding-bottom: $padVert;
+  padding-left: $padHori;
+  padding-right: $padHori;
   color: $fore;
 }
 
@@ -458,8 +457,6 @@
     -moz-box-shadow: 0 0 $size 0 $borderColor;
     border: 2px solid $borderColor;
   } @else {
-    border: 2px solid rgba(white, 0);
-
     &:focus:not(#{get(KW, ValidateError)}) {
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
@@ -546,21 +543,10 @@
   transform: translateY($val);
 }
 
-@mixin paddingMargin($prefix: Padding) {
+@mixin paddingAndMargin($prefix: Padding) {
     $prefix: lower($prefix);
-    $map: ();
 
-    @if (equal($prefix, Padding)) {
-        $map: $padValues;
-    }
-    @else if (equal($prefix, Margin)) {
-        $map: $marginValues;
-    }
-    @else {
-        @error "#{$prefix} is not a valid prefix value. Names Padding and Margin supported";
-    }
-
-    @each $baseName, $baseValue in $map {
+    @each $baseName, $baseValue in $padAndMarginValues {
         $baseName: lower($baseName);
 
         &-#{lower($baseName)} {
@@ -579,6 +565,22 @@
                     &-force {
                         #{$prefix}-#{$dir}: $baseValue !important;
                     }
+
+                    &-clear {
+                        #{$prefix}-#{$dir}: 0;
+
+                        &-force {
+                            #{$prefix}-#{$dir}: 0 !important;
+                        }
+                    }
+                }
+            }
+
+            &-clear {
+                #{$prefix}: 0;
+
+                &-force {
+                    #{$prefix}: 0 !important;
                 }
             }
         }
@@ -629,14 +631,6 @@
                 #{$prefix}-top: $baseValue !important;
                 #{$prefix}-bottom: $baseValue !important;
             }
-        }
-    }
-
-    &-clean {
-        #{$prefix}: 0;
-
-        &-force {
-            #{$prefix}: 0 !important;
         }
     }
 }

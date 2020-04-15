@@ -6,7 +6,7 @@
 using LC.Assets;
 using LC.Assets.Components.Extensions;
 using LC.Assets.Core.Components.TagHelpers;
-using LC.Assets.Data;
+using LC.Assets.Components.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;

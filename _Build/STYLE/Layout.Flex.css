@@ -1,133 +1,757 @@
 ﻿.flex {
   display: flex; }
+  .flex-force {
+    display: flex !important; }
   .flex-wrap {
     display: flex;
     flex-wrap: wrap; }
+    .flex-wrap-force {
+      display: flex !important;
+      flex-wrap: wrap !important; }
   .flex-no-wrap {
     display: flex;
     flex-wrap: nowrap; }
+    .flex-no-wrap-force {
+      display: flex !important;
+      flex-wrap: nowrap !important; }
   .flex-reverse {
     display: flex;
     flex-wrap: wrap-reverse; }
+    .flex-reverse-force {
+      display: flex !important;
+      flex-wrap: wrap-reverse !important; }
   .flex-even {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
     align-content: center; }
     .flex-even > * {
       flex: 1 1 auto; }
+    .flex-even-force {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-around !important;
+      align-items: stretch !important;
+      align-content: center !important; }
+      .flex-even-force > * {
+        flex: 1 1 auto !important; }
+    .flex-even-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch;
+      align-content: center; }
+      .flex-even-column > * {
+        flex: 1 1 auto; }
+      .flex-even-column-force {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-around !important;
+        align-items: stretch !important;
+        align-content: center !important; }
+        .flex-even-column-force > * {
+          flex: 1 1 auto !important; }
   .flex-center {
     display: flex;
     justify-content: center; }
+    .flex-center-force {
+      display: flex !important;
+      justify-content: center !important; }
     .flex-center-base {
       display: flex;
       justify-content: center;
       align-items: baseline; }
+      .flex-center-base-force {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: baseline !important; }
     .flex-center-center {
       display: flex;
       justify-content: center;
       align-items: center; }
+      .flex-center-center-force {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important; }
     .flex-center-end {
       display: flex;
       justify-content: center;
       align-items: flex-end; }
+      .flex-center-end-force {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-end !important; }
     .flex-center-start {
       display: flex;
       justify-content: center;
       align-items: flex-start; }
+      .flex-center-start-force {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-start !important; }
     .flex-center-stretch {
       display: flex;
       justify-content: center;
       align-items: stretch; }
+      .flex-center-stretch-force {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: stretch !important; }
+  .flex-self-base {
+    align-self: baseline; }
+    .flex-self-base-force {
+      align-self: baseline !important; }
+  .flex-self-center {
+    align-self: center; }
+    .flex-self-center-force {
+      align-self: center !important; }
+  .flex-self-end {
+    align-self: flex-end; }
+    .flex-self-end-force {
+      align-self: flex-end !important; }
+  .flex-self-start {
+    align-self: flex-start; }
+    .flex-self-start-force {
+      align-self: flex-start !important; }
+  .flex-self-stretch {
+    align-self: stretch; }
+    .flex-self-stretch-force {
+      align-self: stretch !important; }
   .flex-end {
     display: flex;
     justify-content: flex-end; }
+    .flex-end-force {
+      display: flex !important;
+      justify-content: flex-end !important; }
     .flex-end-base {
       display: flex;
       justify-content: flex-end;
       align-items: baseline; }
+      .flex-end-base-force {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: baseline !important; }
     .flex-end-center {
       display: flex;
       justify-content: flex-end;
       align-items: center; }
+      .flex-end-center-force {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important; }
     .flex-end-end {
       display: flex;
       justify-content: flex-end;
       align-items: flex-end; }
+      .flex-end-end-force {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: flex-end !important; }
     .flex-end-start {
       display: flex;
       justify-content: flex-end;
       align-items: flex-start; }
+      .flex-end-start-force {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: flex-start !important; }
     .flex-end-stretch {
       display: flex;
       justify-content: flex-end;
       align-items: stretch; }
+      .flex-end-stretch-force {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: stretch !important; }
+  .flex-self-base {
+    align-self: baseline; }
+    .flex-self-base-force {
+      align-self: baseline !important; }
+  .flex-self-center {
+    align-self: center; }
+    .flex-self-center-force {
+      align-self: center !important; }
+  .flex-self-end {
+    align-self: flex-end; }
+    .flex-self-end-force {
+      align-self: flex-end !important; }
+  .flex-self-start {
+    align-self: flex-start; }
+    .flex-self-start-force {
+      align-self: flex-start !important; }
+  .flex-self-stretch {
+    align-self: stretch; }
+    .flex-self-stretch-force {
+      align-self: stretch !important; }
   .flex-start {
     display: flex;
     justify-content: flex-start; }
+    .flex-start-force {
+      display: flex !important;
+      justify-content: flex-start !important; }
     .flex-start-base {
       display: flex;
       justify-content: flex-start;
       align-items: baseline; }
+      .flex-start-base-force {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: baseline !important; }
     .flex-start-center {
       display: flex;
       justify-content: flex-start;
       align-items: center; }
+      .flex-start-center-force {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important; }
     .flex-start-end {
       display: flex;
       justify-content: flex-start;
       align-items: flex-end; }
+      .flex-start-end-force {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: flex-end !important; }
     .flex-start-start {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start; }
+      .flex-start-start-force {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important; }
     .flex-start-stretch {
       display: flex;
       justify-content: flex-start;
       align-items: stretch; }
+      .flex-start-stretch-force {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important; }
+  .flex-self-base {
+    align-self: baseline; }
+    .flex-self-base-force {
+      align-self: baseline !important; }
+  .flex-self-center {
+    align-self: center; }
+    .flex-self-center-force {
+      align-self: center !important; }
+  .flex-self-end {
+    align-self: flex-end; }
+    .flex-self-end-force {
+      align-self: flex-end !important; }
+  .flex-self-start {
+    align-self: flex-start; }
+    .flex-self-start-force {
+      align-self: flex-start !important; }
+  .flex-self-stretch {
+    align-self: stretch; }
+    .flex-self-stretch-force {
+      align-self: stretch !important; }
   .flex-around {
     display: flex;
     justify-content: space-around; }
+    .flex-around-force {
+      display: flex !important;
+      justify-content: space-around !important; }
     .flex-around-base {
       display: flex;
       justify-content: space-around;
       align-items: baseline; }
+      .flex-around-base-force {
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: baseline !important; }
     .flex-around-center {
       display: flex;
       justify-content: space-around;
       align-items: center; }
+      .flex-around-center-force {
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: center !important; }
     .flex-around-end {
       display: flex;
       justify-content: space-around;
       align-items: flex-end; }
+      .flex-around-end-force {
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: flex-end !important; }
     .flex-around-start {
       display: flex;
       justify-content: space-around;
       align-items: flex-start; }
+      .flex-around-start-force {
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: flex-start !important; }
     .flex-around-stretch {
       display: flex;
       justify-content: space-around;
       align-items: stretch; }
+      .flex-around-stretch-force {
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: stretch !important; }
+  .flex-self-base {
+    align-self: baseline; }
+    .flex-self-base-force {
+      align-self: baseline !important; }
+  .flex-self-center {
+    align-self: center; }
+    .flex-self-center-force {
+      align-self: center !important; }
+  .flex-self-end {
+    align-self: flex-end; }
+    .flex-self-end-force {
+      align-self: flex-end !important; }
+  .flex-self-start {
+    align-self: flex-start; }
+    .flex-self-start-force {
+      align-self: flex-start !important; }
+  .flex-self-stretch {
+    align-self: stretch; }
+    .flex-self-stretch-force {
+      align-self: stretch !important; }
   .flex-between {
     display: flex;
     justify-content: space-between; }
+    .flex-between-force {
+      display: flex !important;
+      justify-content: space-between !important; }
     .flex-between-base {
       display: flex;
       justify-content: space-between;
       align-items: baseline; }
+      .flex-between-base-force {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important; }
     .flex-between-center {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      .flex-between-center-force {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important; }
     .flex-between-end {
       display: flex;
       justify-content: space-between;
       align-items: flex-end; }
+      .flex-between-end-force {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-end !important; }
     .flex-between-start {
       display: flex;
       justify-content: space-between;
       align-items: flex-start; }
+      .flex-between-start-force {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important; }
     .flex-between-stretch {
       display: flex;
       justify-content: space-between;
       align-items: stretch; }
+      .flex-between-stretch-force {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: stretch !important; }
+  .flex-self-base {
+    align-self: baseline; }
+    .flex-self-base-force {
+      align-self: baseline !important; }
+  .flex-self-center {
+    align-self: center; }
+    .flex-self-center-force {
+      align-self: center !important; }
+  .flex-self-end {
+    align-self: flex-end; }
+    .flex-self-end-force {
+      align-self: flex-end !important; }
+  .flex-self-start {
+    align-self: flex-start; }
+    .flex-self-start-force {
+      align-self: flex-start !important; }
+  .flex-self-stretch {
+    align-self: stretch; }
+    .flex-self-stretch-force {
+      align-self: stretch !important; }
+  .flex-evenly {
+    display: flex;
+    justify-content: space-evenly; }
+    .flex-evenly-force {
+      display: flex !important;
+      justify-content: space-evenly !important; }
+    .flex-evenly-base {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: baseline; }
+      .flex-evenly-base-force {
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: baseline !important; }
+    .flex-evenly-center {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .flex-evenly-center-force {
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: center !important; }
+    .flex-evenly-end {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end; }
+      .flex-evenly-end-force {
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: flex-end !important; }
+    .flex-evenly-start {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start; }
+      .flex-evenly-start-force {
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: flex-start !important; }
+    .flex-evenly-stretch {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: stretch; }
+      .flex-evenly-stretch-force {
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: stretch !important; }
+  .flex-self-base {
+    align-self: baseline; }
+    .flex-self-base-force {
+      align-self: baseline !important; }
+  .flex-self-center {
+    align-self: center; }
+    .flex-self-center-force {
+      align-self: center !important; }
+  .flex-self-end {
+    align-self: flex-end; }
+    .flex-self-end-force {
+      align-self: flex-end !important; }
+  .flex-self-start {
+    align-self: flex-start; }
+    .flex-self-start-force {
+      align-self: flex-start !important; }
+  .flex-self-stretch {
+    align-self: stretch; }
+    .flex-self-stretch-force {
+      align-self: stretch !important; }
+
+.horizontal-list {
+  display: flex;
+  flex-direction: row; }
+  .horizontal-list-even {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center; }
+    .horizontal-list-even > * {
+      flex: 1 1 auto; }
+    .horizontal-list-even-force {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+      align-content: center; }
+      .horizontal-list-even-force > * {
+        flex: 1 1 auto; }
+
+.vertical-list {
+  display: flex;
+  flex-direction: column; }
+  .vertical-list-force {
+    display: flex !important;
+    flex-direction: column !important; }
+
+.flex-item-resize-auto {
+  flex: 1 1 auto; }
+  .flex-item-resize-auto-force {
+    flex: 1 1 auto !important; }
+
+.flex-item-resize-xxs {
+  flex: 1 1 76px; }
+  .flex-item-resize-xxs-force {
+    flex: 1 1 76px !important; }
+
+.flex-item-resize-xs {
+  flex: 1 1 120px; }
+  .flex-item-resize-xs-force {
+    flex: 1 1 120px !important; }
+
+.flex-item-resize-sm {
+  flex: 1 1 200px; }
+  .flex-item-resize-sm-force {
+    flex: 1 1 200px !important; }
+
+.flex-item-resize-md {
+  flex: 1 1 280px; }
+  .flex-item-resize-md-force {
+    flex: 1 1 280px !important; }
+
+.flex-item-resize-lg {
+  flex: 1 1 368px; }
+  .flex-item-resize-lg-force {
+    flex: 1 1 368px !important; }
+
+.flex-item-resize-xl {
+  flex: 1 1 498px; }
+  .flex-item-resize-xl-force {
+    flex: 1 1 498px !important; }
+
+.flex-item-resize-xxl {
+  flex: 1 1 612px; }
+  .flex-item-resize-xxl-force {
+    flex: 1 1 612px !important; }
+
+.flex-item-resize-10 {
+  flex: 1 1 10%; }
+  .flex-item-resize-10-force {
+    flex: 1 1 10% !important; }
+
+.flex-item-resize-25 {
+  flex: 1 1 25%; }
+  .flex-item-resize-25-force {
+    flex: 1 1 25% !important; }
+
+.flex-item-resize-50 {
+  flex: 1 1 50%; }
+  .flex-item-resize-50-force {
+    flex: 1 1 50% !important; }
+
+.flex-item-resize-75 {
+  flex: 1 1 75%; }
+  .flex-item-resize-75-force {
+    flex: 1 1 75% !important; }
+
+.flex-item-resize-90 {
+  flex: 1 1 90%; }
+  .flex-item-resize-90-force {
+    flex: 1 1 90% !important; }
+
+.flex-item-resize-100 {
+  flex: 1 1 100%; }
+  .flex-item-resize-100-force {
+    flex: 1 1 100% !important; }
+
+.flex-item-shrink-auto {
+  flex: 0 1 auto; }
+  .flex-item-shrink-auto-force {
+    flex: 0 1 auto !important; }
+
+.flex-item-shrink-xxs {
+  flex: 0 1 76px; }
+  .flex-item-shrink-xxs-force {
+    flex: 0 1 76px !important; }
+
+.flex-item-shrink-xs {
+  flex: 0 1 120px; }
+  .flex-item-shrink-xs-force {
+    flex: 0 1 120px !important; }
+
+.flex-item-shrink-sm {
+  flex: 0 1 200px; }
+  .flex-item-shrink-sm-force {
+    flex: 0 1 200px !important; }
+
+.flex-item-shrink-md {
+  flex: 0 1 280px; }
+  .flex-item-shrink-md-force {
+    flex: 0 1 280px !important; }
+
+.flex-item-shrink-lg {
+  flex: 0 1 368px; }
+  .flex-item-shrink-lg-force {
+    flex: 0 1 368px !important; }
+
+.flex-item-shrink-xl {
+  flex: 0 1 498px; }
+  .flex-item-shrink-xl-force {
+    flex: 0 1 498px !important; }
+
+.flex-item-shrink-xxl {
+  flex: 0 1 612px; }
+  .flex-item-shrink-xxl-force {
+    flex: 0 1 612px !important; }
+
+.flex-item-shrink-10 {
+  flex: 0 1 10%; }
+  .flex-item-shrink-10-force {
+    flex: 0 1 10% !important; }
+
+.flex-item-shrink-25 {
+  flex: 0 1 25%; }
+  .flex-item-shrink-25-force {
+    flex: 0 1 25% !important; }
+
+.flex-item-shrink-50 {
+  flex: 0 1 50%; }
+  .flex-item-shrink-50-force {
+    flex: 0 1 50% !important; }
+
+.flex-item-shrink-75 {
+  flex: 0 1 75%; }
+  .flex-item-shrink-75-force {
+    flex: 0 1 75% !important; }
+
+.flex-item-shrink-90 {
+  flex: 0 1 90%; }
+  .flex-item-shrink-90-force {
+    flex: 0 1 90% !important; }
+
+.flex-item-shrink-100 {
+  flex: 0 1 100%; }
+  .flex-item-shrink-100-force {
+    flex: 0 1 100% !important; }
+
+.flex-item-grow-auto {
+  flex: 1 0 auto; }
+  .flex-item-grow-auto-force {
+    flex: 1 0 auto !important; }
+
+.flex-item-grow-xxs {
+  flex: 1 0 76px; }
+  .flex-item-grow-xxs-force {
+    flex: 1 0 76px !important; }
+
+.flex-item-grow-xs {
+  flex: 1 0 120px; }
+  .flex-item-grow-xs-force {
+    flex: 1 0 120px !important; }
+
+.flex-item-grow-sm {
+  flex: 1 0 200px; }
+  .flex-item-grow-sm-force {
+    flex: 1 0 200px !important; }
+
+.flex-item-grow-md {
+  flex: 1 0 280px; }
+  .flex-item-grow-md-force {
+    flex: 1 0 280px !important; }
+
+.flex-item-grow-lg {
+  flex: 1 0 368px; }
+  .flex-item-grow-lg-force {
+    flex: 1 0 368px !important; }
+
+.flex-item-grow-xl {
+  flex: 1 0 498px; }
+  .flex-item-grow-xl-force {
+    flex: 1 0 498px !important; }
+
+.flex-item-grow-xxl {
+  flex: 1 0 612px; }
+  .flex-item-grow-xxl-force {
+    flex: 1 0 612px !important; }
+
+.flex-item-grow-10 {
+  flex: 1 0 10%; }
+  .flex-item-grow-10-force {
+    flex: 1 0 10% !important; }
+
+.flex-item-grow-25 {
+  flex: 1 0 25%; }
+  .flex-item-grow-25-force {
+    flex: 1 0 25% !important; }
+
+.flex-item-grow-50 {
+  flex: 1 0 50%; }
+  .flex-item-grow-50-force {
+    flex: 1 0 50% !important; }
+
+.flex-item-grow-75 {
+  flex: 1 0 75%; }
+  .flex-item-grow-75-force {
+    flex: 1 0 75% !important; }
+
+.flex-item-grow-90 {
+  flex: 1 0 90%; }
+  .flex-item-grow-90-force {
+    flex: 1 0 90% !important; }
+
+.flex-item-grow-100 {
+  flex: 1 0 100%; }
+  .flex-item-grow-100-force {
+    flex: 1 0 100% !important; }
+
+.flex-item-auto {
+  flex: 0 0 auto; }
+  .flex-item-auto-force {
+    flex: 0 0 auto !important; }
+
+.flex-item-xxs {
+  flex: 0 0 76px; }
+  .flex-item-xxs-force {
+    flex: 0 0 76px !important; }
+
+.flex-item-xs {
+  flex: 0 0 120px; }
+  .flex-item-xs-force {
+    flex: 0 0 120px !important; }
+
+.flex-item-sm {
+  flex: 0 0 200px; }
+  .flex-item-sm-force {
+    flex: 0 0 200px !important; }
+
+.flex-item-md {
+  flex: 0 0 280px; }
+  .flex-item-md-force {
+    flex: 0 0 280px !important; }
+
+.flex-item-lg {
+  flex: 0 0 368px; }
+  .flex-item-lg-force {
+    flex: 0 0 368px !important; }
+
+.flex-item-xl {
+  flex: 0 0 498px; }
+  .flex-item-xl-force {
+    flex: 0 0 498px !important; }
+
+.flex-item-xxl {
+  flex: 0 0 612px; }
+  .flex-item-xxl-force {
+    flex: 0 0 612px !important; }
+
+.flex-item-10 {
+  flex: 0 0 10%; }
+  .flex-item-10-force {
+    flex: 0 0 10% !important; }
+
+.flex-item-25 {
+  flex: 0 0 25%; }
+  .flex-item-25-force {
+    flex: 0 0 25% !important; }
+
+.flex-item-50 {
+  flex: 0 0 50%; }
+  .flex-item-50-force {
+    flex: 0 0 50% !important; }
+
+.flex-item-75 {
+  flex: 0 0 75%; }
+  .flex-item-75-force {
+    flex: 0 0 75% !important; }
+
+.flex-item-90 {
+  flex: 0 0 90%; }
+  .flex-item-90-force {
+    flex: 0 0 90% !important; }
+
+.flex-item-100 {
+  flex: 0 0 100%; }
+  .flex-item-100-force {
+    flex: 0 0 100% !important; }

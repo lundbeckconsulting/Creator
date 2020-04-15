@@ -3,26 +3,35 @@
 @import "..\\Shared\\Media";
 
 .pad {
-    @include paddingMargin(Padding);
+    @include paddingAndMargin(Padding);
 
     &-doc {
         padding: $defaultPad;
-        padding: $defaultPad;
+
+        &-force {
+            padding: $defaultPad !important;
+        }
     }
 
-    &-mrg-clean {
+    &-clear {
         padding: 0;
-        margin: 0;
 
         &-force {
             padding: 0 !important;
-            margin: 0 !important;
         }
     }
 }
 
 .mrg {
-    @include paddingMargin(Margin);
+    @include paddingAndMargin(Margin);
+
+    &-clear {
+        margin: 0;
+
+        &-force {
+            margin: 0 !important;
+        }
+    }
 
     &-auto {
         @include autoMargin();

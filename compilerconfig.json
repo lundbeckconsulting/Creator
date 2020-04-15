@@ -8,8 +8,8 @@
     "outputFile": "_Build/STYLE/Element.FormControl.css"
   },
   {
-    "inputFile": "STYLE/Element/Modal.scss",
-    "outputFile": "_Build/STYLE/Element.Modal.css"
+    "inputFile": "STYLE/Element/Dialog.scss",
+    "outputFile": "_Build/STYLE/Element.Dialog.css"
   },
   {
     "inputFile": "STYLE/Element/Notify.scss",
@@ -48,6 +48,10 @@
     "outputFile": "_Build/STYLE/Layout.PaddingAndMargin.css"
   },
   {
+    "inputFile": "STYLE/Layout/Positioning.scss",
+    "outputFile": "_Build/STYLE/Layout.Positioning.css"
+  },
+  {
     "inputFile": "STYLE/Layout/Row.scss",
     "outputFile": "_Build/STYLE/Layout.Row.css"
   },
@@ -62,5 +66,13 @@
   {
     "inputFile": "STYLE/TagHelper/Icon.scss",
     "outputFile": "_Build/STYLE/TagHelper.Icon.css"
+  },
+  {
+    "inputFile": "STYLE/TagHelper/Checkbox.scss",
+    "outputFile": "_Build/STYLE/TagHelper.Checkbox.css"
+  },
+  {
+    "inputFile": "SCRIPT/Notify.js",
+    "outputFile": "_Build/SCRIPT/Notify.js"
   }
 ]

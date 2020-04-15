@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 
 var styles = ["Bar", "Box"];
 var barPositions = ["Top", "Bottom"];
@@ -88,3 +88,4 @@ function handleNotifyElement(element, dur) {
         $(element).removeClass("show");
     });
 }
+

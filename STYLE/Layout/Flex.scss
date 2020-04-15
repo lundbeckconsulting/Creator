@@ -3,54 +3,143 @@
 @import "Mixin";
 
 .flex {
-  display: flex;
-
-  &-wrap {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &-no-wrap {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  &-reverse {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
-
-  &-even {
     display: flex;
 
-    @include flexEven();
-  }
-
-  @each $show, $full in $flexJustifyItems {
-    $just: $show;
-    $tag: $show;
-
-    @if (equalz($just, start, end)) {
-      $just: $full;
+    &-force {
+        display: flex !important;
     }
 
-    @if (equal($just, around)) {
-      $just: space-around;
-    } @else if (equal($just, between)) {
-      $just: space-between;
-    }
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
 
-    &-#{lower($tag)} {
-      display: flex;
-      justify-content: lower($just);
-
-      @each $alignName, $alignVal in $flexAlignItems {
-        &-#{lower($alignName)} {
-          display: flex;
-          justify-content: lower($just);
-          align-items: lower($alignVal);
+        &-force {
+            display: flex !important;
+            flex-wrap: wrap !important;
         }
-      }
     }
-  }
+
+    &-no-wrap {
+        display: flex;
+        flex-wrap: nowrap;
+
+        &-force {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+        }
+    }
+
+    &-reverse {
+        display: flex;
+        flex-wrap: wrap-reverse;
+
+        &-force {
+            display: flex !important;
+            flex-wrap: wrap-reverse !important;
+        }
+    }
+
+    &-even {
+        @include flexEven();
+        @include flexEven(row, true, true);
+
+        &-column {
+            @include flexEven(column);
+            @include flexEven(column, true, true);
+        }
+    }
+
+    @each $show, $full in $flexJustifyItems {
+        $just: $show;
+        $tag: $show;
+
+        @if (equalz($just, start, end)) {
+            $just: $full;
+        }
+
+        @if (equal($just, around)) {
+            $just: space-around;
+        }
+        @else if (equal($just, between)) {
+            $just: space-between;
+        }
+
+        &-#{lower($tag)} {
+            display: flex;
+            justify-content: lower($just);
+
+            &-force {
+                display: flex !important;
+                justify-content: lower($just) !important;
+            }
+
+            @each $alignName, $alignVal in $flexAlignItems {
+                &-#{lower($alignName)} {
+                    display: flex;
+                    justify-content: lower($just);
+                    align-items: lower($alignVal);
+
+                    &-force {
+                        display: flex !important;
+                        justify-content: lower($just) !important;
+                        align-items: lower($alignVal) !important;
+                    }
+                }
+            }
+        }
+
+        @each $alignName, $alignVal in $flexAlignItems {
+            &-self-#{lower($alignName)} {
+                align-self: lower($alignVal);
+
+                &-force {
+                    align-self: lower($alignVal) !important;
+                }
+            }
+        }
+    }
+}
+
+.horizontal-list {
+    display: flex;
+    flex-direction: row;
+
+    &-even {
+        @include flexEven();
+
+        &-force {
+            @include flexEven(row, true);
+        }
+    }
+}
+
+.vertical-list {
+    display: flex;
+    flex-direction: column;
+
+    &-force {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+@each $item, $property in get(FlexItem) {
+    .flex-item {
+        @each $sizeName, $size in get(FlexItemSize) {
+            $styleName: lower($item) + "-" + lower($sizeName);
+            $prop: $property + " " + lower($size);
+
+            @if ($item == Fixed) {
+                $styleName: lower($sizeName);
+            }
+
+            &-#{$styleName} {
+                flex: #{$prop};
+
+                &-force {
+                    flex: #{$prop} !important;
+                }
+            }
+        }
+    }
 }

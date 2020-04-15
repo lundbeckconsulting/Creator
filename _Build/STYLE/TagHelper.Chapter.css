@@ -190,21 +190,21 @@
       opacity: 0.8; }
 
 .chapter > .content-main {
-  padding: 10px; }
+  padding: 28px; }
   .chapter > .content-main-xs {
-    padding: 4px;
-    display: none; }
-  .chapter > .content-main-sm {
-    padding: 6px;
-    display: none; }
-  .chapter > .content-main-md {
     padding: 10px;
     display: none; }
-  .chapter > .content-main-lg {
+  .chapter > .content-main-sm {
     padding: 16px;
     display: none; }
+  .chapter > .content-main-md {
+    padding: 28px;
+    display: none; }
+  .chapter > .content-main-lg {
+    padding: 34px;
+    display: none; }
   .chapter > .content-main-xl {
-    padding: 24px;
+    padding: 42px;
     display: none; }
 
 .chapter > .more.wrap {

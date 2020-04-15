@@ -2,12 +2,93 @@
 @import "..//Shared//Config";
 @import "..//Shared//ColorProfiles";
 
+$padding: 10px;
+$borderRadius: 8px;
+
 @each $style in $notifyStyles {
-  @each $pos in $notifyPositions {
-    @each $cp, $cpVals in $CPs {
-      .#{"notify-" + lower($style) + "-" + lower($cp) + "-" + lower($pos)} {
-        @include notifyBase($style, $cp, $pos);
-      }
+    @each $position in map-get($notifyPositions, $style) {
+        @each $duration in $notifyDurations {
+            .notify-#{lower($style)}-#{lower($position)}-#{lower($duration)} {
+                @if ($style == Bar) {
+                    position: fixed;
+                    transition: all 0.8s;
+                    visibility: hidden;
+                    opacity: 0;
+                    text-align: center;
+                    left: 8px;
+                    right: 8px;
+                    min-height: 28px;
+                    padding: $padding;
+                    border-radius: $borderRadius;
+
+                    &.show {
+                        transition: opacity 0.8s;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    @if ($position == Top) {
+                        top: 8px;
+                        bottom: unset;
+                    }
+                    @else if ($position == Bottom) {
+                        bottom: 8px;
+                        top: unset;
+                    }
+
+                    @each $name, $content in $CPs {
+                        &.cp-#{lower($name)} {
+                            background-color: color($name);
+                            color: color($name, Fifth);
+                        }
+                    }
+                }
+                @else if ($style == Box) {
+                    display: flex;
+                    justify-content: center;
+                    position: fixed;
+                    z-index: 99;
+
+                    @if ($position == Left) or ($position == Right) {
+                        flex-direction: column;
+                    }
+
+                    @if ($position == Top) or ($position == Bottom) {
+                        left: 0;
+                        right: 0;
+                    }
+
+                    @if ($position == Top) {
+                        top: 8px;
+                        bottom: unset;
+                    }
+                    @else if ($position == Bottom) {
+                        bottom: 8px;
+                        top: unset;
+                    }
+
+                    & > .box {
+                        display: none;
+                        min-width: 36px;
+                        min-height: 36px;
+                        padding: $padding;
+                        border-radius: $borderRadius;
+
+                        &.show {
+                            display: block;
+                        }
+                    }
+
+                    @each $name, $content in $CPs {
+                        &.cp-#{lower($name)} {
+                            & > .box {
+                                background-color: color($name);
+                                color: color($name, Fifth);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }

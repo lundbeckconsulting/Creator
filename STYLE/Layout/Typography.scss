@@ -1,46 +1,30 @@
-﻿@import "..\\Shared\\Function";
-@import "..\\Shared\\Media";
+﻿@import "..//Shared//Function";
+@import "..//Shared//Media";
 
 @each $n, $v in $headSyno {
-  .#{get(KW, Head) + $n} {
-    font-size: get(Head, $v);
-
-    &.bold {
-      font-weight: bold;
-    }
-
-    &.airy {
-      padding: $defaultPad;
-    }
-  }
-
-  @each $mN, $mV in $mediaBreakpoints {
-    @include media($mN) {
-      .#{get(KW, Head) + $n + "-" + lower($mN)} {
+    .#{get(KW, Head) + $n} {
         font-size: get(Head, $v);
 
         &.bold {
-          font-weight: bold;
+            font-weight: bold;
         }
 
         &.airy {
-          padding: $defaultPad;
+            padding: $defaultPad;
         }
-      }
     }
-  }
 }
 
 @each $size, $val in $fontSizes {
-  .#{get(KW, Font) + "-" + $size} {
-    font-size: $val;
-  }
-
-  @each $s, $v in $mediaBreakpoints {
-    @include media($s) {
-      .#{get(KW, Font) + "-" + $size + "-" + lower($s)} {
+    .#{get(KW, Font) + "-" + $size} {
         font-size: $val;
-      }
     }
-  }
+
+    @each $s, $v in $mediaBreakpoints {
+        @include media($s) {
+            .#{get(KW, Font) + "-" + $size + "-" + lower($s)} {
+                font-size: $val;
+            }
+        }
+    }
 }

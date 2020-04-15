@@ -1,5 +1,5 @@
-﻿@import "..\\Shared/Mixin";
-@import "..\\Shared/Function";
+﻿@import "..//Shared//Mixin";
+@import "..//Shared//Function";
 
 @each $name, $map in $CPs {
   $name: lower($name);
@@ -66,5 +66,9 @@
         @include shadow();
       }
     }
+  }
+
+  .#{get(KW, FormControl)}-#{$name} {
+      @include formControl($name);
   }
 }

@@ -5,7 +5,7 @@
 
 using LC.Assets;
 using LC.Assets.Core.Components.TagHelpers;
-using LC.Assets.Data;
+using LC.Assets.Components.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;

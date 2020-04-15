@@ -61,14 +61,8 @@
 .grid {
   grid-gap: 12px; }
   .grid-xs {
-    grid-gap: 2px; }
+    grid-gap: 6px; }
   .grid-sm {
-    grid-gap: 4px; }
+    grid-gap: 14px; }
   .grid-md {
-    grid-gap: 8px; }
-  .grid-lg {
-    grid-gap: 16px; }
-  .grid-xl {
-    grid-gap: 30px; }
-  .grid-xxl {
     grid-gap: 1fr; }

@@ -1,10 +1,9 @@
 ﻿html.creator {
   width: 100%;
   height: 100%;
-  font-size: 62.5%; }
+  font-size: 1.6rem; }
   html.creator > body.creator {
-    margin: 0;
-    font-size: 2rem; }
+    margin: 0; }
     html.creator > body.creator header.creator {
       width: 100%;
       min-width: 0px;
@@ -35,10 +34,10 @@
       padding: 10px; }
       html.creator > body.creator footer.creator-sticky {
         flex: 0 0 auto;
-        padding: 8px; }
+        padding: 16px; }
   html.creator > body.creator-no-pad {
     margin: 0;
-    font-size: 2rem; }
+    padding: 0; }
     html.creator > body.creator-no-pad header.creator {
       width: 100%;
       min-width: 0px;
@@ -69,10 +68,10 @@
       padding: 0; }
       html.creator > body.creator-no-pad footer.creator-sticky {
         flex: 0 0 auto;
-        padding: 8px; }
+        padding: 16px; }
   html.creator > body.creator-no-pad-cover {
     margin: 0;
-    font-size: 2rem; }
+    padding: 0; }
     html.creator > body.creator-no-pad-cover header.creator {
       width: 100%;
       min-width: 0px;
@@ -103,12 +102,11 @@
       padding: 0; }
       html.creator > body.creator-no-pad-cover footer.creator-sticky {
         flex: 0 0 auto;
-        padding: 8px; }
+        padding: 16px; }
   @media (min-width: 576px) {
     html.creator > body.creator-sm {
       margin: 0;
-      padding: 0;
-      font-size: 2rem; }
+      padding: 0; }
       html.creator > body.creator-sm header.creator {
         width: 100%;
         min-width: 0px;
@@ -139,10 +137,10 @@
         padding: 10px; }
         html.creator > body.creator-sm footer.creator-sticky {
           flex: 0 0 auto;
-          padding: 8px; }
+          padding: 16px; }
       html.creator > body.creator-sm-no-pad {
         margin: 0;
-        font-size: 2rem; }
+        padding: 0; }
         html.creator > body.creator-sm-no-pad header.creator {
           width: 100%;
           min-width: 0px;
@@ -173,10 +171,10 @@
           padding: 0; }
           html.creator > body.creator-sm-no-pad footer.creator-sticky {
             flex: 0 0 auto;
-            padding: 8px; }
+            padding: 16px; }
         html.creator > body.creator-sm-no-pad-cover {
           margin: 0;
-          font-size: 2rem; }
+          padding: 0; }
           html.creator > body.creator-sm-no-pad-cover header.creator {
             width: 100%;
             min-width: 0px;
@@ -207,12 +205,11 @@
             padding: 0; }
             html.creator > body.creator-sm-no-pad-cover footer.creator-sticky {
               flex: 0 0 auto;
-              padding: 8px; } }
+              padding: 16px; } }
   @media (min-width: 768px) {
     html.creator > body.creator-md {
       margin: 0;
-      padding: 0;
-      font-size: 2rem; }
+      padding: 0; }
       html.creator > body.creator-md header.creator {
         width: 100%;
         min-width: 0px;
@@ -243,10 +240,10 @@
         padding: 10px; }
         html.creator > body.creator-md footer.creator-sticky {
           flex: 0 0 auto;
-          padding: 8px; }
+          padding: 16px; }
       html.creator > body.creator-md-no-pad {
         margin: 0;
-        font-size: 2rem; }
+        padding: 0; }
         html.creator > body.creator-md-no-pad header.creator {
           width: 100%;
           min-width: 0px;
@@ -277,10 +274,10 @@
           padding: 0; }
           html.creator > body.creator-md-no-pad footer.creator-sticky {
             flex: 0 0 auto;
-            padding: 8px; }
+            padding: 16px; }
         html.creator > body.creator-md-no-pad-cover {
           margin: 0;
-          font-size: 2rem; }
+          padding: 0; }
           html.creator > body.creator-md-no-pad-cover header.creator {
             width: 100%;
             min-width: 0px;
@@ -311,12 +308,11 @@
             padding: 0; }
             html.creator > body.creator-md-no-pad-cover footer.creator-sticky {
               flex: 0 0 auto;
-              padding: 8px; } }
+              padding: 16px; } }
   @media (min-width: 992px) {
     html.creator > body.creator-lg {
       margin: 0;
-      padding: 0;
-      font-size: 2rem; }
+      padding: 0; }
       html.creator > body.creator-lg header.creator {
         width: 100%;
         min-width: 0px;
@@ -347,10 +343,10 @@
         padding: 10px; }
         html.creator > body.creator-lg footer.creator-sticky {
           flex: 0 0 auto;
-          padding: 8px; }
+          padding: 16px; }
       html.creator > body.creator-lg-no-pad {
         margin: 0;
-        font-size: 2rem; }
+        padding: 0; }
         html.creator > body.creator-lg-no-pad header.creator {
           width: 100%;
           min-width: 0px;
@@ -381,10 +377,10 @@
           padding: 0; }
           html.creator > body.creator-lg-no-pad footer.creator-sticky {
             flex: 0 0 auto;
-            padding: 8px; }
+            padding: 16px; }
         html.creator > body.creator-lg-no-pad-cover {
           margin: 0;
-          font-size: 2rem; }
+          padding: 0; }
           html.creator > body.creator-lg-no-pad-cover header.creator {
             width: 100%;
             min-width: 0px;
@@ -415,12 +411,11 @@
             padding: 0; }
             html.creator > body.creator-lg-no-pad-cover footer.creator-sticky {
               flex: 0 0 auto;
-              padding: 8px; } }
+              padding: 16px; } }
   @media (min-width: 1200px) {
     html.creator > body.creator-xl {
       margin: 0;
-      padding: 0;
-      font-size: 2rem; }
+      padding: 0; }
       html.creator > body.creator-xl header.creator {
         width: 100%;
         min-width: 0px;
@@ -451,10 +446,10 @@
         padding: 10px; }
         html.creator > body.creator-xl footer.creator-sticky {
           flex: 0 0 auto;
-          padding: 8px; }
+          padding: 16px; }
       html.creator > body.creator-xl-no-pad {
         margin: 0;
-        font-size: 2rem; }
+        padding: 0; }
         html.creator > body.creator-xl-no-pad header.creator {
           width: 100%;
           min-width: 0px;
@@ -485,10 +480,10 @@
           padding: 0; }
           html.creator > body.creator-xl-no-pad footer.creator-sticky {
             flex: 0 0 auto;
-            padding: 8px; }
+            padding: 16px; }
         html.creator > body.creator-xl-no-pad-cover {
           margin: 0;
-          font-size: 2rem; }
+          padding: 0; }
           html.creator > body.creator-xl-no-pad-cover header.creator {
             width: 100%;
             min-width: 0px;
@@ -519,4 +514,4 @@
             padding: 0; }
             html.creator > body.creator-xl-no-pad-cover footer.creator-sticky {
               flex: 0 0 auto;
-              padding: 8px; } }
+              padding: 16px; } }

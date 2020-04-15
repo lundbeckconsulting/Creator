@@ -7,7 +7,7 @@ using LC.Assets;
 using LC.Assets.Components.Extensions;
 using LC.Assets.Core;
 using LC.Assets.Core.Components.TagHelpers;
-using LC.Assets.Data;
+using LC.Assets.Components.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -15,20 +15,22 @@ using System.Threading.Tasks;
 
 namespace Creator.TagHelpers
 {
-    [HtmlTargetElement("modal", TagStructure = TagStructure.NormalOrSelfClosing)]
-    public class ModalTagHelper : TagHelperBase
+    [HtmlTargetElement("dialog", Attributes = "size", TagStructure = TagStructure.NormalOrSelfClosing)]
+    public class DialogTagHelper : TagHelperBase
     {
-        public ModalTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        private const string _backgroundID = "creatorDialogBackground";
+        private const string _viewDataBackgroundKey = "dialogBackgroundExists";
+        private const string _backgroundCssName = "dialog-background";
+
+        public DialogTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
         { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
             base.PreProcess(context, output);
-
-            TagBuilder tmp = GetTag();
-
-            output.SuppressOutput();
-            output.Content.AppendHtml(tmp);
+            
+            output.Content.AppendHtml(GetTag());
+            AddBackgroundTag();
 
             await base.ProcessAsync(context, output);
 
@@ -48,7 +50,6 @@ namespace Creator.TagHelpers
                     title.InnerHtml.Append(this.Title);
                     title.AddCssClass("title");
                     header.InnerHtml.AppendHtml(title);
-                    // closeIcon.InnerHtml.AppendHtml()
                     closeIcon.AddCssClass("hide-modal");
                     header.InnerHtml.AppendHtml(closeIcon);
                     content.InnerHtml.AppendHtml(header);
@@ -66,13 +67,28 @@ namespace Creator.TagHelpers
 
                 return result;
             }
+
+            void AddBackgroundTag()
+            {
+                bool exists = this.HtmlHelper.ViewData.ContainsKey(_viewDataBackgroundKey) ? this.HtmlHelper.ViewData.GetValue<bool>(_viewDataBackgroundKey) : false;
+                TagBuilder result = new TagBuilder("div");
+                result.Attributes.Add("id", _backgroundID);
+                result.AddCssClass(_backgroundCssName);
+
+                if (!exists)
+                {
+                    output.PostContent.AppendHtml(result);
+
+                    this.HtmlHelper.ViewData.Add(_viewDataBackgroundKey, true);
+                }
+            }
         }
 
         [HtmlAttributeName("color")]
         public CreatorColorProfiles Color { get; set; } = CreatorColorProfiles.Default;
 
         [HtmlAttributeName("size")]
-        public ModalSizes Size { get; set; } = ModalSizes.MD;
+        public ModalSizes Size { get; set; }
 
         [HtmlAttributeName("title")]
         public string Header { get; set; } = default;

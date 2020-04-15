@@ -7,7 +7,7 @@
     $colorTitle: color($cp);
     $closeIconColor: #800505;
 
-    .#{"modal-" + lower($cp) + "-" + lower($sizeName)} {
+    .#{"dialog-" + lower($cp) + "-" + lower($sizeName)} {
       @include modal($sizeName, $cp);
 
       & > content {

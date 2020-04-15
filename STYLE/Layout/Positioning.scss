@@ -1,0 +1,301 @@
+﻿@import "..//Shared//Function";
+@import "..//Shared//Config";
+
+.position {
+    @each $name, $property in get(Position) {
+        $pos: lower($property);
+
+        &-#{lower($name)} {
+            position: $pos;
+
+            &-force {
+                position: $pos !important;
+            }
+
+            @if ($name == Absolute) or ($name == Fixed) or ($name == Sticky) {
+                @each $dir in $defaultDirections {
+                    &-#{lower($dir)} {
+                        @if ($dir == Left) {
+                            position: $pos;
+                            left: 0;
+                            right: unset;
+
+                            &-force {
+                                position: $pos !important;
+                                left: 0 !important;
+                                right: unset !important;
+                            }
+
+                            @each $dr in $defaultDirections {
+                                @if ($dr == Top) {
+                                    &-#{lower($dr)} {
+                                        position: $pos;
+                                        left: 0;
+                                        right: unset;
+                                        top: 0;
+                                        bottom: unset;
+
+                                        &-force {
+                                            position: $pos !important;
+                                            left: 0 !important;
+                                            right: unset !important;
+                                            top: 0 !important;
+                                            bottom: unset !important;
+                                        }
+                                    }
+                                }
+                                @else if ($dr == Bottom) {
+                                    &-#{lower($dr)} {
+                                        position: $pos;
+                                        left: 0;
+                                        right: unset;
+                                        bottom: 0;
+                                        top: unset;
+
+                                        &-force {
+                                            position: $pos !important;
+                                            left: 0 !important;
+                                            right: unset !important;
+                                            bottom: 0 !important;
+                                            top: unset !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &-top-bottom {
+                                position: $pos;
+                                left: 0;
+                                right: unset;
+                                top: 0;
+                                bottom: 0;
+
+                                &-force {
+                                    position: $pos !important;
+                                    left: 0 !important;
+                                    right: unset !important;
+                                    top: 0 !important;
+                                    bottom: 0 !important;
+                                }
+                            }
+                        }
+                        @else if ($dir == Right) {
+                            position: $pos;
+                            right: 0;
+                            left: unset;
+
+                            &-force {
+                                position: $pos !important;
+                                right: 0 !important;
+                                left: unset !important;
+                            }
+
+                            @each $dr in $defaultDirections {
+                                @if ($dr == Top) {
+                                    &-#{lower($dr)} {
+                                        position: $pos;
+                                        right: 0;
+                                        left: unset;
+                                        top: 0;
+                                        bottom: unset;
+
+                                        &-force {
+                                            position: $pos !important;
+                                            right: 0 !important;
+                                            left: unset !important;
+                                            top: 0 !important;
+                                            bottom: unset !important;
+                                        }
+                                    }
+                                }
+                                @else if ($dr == Bottom) {
+                                    &-#{lower($dr)} {
+                                        position: $pos;
+                                        right: 0;
+                                        left: unset;
+                                        bottom: 0;
+                                        top: unset;
+
+                                        &-force {
+                                            position: $pos !important;
+                                            right: 0 !important;
+                                            left: unset !important;
+                                            bottom: 0 !important;
+                                            top: unset !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &-top-bottom {
+                                position: $pos;
+                                right: 0;
+                                left: unset;
+                                top: 0;
+                                bottom: 0;
+
+                                &-force {
+                                    position: $pos !important;
+                                    right: 0 !important;
+                                    left: unset !important;
+                                    top: 0 !important;
+                                    bottom: 0 !important;
+                                }
+                            }
+                        }
+                        @else if ($dir == Top) {
+                            position: $pos;
+                            top: 0;
+                            bottom: unset;
+
+                            &-force {
+                                position: $pos !important;
+                                top: 0 !important;
+                                bottom: unset !important;
+                            }
+
+                            @each $dr in $defaultDirections {
+                                @if ($dr == Left) {
+                                    &-#{lower($dr)} {
+                                        position: $pos;
+                                        top: 0;
+                                        bottom: unset;
+                                        left: 0;
+                                        right: unset;
+
+                                        &-force {
+                                            position: $pos !important;
+                                            top: 0 !important;
+                                            bottom: unset !important;
+                                            left: 0 !important;
+                                            right: unset !important;
+                                        }
+                                    }
+                                }
+                                @else if ($dr == Right) {
+                                    &-#{lower($dr)} {
+                                        position: $pos;
+                                        top: 0;
+                                        bottom: unset;
+                                        right: 0;
+                                        left: unset;
+
+                                        &-force {
+                                            position: $pos !important;
+                                            top: 0 !important;
+                                            bottom: unset !important;
+                                            right: 0 !important;
+                                            left: unset !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &-left-right {
+                                position: $pos;
+                                top: 0;
+                                bottom: unset;
+                                left: 0;
+                                right: 0;
+
+                                &-force {
+                                    position: $pos !important;
+                                    top: 0 !important;
+                                    bottom: unset !important;
+                                    left: 0 !important;
+                                    right: 0 !important;
+                                }
+                            }
+                        }
+                        @else if ($dir == Bottom) {
+                            position: $pos;
+                            bottom: 0;
+                            top: unset;
+
+                            &-force {
+                                position: $pos !important;
+                                bottom: 0 !important;
+                                top: unset !important;
+                            }
+
+                            @each $dr in $defaultDirections {
+                                @if ($dr == Left) {
+                                    &-#{lower($dr)} {
+                                        position: $pos;
+                                        bottom: 0;
+                                        top: unset;
+                                        left: 0;
+                                        right: unset;
+
+                                        &-force {
+                                            position: $pos !important;
+                                            bottom: 0 !important;
+                                            top: unset !important;
+                                            left: 0 !important;
+                                            right: unset !important;
+                                        }
+                                    }
+                                }
+                                @else if ($dr == Right) {
+                                    &-#{lower($dr)} {
+                                        position: $pos;
+                                        bottom: 0;
+                                        top: unset;
+                                        right: 0;
+                                        left: unset;
+
+                                        &-force {
+                                            position: $pos !important;
+                                            bottom: 0 !important;
+                                            top: unset !important;
+                                            right: 0 !important;
+                                            left: unset !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &-left-right {
+                                position: $pos;
+                                bottom: 0;
+                                top: unset;
+                                left: 0;
+                                right: 0;
+
+                                &-force {
+                                    position: $pos !important;
+                                    bottom: 0 !important;
+                                    top: unset !important;
+                                    left: 0 !important;
+                                    right: 0 !important;
+                                }
+                            }
+                        }
+                    }
+
+                    &-fill {
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+
+                        &-force {
+                            left: 0 !important;
+                            right: 0 !important;
+                            top: 0 !important;
+                            bottom: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-clear {
+        position: static;
+
+        &-force {
+            position: static !important;
+        }
+    }
+}

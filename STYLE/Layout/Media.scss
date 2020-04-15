@@ -15,16 +15,28 @@
     display: none;
 }
 
+.hide {
+    display: none;
+
+    &-force {
+        display: none !important;
+    }
+}
+
 .show {
   display: block;
 
+  &-force {
+      display: block !important;
+  }
+
   &-inline {
     display: inline-block;
-  }
-}
 
-.hide {
-  display: none;
+    &-force {
+        display: inline-block !important;
+    }
+  }
 }
 
 @each $name, $val in $mediaBreakpoints {
@@ -34,13 +46,25 @@
 
       .hide-#{$name} {
         display: none;
+
+        &-force {
+            display: none !important;
+        }
       }
 
       .show-#{$name} {
         display: block;
 
+        &-force {
+            display: block !important;
+        }
+
         &-inline {
           display: inline-block;
+
+          &-force {
+              display: inline-block !important;
+          }
         }
       }
 
