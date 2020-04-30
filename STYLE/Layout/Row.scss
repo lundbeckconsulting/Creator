@@ -15,7 +15,7 @@ $base: 12;
   }
 }
 
-@each $size in $commonSizes {
+@each $size in get(Common) {
   @include media($size) {
     @for $c from 1 through $base {
       .col-#{lower($size)}-#{$c} {

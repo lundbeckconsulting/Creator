@@ -15,71 +15,48 @@ namespace Creator.TagHelpers
     [HtmlTargetElement("check", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class CheckboxTagHelper : TagHelperBase
     {
-        public CheckboxTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        public CheckboxTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigAccessor config, IHtmlHelper html) : base(environment, db, config, html)
         {
             
         }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, output);         
+            await base.PreProcess(context, output);         
 
-            TagBuilder wrap = new TagBuilder("div");
-            wrap.AddCssClass("creator");
-            wrap.AddCssClass("checkbox-wrap");
-            wrap.AddCssClass($"cp-{this.Color.ToLower()}");
+            TagBuilderCustom outer = new TagBuilderCustom("div");
+            outer.AddCssClassRange(new string[] { "creator", "checkbox-wrap", $"cp-{this.Color.ToLower()}" });
 
-            TagBuilder label = new TagBuilder("label");
+            TagBuilderCustom label = new TagBuilderCustom("label");
             label.AddCssClass("container");
 
-            TagBuilder input = new TagBuilder("input");
-            input.TagRenderMode = TagRenderMode.SelfClosing;
+            TagBuilderCustom input = new TagBuilderCustom("input", TagRenderMode.SelfClosing, true, new string[] { "id", "name" });
             input.Attributes.Add("type", "checkbox");
             input.AddCssClass("chk");
-
-            if (!this.IdName.IsNull())
-            {
-                input.Attributes.Add("id", this.IdName);
-                input.Attributes.Add("name", this.IdName);
-            }
-            else
-            {
-                if (!this.Id_.IsNull())
-                {
-                    input.Attributes.Add("id", this.Id_);
-                }
-
-                if (!this.Name.IsNull())
-                {
-                    input.Attributes.Add("name", this.Name);
-                }
-            }
 
             if (this.Checked)
             {
                 input.Attributes.Add("checked", "checked");
             }
 
-            TagBuilder span = new TagBuilder("span");
+            TagBuilderCustom span = new TagBuilderCustom("span");
             span.AddCssClass("checkmark");
 
-            label.InnerHtml.AppendHtml(input);
-            label.InnerHtml.AppendHtml(span);
-
-            wrap.InnerHtml.AppendHtml(label);
+            label.AddChildRange(input, span);
+            outer.AddChild(label);
 
             if (!this.Text.IsNull())
             {
-                TagBuilder txt = new TagBuilder("span");
+                TagBuilderCustom txt = new TagBuilderCustom("span");
                 txt.AddCssClass("text");
                 txt.InnerHtml.Append(this.Text);
 
-                wrap.InnerHtml.AppendHtml(txt);
+                outer.AddChild(txt);
             }
 
-            AddContent(wrap);
+            AddContent(outer);
 
-            await base.ProcessAsync();
+            await base.ProcessAsync(true, true);
         }
 
         [HtmlAttributeName("color")]

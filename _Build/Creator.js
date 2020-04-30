@@ -88,3 +88,104 @@ function handleNotifyElement(element, dur) {
         $(element).removeClass("show");
     });
 }
+
+
+"use strict";
+
+$(".open-dialog[data-dialog]").click(function (e) {
+    var dialogId = $(this).data("dialog");
+
+    openDialog(dialogId);
+});
+
+$("dialog[class^=\"dialog-\"]").find("header .close-command").click(function (e) {
+    var dialog = $(this).closest("dialog");
+
+    $(dialog).trigger("command:close");
+
+    closeDialog(dialog.attr("id"));
+});
+
+$("dialog[class^=\"dialog-\"]").find("footer .ok-command").click(function () {
+    var dialog = $(this).closest("dialog");
+    $(dialog).closest("dialog").trigger("command:ok");
+
+    closeDialog(dialog.attr("id"));
+});
+
+$("dialog[class^='dialog-']").on("close", function (e) {
+    closeDialog($(this).attr("id"));
+});
+
+$("dialog[class^='dialog-']").on("open", function (e) {
+    openDialog($(this).attr("id"));
+});
+
+$("body").on("click", "#dialogBackground", function () {
+    $("dialog").removeAttr("open");
+
+    closeDialogBg();
+});
+
+$(document).keyup(function (e) {
+    if (e.key === "Escape") {
+        $("dialog").removeAttr("open");
+
+        closeDialogBg();
+    }
+});
+
+function openDialog(id) {
+    removeDialogBg();
+
+    $("body").append("<div id=\"dialogBackground\"></div>");
+
+    $("#dialogBackground").fadeIn("slow", function () {
+        $("#" + id).attr("open", "open");
+    });
+};
+
+function closeDialog(id) {
+    $("#" + id).removeAttr("open");
+    closeDialogBg();
+};
+
+function closeDialogBg() {
+    $("#dialogBackground").fadeOut("slow", function () {
+        removeDialogBg();
+    });
+};
+
+function removeDialogBg() {
+    $("body").remove("#dialogBackground");
+};
+
+
+"use strict";
+
+$("#burgerIcon").click(function () {
+    $("body").append("<div id=\"burgerMenuBackground\"></div>");
+
+    $("#burgerMenuBackground").fadeIn("slow", function () {
+        $("#burgerMenu").fadeIn("slow", function () {
+            $("#burgerMenuBackground").append("<span class=\"close-burger-menu\">X</span>");
+        });
+    });
+});
+
+$("body").on("click", "#burgerMenuBackground", function () {
+    closeMenu();
+});
+
+$("body").on("click", ".close-burger-menu", function () {
+    closeMenu();
+});
+
+function closeMenu() {
+    $("#burgerMenu").fadeOut("slow", function () {
+        $("#burgerMenuBackground").fadeOut("fast", function () {
+            $("#burgerMenuBackground").remove(".close-burger-menu");
+            $("body").remove("#burgerMenuBackground");
+        });
+    });
+}

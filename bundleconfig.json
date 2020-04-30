@@ -2,6 +2,7 @@
   {
     "outputFileName": "_Build/Creator.css",
     "inputFiles": [
+      "_Build/STYLE/Element.BurgerMenu.css",
       "_Build/STYLE/Element.Footer.css",
       "_Build/STYLE/Element.FormControl.css",
       "_Build/STYLE/Element.Dialog.css",
@@ -25,7 +26,9 @@
   {
     "outputFileName": "_Build/Creator.js",
     "inputFiles": [
-      "_Build/SCRIPT/Notify.js"
+      "_Build/SCRIPT/Element.Notify.js",
+      "_Build/SCRIPT/Element.Dialog.js",
+      "_Build/SCRIPT/Element.BurgerMenu.js"
     ],
     "sourceMap": true
   }

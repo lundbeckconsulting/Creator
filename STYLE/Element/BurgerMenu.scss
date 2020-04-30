@@ -1,0 +1,86 @@
+﻿@import "..\\Shared\\Media";
+@import "..\\Shared\\Function";
+@import "..\\Shared\\Mixin";
+@import "..\\Shared\\ColorProfiles";
+
+$name: burgerIcon;
+$sizes: ( SM: 1.6rem, MD: 2.8rem, LG: 4rem );
+
+@each $sname, $size in $sizes {
+    .#{$name}-#{lower($sname)} {
+        @each $cname, $cprofile in $CPs {
+            &.cp-#{lower($cname)} {
+                display: none;
+                visibility: hidden;
+
+                &::before {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: $size;
+                    font-weight: bold;
+                    color: color($cname);
+                    content: "|||";
+                    transform: rotate(90deg);
+                    transition: all 0.4ms ease-in-out;
+                }
+
+                &:hover::before {
+                    color: color($cname, Second);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+#burgerMenu {
+    display: none;
+    z-index: 82;
+
+    & > nav {
+        display: grid;
+        grid-template-rows: 1fr auto 1fr;
+        grid-template-columns: 1fr;
+
+        & > .link {
+            grid-column-start: 1;
+            grid-row-start: 2;
+            justify-self: center;
+            align-self: center;
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: white;
+            margin: 4px;
+            z-index: 99;
+        }
+    }
+}
+
+#burgerMenuBackground {
+    @include fillParent(fixed, 0, false);
+    background-color: rgba(black, 0.8);
+
+    & > .close-burger-menu {
+        position: absolute;
+        top: 18px;
+        right: 24px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: white;
+
+        &:hover {
+            color: darken(white, 20%);
+            cursor: pointer;
+        }
+    }
+}
+
+@include media(MD, Any, Down) {
+    ##{$name} {
+        display: block !important;
+        visibility: visible !important;
+
+        &::before {
+            display: inline-block;
+        }
+    }
+}

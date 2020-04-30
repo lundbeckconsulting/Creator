@@ -5,7 +5,7 @@
 @import "Mixin";
 
 .airy {
-  margin: getAiry();
+  margin: get(Airy, XS);
 }
 
 @each $n, $v in $airyValues {
@@ -233,10 +233,46 @@
   }
 }
 
-@include head(true);
+@each $name, $val in $headSyno {
+    $size: get(Head, $val);
 
-@include media() {
-  @include head();
+    .h#{$name} {
+        font-size: $size;
+        font-weight: normal;
+
+        &-bold {
+            font-size: $size;
+            font-weight: bold;
+        }
+
+        @each $s, $v in $airyValues {
+            &-#{"airy-" + lower($s)} {
+                font-size: $size;
+                margin: $v;
+                font-weight: normal;
+            }
+
+            &-#{"airy-" + lower($s) + "-bold"} {
+                font-size: $size;
+                margin: $v;
+                font-weight: bold;
+            }
+
+            @if (equal($s, MD)) {
+                &-airy {
+                    font-size: $size;
+                    margin: getAiry();
+                    font-weight: normal;
+
+                    &-bold {
+                        font-size: $size;
+                        margin: getAiry();
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .clean {

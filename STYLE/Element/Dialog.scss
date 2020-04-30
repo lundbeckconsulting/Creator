@@ -2,57 +2,122 @@
 @import "..\\Shared\\Config";
 @import "..\\Shared\\Function";
 
-@each $cp, $c in $CPs {
-  @each $sizeName, $size in $modalSizes {
-    $colorTitle: color($cp);
-    $closeIconColor: #800505;
+@each $cp, $c in get(CP) {
+    @each $sizeName, $size in get(Dialog) {
+        .dialog-#{lower($cp)}-#{lower($sizeName)} {
+            width: 100%;
+            max-width: $size;
+            max-height: 84%;
+            border: 4px solid color($cp);
+            border-radius: 10px;
+            padding: 0px;
+            z-index: 420;
+            position: fixed;
+            top: 10%;
 
-    .#{"dialog-" + lower($cp) + "-" + lower($sizeName)} {
-      @include modal($sizeName, $cp);
+            @include shadow();
+            @include absoluteCenter();
 
-      & > content {
-        & > header {
-          @include modalHeader($cp);
+            & > content {
+                & > header {
+                    $foreColor: color($cp, Last);
+                    $semiColor: color($cp);
+                    $backColor: color($cp, Second);
 
-          & > span.title {
-            flex: 1 1 auto;
-            color: $colorTitle;
-            font-size: 1rem;
-            font-weight: 600;
+                    display: flex;
+                    justify-items: center;
+                    align-items: center;
+                    color: $semiColor;
+                    padding-left: 8px;
+                    border-bottom: 3px solid $semiColor;
+                    background: linear-gradient(lighten(color($cp, Fourth), 10%), color($cp, Last));
 
-            @include noOverflow();
-          }
+                    & .title {
+                        flex: 1 1 auto;
+                        font-size: 1.1rem;
+                        font-weight: 600;
 
-          & > .hide-modal {
-            flex: 0 0 26px;
+                        @include noOverflow();
+                    }
 
-            & > .icon {
-              color: $closeIconColor;
-              margin: 4px;
-              font-size: 1.1rem;
+                    & .close-command {
+                        flex: 0 0 22px;
+                        font-family: 'Open Sans';
+                        font-size: 1.3rem;
+                        font-weight: bolder;
+                        color: $semiColor;
+                        margin: 2px;
+                        transition: all 0.3s ease-in-out;
 
-              &:hover {
-                color: lighten($closeIconColor, 8%);
-              }
+                        &:hover {
+                            color: color($cp, Third);
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                & > .body {
+                    padding: $defaultPad;
+                    color: black;
+                    background-color: white;
+                }
+
+                & > footer {
+                    $color: color($cp);
+
+                    @if ($cp == Light) {
+                        $color: #242424;
+                    }
+
+                    padding: get(Pad, SM);
+                    display: flex;
+                    justify-content: end;
+                    border-top: 1px solid $color;
+
+                    & > .ok-command {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+
+                        &.btn {
+                            $minWidth: 66px;
+
+                            @include formButtonBase($cp);
+                            @include formControlHover($cp);
+                            min-width: $minWidth;
+
+                            &-left {
+                                @include formButtonBase($cp, false, (margin));
+                                @include formControlHover($cp);
+                                min-width: $minWidth;
+                                margin-right: auto;
+                            }
+
+                            &-center {
+                                @include formButtonBase($cp, false, (margin));
+                                @include formControlHover($cp);
+                                min-width: $minWidth;
+                                margin: auto;
+                            }
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            font-weight: 800;
+                        }
+                    }
+                }
             }
-          }
         }
-
-        & > .body {
-          @include modalBody();
-        }
-      }
     }
-  }
 }
 
-#modalBackground {
-  display: none;
-  background-color: rgba(black, 0.8);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 98;
+#dialogBackground {
+    display: none;
+    background-color: rgba(black, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
 }

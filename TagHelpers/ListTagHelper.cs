@@ -18,12 +18,12 @@ namespace Creator.TagHelpers
     [HtmlTargetElement("list", Attributes = "items", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class ListTagHelper : TagHelperBase
     {
-        public ListTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        public ListTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigAccessor config, IHtmlHelper html) : base(environment, db, config, html)
         { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, output);
+            await base.PreProcess(context, output);
 
             TagBuilder tag = new TagBuilder(this.Type.Equals(ListTypes.Ordered) ? "ol" : "ul");
             

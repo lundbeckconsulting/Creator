@@ -18,16 +18,16 @@ namespace Creator.TagHelpers
     [HtmlTargetElement("dialog", Attributes = "size", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class DialogTagHelper : TagHelperBase
     {
-        private const string _backgroundID = "creatorDialogBackground";
+        private const string _backgroundID = "dialogBackground";
         private const string _viewDataBackgroundKey = "dialogBackgroundExists";
         private const string _backgroundCssName = "dialog-background";
 
-        public DialogTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        public DialogTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigAccessor config, IHtmlHelper html) : base(environment, db, config, html)
         { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, output);
+            await base.PreProcess(context, output);
             
             output.Content.AppendHtml(GetTag());
             AddBackgroundTag();

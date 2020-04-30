@@ -4,8 +4,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: black; }
   .creator.checkbox-wrap.cp-default > .container > .checkmark:after {
@@ -15,8 +15,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #8b480e; }
   .creator.checkbox-wrap.cp-primary > .container > .checkmark:after {
@@ -26,8 +26,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #195f34; }
   .creator.checkbox-wrap.cp-success > .container > .checkmark:after {
@@ -37,8 +37,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #8c101b; }
   .creator.checkbox-wrap.cp-danger > .container > .checkmark:after {
@@ -48,8 +48,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #ffbf00; }
   .creator.checkbox-wrap.cp-warning > .container > .checkmark:after {
@@ -59,8 +59,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #2894aa; }
   .creator.checkbox-wrap.cp-info > .container > .checkmark:after {
@@ -70,8 +70,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #a19b9b; }
   .creator.checkbox-wrap.cp-light > .container > .checkmark:after {
@@ -81,8 +81,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #161616; }
   .creator.checkbox-wrap.cp-dark > .container > .checkmark:after {
@@ -92,8 +92,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #fe2f00; }
   .creator.checkbox-wrap.cp-antan > .container > .checkmark:after {
@@ -103,8 +103,8 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
     background-color: #07294e; }
   .creator.checkbox-wrap.cp-notify > .container > .checkmark:after {
@@ -133,9 +133,13 @@
     .creator.checkbox-wrap > .container > .checkmark:after {
       position: relative;
       left: 7px;
-      top: 3px;
-      width: 5px;
-      height: 10px;
+      top: 4px;
+      width: 4px;
+      height: 8px;
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
+  .creator.checkbox-wrap > .text {
+    position: relative;
+    top: -2px;
+    font-size: 0.9rem; }

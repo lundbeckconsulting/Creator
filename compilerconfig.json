@@ -1,5 +1,9 @@
 ﻿[
   {
+    "inputFile": "STYLE/Element/BurgerMenu.scss",
+    "outputFile": "_Build/STYLE/Element.BurgerMenu.css"
+  },
+  {
     "inputFile": "STYLE/Element/Footer.scss",
     "outputFile": "_Build/STYLE/Element.Footer.css"
   },
@@ -72,7 +76,15 @@
     "outputFile": "_Build/STYLE/TagHelper.Checkbox.css"
   },
   {
-    "inputFile": "SCRIPT/Notify.js",
-    "outputFile": "_Build/SCRIPT/Notify.js"
+    "inputFile": "SCRIPT/Element.Notify.js",
+    "outputFile": "_Build/SCRIPT/Element.Notify.js"
+  },
+  {
+    "inputFile": "SCRIPT/Element.Dialog.js",
+    "outputFile": "_Build/SCRIPT/Element.Dialog.js"
+  },
+  {
+    "inputFile": "SCRIPT/Element.BurgerMenu.js",
+    "outputFile": "_Build/SCRIPT/Element.BurgerMenu.js"
   }
 ]

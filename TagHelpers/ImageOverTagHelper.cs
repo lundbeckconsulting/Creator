@@ -18,14 +18,14 @@ namespace Creator.TagHelpers
     [HtmlTargetElement("img-over", Attributes = "src", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class ImageOverTagHelper : TagHelperBase
     {
-        public ImageOverTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        public ImageOverTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigAccessor config, IHtmlHelper html) : base(environment, db, config, html)
         {
             
         }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, output);
+            await base.PreProcess(context, output);
 
             string clss = context.AllAttributes.ContainsName("class") ? context.AllAttributes["class"].Value.ToString() : default;
 

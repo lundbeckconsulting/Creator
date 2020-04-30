@@ -1,5 +1,5 @@
 ﻿.airy {
-  margin: getAiry(); }
+  margin: 10px; }
 
 .airy-xxs {
   margin: 4px; }
@@ -460,14 +460,12 @@
 .bg-cover {
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  background-image: url(); }
+  background-size: cover; }
   .bg-cover.fixed, .bg-cover-fixed {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
-    background-image: url(); }
+    background-attachment: fixed; }
 
 .fixed.top,
 .fixed-top {
@@ -568,357 +566,357 @@
   opacity: 0.9; }
 
 .h1 {
-  font-size: -0.6rem;
+  font-size: 2.8rem;
   font-weight: normal; }
   .h1-bold {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     font-weight: bold; }
   .h1-airy-xxs {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 4px;
     font-weight: normal; }
   .h1-airy-xxs-bold {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 4px;
     font-weight: bold; }
   .h1-airy-xs {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 10px;
     font-weight: normal; }
   .h1-airy-xs-bold {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 10px;
     font-weight: bold; }
   .h1-airy-sm {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 16px;
     font-weight: normal; }
   .h1-airy-sm-bold {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 16px;
     font-weight: bold; }
   .h1-airy-md {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 24px;
     font-weight: normal; }
   .h1-airy-md-bold {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 24px;
     font-weight: bold; }
   .h1-airy {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: getAiry();
     font-weight: normal; }
     .h1-airy-bold {
-      font-size: -0.6rem;
+      font-size: 2.8rem;
       margin: getAiry();
       font-weight: bold; }
   .h1-airy-lg {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 32px;
     font-weight: normal; }
   .h1-airy-lg-bold {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 32px;
     font-weight: bold; }
   .h1-airy-xl {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 40px;
     font-weight: normal; }
   .h1-airy-xl-bold {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 40px;
     font-weight: bold; }
   .h1-airy-xxl {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 62px;
     font-weight: normal; }
   .h1-airy-xxl-bold {
-    font-size: -0.6rem;
+    font-size: 2.8rem;
     margin: 62px;
     font-weight: bold; }
 
 .h2 {
-  font-size: 1.2rem;
+  font-size: 2.4rem;
   font-weight: normal; }
   .h2-bold {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     font-weight: bold; }
   .h2-airy-xxs {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 4px;
     font-weight: normal; }
   .h2-airy-xxs-bold {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 4px;
     font-weight: bold; }
   .h2-airy-xs {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 10px;
     font-weight: normal; }
   .h2-airy-xs-bold {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 10px;
     font-weight: bold; }
   .h2-airy-sm {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 16px;
     font-weight: normal; }
   .h2-airy-sm-bold {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 16px;
     font-weight: bold; }
   .h2-airy-md {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 24px;
     font-weight: normal; }
   .h2-airy-md-bold {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 24px;
     font-weight: bold; }
   .h2-airy {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: getAiry();
     font-weight: normal; }
     .h2-airy-bold {
-      font-size: 1.2rem;
+      font-size: 2.4rem;
       margin: getAiry();
       font-weight: bold; }
   .h2-airy-lg {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 32px;
     font-weight: normal; }
   .h2-airy-lg-bold {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 32px;
     font-weight: bold; }
   .h2-airy-xl {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 40px;
     font-weight: normal; }
   .h2-airy-xl-bold {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 40px;
     font-weight: bold; }
   .h2-airy-xxl {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 62px;
     font-weight: normal; }
   .h2-airy-xxl-bold {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 62px;
     font-weight: bold; }
 
 .h3 {
-  font-size: 0.8rem;
+  font-size: 2rem;
   font-weight: normal; }
   .h3-bold {
-    font-size: 0.8rem;
+    font-size: 2rem;
     font-weight: bold; }
   .h3-airy-xxs {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 4px;
     font-weight: normal; }
   .h3-airy-xxs-bold {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 4px;
     font-weight: bold; }
   .h3-airy-xs {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 10px;
     font-weight: normal; }
   .h3-airy-xs-bold {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 10px;
     font-weight: bold; }
   .h3-airy-sm {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 16px;
     font-weight: normal; }
   .h3-airy-sm-bold {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 16px;
     font-weight: bold; }
   .h3-airy-md {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 24px;
     font-weight: normal; }
   .h3-airy-md-bold {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 24px;
     font-weight: bold; }
   .h3-airy {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: getAiry();
     font-weight: normal; }
     .h3-airy-bold {
-      font-size: 0.8rem;
+      font-size: 2rem;
       margin: getAiry();
       font-weight: bold; }
   .h3-airy-lg {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 32px;
     font-weight: normal; }
   .h3-airy-lg-bold {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 32px;
     font-weight: bold; }
   .h3-airy-xl {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 40px;
     font-weight: normal; }
   .h3-airy-xl-bold {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 40px;
     font-weight: bold; }
   .h3-airy-xxl {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 62px;
     font-weight: normal; }
   .h3-airy-xxl-bold {
-    font-size: 0.8rem;
+    font-size: 2rem;
     margin: 62px;
     font-weight: bold; }
 
 .h4 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: normal; }
   .h4-bold {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: bold; }
   .h4-airy-xxs {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 4px;
     font-weight: normal; }
   .h4-airy-xxs-bold {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 4px;
     font-weight: bold; }
   .h4-airy-xs {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 10px;
     font-weight: normal; }
   .h4-airy-xs-bold {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 10px;
     font-weight: bold; }
   .h4-airy-sm {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 16px;
     font-weight: normal; }
   .h4-airy-sm-bold {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 16px;
     font-weight: bold; }
   .h4-airy-md {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 24px;
     font-weight: normal; }
   .h4-airy-md-bold {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 24px;
     font-weight: bold; }
   .h4-airy {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: getAiry();
     font-weight: normal; }
     .h4-airy-bold {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       margin: getAiry();
       font-weight: bold; }
   .h4-airy-lg {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 32px;
     font-weight: normal; }
   .h4-airy-lg-bold {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 32px;
     font-weight: bold; }
   .h4-airy-xl {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 40px;
     font-weight: normal; }
   .h4-airy-xl-bold {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 40px;
     font-weight: bold; }
   .h4-airy-xxl {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 62px;
     font-weight: normal; }
   .h4-airy-xxl-bold {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 62px;
     font-weight: bold; }
 
 .h5 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: normal; }
   .h5-bold {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold; }
   .h5-airy-xxs {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 4px;
     font-weight: normal; }
   .h5-airy-xxs-bold {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 4px;
     font-weight: bold; }
   .h5-airy-xs {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 10px;
     font-weight: normal; }
   .h5-airy-xs-bold {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 10px;
     font-weight: bold; }
   .h5-airy-sm {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 16px;
     font-weight: normal; }
   .h5-airy-sm-bold {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 16px;
     font-weight: bold; }
   .h5-airy-md {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 24px;
     font-weight: normal; }
   .h5-airy-md-bold {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 24px;
     font-weight: bold; }
   .h5-airy {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: getAiry();
     font-weight: normal; }
     .h5-airy-bold {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin: getAiry();
       font-weight: bold; }
   .h5-airy-lg {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 32px;
     font-weight: normal; }
   .h5-airy-lg-bold {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 32px;
     font-weight: bold; }
   .h5-airy-xl {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 40px;
     font-weight: normal; }
   .h5-airy-xl-bold {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 40px;
     font-weight: bold; }
   .h5-airy-xxl {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 62px;
     font-weight: normal; }
   .h5-airy-xxl-bold {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 62px;
     font-weight: bold; }
 
@@ -1063,498 +1061,6 @@
     font-size: 0.8rem;
     margin: 62px;
     font-weight: bold; }
-
-@media (min-width: 768px) {
-  .h1 {
-    font-size: 2.8rem;
-    font-weight: normal; }
-    .h1-bold {
-      font-size: 2.8rem;
-      font-weight: bold; }
-    .h1-airy-xxs {
-      font-size: 2.8rem;
-      margin: 4px;
-      font-weight: normal; }
-    .h1-airy-xxs-bold {
-      font-size: 2.8rem;
-      margin: 4px;
-      font-weight: bold; }
-    .h1-airy-xs {
-      font-size: 2.8rem;
-      margin: 10px;
-      font-weight: normal; }
-    .h1-airy-xs-bold {
-      font-size: 2.8rem;
-      margin: 10px;
-      font-weight: bold; }
-    .h1-airy-sm {
-      font-size: 2.8rem;
-      margin: 16px;
-      font-weight: normal; }
-    .h1-airy-sm-bold {
-      font-size: 2.8rem;
-      margin: 16px;
-      font-weight: bold; }
-    .h1-airy-md {
-      font-size: 2.8rem;
-      margin: 24px;
-      font-weight: normal; }
-    .h1-airy-md-bold {
-      font-size: 2.8rem;
-      margin: 24px;
-      font-weight: bold; }
-    .h1-airy {
-      font-size: 2.8rem;
-      margin: getAiry();
-      font-weight: normal; }
-      .h1-airy-bold {
-        font-size: 2.8rem;
-        margin: getAiry();
-        font-weight: bold; }
-    .h1-airy-lg {
-      font-size: 2.8rem;
-      margin: 32px;
-      font-weight: normal; }
-    .h1-airy-lg-bold {
-      font-size: 2.8rem;
-      margin: 32px;
-      font-weight: bold; }
-    .h1-airy-xl {
-      font-size: 2.8rem;
-      margin: 40px;
-      font-weight: normal; }
-    .h1-airy-xl-bold {
-      font-size: 2.8rem;
-      margin: 40px;
-      font-weight: bold; }
-    .h1-airy-xxl {
-      font-size: 2.8rem;
-      margin: 62px;
-      font-weight: normal; }
-    .h1-airy-xxl-bold {
-      font-size: 2.8rem;
-      margin: 62px;
-      font-weight: bold; }
-  .h2 {
-    font-size: 2.4rem;
-    font-weight: normal; }
-    .h2-bold {
-      font-size: 2.4rem;
-      font-weight: bold; }
-    .h2-airy-xxs {
-      font-size: 2.4rem;
-      margin: 4px;
-      font-weight: normal; }
-    .h2-airy-xxs-bold {
-      font-size: 2.4rem;
-      margin: 4px;
-      font-weight: bold; }
-    .h2-airy-xs {
-      font-size: 2.4rem;
-      margin: 10px;
-      font-weight: normal; }
-    .h2-airy-xs-bold {
-      font-size: 2.4rem;
-      margin: 10px;
-      font-weight: bold; }
-    .h2-airy-sm {
-      font-size: 2.4rem;
-      margin: 16px;
-      font-weight: normal; }
-    .h2-airy-sm-bold {
-      font-size: 2.4rem;
-      margin: 16px;
-      font-weight: bold; }
-    .h2-airy-md {
-      font-size: 2.4rem;
-      margin: 24px;
-      font-weight: normal; }
-    .h2-airy-md-bold {
-      font-size: 2.4rem;
-      margin: 24px;
-      font-weight: bold; }
-    .h2-airy {
-      font-size: 2.4rem;
-      margin: getAiry();
-      font-weight: normal; }
-      .h2-airy-bold {
-        font-size: 2.4rem;
-        margin: getAiry();
-        font-weight: bold; }
-    .h2-airy-lg {
-      font-size: 2.4rem;
-      margin: 32px;
-      font-weight: normal; }
-    .h2-airy-lg-bold {
-      font-size: 2.4rem;
-      margin: 32px;
-      font-weight: bold; }
-    .h2-airy-xl {
-      font-size: 2.4rem;
-      margin: 40px;
-      font-weight: normal; }
-    .h2-airy-xl-bold {
-      font-size: 2.4rem;
-      margin: 40px;
-      font-weight: bold; }
-    .h2-airy-xxl {
-      font-size: 2.4rem;
-      margin: 62px;
-      font-weight: normal; }
-    .h2-airy-xxl-bold {
-      font-size: 2.4rem;
-      margin: 62px;
-      font-weight: bold; }
-  .h3 {
-    font-size: 2rem;
-    font-weight: normal; }
-    .h3-bold {
-      font-size: 2rem;
-      font-weight: bold; }
-    .h3-airy-xxs {
-      font-size: 2rem;
-      margin: 4px;
-      font-weight: normal; }
-    .h3-airy-xxs-bold {
-      font-size: 2rem;
-      margin: 4px;
-      font-weight: bold; }
-    .h3-airy-xs {
-      font-size: 2rem;
-      margin: 10px;
-      font-weight: normal; }
-    .h3-airy-xs-bold {
-      font-size: 2rem;
-      margin: 10px;
-      font-weight: bold; }
-    .h3-airy-sm {
-      font-size: 2rem;
-      margin: 16px;
-      font-weight: normal; }
-    .h3-airy-sm-bold {
-      font-size: 2rem;
-      margin: 16px;
-      font-weight: bold; }
-    .h3-airy-md {
-      font-size: 2rem;
-      margin: 24px;
-      font-weight: normal; }
-    .h3-airy-md-bold {
-      font-size: 2rem;
-      margin: 24px;
-      font-weight: bold; }
-    .h3-airy {
-      font-size: 2rem;
-      margin: getAiry();
-      font-weight: normal; }
-      .h3-airy-bold {
-        font-size: 2rem;
-        margin: getAiry();
-        font-weight: bold; }
-    .h3-airy-lg {
-      font-size: 2rem;
-      margin: 32px;
-      font-weight: normal; }
-    .h3-airy-lg-bold {
-      font-size: 2rem;
-      margin: 32px;
-      font-weight: bold; }
-    .h3-airy-xl {
-      font-size: 2rem;
-      margin: 40px;
-      font-weight: normal; }
-    .h3-airy-xl-bold {
-      font-size: 2rem;
-      margin: 40px;
-      font-weight: bold; }
-    .h3-airy-xxl {
-      font-size: 2rem;
-      margin: 62px;
-      font-weight: normal; }
-    .h3-airy-xxl-bold {
-      font-size: 2rem;
-      margin: 62px;
-      font-weight: bold; }
-  .h4 {
-    font-size: 1.8rem;
-    font-weight: normal; }
-    .h4-bold {
-      font-size: 1.8rem;
-      font-weight: bold; }
-    .h4-airy-xxs {
-      font-size: 1.8rem;
-      margin: 4px;
-      font-weight: normal; }
-    .h4-airy-xxs-bold {
-      font-size: 1.8rem;
-      margin: 4px;
-      font-weight: bold; }
-    .h4-airy-xs {
-      font-size: 1.8rem;
-      margin: 10px;
-      font-weight: normal; }
-    .h4-airy-xs-bold {
-      font-size: 1.8rem;
-      margin: 10px;
-      font-weight: bold; }
-    .h4-airy-sm {
-      font-size: 1.8rem;
-      margin: 16px;
-      font-weight: normal; }
-    .h4-airy-sm-bold {
-      font-size: 1.8rem;
-      margin: 16px;
-      font-weight: bold; }
-    .h4-airy-md {
-      font-size: 1.8rem;
-      margin: 24px;
-      font-weight: normal; }
-    .h4-airy-md-bold {
-      font-size: 1.8rem;
-      margin: 24px;
-      font-weight: bold; }
-    .h4-airy {
-      font-size: 1.8rem;
-      margin: getAiry();
-      font-weight: normal; }
-      .h4-airy-bold {
-        font-size: 1.8rem;
-        margin: getAiry();
-        font-weight: bold; }
-    .h4-airy-lg {
-      font-size: 1.8rem;
-      margin: 32px;
-      font-weight: normal; }
-    .h4-airy-lg-bold {
-      font-size: 1.8rem;
-      margin: 32px;
-      font-weight: bold; }
-    .h4-airy-xl {
-      font-size: 1.8rem;
-      margin: 40px;
-      font-weight: normal; }
-    .h4-airy-xl-bold {
-      font-size: 1.8rem;
-      margin: 40px;
-      font-weight: bold; }
-    .h4-airy-xxl {
-      font-size: 1.8rem;
-      margin: 62px;
-      font-weight: normal; }
-    .h4-airy-xxl-bold {
-      font-size: 1.8rem;
-      margin: 62px;
-      font-weight: bold; }
-  .h5 {
-    font-size: 1.4rem;
-    font-weight: normal; }
-    .h5-bold {
-      font-size: 1.4rem;
-      font-weight: bold; }
-    .h5-airy-xxs {
-      font-size: 1.4rem;
-      margin: 4px;
-      font-weight: normal; }
-    .h5-airy-xxs-bold {
-      font-size: 1.4rem;
-      margin: 4px;
-      font-weight: bold; }
-    .h5-airy-xs {
-      font-size: 1.4rem;
-      margin: 10px;
-      font-weight: normal; }
-    .h5-airy-xs-bold {
-      font-size: 1.4rem;
-      margin: 10px;
-      font-weight: bold; }
-    .h5-airy-sm {
-      font-size: 1.4rem;
-      margin: 16px;
-      font-weight: normal; }
-    .h5-airy-sm-bold {
-      font-size: 1.4rem;
-      margin: 16px;
-      font-weight: bold; }
-    .h5-airy-md {
-      font-size: 1.4rem;
-      margin: 24px;
-      font-weight: normal; }
-    .h5-airy-md-bold {
-      font-size: 1.4rem;
-      margin: 24px;
-      font-weight: bold; }
-    .h5-airy {
-      font-size: 1.4rem;
-      margin: getAiry();
-      font-weight: normal; }
-      .h5-airy-bold {
-        font-size: 1.4rem;
-        margin: getAiry();
-        font-weight: bold; }
-    .h5-airy-lg {
-      font-size: 1.4rem;
-      margin: 32px;
-      font-weight: normal; }
-    .h5-airy-lg-bold {
-      font-size: 1.4rem;
-      margin: 32px;
-      font-weight: bold; }
-    .h5-airy-xl {
-      font-size: 1.4rem;
-      margin: 40px;
-      font-weight: normal; }
-    .h5-airy-xl-bold {
-      font-size: 1.4rem;
-      margin: 40px;
-      font-weight: bold; }
-    .h5-airy-xxl {
-      font-size: 1.4rem;
-      margin: 62px;
-      font-weight: normal; }
-    .h5-airy-xxl-bold {
-      font-size: 1.4rem;
-      margin: 62px;
-      font-weight: bold; }
-  .h6 {
-    font-size: 1rem;
-    font-weight: normal; }
-    .h6-bold {
-      font-size: 1rem;
-      font-weight: bold; }
-    .h6-airy-xxs {
-      font-size: 1rem;
-      margin: 4px;
-      font-weight: normal; }
-    .h6-airy-xxs-bold {
-      font-size: 1rem;
-      margin: 4px;
-      font-weight: bold; }
-    .h6-airy-xs {
-      font-size: 1rem;
-      margin: 10px;
-      font-weight: normal; }
-    .h6-airy-xs-bold {
-      font-size: 1rem;
-      margin: 10px;
-      font-weight: bold; }
-    .h6-airy-sm {
-      font-size: 1rem;
-      margin: 16px;
-      font-weight: normal; }
-    .h6-airy-sm-bold {
-      font-size: 1rem;
-      margin: 16px;
-      font-weight: bold; }
-    .h6-airy-md {
-      font-size: 1rem;
-      margin: 24px;
-      font-weight: normal; }
-    .h6-airy-md-bold {
-      font-size: 1rem;
-      margin: 24px;
-      font-weight: bold; }
-    .h6-airy {
-      font-size: 1rem;
-      margin: getAiry();
-      font-weight: normal; }
-      .h6-airy-bold {
-        font-size: 1rem;
-        margin: getAiry();
-        font-weight: bold; }
-    .h6-airy-lg {
-      font-size: 1rem;
-      margin: 32px;
-      font-weight: normal; }
-    .h6-airy-lg-bold {
-      font-size: 1rem;
-      margin: 32px;
-      font-weight: bold; }
-    .h6-airy-xl {
-      font-size: 1rem;
-      margin: 40px;
-      font-weight: normal; }
-    .h6-airy-xl-bold {
-      font-size: 1rem;
-      margin: 40px;
-      font-weight: bold; }
-    .h6-airy-xxl {
-      font-size: 1rem;
-      margin: 62px;
-      font-weight: normal; }
-    .h6-airy-xxl-bold {
-      font-size: 1rem;
-      margin: 62px;
-      font-weight: bold; }
-  .h7 {
-    font-size: 0.8rem;
-    font-weight: normal; }
-    .h7-bold {
-      font-size: 0.8rem;
-      font-weight: bold; }
-    .h7-airy-xxs {
-      font-size: 0.8rem;
-      margin: 4px;
-      font-weight: normal; }
-    .h7-airy-xxs-bold {
-      font-size: 0.8rem;
-      margin: 4px;
-      font-weight: bold; }
-    .h7-airy-xs {
-      font-size: 0.8rem;
-      margin: 10px;
-      font-weight: normal; }
-    .h7-airy-xs-bold {
-      font-size: 0.8rem;
-      margin: 10px;
-      font-weight: bold; }
-    .h7-airy-sm {
-      font-size: 0.8rem;
-      margin: 16px;
-      font-weight: normal; }
-    .h7-airy-sm-bold {
-      font-size: 0.8rem;
-      margin: 16px;
-      font-weight: bold; }
-    .h7-airy-md {
-      font-size: 0.8rem;
-      margin: 24px;
-      font-weight: normal; }
-    .h7-airy-md-bold {
-      font-size: 0.8rem;
-      margin: 24px;
-      font-weight: bold; }
-    .h7-airy {
-      font-size: 0.8rem;
-      margin: getAiry();
-      font-weight: normal; }
-      .h7-airy-bold {
-        font-size: 0.8rem;
-        margin: getAiry();
-        font-weight: bold; }
-    .h7-airy-lg {
-      font-size: 0.8rem;
-      margin: 32px;
-      font-weight: normal; }
-    .h7-airy-lg-bold {
-      font-size: 0.8rem;
-      margin: 32px;
-      font-weight: bold; }
-    .h7-airy-xl {
-      font-size: 0.8rem;
-      margin: 40px;
-      font-weight: normal; }
-    .h7-airy-xl-bold {
-      font-size: 0.8rem;
-      margin: 40px;
-      font-weight: bold; }
-    .h7-airy-xxl {
-      font-size: 0.8rem;
-      margin: 62px;
-      font-weight: normal; }
-    .h7-airy-xxl-bold {
-      font-size: 0.8rem;
-      margin: 62px;
-      font-weight: bold; } }
 
 .clean {
   padding: unset; }

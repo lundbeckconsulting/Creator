@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Dialog demo</title>
+
+    <link href="../_Build/Creator.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
+
+</head>
+<body>
+    <p>
+        <button class="open-dialog" data-dialog="mainDialog">Open Dialog</button>
+    </p>
+    
+    <dialog id="mainDialog" class="dialog-notify-lg">
+        <content>
+            <header>
+                <span class="title">My Dialog</span>
+                <span class="close-icon">X</span>
+            </header>
+            <div class="body">
+                The Body
+            </div>
+            <footer>
+                <button class="ok-command btn">Ok</button>
+            </footer>
+        </content>
+    </dialog>
+
+    <script src="../_Build/Creator.js"></script>
+</body>
+</html>

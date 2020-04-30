@@ -22,12 +22,12 @@ namespace Creator.TagHelpers
     [RestrictChildren("content")]
     public class ChapterTagHelper : TagHelperBase
     {
-        public ChapterTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        public ChapterTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigAccessor config, IHtmlHelper html) : base(environment, db, config, html)
         { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, output);
+            await base.PreProcess(context, output);
 
             ChapterContext cntx = new ChapterContext();
             context.Items.Add(typeof(ChapterTagHelper), cntx);
@@ -68,7 +68,6 @@ namespace Creator.TagHelpers
 
             tag.InnerHtml.AppendLine(GetContentTag(ChapterContentTypes.Main, main));
 
-            output.SuppressOutput();
             output.PostElement.AppendLine(tag);
 
             await base.ProcessAsync(context, output);

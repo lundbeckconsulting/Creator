@@ -16,12 +16,12 @@ namespace Creator.TagHelpers
     [HtmlTargetElement("content", Attributes = "type", ParentTag = "chapter", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class ChapterContentTagHelper : TagHelperBase
     {
-        public ChapterContentTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigWrapper config, IHtmlHelper html) : base(environment, db, config, html)
+        public ChapterContentTagHelper(IWebHostEnvironment environment, IAssetsDBContextAccessor db, IAssetsConfigAccessor config, IHtmlHelper html) : base(environment, db, config, html)
         { }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            base.PreProcess(context, output);
+            await base.PreProcess(context, output);
 
             ChapterContext cntx = (ChapterContext)context.Items[typeof(ChapterTagHelper)];
             TagHelperContent child = await output.GetChildContentAsync();

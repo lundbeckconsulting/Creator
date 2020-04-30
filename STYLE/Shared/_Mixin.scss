@@ -1,0 +1,530 @@
+﻿@import "Config";
+@import "Function";
+@import "Media";
+
+@mixin fillParent($position: absolute, $padding: 0, $visible: true) {
+    position: $position;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: $padding;
+
+    @if not ($visible) {
+        display: none;
+    }
+}
+
+@mixin airy($size: MD, $inside: false) {
+    $val: get(Airy, $size);
+
+    @if ($inside) {
+        padding: $val;
+    }
+    @else {
+        margin: $val;
+    }
+}
+
+@mixin font($size: MD, $bold: false) {
+    font-size: get(Font, $size);
+
+    @if ($bold) {
+        font-weight: bold;
+    }
+}
+
+@mixin responsive($restrain: true, $center: true, $pad: false) {
+    $min: 0px;
+    $max: 100%;
+
+    @if ($restrain) {
+        $max: get(Width, DOC);
+    }
+
+    width: 100%;
+    min-width: $min;
+    max-width: $max;
+
+    @if ($center) {
+        @include autoMargin();
+    }
+
+    @if ($pad) {
+        padding: $defaultPad;
+    }
+    @else {
+        padding: 0;
+    }
+}
+
+@mixin color($cpName: Default, $clrName: Primary, $font: false, $bg: false) {
+    $clr: getItem($CPs, toCPName($cpName));
+    $color: getItem($clr, toPCColorName($clrName));
+
+    @if ($font) {
+        color: $color;
+    }
+
+    @if ($bg) {
+        background-color: $color;
+    }
+}
+
+@mixin absoluteCenter() {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin autoMargin() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin bgCover($fixed: false, $img: null) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @if ($fixed) {
+        background-attachment: fixed;
+    }
+
+    @if ($img) {
+        background-image: url($img);
+    }
+}
+
+@mixin bgRepeat() {
+    background-repeat: repeat;
+}
+
+@mixin bgRepeatY() {
+    background-position-y: left;
+    background-position-x: unset;
+}
+
+@mixin bgRepeatX() {
+    background-position-x: top;
+    background-position-y: unset;
+}
+
+@mixin cleanBase($pad: true, $mrg: true, $border: false, $table: false, $td: false) {
+    @if ($pad) {
+        padding: 0 !important;
+    }
+
+    @if ($mrg) {
+        margin: 0 !important;
+    }
+
+    @if ($border) {
+        border: none !important;
+    }
+
+    @if ($table) {
+        border: none !important;
+        margin: inherit;
+    }
+
+    @if ($td) {
+        td {
+            border: none !important;
+            padding: initial;
+        }
+    }
+}
+
+@mixin table($cpName: Default, $border: true, $fat: false, $airy: false, $autoMargin: false) {
+    display: table;
+    border-collapse: collapse;
+
+    @if ($autoMargin) {
+        @include autoMargin();
+    }
+}
+
+@mixin tableAlternate($cpName: Default) {
+    tr:nth-child(even) {
+        $clr: color($cpName, Fifth);
+
+        @if (equal($cpName, Light)) {
+            $clr: #e8e8e8;
+        }
+
+        background-color: $clr;
+    }
+}
+
+@mixin noOverflow() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin table($cpName: Default, $td: true, $airy: false, $fat: false, $border: true) {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    thead {
+        padding: 8px;
+        background-color: color($cpName, Third);
+        font-weight: bold;
+        color: color($cpName);
+    }
+
+    @if ($td) {
+        @include tableTd($cpName, $airy, $fat, $border);
+    }
+}
+
+@mixin tableTd($cpName: Default, $airy: false, $fat: false, $border: true) {
+    td {
+        $clr: color($cpName);
+        $pad: 6px;
+        $borderWidth: 2px;
+        $borderColor: rgba($clr, 0.4);
+
+        @if ($airy) {
+            $pad: 14px;
+        }
+
+        @if ($fat) {
+            $borderWidth: 6px;
+        }
+
+        @if ($border) {
+            border: $borderWidth solid $borderColor;
+        }
+
+        color: $clr;
+        padding: $pad;
+
+        &:first-child {
+            padding-right: 0;
+        }
+    }
+}
+
+@mixin tableAlternate($cpName: Default) {
+    tr:nth-child(even) {
+        $clr: color($cpName, Fifth);
+
+        @if (equal($cpName, Light)) {
+            $clr: #e8e8e8;
+        }
+
+        background-color: rgba($clr, 0.8);
+    }
+}
+
+@mixin formControl($cpName: Default, $glowFocus: false) {
+    $cpName: toCPName($cpName);
+    $fore: color($cpName, Last);
+
+    border-radius: get(Sys, BorderRadius);
+    font-size: 0.8rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    height: 32px;
+    padding-left: 6px;
+
+    @if ($glowFocus) {
+        @include boxGlow($cpName);
+    }
+}
+
+@mixin formControlHover($cpName: Default, $gradient: false) {
+    &:hover {
+        $cursor: pointer;
+
+        @if ($gradient) {
+            $start: color($cpName, Last);
+            $end: color($cpName, Second);
+
+            background: linear-gradient($start, $end);
+        }
+        @else {
+            $cpName: toCPName($cpName);
+            $back: darken(color($cpName), 18%);
+            $fore: color($cpName, Last);
+
+            @if (equal($cpName, Warning)) {
+                $fore: white;
+            }
+            @else if (equal($cpName, Dark)) {
+                $fore: #6d6d6d;
+            }
+
+            color: $fore;
+            background-color: $back;
+        }
+
+        cursor: $cursor;
+    }
+}
+
+@mixin formTextbox($cpName: Default, $glow: true) {
+    $color: color(toCPName($cpName));
+
+    @if (equal($cpName, Default)) {
+        $color: #a5a5a5;
+    }
+
+    @include formControl($cpName, true);
+
+    @if ($glow) {
+        @include boxGlow($cpName);
+    }
+
+    @if (equal($cpName, Default)) {
+        $color: #272727;
+    }
+
+    border: 2px solid #343434;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+    &:hover {
+        background-color: #e4e1cf;
+    }
+}
+
+@mixin formButtonBase($cpName: Default, $border: false, $gradient: false, $exclude: ()) {
+    $cpName: toCPName($cpName);
+    $fore: color($cpName, Last);
+    $back: color($cpName);
+    $borderColor: $back;
+    $mrg: 2px;
+    $padHori: 12px;
+    $padVert: 6px;
+
+    @if (equal($cpName, Default)) {
+        $fore: color(Default, Middle);
+        $back: white;
+        $border: true;
+        $borderColor: #2a2a2a;
+    }
+    @else if (equal($cpName, Warning)) {
+        @if ($gradient) {
+            $fore: color($cpName, Last);
+        }
+    }
+    @else if (equal($cpName, Dark)) {
+        $fore: gray;
+    }
+
+    @if (equal($cpName, Default)) {
+        $border: true;
+    }
+
+    @include formControl($cpName, false);
+
+    @if ($border) {
+        border: 2px solid $borderColor;
+    }
+    @else {
+        border: none;
+    }
+
+    @if (equal($cpName, Warning)) {
+        $fore: #86291c;
+    }
+    @else if ($gradient and equal($cpName, Info)) {
+        $fore: #0c436e;
+    }
+    @else if ($gradient and equal($cpName, Dark)) {
+        $fore: white;
+    }
+    @else if ($gradient) {
+        @if (equal($cpName, Primary, Success, Danger, Light, Antan, Notify)) {
+            $fore: darken(color($cpName), 22%);
+        }
+    }
+
+    @if (equal($cpName, Default)) {
+        $fore: black;
+    }
+
+    @if not (getItem($exclude, background)) {
+        @if ($gradient) {
+            background: linear-gradient($fore, $back);
+        }
+        @else {
+            background-color: $back;
+        }
+    }
+
+    @if not (getItem($exclude, margin)) {
+        margin-left: $mrg;
+        margin-right: $mrg;
+    }
+    @else if not (getItem($exclude, padding)) {
+        padding-top: $padVert;
+        padding-bottom: $padVert;
+        padding-left: $padHori;
+        padding-right: $padHori;
+    }
+    @else if not (getItem($exclude, height)) {
+        height: 38px;
+    }
+    @else if not (getItem($exclude, color)) {
+        color: $fore;
+    }
+
+    display: inline-block;
+}
+
+@mixin formButtonSolid($cpName: Default, $border: false) {
+    @include formButtonBase($cpName, $border);
+    @include formControlHover($cpName);
+}
+
+@mixin formButtonGradient($cpName: Default, $border: false) {
+    @include formButtonBase($cpName, $border, true);
+    @include formControlHover($cpName, true);
+}
+
+@mixin boxGlow($cpName: Default, $size: 18px, $borderCpName: None) {
+    $cpName: toCPName($cpName);
+    $color: color($cpName);
+    $borderColor: unset;
+
+    @if (equal($cpName, Default)) {
+        $color: #b9b9b9;
+    }
+
+    @if not (equal($borderCpName, None)) {
+        $borderCpName: toCPName($borderCpName);
+        $borderColor: color($borderCpName);
+
+        box-shadow: 0 0 $size $borderColor;
+        -webkit-box-shadow: 0 0 $size 0 $borderColor;
+        -moz-box-shadow: 0 0 $size 0 $borderColor;
+        border: 2px solid $borderColor;
+    }
+    @else {
+        &:focus:not(#{get(KW, ValidateError)}) {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -webkit-box-shadow: 0 0 $size 0 $color;
+            -moz-box-shadow: 0 0 $size 0 $color;
+            box-shadow: 0 0 $size $color;
+            outline: none;
+            background-color: color(Light, Fourth);
+        }
+    }
+}
+
+@mixin textGlow($color: #002155, $x: 1px, $y: 1px, $blur: 10px) {
+    text-shadow: $x $y $blur $color, $x $y $blur $color;
+}
+
+@mixin textOutline($size: 4px, $color: #4073c4, $outlineColor: #8d0000) {
+    color: $color;
+    -webkit-text-stroke-width: $size;
+    -webkit-text-stroke-color: $outlineColor;
+}
+
+@mixin textShadow($size: 2px, $color: color(Default)) {
+    text-shadow: $size $size $color;
+}
+
+@mixin shadow($size: 3px, $color: lighten(color(Default), 28%)) {
+    box-shadow: $size $size $color;
+}
+
+@mixin paddingAndMargin($prefix: Padding) {
+    $prefix: lower($prefix);
+
+    @each $baseName, $baseValue in get(Pad) {
+        $baseName: lower($baseName);
+
+        &-#{lower($baseName)} {
+            #{$prefix}: $baseValue;
+
+            &-force {
+                #{$prefix}: $baseValue !important;
+            }
+
+            @each $dir in $defaultDirections {
+                $dir: lower($dir);
+
+                &-#{$dir} {
+                    #{$prefix}-#{$dir}: $baseValue;
+
+                    &-force {
+                        #{$prefix}-#{$dir}: $baseValue !important;
+                    }
+
+                    &-clear {
+                        #{$prefix}-#{$dir}: 0;
+
+                        &-force {
+                            #{$prefix}-#{$dir}: 0 !important;
+                        }
+                    }
+                }
+            }
+
+            &-clear {
+                #{$prefix}: 0;
+
+                &-force {
+                    #{$prefix}: 0 !important;
+                }
+            }
+        }
+
+        @each $deviceName, $deviceValue in get(Device) {
+            &-#{lower($deviceName)}-#{lower($baseName)} {
+                @include media($deviceValue) {
+                    #{$prefix}: $baseValue;
+                }
+            }
+
+            &-#{lower($deviceName)}-#{lower($baseName)}-force {
+                @include media($deviceValue) {
+                    #{$prefix}: $baseValue !important;
+                }
+            }
+
+            @each $dir in $defaultDirections {
+                &-#{lower($deviceName)}-#{lower($baseName)}-#{lower($dir)} {
+                    @include media($deviceValue) {
+                        #{$prefix}-#{lower($dir)}: $baseValue;
+                    }
+                }
+
+                &-#{lower($deviceName)}-#{lower($baseName)}-#{lower($dir)}-force {
+                    @include media($deviceValue) {
+                        #{$prefix}-#{lower($dir)}: $baseValue !important;
+                    }
+                }
+            }
+        }
+
+        &-#{$baseName}-horizontal {
+            #{$prefix}-left: $baseValue;
+            #{$prefix}-right: $baseValue;
+
+            &-force {
+                #{$prefix}-left: $baseValue !important;
+                #{$prefix}-right: $baseValue !important;
+            }
+        }
+
+        &-#{$baseName}-vertical {
+            #{$prefix}-top: $baseValue;
+            #{$prefix}-bottom: $baseValue;
+
+            &-force {
+                #{$prefix}-top: $baseValue !important;
+                #{$prefix}-bottom: $baseValue !important;
+            }
+        }
+    }
+}
