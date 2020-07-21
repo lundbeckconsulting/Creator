@@ -1,4 +1,4 @@
-# Creator framework - lightweight responsive design
+# ![Creator framework logo](http://shared.lundbeckconsulting.com/image/creator-logo-sm.png) Creator framework - lightweight responsive design
 
 Creator is a CSS and JavaScript based framework for modern responsive web development.
 The framework makes it easy to universally style a complete web site with just adding class names to your tags.
