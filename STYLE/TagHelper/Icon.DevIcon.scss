@@ -1,0 +1,277 @@
+﻿@font-face {
+    font-family: 'devicon';
+    src:    url("/STYLE/FONT/DevIcon/devicons.eot?xqxft6");
+    src:    url("/STYLE/FONT/DevIcon/devicons.eot?#iefixxqxft6") format("embedded-opentype"), 
+            url("/STYLE/FONT/DevIcon/devicons.woff?xqxft6") format("woff"), 
+            url("/STYLE/FONT/DevIcon/devicons.ttf?xqxft6") format("truetype"), 
+            url("/STYLE/FONT/DevIcon/devicons.svg?xqxft6#devicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.devicon {
+    font-family: 'devicon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &.size {
+        &-xxs {
+            font-size: 0.2rem;
+        }
+
+        &-xs {
+            font-size: 0.6rem;
+        }
+
+        &-sm {
+            font-size: 1rem;
+        }
+
+        &-md {
+            font-size: 1.2rem;
+        }
+
+        &-normal {
+            font-size: 1.4rem;
+        }
+
+        &-lg {
+            font-size: 2rem;
+        }
+
+        &-xl {
+            font-size: 2.4rem;
+        }
+
+        &-xxl {
+            font-size: 3.2rem;
+        }
+
+        &-xxxl {
+            font-size: 3.8rem;
+        }
+
+        &-x7 {
+            font-size: 4.4rem;
+        }
+
+        &-x8 {
+            font-size: 4.8rem;
+        }
+
+        &-x9 {
+            font-size: 5.4rem;
+        }
+    }
+}
+
+$icons: (
+    (git, "602"), 
+    (git_compare, "628"),
+    (git_branch, "625"),
+    (git_commit, "629"),
+    (git_pull_request, "626"),
+    (git_merge, "627"),
+    (bitbucket, "603"),
+    (github_alt, "608"),
+    (github_badge, "609"),
+    (github, "60a"),
+    (github_full, "617"),
+    (java, "638"),
+    (ruby, "639"),
+    (scala, "637"),
+    (python, "63c"),
+    (go, "624"),
+    (ruby_on_rails, "63b"),
+    (django, "61d"),
+    (markdown, "63e"),
+    (php, "63d"),
+    (mysql, "604"),
+    (streamline, "605"),
+    (database, "606"),
+    (laravel, "63f"),
+    (javascript, "64e"),
+    (angular, "653"),
+    (backbone, "652"),
+    (coffeescript, "651"),
+    (jquery, "650"),
+    (modernizr, "620"),
+    (jquery_ui, "654"),
+    (ember, "61b"),
+    (dojo, "61c"),
+    (nodejs, "619"),
+    (nodejs_small, "618"),
+    (javascript_shield, "64f"),
+    (bootstrap, "647"),
+    (sass, "64b"),
+    (css3_full, "64a"),
+    (css3, "649"),
+    (html5, "636"),
+    (html5_multimedia, "632"),
+    (html5_device_access, "633"),
+    (html5_3d_effects, "635"),
+    (html5_connectivity, "634"),
+    (ghost_small, "614"),
+    (ghost, "61f"),
+    (magento, "640"),
+    (joomla, "641"),
+    (jekyll_small, "60d"),
+    (drupal, "642"),
+    (wordpress, "60b"),
+    (grunt, "64c"),
+    (bower, "64d"),
+    (npm, "61e"),
+    (yahoo_small, "62b"),
+    (yahoo, "615"),
+    (bing_small, "600"),
+    (windows, "60f"),
+    (linux, "612"),
+    (ubuntu, "63a"),
+    (android, "60e"),
+    (apple, "611"),
+    (appstore, "613"),
+    (phonegap, "630"),
+    (blackberry, "623"),
+    (stackoverflow, "610"),
+    (techcrunch, "62c"),
+    (codrops, "62f"),
+    (css_tricks, "601"),
+    (smashing_magazine, "62d"),
+    (netmagazine, "62e"),
+    (codepen, "616"),
+    (cssdeck, "62a"),
+    (hackernews, "61a"),
+    (dropbox, "607"),
+    (google_drive, "631"),
+    (visualstudio, "60c"),
+    (unity_small, "621"),
+    (raspberry_pi, "622"),
+    (chrome, "643"),
+    (ie, "644"),
+    (firefox, "645"),
+    (opera, "646"),
+    (safari, "648"),
+    (swift, "655"),
+    (symfony, "656"),
+    (symfony_badge, "657"),
+    (less, "658"),
+    (stylus, "659"),
+    (trello, "65a"),
+    (atlassian, "65b"),
+    (jira, "65c"),
+    (envato, "65d"),
+    (snap_svg, "65e"),
+    (raphael, "65f"),
+    (google_analytics, "660"),
+    (compass, "661"),
+    (onedrive, "662"),
+    (gulp, "663"),
+    (atom, "664"),
+    (cisco, "665"),
+    (nancy, "666"),
+    (clojure, "668"),
+    (clojure_alt, "66a"),
+    (perl, "669"),
+    (celluloid, "66b"),
+    (w3c, "66c"),
+    (redis, "66d"),
+    (postgresql, "66e"),
+    (webplatform, "66f"),
+    (jenkins, "667"),
+    (requirejs, "670"),
+    (opensource, "671"),
+    (typo3, "672"),
+    (uikit, "673"),
+    (doctrine, "674"),
+    (groovy, "675"),
+    (nginx, "676"),
+    (haskell, "677"),
+    (zend, "678"),
+    (gnu, "679"),
+    (yeoman, "67a"),
+    (heroku, "67b"),
+    (debian, "67d"),
+    (travis, "67e"),
+    (dotnet, "67f"),
+    (codeigniter, "680"),
+    (javascript_badge, "681"),
+    (yii, "682"),
+    (msql_server, "67c"),
+    (composer, "683"),
+    (krakenjs_badge, "684"),
+    (krakenjs, "685"),
+    (mozilla, "686"),
+    (firebase, "687"),
+    (sizzlejs, "688"),
+    (creativecommons, "689"),
+    (creativecommons_badge, "68a"),
+    (mitlicence, "68b"),
+    (senchatouch, "68c"),
+    (bugsense, "68d"),
+    (extjs, "68e"),
+    (mootools_badge, "68f"),
+    (mootools, "690"),
+    (ruby_rough, "691"),
+    (komodo, "692"),
+    (coda, "693"),
+    (bintray, "694"),
+    (terminal, "695"),
+    (code, "696"),
+    (responsive, "697"),
+    (dart, "698"),
+    (aptana, "699"),
+    (mailchimp, "69a"),
+    (netbeans, "69b"),
+    (dreamweaver, "69c"),
+    (brackets, "69d"),
+    (eclipse, "69e"),
+    (cloud9, "69f"),
+    (scrum, "6a0"),
+    (prolog, "6a1"),
+    (terminal_badge, "6a2"),
+    (code_badge, "6a3"),
+    (mongodb, "6a4"),
+    (meteor, "6a5"),
+    (meteorfull, "6a6"),
+    (fsharp, "6a7"),
+    (rust, "6a8"),
+    (ionic, "6a9"),
+    (sublime, "6aa"),
+    (appcelerator, "6ab"),
+    (asterisk, "6ac"),
+    (aws, "6ad"),
+    (digital-ocean, "6ae"),
+    (dlang, "6af"),
+    (docker, "6b0"),
+    (erlang, "6b1"),
+    (google-cloud-platform, "6b2"),
+    (grails, "6b3"),
+    (illustrator, "6b4"),
+    (intellij, "6b5"),
+    (materializecss, "6b6"),
+    (openshift, "6b7"),
+    (photoshop, "6b8"),
+    (rackspace, "6b9"),
+    (react, "6ba"),
+    (redhat, "6bb"),
+    (scriptcs, "6bc"),
+    (sqllite, "6c4"),
+    (vim, "6c5")
+);
+
+@each $icon in $icons {
+    $iconClass: nth($icon, 1);
+    $iconClassBefore: nth($icon, 2);
+
+    .devicon-#{$iconClass} {
+        &::before {
+            content: #{"\\e" + $iconClassBefore};
+        }
+    }
+}

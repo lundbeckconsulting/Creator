@@ -1,55 +1,211 @@
 ﻿.airy {
   margin: 10px; }
+  .airy-force {
+    margin: 10px !important; }
 
 .airy-xxs {
   margin: 4px; }
+  .airy-xxs-force {
+    margin: 4px !important; }
 
 .airy-xs {
   margin: 10px; }
+  .airy-xs-force {
+    margin: 10px !important; }
 
 .airy-sm {
   margin: 16px; }
+  .airy-sm-force {
+    margin: 16px !important; }
 
 .airy-md {
   margin: 24px; }
+  .airy-md-force {
+    margin: 24px !important; }
 
 .airy-lg {
   margin: 32px; }
+  .airy-lg-force {
+    margin: 32px !important; }
 
 .airy-xl {
   margin: 40px; }
+  .airy-xl-force {
+    margin: 40px !important; }
 
 .airy-xxl {
   margin: 62px; }
+  .airy-xxl-force {
+    margin: 62px !important; }
 
 .align-left {
   text-align: left; }
+  .align-left-force {
+    text-align: left !important; }
 
 .align-right {
   text-align: right; }
+  .align-right-force {
+    text-align: right !important; }
 
 .align-center {
   text-align: center; }
+  .align-center-force {
+    text-align: center !important; }
 
 .align-vertical-top {
   position: absolute;
   top: 0; }
+  .align-vertical-top-force {
+    position: absolute !important;
+    top: 0 !important; }
+  .align-vertical-top-fixed {
+    position: fixed;
+    top: 0; }
+    .align-vertical-top-fixed-force {
+      position: fixed !important;
+      top: 0 !important; }
 
 .align-vertical-center, .align-vertical-center-50 {
   position: absolute;
-  top: 50%; }
+  top: 50%;
+  transform: translateY(-50%); }
+  .align-vertical-center-force, .align-vertical-center-50-force {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important; }
+  .align-vertical-center-fixed, .align-vertical-center-50-fixed {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%); }
+    .align-vertical-center-fixed-force, .align-vertical-center-50-fixed-force {
+      position: fixed !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important; }
 
 .align-vertical-center-25 {
   position: absolute;
-  top: 25%; }
+  top: 25%;
+  transform: translateY(-25%); }
+  .align-vertical-center-25-force {
+    position: absolute !important;
+    top: 25% !important;
+    transform: translateY(-25%) !important; }
+  .align-vertical-center-25-fixed {
+    position: fixed;
+    top: 25%;
+    transform: translateY(-25%); }
+    .align-vertical-center-25-fixed-force {
+      position: fixed !important;
+      top: 25% !important;
+      transform: translateY(-25%) !important; }
 
 .align-vertical-center-75 {
   position: absolute;
-  top: 75%; }
+  top: 75%;
+  transform: translateY(-75%); }
+  .align-vertical-center-75-force {
+    position: absolute !important;
+    top: 75% !important;
+    transform: translateY(-75%) !important; }
+  .align-vertical-center-75-fixed {
+    position: fixed;
+    top: 75%;
+    transform: translateY(-75%); }
+    .align-vertical-center-75-fixed-force {
+      position: fixed !important;
+      top: 75% !important;
+      transform: translateY(-75%) !important; }
 
 .align-vertical-bottom {
   position: absolute;
   bottom: 0; }
+  .align-vertical-bottom-force {
+    position: absolute !important;
+    bottom: 0 !important; }
+  .align-vertical-bottom-fixed {
+    position: fixed;
+    bottom: 0; }
+    .align-vertical-bottom-fixed-force {
+      position: fixed !important;
+      bottom: 0 !important; }
+
+.align-horizontal-center, .align-horizontal-center-50 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .align-horizontal-center-force, .align-horizontal-center-50-force {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; }
+  .align-horizontal-center-fixed, .align-horizontal-center-50-fixed {
+    position: fixed !important;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .align-horizontal-center-fixed-force, .align-horizontal-center-50-fixed-force {
+      position: fixed !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important; }
+
+.align-horizontal-center-25 {
+  position: absolute;
+  left: 25%;
+  transform: translate(-25%, -25%); }
+  .align-horizontal-center-25-force {
+    position: absolute !important;
+    left: 25% !important;
+    transform: translate(-25%, -25%) !important; }
+  .align-horizontal-center-25-fixed {
+    position: fixed;
+    left: 25%;
+    transform: translate(-25%, -25%); }
+    .align-horizontal-center-25-fixed-force {
+      position: fixed !important;
+      left: 25% !important;
+      transform: translate(-25%, -25%) !important; }
+
+.align-horizontal-center-75 {
+  position: absolute;
+  left: 75%;
+  transform: translate(-75%, -75%); }
+  .align-horizontal-center-75-force {
+    position: absolute !important;
+    left: 75% !important;
+    transform: translate(-75%, -75%) !important; }
+  .align-horizontal-center-75-fixed {
+    position: fixed;
+    left: 75%;
+    transform: translate(-75%, -75%); }
+    .align-horizontal-center-75-fixed-force {
+      position: fixed !important;
+      left: 75% !important;
+      transform: translate(-75%, -75%) !important; }
+
+.align-horizontal-left {
+  position: absolute;
+  left: 0; }
+  .align-horizontal-left-force {
+    position: absolute !important;
+    left: 0 !important; }
+  .align-horizontal-left-fixed {
+    position: fixed;
+    left: 0; }
+    .align-horizontal-left-fixed-force {
+      position: fixed !important;
+      left: 0 !important; }
+
+.align-horizontal-right {
+  position: absolute;
+  right: 0; }
+  .align-horizontal-right-force {
+    position: absolute !important;
+    right: 0 !important; }
+  .align-horizontal-right-fixed {
+    position: fixed;
+    right: 0; }
+    .align-horizontal-right-fixed-force {
+      position: fixed !important;
+      right: 0 !important; }
 
 .width-xxs {
   width: 26px; }
@@ -426,7 +582,7 @@
   width: 100%;
   min-width: 0px;
   max-width: 1366px;
-  padding: 10px; }
+  padding: 12px; }
   .container-clean {
     width: 100%;
     min-width: 0px;
@@ -438,7 +594,7 @@
     max-width: 1366px;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px; }
+    padding: 12px; }
     .container-auto-clean {
       width: 100%;
       min-width: 0px;
@@ -450,7 +606,7 @@
     width: 100%;
     min-width: 0px;
     max-width: 100%;
-    padding: 10px; }
+    padding: 12px; }
     .container-full-clean {
       width: 100%;
       min-width: 0px;
@@ -461,759 +617,1061 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
-  .bg-cover.fixed, .bg-cover-fixed {
+  .bg-cover-fixed {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed; }
 
-.fixed.top,
 .fixed-top {
   position: fixed;
   top: 0;
   bottom: unset;
   left: 0;
   right: 0; }
+  .fixed-top-force {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: unset !important;
+    left: 0 !important;
+    right: 0 !important; }
 
-.fixed.bottom,
 .fixed-bottom {
   position: fixed;
   top: unset;
   left: 0;
   right: 0;
   bottom: 0; }
+  .fixed-bottom-force {
+    position: fixed !important;
+    top: unset !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important; }
 
-.fixed.left,
 .fixed-left {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: unset; }
+  .fixed-left-force {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: unset !important; }
 
-.fixed.right,
 .fixed-right {
   position: fixed;
   top: 0;
   bottom: 0;
   left: unset;
   right: 0; }
+  .fixed-right-force {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: unset !important;
+    right: 0 !important; }
 
-.float.left,
 .float-left {
   float: left; }
+  .float-left-force {
+    float: left !important; }
 
-.float.right,
 .float-right {
   float: right; }
+  .float-right-force {
+    float: right !important; }
 
 .hide,
 .close,
 .invisible {
-  display: none; }
+  display: none;
+  visibility: hidden; }
+  .hide-force,
+  .close-force,
+  .invisible-force {
+    display: none !important;
+    visibility: hidden !important; }
 
 .show,
 .block,
 .visible {
-  display: block; }
+  display: block;
+  visibility: visible; }
+  .show-force,
+  .block-force,
+  .visible-force {
+    display: block !important;
+    visibility: visible !important; }
 
-.position-relative {
+.pos-rltv {
   position: relative; }
+  .pos-rltv-force {
+    position: relative !important; }
 
-.position-absolute {
+.pos-abslt {
   position: absolute; }
+  .pos-abslt-force {
+    position: absolute !important; }
 
-.position-fixed {
+.pos-fxd {
   position: fixed; }
+  .pos-fxd-force {
+    position: fixed !important; }
 
-.position-static {
+.pos-stc {
   position: static; }
+  .pos-stc-force {
+    position: static !important; }
 
-.position-sticky {
+.pos-stck {
   position: sticky; }
+  .pos-stck-force {
+    position: sticky !important; }
 
-.position-center {
+.pos-cntr {
   position: center; }
+  .pos-cntr-force {
+    position: center !important; }
 
-.position-page {
+.pos-pg {
   position: page; }
+  .pos-pg-force {
+    position: page !important; }
 
-.o-1 {
+.opacity-1 {
   opacity: 1; }
+  .opacity-1-force {
+    opacity: 1 !important; }
 
-.o-2 {
+.opacity-2 {
   opacity: 0.2; }
+  .opacity-2-force {
+    opacity: 0.2 !important; }
 
-.o-3 {
+.opacity-3 {
   opacity: 0.3; }
+  .opacity-3-force {
+    opacity: 0.3 !important; }
 
-.o-4 {
+.opacity-4 {
   opacity: 0.4; }
+  .opacity-4-force {
+    opacity: 0.4 !important; }
 
-.o-5 {
+.opacity-5 {
   opacity: 0.5; }
+  .opacity-5-force {
+    opacity: 0.5 !important; }
 
-.o-6 {
+.opacity-6 {
   opacity: 0.6; }
+  .opacity-6-force {
+    opacity: 0.6 !important; }
 
-.o-7 {
+.opacity-7 {
   opacity: 0.7; }
+  .opacity-7-force {
+    opacity: 0.7 !important; }
 
-.o-8 {
+.opacity-8 {
   opacity: 0.8; }
+  .opacity-8-force {
+    opacity: 0.8 !important; }
 
-.o-9 {
+.opacity-9 {
   opacity: 0.9; }
+  .opacity-9-force {
+    opacity: 0.9 !important; }
 
 .h1 {
-  font-size: 2.8rem;
+  font-size: 4.4rem, 5.2rem;
   font-weight: normal; }
   .h1-bold {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     font-weight: bold; }
   .h1-airy-xxs {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 4px;
     font-weight: normal; }
   .h1-airy-xxs-bold {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 4px;
     font-weight: bold; }
   .h1-airy-xs {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 10px;
     font-weight: normal; }
   .h1-airy-xs-bold {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 10px;
     font-weight: bold; }
   .h1-airy-sm {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 16px;
     font-weight: normal; }
   .h1-airy-sm-bold {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 16px;
     font-weight: bold; }
   .h1-airy-md {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 24px;
     font-weight: normal; }
   .h1-airy-md-bold {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 24px;
     font-weight: bold; }
   .h1-airy {
-    font-size: 2.8rem;
-    margin: getAiry();
+    font-size: 4.4rem, 5.2rem;
+    margin: 24px;
     font-weight: normal; }
     .h1-airy-bold {
-      font-size: 2.8rem;
-      margin: getAiry();
+      font-size: 4.4rem, 5.2rem;
+      margin: 24px;
       font-weight: bold; }
   .h1-airy-lg {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 32px;
     font-weight: normal; }
   .h1-airy-lg-bold {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 32px;
     font-weight: bold; }
   .h1-airy-xl {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 40px;
     font-weight: normal; }
   .h1-airy-xl-bold {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 40px;
     font-weight: bold; }
   .h1-airy-xxl {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 62px;
     font-weight: normal; }
   .h1-airy-xxl-bold {
-    font-size: 2.8rem;
+    font-size: 4.4rem, 5.2rem;
     margin: 62px;
     font-weight: bold; }
 
 .h2 {
-  font-size: 2.4rem;
+  font-size: 3.6rem, 4rem;
   font-weight: normal; }
   .h2-bold {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     font-weight: bold; }
   .h2-airy-xxs {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 4px;
     font-weight: normal; }
   .h2-airy-xxs-bold {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 4px;
     font-weight: bold; }
   .h2-airy-xs {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 10px;
     font-weight: normal; }
   .h2-airy-xs-bold {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 10px;
     font-weight: bold; }
   .h2-airy-sm {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 16px;
     font-weight: normal; }
   .h2-airy-sm-bold {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 16px;
     font-weight: bold; }
   .h2-airy-md {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 24px;
     font-weight: normal; }
   .h2-airy-md-bold {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 24px;
     font-weight: bold; }
   .h2-airy {
-    font-size: 2.4rem;
-    margin: getAiry();
+    font-size: 3.6rem, 4rem;
+    margin: 24px;
     font-weight: normal; }
     .h2-airy-bold {
-      font-size: 2.4rem;
-      margin: getAiry();
+      font-size: 3.6rem, 4rem;
+      margin: 24px;
       font-weight: bold; }
   .h2-airy-lg {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 32px;
     font-weight: normal; }
   .h2-airy-lg-bold {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 32px;
     font-weight: bold; }
   .h2-airy-xl {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 40px;
     font-weight: normal; }
   .h2-airy-xl-bold {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 40px;
     font-weight: bold; }
   .h2-airy-xxl {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 62px;
     font-weight: normal; }
   .h2-airy-xxl-bold {
-    font-size: 2.4rem;
+    font-size: 3.6rem, 4rem;
     margin: 62px;
     font-weight: bold; }
 
 .h3 {
-  font-size: 2rem;
+  font-size: 3rem, 3.5rem;
   font-weight: normal; }
   .h3-bold {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     font-weight: bold; }
   .h3-airy-xxs {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 4px;
     font-weight: normal; }
   .h3-airy-xxs-bold {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 4px;
     font-weight: bold; }
   .h3-airy-xs {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 10px;
     font-weight: normal; }
   .h3-airy-xs-bold {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 10px;
     font-weight: bold; }
   .h3-airy-sm {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 16px;
     font-weight: normal; }
   .h3-airy-sm-bold {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 16px;
     font-weight: bold; }
   .h3-airy-md {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 24px;
     font-weight: normal; }
   .h3-airy-md-bold {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 24px;
     font-weight: bold; }
   .h3-airy {
-    font-size: 2rem;
-    margin: getAiry();
+    font-size: 3rem, 3.5rem;
+    margin: 24px;
     font-weight: normal; }
     .h3-airy-bold {
-      font-size: 2rem;
-      margin: getAiry();
+      font-size: 3rem, 3.5rem;
+      margin: 24px;
       font-weight: bold; }
   .h3-airy-lg {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 32px;
     font-weight: normal; }
   .h3-airy-lg-bold {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 32px;
     font-weight: bold; }
   .h3-airy-xl {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 40px;
     font-weight: normal; }
   .h3-airy-xl-bold {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 40px;
     font-weight: bold; }
   .h3-airy-xxl {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 62px;
     font-weight: normal; }
   .h3-airy-xxl-bold {
-    font-size: 2rem;
+    font-size: 3rem, 3.5rem;
     margin: 62px;
     font-weight: bold; }
 
 .h4 {
-  font-size: 1.8rem;
+  font-size: 2.2rem, 2.8rem;
   font-weight: normal; }
   .h4-bold {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     font-weight: bold; }
   .h4-airy-xxs {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 4px;
     font-weight: normal; }
   .h4-airy-xxs-bold {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 4px;
     font-weight: bold; }
   .h4-airy-xs {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 10px;
     font-weight: normal; }
   .h4-airy-xs-bold {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 10px;
     font-weight: bold; }
   .h4-airy-sm {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 16px;
     font-weight: normal; }
   .h4-airy-sm-bold {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 16px;
     font-weight: bold; }
   .h4-airy-md {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 24px;
     font-weight: normal; }
   .h4-airy-md-bold {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 24px;
     font-weight: bold; }
   .h4-airy {
-    font-size: 1.8rem;
-    margin: getAiry();
+    font-size: 2.2rem, 2.8rem;
+    margin: 24px;
     font-weight: normal; }
     .h4-airy-bold {
-      font-size: 1.8rem;
-      margin: getAiry();
+      font-size: 2.2rem, 2.8rem;
+      margin: 24px;
       font-weight: bold; }
   .h4-airy-lg {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 32px;
     font-weight: normal; }
   .h4-airy-lg-bold {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 32px;
     font-weight: bold; }
   .h4-airy-xl {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 40px;
     font-weight: normal; }
   .h4-airy-xl-bold {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 40px;
     font-weight: bold; }
   .h4-airy-xxl {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 62px;
     font-weight: normal; }
   .h4-airy-xxl-bold {
-    font-size: 1.8rem;
+    font-size: 2.2rem, 2.8rem;
     margin: 62px;
     font-weight: bold; }
 
 .h5 {
-  font-size: 1.4rem;
+  font-size: 1.7rem, 2rem;
   font-weight: normal; }
   .h5-bold {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     font-weight: bold; }
   .h5-airy-xxs {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 4px;
     font-weight: normal; }
   .h5-airy-xxs-bold {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 4px;
     font-weight: bold; }
   .h5-airy-xs {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 10px;
     font-weight: normal; }
   .h5-airy-xs-bold {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 10px;
     font-weight: bold; }
   .h5-airy-sm {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 16px;
     font-weight: normal; }
   .h5-airy-sm-bold {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 16px;
     font-weight: bold; }
   .h5-airy-md {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 24px;
     font-weight: normal; }
   .h5-airy-md-bold {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 24px;
     font-weight: bold; }
   .h5-airy {
-    font-size: 1.4rem;
-    margin: getAiry();
+    font-size: 1.7rem, 2rem;
+    margin: 24px;
     font-weight: normal; }
     .h5-airy-bold {
-      font-size: 1.4rem;
-      margin: getAiry();
+      font-size: 1.7rem, 2rem;
+      margin: 24px;
       font-weight: bold; }
   .h5-airy-lg {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 32px;
     font-weight: normal; }
   .h5-airy-lg-bold {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 32px;
     font-weight: bold; }
   .h5-airy-xl {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 40px;
     font-weight: normal; }
   .h5-airy-xl-bold {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 40px;
     font-weight: bold; }
   .h5-airy-xxl {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 62px;
     font-weight: normal; }
   .h5-airy-xxl-bold {
-    font-size: 1.4rem;
+    font-size: 1.7rem, 2rem;
     margin: 62px;
     font-weight: bold; }
 
 .h6 {
-  font-size: 1rem;
+  font-size: 1.2rem, 1.6rem;
   font-weight: normal; }
   .h6-bold {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     font-weight: bold; }
   .h6-airy-xxs {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 4px;
     font-weight: normal; }
   .h6-airy-xxs-bold {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 4px;
     font-weight: bold; }
   .h6-airy-xs {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 10px;
     font-weight: normal; }
   .h6-airy-xs-bold {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 10px;
     font-weight: bold; }
   .h6-airy-sm {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 16px;
     font-weight: normal; }
   .h6-airy-sm-bold {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 16px;
     font-weight: bold; }
   .h6-airy-md {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 24px;
     font-weight: normal; }
   .h6-airy-md-bold {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 24px;
     font-weight: bold; }
   .h6-airy {
-    font-size: 1rem;
-    margin: getAiry();
+    font-size: 1.2rem, 1.6rem;
+    margin: 24px;
     font-weight: normal; }
     .h6-airy-bold {
-      font-size: 1rem;
-      margin: getAiry();
+      font-size: 1.2rem, 1.6rem;
+      margin: 24px;
       font-weight: bold; }
   .h6-airy-lg {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 32px;
     font-weight: normal; }
   .h6-airy-lg-bold {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 32px;
     font-weight: bold; }
   .h6-airy-xl {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 40px;
     font-weight: normal; }
   .h6-airy-xl-bold {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 40px;
     font-weight: bold; }
   .h6-airy-xxl {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 62px;
     font-weight: normal; }
   .h6-airy-xxl-bold {
-    font-size: 1rem;
+    font-size: 1.2rem, 1.6rem;
     margin: 62px;
     font-weight: bold; }
 
 .h7 {
-  font-size: 0.8rem;
+  font-size: 0.8rem, 1rem;
   font-weight: normal; }
   .h7-bold {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     font-weight: bold; }
   .h7-airy-xxs {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 4px;
     font-weight: normal; }
   .h7-airy-xxs-bold {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 4px;
     font-weight: bold; }
   .h7-airy-xs {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 10px;
     font-weight: normal; }
   .h7-airy-xs-bold {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 10px;
     font-weight: bold; }
   .h7-airy-sm {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 16px;
     font-weight: normal; }
   .h7-airy-sm-bold {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 16px;
     font-weight: bold; }
   .h7-airy-md {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 24px;
     font-weight: normal; }
   .h7-airy-md-bold {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 24px;
     font-weight: bold; }
   .h7-airy {
-    font-size: 0.8rem;
-    margin: getAiry();
+    font-size: 0.8rem, 1rem;
+    margin: 24px;
     font-weight: normal; }
     .h7-airy-bold {
-      font-size: 0.8rem;
-      margin: getAiry();
+      font-size: 0.8rem, 1rem;
+      margin: 24px;
       font-weight: bold; }
   .h7-airy-lg {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 32px;
     font-weight: normal; }
   .h7-airy-lg-bold {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 32px;
     font-weight: bold; }
   .h7-airy-xl {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 40px;
     font-weight: normal; }
   .h7-airy-xl-bold {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 40px;
     font-weight: bold; }
   .h7-airy-xxl {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 62px;
     font-weight: normal; }
   .h7-airy-xxl-bold {
-    font-size: 0.8rem;
+    font-size: 0.8rem, 1rem;
     margin: 62px;
     font-weight: bold; }
 
 .clean {
-  padding: unset; }
+  padding: unset;
+  margin: unset; }
+  .clean-force {
+    padding: unset !important;
+    margin: unset !important; }
 
 .clean-mrg {
   margin: unset; }
+  .clean-mrg-force {
+    margin: unset !important; }
 
-.clean-all {
-  padding: unset;
-  margin: unset; }
+.clean-pad {
+  padding: unset; }
+  .clean-pad-force {
+    padding: unset !important; }
 
-.bg-white {
+.color-bg-white {
   background-color: white; }
-
-.bg-black {
-  background-color: white; }
-
-.bg-default {
-  background-color: black; }
-
-.bg-primary {
-  background-color: #8b480e; }
-
-.bg-success {
-  background-color: #195f34; }
-
-.bg-danger {
-  background-color: #8c101b; }
-
-.bg-warning {
-  background-color: #ffbf00; }
-
-.bg-info {
-  background-color: #2894aa; }
-
-.bg-light {
-  background-color: #a19b9b; }
-
-.bg-dark {
-  background-color: #161616; }
-
-.bg-antan {
-  background-color: #fe2f00; }
-
-.bg-notify {
-  background-color: #07294e; }
+  .color-bg-white-force {
+    background-color: white !important; }
 
 .color-white {
   color: white; }
+  .color-white-force {
+    color: white !important; }
+
+.color-bg-black {
+  background-color: black; }
+  .color-bg-black-force {
+    background-color: black !important; }
 
 .color-black {
   color: black; }
+  .color-black-force {
+    color: black !important; }
 
 .color-default {
   color: black; }
+  .color-default-force {
+    color: black !important; }
+
+.color-bg-default {
+  background-color: black; }
+  .color-bg-default-force {
+    background-color: black !important; }
+  .color-bg-default-opacity-8 {
+    background-color: rgba(0, 0, 0, 0.8); }
+    .color-bg-default-opacity-8-force {
+      background-color: rgba(0, 0, 0, 0.8) !important; }
+  .color-bg-default-opacity-6 {
+    background-color: rgba(0, 0, 0, 0.6); }
+    .color-bg-default-opacity-6-force {
+      background-color: rgba(0, 0, 0, 0.6) !important; }
+  .color-bg-default-opacity-4 {
+    background-color: rgba(0, 0, 0, 0.4); }
+    .color-bg-default-opacity-4-force {
+      background-color: rgba(0, 0, 0, 0.4) !important; }
+  .color-bg-default-opacity-2 {
+    background-color: rgba(0, 0, 0, 0.2); }
+    .color-bg-default-opacity-2-force {
+      background-color: rgba(0, 0, 0, 0.2) !important; }
 
 .color-primary {
   color: #8b480e; }
+  .color-primary-force {
+    color: #8b480e !important; }
+
+.color-bg-primary {
+  background-color: #8b480e; }
+  .color-bg-primary-force {
+    background-color: #8b480e !important; }
+  .color-bg-primary-opacity-8 {
+    background-color: rgba(139, 72, 14, 0.8); }
+    .color-bg-primary-opacity-8-force {
+      background-color: rgba(139, 72, 14, 0.8) !important; }
+  .color-bg-primary-opacity-6 {
+    background-color: rgba(139, 72, 14, 0.6); }
+    .color-bg-primary-opacity-6-force {
+      background-color: rgba(139, 72, 14, 0.6) !important; }
+  .color-bg-primary-opacity-4 {
+    background-color: rgba(139, 72, 14, 0.4); }
+    .color-bg-primary-opacity-4-force {
+      background-color: rgba(139, 72, 14, 0.4) !important; }
+  .color-bg-primary-opacity-2 {
+    background-color: rgba(139, 72, 14, 0.2); }
+    .color-bg-primary-opacity-2-force {
+      background-color: rgba(139, 72, 14, 0.2) !important; }
 
 .color-success {
   color: #195f34; }
+  .color-success-force {
+    color: #195f34 !important; }
+
+.color-bg-success {
+  background-color: #195f34; }
+  .color-bg-success-force {
+    background-color: #195f34 !important; }
+  .color-bg-success-opacity-8 {
+    background-color: rgba(25, 95, 52, 0.8); }
+    .color-bg-success-opacity-8-force {
+      background-color: rgba(25, 95, 52, 0.8) !important; }
+  .color-bg-success-opacity-6 {
+    background-color: rgba(25, 95, 52, 0.6); }
+    .color-bg-success-opacity-6-force {
+      background-color: rgba(25, 95, 52, 0.6) !important; }
+  .color-bg-success-opacity-4 {
+    background-color: rgba(25, 95, 52, 0.4); }
+    .color-bg-success-opacity-4-force {
+      background-color: rgba(25, 95, 52, 0.4) !important; }
+  .color-bg-success-opacity-2 {
+    background-color: rgba(25, 95, 52, 0.2); }
+    .color-bg-success-opacity-2-force {
+      background-color: rgba(25, 95, 52, 0.2) !important; }
 
 .color-danger {
   color: #8c101b; }
+  .color-danger-force {
+    color: #8c101b !important; }
+
+.color-bg-danger {
+  background-color: #8c101b; }
+  .color-bg-danger-force {
+    background-color: #8c101b !important; }
+  .color-bg-danger-opacity-8 {
+    background-color: rgba(140, 16, 27, 0.8); }
+    .color-bg-danger-opacity-8-force {
+      background-color: rgba(140, 16, 27, 0.8) !important; }
+  .color-bg-danger-opacity-6 {
+    background-color: rgba(140, 16, 27, 0.6); }
+    .color-bg-danger-opacity-6-force {
+      background-color: rgba(140, 16, 27, 0.6) !important; }
+  .color-bg-danger-opacity-4 {
+    background-color: rgba(140, 16, 27, 0.4); }
+    .color-bg-danger-opacity-4-force {
+      background-color: rgba(140, 16, 27, 0.4) !important; }
+  .color-bg-danger-opacity-2 {
+    background-color: rgba(140, 16, 27, 0.2); }
+    .color-bg-danger-opacity-2-force {
+      background-color: rgba(140, 16, 27, 0.2) !important; }
 
 .color-warning {
   color: #ffbf00; }
+  .color-warning-force {
+    color: #ffbf00 !important; }
+
+.color-bg-warning {
+  background-color: #ffbf00; }
+  .color-bg-warning-force {
+    background-color: #ffbf00 !important; }
+  .color-bg-warning-opacity-8 {
+    background-color: rgba(255, 191, 0, 0.8); }
+    .color-bg-warning-opacity-8-force {
+      background-color: rgba(255, 191, 0, 0.8) !important; }
+  .color-bg-warning-opacity-6 {
+    background-color: rgba(255, 191, 0, 0.6); }
+    .color-bg-warning-opacity-6-force {
+      background-color: rgba(255, 191, 0, 0.6) !important; }
+  .color-bg-warning-opacity-4 {
+    background-color: rgba(255, 191, 0, 0.4); }
+    .color-bg-warning-opacity-4-force {
+      background-color: rgba(255, 191, 0, 0.4) !important; }
+  .color-bg-warning-opacity-2 {
+    background-color: rgba(255, 191, 0, 0.2); }
+    .color-bg-warning-opacity-2-force {
+      background-color: rgba(255, 191, 0, 0.2) !important; }
 
 .color-info {
   color: #2894aa; }
+  .color-info-force {
+    color: #2894aa !important; }
+
+.color-bg-info {
+  background-color: #2894aa; }
+  .color-bg-info-force {
+    background-color: #2894aa !important; }
+  .color-bg-info-opacity-8 {
+    background-color: rgba(40, 148, 170, 0.8); }
+    .color-bg-info-opacity-8-force {
+      background-color: rgba(40, 148, 170, 0.8) !important; }
+  .color-bg-info-opacity-6 {
+    background-color: rgba(40, 148, 170, 0.6); }
+    .color-bg-info-opacity-6-force {
+      background-color: rgba(40, 148, 170, 0.6) !important; }
+  .color-bg-info-opacity-4 {
+    background-color: rgba(40, 148, 170, 0.4); }
+    .color-bg-info-opacity-4-force {
+      background-color: rgba(40, 148, 170, 0.4) !important; }
+  .color-bg-info-opacity-2 {
+    background-color: rgba(40, 148, 170, 0.2); }
+    .color-bg-info-opacity-2-force {
+      background-color: rgba(40, 148, 170, 0.2) !important; }
 
 .color-light {
   color: #a19b9b; }
+  .color-light-force {
+    color: #a19b9b !important; }
+
+.color-bg-light {
+  background-color: #a19b9b; }
+  .color-bg-light-force {
+    background-color: #a19b9b !important; }
+  .color-bg-light-opacity-8 {
+    background-color: rgba(161, 155, 155, 0.8); }
+    .color-bg-light-opacity-8-force {
+      background-color: rgba(161, 155, 155, 0.8) !important; }
+  .color-bg-light-opacity-6 {
+    background-color: rgba(161, 155, 155, 0.6); }
+    .color-bg-light-opacity-6-force {
+      background-color: rgba(161, 155, 155, 0.6) !important; }
+  .color-bg-light-opacity-4 {
+    background-color: rgba(161, 155, 155, 0.4); }
+    .color-bg-light-opacity-4-force {
+      background-color: rgba(161, 155, 155, 0.4) !important; }
+  .color-bg-light-opacity-2 {
+    background-color: rgba(161, 155, 155, 0.2); }
+    .color-bg-light-opacity-2-force {
+      background-color: rgba(161, 155, 155, 0.2) !important; }
 
 .color-dark {
   color: #161616; }
+  .color-dark-force {
+    color: #161616 !important; }
+
+.color-bg-dark {
+  background-color: #161616; }
+  .color-bg-dark-force {
+    background-color: #161616 !important; }
+  .color-bg-dark-opacity-8 {
+    background-color: rgba(22, 22, 22, 0.8); }
+    .color-bg-dark-opacity-8-force {
+      background-color: rgba(22, 22, 22, 0.8) !important; }
+  .color-bg-dark-opacity-6 {
+    background-color: rgba(22, 22, 22, 0.6); }
+    .color-bg-dark-opacity-6-force {
+      background-color: rgba(22, 22, 22, 0.6) !important; }
+  .color-bg-dark-opacity-4 {
+    background-color: rgba(22, 22, 22, 0.4); }
+    .color-bg-dark-opacity-4-force {
+      background-color: rgba(22, 22, 22, 0.4) !important; }
+  .color-bg-dark-opacity-2 {
+    background-color: rgba(22, 22, 22, 0.2); }
+    .color-bg-dark-opacity-2-force {
+      background-color: rgba(22, 22, 22, 0.2) !important; }
 
 .color-antan {
   color: #fe2f00; }
+  .color-antan-force {
+    color: #fe2f00 !important; }
+
+.color-bg-antan {
+  background-color: #fe2f00; }
+  .color-bg-antan-force {
+    background-color: #fe2f00 !important; }
+  .color-bg-antan-opacity-8 {
+    background-color: rgba(254, 47, 0, 0.8); }
+    .color-bg-antan-opacity-8-force {
+      background-color: rgba(254, 47, 0, 0.8) !important; }
+  .color-bg-antan-opacity-6 {
+    background-color: rgba(254, 47, 0, 0.6); }
+    .color-bg-antan-opacity-6-force {
+      background-color: rgba(254, 47, 0, 0.6) !important; }
+  .color-bg-antan-opacity-4 {
+    background-color: rgba(254, 47, 0, 0.4); }
+    .color-bg-antan-opacity-4-force {
+      background-color: rgba(254, 47, 0, 0.4) !important; }
+  .color-bg-antan-opacity-2 {
+    background-color: rgba(254, 47, 0, 0.2); }
+    .color-bg-antan-opacity-2-force {
+      background-color: rgba(254, 47, 0, 0.2) !important; }
 
 .color-notify {
   color: #07294e; }
+  .color-notify-force {
+    color: #07294e !important; }
 
-.border-white {
-  border-color: white; }
+.color-bg-notify {
+  background-color: #07294e; }
+  .color-bg-notify-force {
+    background-color: #07294e !important; }
+  .color-bg-notify-opacity-8 {
+    background-color: rgba(7, 41, 78, 0.8); }
+    .color-bg-notify-opacity-8-force {
+      background-color: rgba(7, 41, 78, 0.8) !important; }
+  .color-bg-notify-opacity-6 {
+    background-color: rgba(7, 41, 78, 0.6); }
+    .color-bg-notify-opacity-6-force {
+      background-color: rgba(7, 41, 78, 0.6) !important; }
+  .color-bg-notify-opacity-4 {
+    background-color: rgba(7, 41, 78, 0.4); }
+    .color-bg-notify-opacity-4-force {
+      background-color: rgba(7, 41, 78, 0.4) !important; }
+  .color-bg-notify-opacity-2 {
+    background-color: rgba(7, 41, 78, 0.2); }
+    .color-bg-notify-opacity-2-force {
+      background-color: rgba(7, 41, 78, 0.2) !important; }
 
-.border-black {
-  border-color: black; }
+.color-funk {
+  color: #165992; }
+  .color-funk-force {
+    color: #165992 !important; }
 
-.border-default {
-  border-color: black; }
-
-.border-primary {
-  border-color: #8b480e; }
-
-.border-success {
-  border-color: #195f34; }
-
-.border-danger {
-  border-color: #8c101b; }
-
-.border-warning {
-  border-color: #ffbf00; }
-
-.border-info {
-  border-color: #2894aa; }
-
-.border-light {
-  border-color: #a19b9b; }
-
-.border-dark {
-  border-color: #161616; }
-
-.border-antan {
-  border-color: #fe2f00; }
-
-.border-notify {
-  border-color: #07294e; }
+.color-bg-funk {
+  background-color: #165992; }
+  .color-bg-funk-force {
+    background-color: #165992 !important; }
+  .color-bg-funk-opacity-8 {
+    background-color: rgba(22, 89, 146, 0.8); }
+    .color-bg-funk-opacity-8-force {
+      background-color: rgba(22, 89, 146, 0.8) !important; }
+  .color-bg-funk-opacity-6 {
+    background-color: rgba(22, 89, 146, 0.6); }
+    .color-bg-funk-opacity-6-force {
+      background-color: rgba(22, 89, 146, 0.6) !important; }
+  .color-bg-funk-opacity-4 {
+    background-color: rgba(22, 89, 146, 0.4); }
+    .color-bg-funk-opacity-4-force {
+      background-color: rgba(22, 89, 146, 0.4) !important; }
+  .color-bg-funk-opacity-2 {
+    background-color: rgba(22, 89, 146, 0.2); }
+    .color-bg-funk-opacity-2-force {
+      background-color: rgba(22, 89, 146, 0.2) !important; }
 
 .dis-table {
-  display: table; }
+  display: table;
+  visibility: visible; }
+  .dis-table-force {
+    display: table !important;
+    visibility: visible !important; }
 
 .dis-inline-table {
-  display: inline-table; }
+  display: inline-table;
+  visibility: visible; }
+  .dis-inline-table-force {
+    display: inline-table !important;
+    visibility: visible !important; }
 
 .dis-block {
-  display: block; }
+  display: block;
+  visibility: visible; }
+  .dis-block-force {
+    display: block !important;
+    visibility: visible !important; }
 
 .dis-inline-block {
-  display: inline-block; }
+  display: inline-block;
+  visibility: visible; }
+  .dis-inline-block-force {
+    display: inline-block !important;
+    visibility: visible !important; }
 
 .dis-normal {
-  display: normal; }
+  display: normal;
+  visibility: visible; }
+  .dis-normal-force {
+    display: normal !important;
+    visibility: visible !important; }
 
 .dis-none {
-  display: none; }
+  display: none;
+  visibility: hidden; }
+  .dis-none-force {
+    display: none !important;
+    visibility: hidden !important; }
 
 .ws-nowrap {
   white-space: nowrap; }
+  .ws-nowrap-force {
+    white-space: nowrap !important; }
 
 .ws-normal {
   white-space: normal; }
+  .ws-normal-force {
+    white-space: normal !important; }
 
 .ws-pre {
   white-space: pre; }
-
-.ws-normal {
-  white-space: normal; }
+  .ws-pre-force {
+    white-space: pre !important; }
 
 .table-auto {
   display: table;
   margin-left: auto;
   margin-right: auto; }
+  .table-auto-force {
+    display: table !important;
+    margin-left: auto !important;
+    margin-right: auto !important; }
 
 .fill {
   min-width: 100%;

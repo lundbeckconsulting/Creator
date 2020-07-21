@@ -44,6 +44,14 @@
     "outputFile": "_Build/STYLE/Layout.Media.css"
   },
   {
+    "inputFile": "STYLE/Layout/MediaDevice.scss",
+    "outputFile": "_Build/STYLE/Layout.MediaDevice.css"
+  },
+  {
+    "inputFile": "STYLE/Layout/MediaRetina.scss",
+    "outputFile": "_Build/STYLE/Layout.MediaRetina.css"
+  },
+  {
     "inputFile": "STYLE/Layout/Other.scss",
     "outputFile": "_Build/STYLE/Layout.Other.css"
   },
@@ -64,16 +72,20 @@
     "outputFile": "_Build/STYLE/Layout.Typography.css"
   },
   {
-    "inputFile": "STYLE/TagHelper/Chapter.scss",
-    "outputFile": "_Build/STYLE/TagHelper.Chapter.css"
-  },
-  {
     "inputFile": "STYLE/TagHelper/Icon.scss",
     "outputFile": "_Build/STYLE/TagHelper.Icon.css"
   },
   {
     "inputFile": "STYLE/TagHelper/Checkbox.scss",
     "outputFile": "_Build/STYLE/TagHelper.Checkbox.css"
+  },
+  {
+    "inputFile": "STYLE/TagHelper/Icon.CaptainIcon.scss",
+    "outputFile": "_Build/STYLE/TagHelper.Icon.CaptainIcon.css"
+  },
+  {
+    "inputFile": "STYLE/TagHelper/Icon.DevIcon.scss",
+    "outputFile": "_Build/STYLE/TagHelper.Icon.DevIcon.css"
   },
   {
     "inputFile": "SCRIPT/Element.Notify.js",

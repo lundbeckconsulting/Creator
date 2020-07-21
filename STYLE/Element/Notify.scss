@@ -1,91 +1,81 @@
-@import "..//Shared//Config";
-@import "..//Shared//ColorProfiles";
-@import "..//Shared//_Function";
+@import "..\\Shared\\Config";
+@import "..\\Shared\\ColorFunction";
+@import "..\\Shared\\Function";
+@import "..\\Shared\\Mixin";
 
 $padding: 10px;
-$borderRadius: 8px;
+$borderRadius: 14px;
+$shadowColor: black;
 
-@each $style in $notifyStyles {
-    @each $position in map-get($notifyPositions, $style) {
-        @each $duration in $notifyDurations {
-            .notify-#{lower($style)}-#{lower($position)}-#{lower($duration)} {
-                @if ($style == Bar) {
-                    position: fixed;
-                    transition: all 0.8s;
-                    visibility: hidden;
-                    opacity: 0;
-                    text-align: center;
-                    left: 8px;
-                    right: 8px;
+@each $style in sys(NotifyStyles) {
+    @each $position in getMap(NotifyPosition, $style) {
+        @each $duration in getMap(NotifyDuration) {
+            .notify-#{str($style)}-#{str($position)}-#{str($duration)} {
+                position: fixed;
+                transition: all 0.8s;
+                visibility: hidden;
+                opacity: 0;
+                text-align: center;
+                padding: $padding;
+
+                @if (equal($style, Bar)) {
+                    left: 0;
+                    right: 0;
                     min-height: 28px;
-                    padding: $padding;
-                    border-radius: $borderRadius;
 
-                    &.show {
-                        transition: opacity 0.8s;
-                        visibility: visible;
-                        opacity: 1;
-                    }
-
-                    @if ($position == Top) {
-                        top: 8px;
+                    @if (equal($position, Top)) {
+                        top: 0;
                         bottom: unset;
+                        box-shadow: 0 4px 22px -2px $shadowColor;
+                        border-bottom-left-radius: $borderRadius;
+                        border-bottom-right-radius: $borderRadius;
                     }
-                    @else if ($position == Bottom) {
-                        bottom: 8px;
+                    @else if (equal($position, Bottom)) {
+                        bottom: 0;
                         top: unset;
+                        box-shadow: 0 -4px 22px $shadowColor;
+                        border-top-left-radius: $borderRadius;
+                        border-top-right-radius: $borderRadius;
                     }
+                }
+                @else if (equal($style, Box)) {
+                    min-width: 36px;
+                    min-height: 36px;
+                    border-radius: $borderRadius;
+                    box-shadow: 0 0 12px 8px $shadowColor;
 
-                    @each $name, $content in $CPs {
-                        &.cp-#{lower($name)} {
-                            background-color: color($name);
-                            color: color($name, Fifth);
+                    @if (equal($position, Top, Bottom)) {
+                        @include absoluteCenter();
+
+                        @if (equal($position, Top)) {
+                            top: 38px;
+                            bottom: unset;
+                        }
+                        @else if (equal($position, Bottom)) {
+                            top: unset;
+                            bottom: 0;
+                        }
+                    }
+                    @else if (equal($position, Left, Right)) {
+                        @include absoluteCenter(Vertical);
+
+                        @if (equal($position, Right)) {
+                            left: unset;
+                            right: 16px;
                         }
                     }
                 }
-                @else if ($style == Box) {
-                    display: flex;
-                    justify-content: center;
-                    position: fixed;
-                    z-index: 99;
 
-                    @if ($position == Left) or ($position == Right) {
-                        flex-direction: column;
-                    }
+                &.show {
+                    transition: opacity 0.8s;
+                    visibility: visible;
+                    opacity: 1;
+                }
 
-                    @if ($position == Top) or ($position == Bottom) {
-                        left: 0;
-                        right: 0;
-                    }
-
-                    @if ($position == Top) {
-                        top: 8px;
-                        bottom: unset;
-                    }
-                    @else if ($position == Bottom) {
-                        bottom: 8px;
-                        top: unset;
-                    }
-
-                    & > .box {
-                        display: none;
-                        min-width: 36px;
-                        min-height: 36px;
-                        padding: $padding;
-                        border-radius: $borderRadius;
-
-                        &.show {
-                            display: block;
-                        }
-                    }
-
-                    @each $name, $content in $CPs {
-                        &.cp-#{lower($name)} {
-                            & > .box {
-                                background-color: color($name);
-                                color: color($name, Fifth);
-                            }
-                        }
+                @each $name, $content in getMap(CP) {
+                    &.cp-#{str($name)} {
+                        background-color: color($name);
+                        color: color($name, Fifth);
                     }
                 }
             }

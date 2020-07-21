@@ -1,0 +1,47 @@
+@import "Function";
+@import "ColorProfiles";
+
+@function color($profileName: Default, $color: Primary) {
+    $profileName: toCPName($profileName);
+
+    @if (isProtected($color)) {
+        $color: getItem(getMap(CP, $profileName), $color, Name);
+    }
+
+    $color: toColorName($color);
+    $tmp: getMap(CP, $profileName);
+
+    @return getItem($tmp, $color, Value);
+}
+
+@function toCPName($name) {
+    $result: null;
+
+    @each $n, $v in getMap(CP) {
+        @if (equal($name, $n)) {
+            $result: $n;
+        }
+    }
+
+    @if not ($result) {
+        @error "Color Profile #{$name} doesn't exists";
+    }
+
+    @return $result;
+}
+
+@function toColorName($name) {
+    $result: null;
+
+    @each $val, $color in $cpDefault {
+        @if (equal($name, $val)) {
+            $result: $val;
+        }
+    }
+
+    @if not ($result) {
+        @error "Color #{$name} doesn't exists";
+    }
+
+    @return $result;
+}

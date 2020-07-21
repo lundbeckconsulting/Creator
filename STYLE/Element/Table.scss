@@ -1,8 +1,9 @@
-﻿@import "..\\Shared\\Mixin";
+﻿@import "ElementMixin";
 @import "..\\Shared\\Function";
+@import "..\\Shared\\ColorFunction";
 
-@each $name, $val in $CPs {
-  $name: lower($name);
+@each $name, $val in getMap(CP) {
+  $name: str($name);
   $color: rgba(color($name, Primary), 0.6);
 
   .#{"table" + "-" + $name} {
@@ -101,7 +102,7 @@
     }
   }
 
-  .#{get(KW, Font) + "-black"} td {
+  .#{getMap(KW, Font) + "-black"} td {
     color: black;
 
     &-bold {

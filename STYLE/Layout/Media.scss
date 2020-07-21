@@ -1,81 +1,81 @@
-﻿@import "Mixin";
-@import "..\\Shared\\Media";
+﻿@import "..\\Shared\\Media";
 @import "..\\Shared\\Function";
-@import "..\\Shared\\Config";
 
 [class^="show-"] {
-  display: none;
-}
-
-[class^="device-"] {
-    display: none;
-}
-
-[class^="retina-"] {
-    display: none;
+  display: none !important;
+  visibility: hidden;
 }
 
 .hide {
     display: none;
+    visibility: hidden;
 
     &-force {
         display: none !important;
+        visibility: hidden !important;
     }
 }
 
 .show {
-  display: block;
-
-  &-force {
-      display: block !important;
-  }
-
-  &-inline {
-    display: inline-block;
+    display: block;
+    visibility: visible;
 
     &-force {
-        display: inline-block !important;
+        display: block !important;
+        visibility: visible !important;
     }
-  }
+
+    &-inline {
+        display: inline-block;
+        visibility: visible;
+
+        &-force {
+            display: inline-block !important;
+            visibility: visible !important;
+        }
+    }
 }
 
 @each $name, $val in $mediaBreakpoints {
-  @if not(equal($name, XS)) {
+  @if not (equal($name, XS)) {
     @include media($name) {
-      $name: lower($name);
+        $name: str($name);
 
-      .hide-#{$name} {
-        display: none;
+        .hide-#{$name} {
+            display: none;
+            visibility: hidden;
 
-        &-force {
-            display: none !important;
-        }
-      }
-
-      .show-#{$name} {
-        display: block;
-
-        &-force {
-            display: block !important;
+            &-force {
+                display: none !important;
+                visibility: hidden !important;
+            }
         }
 
-        &-inline {
-          display: inline-block;
+        .show-#{$name} {
+            display: block;
+            visibility: visible;
 
-          &-force {
-              display: inline-block !important;
-          }
-        }
-      }
+            &-force {
+                display: block !important;
+                visibility: visible !important;
+            }
 
-      @each $n, $v in $headSyno {
-        .#{"h" + $n + "-" + $name} {
-          font-size: get(Head, $v);
+            &-inline {
+                display: inline-block;
+                visibility: visible !important;
+
+                &-force {
+                    display: inline-block !important;
+                    visibility: visible !important;
+                }
+            }
         }
-      }
+
+        @each $n, $v in getMap(HeadMap) {
+            .#{"h" + $n + "-" + $name} {
+                font-size: getMap(Head, $v);
+            }
+        }
     }
   }
 }
-
-@include mediaDevice();
-@include mediaRetina();

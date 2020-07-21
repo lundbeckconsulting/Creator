@@ -1,0 +1,219 @@
+﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\ColorFunction";
+@import "..\\Shared\\Mixin";
+
+@mixin formControl($cpName: Default, $glowFocus: true, $height: 44px, $borderRadius: getMap(FormControl, BorderRadius), $fontSize: getMap(FormControl, FontSize)) {
+    $cpName: toCPName($cpName);
+
+    color: color($cpName);
+    background-color: color($cpName, Fifth);
+    border-radius: $borderRadius;
+    font-size: $fontSize;
+    transition: sys(Transition);
+    text-decoration: none;
+    height: $height;
+
+    @if ($glowFocus) {
+        @include boxGlow($cpName);
+    }
+}
+
+@mixin formControlHover($cpName: Default, $gradient: false) {
+    &:hover {
+        $cursor: pointer;
+
+        @if ($gradient) {
+            $start: color($cpName, Last);
+            $end: color($cpName, Second);
+
+            background: linear-gradient($start, $end);
+        }
+        @else {
+            $cpName: toCPName($cpName);
+            $back: darken(color($cpName), 18%);
+            $fore: color($cpName, Last);
+
+            @if (equal($cpName, Warning)) {
+                $fore: white;
+            }
+            @else if (equal($cpName, Dark)) {
+                $fore: #6d6d6d;
+            }
+
+            color: $fore;
+            background-color: $back;
+        }
+
+        cursor: $cursor;
+    }
+}
+
+@mixin formTextbox($cpName: Default, $glow: true) {
+    $color: color(toCPName($cpName));
+
+    @if (equal($cpName, Default)) {
+        $color: #a5a5a5;
+    }
+
+    @include formControl($cpName, true);
+
+    @if ($glow) {
+        @include boxGlow($cpName, 10px, true);
+    }
+
+    @if (equal($cpName, Default)) {
+        $color: #272727;
+    }
+
+    $padVert: 2px;
+    $padHori: 6px;
+
+    border: getMap(FormControl, BorderSize) solid #343434;
+    padding-top: $padVert;
+    padding-bottom: $padVert;
+    padding-left: $padHori;
+    padding-right: $padHori;
+    margin: getMap(FormControl, Margin);
+    
+    &:hover {
+        background-color: #f1efe8;
+    }
+}
+
+@mixin formButtonBase($cpName: Default, $border: false, $gradient: false, $exclude: ()) {
+    $cpName: toCPName($cpName);
+    $fore: color($cpName, Last);
+    $back: color($cpName);
+    $borderColor: $back;
+
+    @if (equal($cpName, Default)) {
+        $fore: color(Default, Middle);
+        $back: white;
+        $border: true;
+        $borderColor: #2a2a2a;
+    }
+    @else if (equal($cpName, Warning)) {
+        @if ($gradient) {
+            $fore: color($cpName, Last);
+        }
+    }
+    @else if (equal($cpName, Dark)) {
+        $fore: gray;
+    }
+
+    @if (equal($cpName, Warning)) {
+        $fore: #86291c;
+    }
+    @else if ($gradient and equal($cpName, Info)) {
+        $fore: #0c436e;
+    }
+    @else if ($gradient and equal($cpName, Dark)) {
+        $fore: white;
+    }
+    @else if ($gradient) {
+        @if (equal($cpName, Primary, Success, Danger, Light, Antan, Notify)) {
+            $fore: darken(color($cpName), 22%);
+        }
+    }
+
+    @if (equal($cpName, Default)) {
+        $fore: black;
+    }
+
+    @if not (itemExists($exclude, background)) {
+        @if ($gradient) {
+            background: linear-gradient($fore, $back);
+        }
+        @else {
+            background-color: $back;
+        }
+    }
+
+    @if not (itemExists($exclude, padding)) {
+        padding-top: getMap(FormControl, ButtonPaddingVertical);
+        padding-bottom: getMap(FormControl, ButtonPaddingVertical);
+        padding-left: getMap(FormControl, ButtonPaddingHorizontal);
+        padding-right: getMap(FormControl, ButtonPaddingHorizontal);
+    }
+
+    @if not (itemExists($exclude, color)) {
+        color: $fore;
+    }
+    
+    @if ($border) {
+        border: getMap(FormControl, BorderSize) solid $borderColor;
+    }
+
+    display: block;
+    margin: getMap(FormControl, Margin);
+    box-shadow: 2px 2px #111111;
+
+    @include formControl($cpName, false, getMap(FormControl, ButtonHeight));
+}
+
+@mixin formButtonSolid($cpName: Default, $border: false) {
+    @include formButtonBase($cpName, $border);
+    @include formControlHover($cpName);
+}
+
+@mixin formButtonGradient($cpName: Default, $border: false) {
+    @include formButtonBase($cpName, $border, true);
+    @include formControlHover($cpName, true);
+}
+
+@mixin table($cpName: Default, $td: true, $airy: false, $fat: false, $border: true) {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    thead {
+        padding: 8px;
+        background-color: color($cpName, Third);
+        font-weight: bold;
+        color: color($cpName);
+    }
+
+    @if ($td) {
+        @include tableTd($cpName, $airy, $fat, $border);
+    }
+}
+
+@mixin tableTd($cpName: Default, $airy: false, $fat: false, $border: true) {
+    td {
+        $clr: color($cpName);
+        $pad: 6px;
+        $borderWidth: 2px;
+        $borderColor: rgba($clr, 0.4);
+
+        @if ($airy) {
+            $pad: 14px;
+        }
+
+        @if ($fat) {
+            $borderWidth: 6px;
+        }
+
+        @if ($border) {
+            border: $borderWidth solid $borderColor;
+        }
+
+        color: $clr;
+        padding: $pad;
+
+        &:first-child {
+            padding-right: 0;
+        }
+    }
+}
+
+@mixin tableAlternate($cpName: Default) {
+    tr:nth-child(even) {
+        $clr: color($cpName, Fifth);
+
+        @if (equal($cpName, Light)) {
+            $clr: #e8e8e8;
+        }
+
+        background-color: rgba($clr, 0.8);
+    }
+}

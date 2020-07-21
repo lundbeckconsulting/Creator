@@ -1,15 +1,14 @@
 ﻿@import "..\\Shared\\Function";
 @import "..\\Shared\\Mixin";
-@import "..\\Shared\\Media";
 
 .pad {
     @include paddingAndMargin(Padding);
 
     &-doc {
-        padding: $defaultPad;
+        padding: sys(DefaultPad);
 
         &-force {
-            padding: $defaultPad !important;
+            padding: sys(DefaultPad) !important;
         }
     }
 

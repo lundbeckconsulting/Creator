@@ -65,6 +65,10 @@ function getElement(style, position, duration) {
     return result.toLowerCase();
 }
 
+function isBox(e) {
+    return $(e).find(".box").length > 0;
+}
+
 function handleNotifyElement(element, dur) {
     if ($(element).hasClass("show")) {
         setInterval(function () {
@@ -141,6 +145,7 @@ function openDialog(id) {
     $("body").append("<div id=\"dialogBackground\"></div>");
 
     $("#dialogBackground").fadeIn("slow", function () {
+        $("#" + id).trigger("command:open");
         $("#" + id).attr("open", "open");
     });
 };
@@ -189,3 +194,4 @@ function closeMenu() {
         });
     });
 }
+

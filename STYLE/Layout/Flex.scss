@@ -1,6 +1,6 @@
 ﻿@import "..\\Shared\\Config";
 @import "..\\Shared\\Function";
-@import "Mixin";
+@import "LayoutMixin";
 
 .flex {
     display: flex;
@@ -49,51 +49,48 @@
         }
     }
 
-    @each $show, $full in $flexJustifyItems {
+    @each $show, $full in getMap(FlexJustify) {
         $just: $show;
         $tag: $show;
 
-        @if (equalz($just, start, end)) {
+        @if (equal($just, start, end)) {
             $just: $full;
         }
 
-        @if (equal($just, around)) {
-            $just: space-around;
-        }
         @else if (equal($just, between)) {
             $just: space-between;
         }
 
-        &-#{lower($tag)} {
+        &-#{str($tag)} {
             display: flex;
-            justify-content: lower($just);
+            justify-content: str($just);
 
             &-force {
                 display: flex !important;
-                justify-content: lower($just) !important;
+                justify-content: str($just) !important;
             }
 
-            @each $alignName, $alignVal in $flexAlignItems {
-                &-#{lower($alignName)} {
+            @each $alignName, $alignVal in getMap(FlexAlign) {
+                &-#{str($alignName)} {
                     display: flex;
-                    justify-content: lower($just);
-                    align-items: lower($alignVal);
+                    justify-content: str($just);
+                    align-items: str($alignVal);
 
                     &-force {
                         display: flex !important;
-                        justify-content: lower($just) !important;
-                        align-items: lower($alignVal) !important;
+                        justify-content: str($just) !important;
+                        align-items: str($alignVal) !important;
                     }
                 }
             }
         }
 
-        @each $alignName, $alignVal in $flexAlignItems {
-            &-self-#{lower($alignName)} {
-                align-self: lower($alignVal);
+        @each $alignName, $alignVal in getMap(FlexJustify) {
+            &-self-#{str($alignName)} {
+                align-self: str($alignVal);
 
                 &-force {
-                    align-self: lower($alignVal) !important;
+                    align-self: str($alignVal) !important;
                 }
             }
         }
@@ -102,35 +99,74 @@
 
 .horizontal-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    &-even {
-        @include flexEven();
+    &-reverse {
+        display: flex;
+        flex-direction: column-reverse;
 
         &-force {
-            @include flexEven(row, true);
+            display: flex !important;
+            flex-direction: column-reverse !important;
         }
     }
-}
-
-.vertical-list {
-    display: flex;
-    flex-direction: column;
 
     &-force {
         display: flex !important;
         flex-direction: column !important;
     }
+
+    &-even {
+        @include flexEven();
+
+        &-reverse {
+            @include flexEven(column, true, false, true);
+            @include flexEven(column, true, true, true);
+        }
+
+        @include flexEven(column, true, true);
+    }
 }
 
-@each $item, $property in get(FlexItem) {
-    .flex-item {
-        @each $sizeName, $size in get(FlexItemSize) {
-            $styleName: lower($item) + "-" + lower($sizeName);
-            $prop: $property + " " + lower($size);
+.vertical-list {
+    display: flex;
+    flex-direction: row;
 
-            @if ($item == Fixed) {
-                $styleName: lower($sizeName);
+    &-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &-force {
+            display: flex !important;
+            flex-direction: row-reverse !important;
+        }
+    }
+
+    &-force {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    &-even {
+        @include flexEven(row);
+
+        &-reverse {
+            @include flexEven(row, true, false, true);
+            @include flexEven(row, true, true, true);
+        }
+
+        @include flexEven(row, true, true);
+    }
+}
+
+@each $item, $property in getMap(FlexItem) {
+    .flex-item {
+        @each $sizeName, $size in getMap(FlexItemSize) {
+            $styleName: str($item) + "-" + str($sizeName);
+            $prop: $property + " " + str($size);
+
+            @if (equal($item, Fixed)) {
+                $styleName: str($sizeName);
             }
 
             &-#{$styleName} {

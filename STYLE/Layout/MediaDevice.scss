@@ -1,0 +1,82 @@
+﻿@import "..\\Shared\\Media";
+@import "..\\Shared\\Function";
+
+[class^="#{KW(MediaDevice)}-"] {
+    display: none !important;
+    visibility: hidden;
+}
+
+@each $name, $break in getMap(Device) {
+    $index: indexOf(getMap(Device), $name);
+    $name: str($name, l);
+    $min: getMap(Media, $break);
+    $max: null;
+
+    @if not (equal($index, len(getMap(Device)))) {
+        $max: getMap(Media, getMap(Device, $index + 1));
+    }
+
+    @include media($break, Any, Only, $min, $max) {
+        .#{KW(MediaDevice)}-#{$name} {
+            display: block;
+            visibility: visible;
+
+            &-force {
+                display: block !important;
+                visibility: visible !important;
+            }
+
+            &-inline {
+                display: inline-block;
+                visibility: visible;
+
+                &-force {
+                    display: inline-block !important;
+                    visibility: visible !important;
+                }
+            }
+
+            &-hide {
+                display: none;
+                visibility: hidden;
+
+                &-force {
+                    display: none !important;
+                    visibility: hidden !important;
+                }
+            }
+        }
+    }
+
+    @if not (itemIsLast(Device, $index)) {
+        @each $nm, $bp in getMap(Device) {
+            $i: indexOf(getMap(Device), $nm);
+            $mode: Only;
+
+            @if ($i > $index) {
+                $nm: str($nm);
+                $max: getMap(Media, getMap(Device, $i));
+
+                @if not(equal($i, len(getMap(Device)))) {
+                    $max: getMap(Media, getMap(Device, $i + 1));
+                }
+                @else {
+                    $mode: Up;
+                    $max: null;
+                }
+
+                @include media($break, Any, $mode, $min, $max) {
+                    .#{KW(MediaDevice)}-#{$name}-#{$nm} {
+                        display: block;
+                        visibility: visible;
+
+                        &-inline {
+                            display: inline-block;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

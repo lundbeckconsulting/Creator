@@ -1,0 +1,60 @@
+﻿@import "..\\Shared\\Media";
+@import "..\\Shared\\Function";
+
+[class^="#{KW(MediaRetina)}-"] {
+    display: none;
+    visibility: hidden;
+}
+
+$ratio: null;
+$query: "only screen";
+$queryAll: null;
+$part: "(-webkit-min-device-pixel-ratio: $ratio), (min-resolution: $resolution)";
+$style: "retina-$ratio";
+$i: 0;
+
+@each $rat, $res in getMap(MediaRetina) {
+    $tmp: replace($part, "$ratio", $rat);
+    $tmp: replace($tmp, "$resolution", $res);
+    $q: $query + " and " + $tmp;
+
+    @if ($ratio) {
+        $query: $query + " and " + $tmp;
+    }
+    @else if not ($ratio) {
+        @if not ($queryAll) {
+            $queryAll: $q;
+        }
+        @else {
+            $queryAll: $queryAll + " and " + $tmp;
+        }
+
+        @media #{$q} {
+            .#{replace($style, "$ratio", replace($rat, "."))} {
+                display: block;
+                visibility: visible;
+
+                &-inline {
+                    display: inline-block;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    $i: $i + 1;
+}
+
+@if ($queryAll) {
+    .#{KW(MediaRetina)} {
+        @media #{$queryAll} {
+            display: block;
+            visibility: visible;
+
+            &-inline {
+                display: inline-block;
+                visibility: visible;
+            }
+        }
+    }
+}

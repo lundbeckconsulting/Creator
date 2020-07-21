@@ -13,6 +13,10 @@
 <body>
     <div style="padding:48px;">
         <input id="showNotify" type="button" value="Show Notify" />
+        <input id="showBoxLeft" type="button" value="Show Box Left" />
+        <input id="showBoxRight" type="button" value="Show Box Right" />
+        <input id="showBoxTop" type="button" value="Show Box Top" />
+        <input id="showBoxBottom" type="button" value="Show Box Bottom" />
     </div>
 
     <div class="notify-bar-top-eight cp-danger">
@@ -23,9 +27,41 @@
         <h1>SHOW</h1>
     </div>
 
+    <div class="notify-box-left-five cp-notify">
+        LEFT
+    </div>
+
+    <div class="notify-box-right-five cp-notify">
+        RIGHT
+    </div>
+
+    <div class="notify-box-top-five cp-notify">
+        TOP
+    </div>
+
+    <div class="notify-box-bottom-five cp-notify">
+        BOTTOM
+    </div>
+
     <script type="text/javascript">
         $("#showNotify").click(function () {
             $(".notify-bar-top-eight").trigger("notify:show");
+        });
+
+        $("#showBoxLeft").click(function () {
+            $(".notify-box-left-five").trigger("notify:show");
+        });
+
+        $("#showBoxRight").click(function () {
+            $(".notify-box-right-five").trigger("notify:show");
+        });
+
+        $("#showBoxTop").click(function () {
+            $(".notify-box-top-five").trigger("notify:show");
+        });
+
+        $("#showBoxBottom").click(function () {
+            $(".notify-box-bottom-five").trigger("notify:show");
         });
     </script>
 

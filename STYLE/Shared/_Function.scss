@@ -1,141 +1,120 @@
 ﻿@import "ColorProfiles";
 @import "Config";
 
-@function color($profileName: Default, $color: Primary) {
+$enumerableProtectedWords: (First, Middle, Last);
+
+@function mapExists($mapName) { 
+    $result: map-get($mapIndex, toMapName($mapName));
+
+    @if not ($result) {
+        @warn "Map with name #{$mapName} doesn't exist";
+    }
+
+    @return $result;
+}
+
+@function getMap($mapName: Sys, $key: null) {
     $result: null;
-    $profileName: toCPName($profileName);
+    $mapName: toMapName($mapName);
+    $map: map-get(map-get($mapIndex, $mapName), Data);
 
-    @if (equal($color, First)) {
-        $color: Primary;
-    }
-    @else if (equal($color, Middle)) {
-        $color: Third;
-    }
-    @else if (equal($color, Last)) {
-        $color: Fifth;
-    }
-
-    $color: toColorName($color);
-
-    @if (map-has-key($CPs, $profileName)) {
-        $tmp: map-get($CPs, $profileName);
-
-        @if (map-has-key($tmp, $color)) {
-            $result: map-get($tmp, $color);
+    @if (is(Number, $key)) {
+        @if (is(List, $map)) {
+            $result: nth($map, $key);
         }
-        @else {
-            @error "Can't find color #{$color}";
+        @else if (is(Map, $map)) {
+            $i: 1;
+
+            @each $k, $v in $map {
+                @if (equal($key, $i)) {
+                    $result: $v;
+                }
+
+                $i: $i + 1;
+            }
+        }
+    }
+    @else if (is(String, $key)) {
+        @if (is(List, $map)) {
+            @each $val in $map {
+                @if (equal($key, $val)) {
+                    $result: $val;
+                }
+            }
+        }
+        @else if (is(Map, $map)) {
+            $result: getItem($map, $key);
         }
     }
     @else {
-        @error "Can't find Color Profile #{$name}";
+        $result: $map;
     }
 
     @return $result;
 }
 
-@function mapExists($mapName, $throwError: false) {
-    $result: map-has-key($mapIndex, toMapName($mapName));
+@function toMapName($name) {
+    $result: null;
 
-    @if not ($result) and ($throwError) {
-        @error "Can't find #{mapName} in MapIndex";
+    @each $n, $v in $mapIndex {
+        @if (equal($name, $n)) {
+            $result: $n;
+        }
+    }
+
+    @if not ($result) {
+        @error "Map #{$name} doesn't exists";
+    }
+
+    @return $result;
+}
+@function sys($systemValueName) {
+    $result: getMap(Sys, $systemValueName);
+
+    @if (is(Null, $result)) {
+        @error "System value namen #{$systemValueName} doesn't exist";
     }
 
     @return $result;
 }
 
-@function keyExists($mapName, $key, $throwError: false) {
+
+@function itemExists($coll, $item) {
     $result: false;
 
-    @if (mapExists($mapName, true)) {
-        $map: get($mapName);
-        $result: map-has-key($map, $key);
-
-        @if not($result) and ($throwError) {
-            @error "#{$key} doesn't exist in #{$mapName}";
+    @if (is(List, $coll)) {
+        @each $itm in $coll {
+            @if (equal($item, $itm)) {
+                $result: true;
+            }
         }
+    }
+    @else if (is(Map, $coll)) {
+        @each $key, $vl in $coll {
+            @if (equal($item, $key)) {
+                $result: true;
+            }
+        }
+    }
+    @else {
+        @error "$coll of type #{type-of($coll)} must be either List or Map";
     }
 
     @return $result;
 }
 
-@function get($mapName: Sys, $key: null) {
-    $result: null;
-    $mapName: toMapName($mapName);
-
-    @if (mapExists($mapName, true)) {
-        $map: map-get(map-get($mapIndex, $mapName), Data);
-
-        @if ($key) {
-            @if not(isType($key, Number)) {
-                @if (map-has-key($map, $key)) {
-                    $result: map-get($map, $key);
-                }
-                @else {
-                    @error "Can't find key #{$key} in #{$mapName}";
-                }
-            }
-            @else {
-                $i: 1;
-
-                @each $k, $v in $map {
-                    @if (equal($i, $key)) {
-                        $result: $v;
-                    }
-
-                    $i: $i + 1;
-                }
-
-                @if not($result) {
-                    @error "Can't find element with index #{$key} in #{$mapName}";
-                }
-            }
-        }
-        @else {
-            $result: $map;
-        }
-    }
-
-    @return $result;
-}
-
-@function upper($str) {
-    @return to-upper-case(toString($str));
-}
-
-@function up($str) {
-    @return upper($str);
-}
-
-@function lower($str) {
-    @return to-lower-case(toString($str));
-}
-
-@function low($str) {
-    @return lower($str);
-}
-
-@function toString($str) {
-    @return inspect($str);
-}
-
-@function str($str, $cmd) {
-    $commands: ( upper, up, lower, low, lw, camel, to-string, string, str, to-number, number, numeric, nr, qt, uqt, list );
-    $cmd: to-lower-case($cmd);
+@function str($str, $cmd: Lower) {
+    $commands: ( to-upper, upper, up, u, to-lower, lower, low, lw, l, camel, to-string, string, str, to-number, number, numeric, nr, qoute, qt, unqoute, uqt, list );
     $result: null;
 
-    @if not (index($commands, $cmd) > 0) {
-        @error "Command #{$cmd} not supported. Supported commands are #{listToString($commands)}";
+    @if (equal($cmd, to-upper, Upper, Up, U)) {
+        $result: to-upper-case(inspect($str));
     }
-
-    @if (equal($cmd, Upper, Up)) {
-        $result: to-upper-case($str);
-    }
-    @else if (equal($cmd, Lower, Low, Lw)) {
-        $result: to-lower-case($str);
+    @else if (equal($cmd, to-lower, Lower, Low, Lw, L)) {
+        $result: to-lower-case(inspect($str));
     }
     @else if (equal($cmd, Camel)) {
-        $words: strTransform($str, List);
+        $words: str($str, List);
         $i: 1;
 
         @each $val in $words {
@@ -151,12 +130,12 @@
             $i: $i + 1;
         }
     }
-    @else if (equal($cmd, to-number, number, numeric)) {
+    @else if (equal($cmd, to-number, number, numeric, nr)) {
         $number: ( 1, 2, 3, 4, 5, 6, 7, 8, 9 );
         $numberStr: ( "1", "2", "3", "4", "5", "6", "7", "8", "9" );
         $result: 0;
 
-        @for $i from 1 through str-length($str) {
+        @for $i from 1 through len($str) {
             $char: str-slice($str, $i, $i);
             $index: index($numberStr, $char);
 
@@ -164,71 +143,56 @@
                 $result: $result + nth($number, $index);
             }
             @else {
-                @error "Couldn't convert string since character #{$char} (#{str-index($str, $char)}) is not numeric'";
+                @error "Can't convert #{$char} with value (#{str-index($str, $char)}) to string since it's not numeric'";
             }
         }
     }
     @else if (equal($cmd, to-string, string, str)) {
-        $result: inspect($str);
-    }
-    @else if (equal($cmd, to-number, number, numeric, nr)) {
-        $numbers: ( 1, 2, 3, 4, 5, 6, 7, 8, 9 );
+        @if (is(List, $str)) {
+            $word: null;
+            $result: ();
 
-        @for $i from 1 through str-length($str) {
-            $char: str-slice($str, $i, $i);
-            $index: index($numbers, unqoute($char));
+            @for $i from 1 through len($str) {
+                $char: slice($str, $i, $i);
 
-            @if ($index > 0) {
-                $result: $result + nth($numbers, $index);
-            }
-            @else {
-                @error "Couldn't convert string to number because the character #{$char} was not recognized as numeric'";
+                @if not ($i == " ") {
+                    $word: $word + slice($str, $i $i)
+                }
+                @else {
+                    $result: append($result, $word);
+                }
             }
         }
+        @else {
+            $result: inspect($str);
+        }
     }
-    @else if (equal($cmd, qt)) {
+    @else if (equal($cmd, quote, qt)) {
         $result: quote($str);
     }
-    @else if (equal($cmd, unqt)) {
+    @else if (equal($cmd, unqoute, uqt)) {
         $result: unqoute($str);
     }
-    @else if (equal($cmd, list)) {
-        $word: null;
+    @else if (equal($cmd, List)) {
+        $vals: ( One: 1, Two: 2, Three: 3, Four: 4, Five: 5, Six: 6, Seven: 7, Eight: 8, Nine: 9, Ten: 10, Eleven: 11, Twelve: 12, Thirteen: 13, Fourteen: 14, Fifteen: 15, Sixteen: 16, Seventeen: 17, Eightteen: 18, Nineteen: 19, Twenty: 20);
         $result: ();
 
-        @for $i from 1 through str-length($str) {
-            $char: slice($str, $i, $i);
+        @each $s in $str {
+            $s: to-upper-case(str-slice($s, 1, 1)) + str-slice($s, 2, str-length($s));
 
-            @if not ($i == " ") {
-                $word: $word + slice($str, $i $i)
-            }
-            @else {
-                $result: append($result, $word);
-            }
+            $result: append($result, $s);
         }
+    }
+    @else {
+        @error "$cmd with value #{$cmd} must be either #{$commands}";
     }
 
     @return $result;
 }
 
-@function listToString($list, $separator: ",") {
-    $result: "";
-    $i: 1;
-
-    @each $val in $list {
-        @if ($i > 1) {
-            $result: $result + "#{$separator} ";
-        }
-
-        $result: $result + $val;
-    }
-
-    @return result;
-}
-
 @function replace($string, $original, $replace: "") {
     $result: null;
-    $str: toString($string);
+    $str: str($string);
     $index: str-index($str, $original);
 
     @if ($index) {
@@ -242,7 +206,7 @@
     $result: false;
 
     @each $v in $vals {
-        @if (upper($base) == upper($v)) {
+        @if (to-upper-case(inspect($base)) == to-upper-case(inspect($v))) {
             $result: true;
         }
     }
@@ -250,22 +214,26 @@
     @return $result;
 }
 
-@function isType($val, $type) {
+@function is($type, $vals...) {
+    $type: to-lower-case($type);
+    $types: ( string: ( type-of(string), type-of("string") ), str: ( type-of(string), type-of("string") ), number: ( type-of(123) ), nr: ( type-of(123) ), bool: ( type-of(true) ), enumerable: ( type-of(( 1, 2, 3 )), type-of(( one: 1, two: 2, three: 3 )) ), list: ( type-of(( 1, 2, 3)) ), map: ( type-of(( one: 1, two: 2, three: 3)) ), null: ( type-of(null) ), color: ( type-of(#fff) ) );
+    $tps: map-get($types, $type);
     $result: true;
-    $types: ( string: string, number: number, bool: boolean, list: list, map: map, null: null );
-    $t: type-of($val);
-    $tp: map-get($types, lower($type));
+    $enumerableMatch: false;
 
-    @return equal($type, $t);;
-}
-
-@function isTypes($type, $vals...) {
-    $result: true;
-
-    @each $v in $vals {
-        @if not (isType($v, $type)) {
-            $result: false;
+    @each $val in $vals {
+        @each $tp in $tps {
+            @if not ($type == enumerable) and not (type-of($val) == $tp) {
+                $result: false;
+            }
+            @else if ($type == enumerable) and (type-of($val) == $tp) {
+                $enumerableMatch: true;
+            }
         }
+    }
+
+    @if ($type == enumerable) {
+        $result: $enumerableMatch;
     }
 
     @return $result;
@@ -274,79 +242,23 @@
 @function len($obj) {
     $result: -1;
 
-    @if (isType($obj, List)) or (isType($obj, Map)) {
+    @if (is(Enumerable, $obj)) {
         $result: length($obj);
     }
     @else {
-        $result: str-length(toString($obj));
+        $result: str-length(inspect($obj));
     }
 
     @return $result;
-}
-
-@function toMapName($name) {
-    $result: null;
-
-    @each $n, $v in $mapIndex {
-        @if (equal($name, $n)) {
-            $result: $n;
-        }
-    }
-
-    @if not($result) {
-        @error "Can't find map #{$name} in MapIndex";
-    }
-
-    @return $result;
-}
-
-@function toCPName($name) {
-    $result: null;
-
-    @each $n, $v in $CPs {
-        @if (equal($name, $n)) {
-            $result: $n;
-        }
-    }
-
-    @if not($result) {
-        @error "Can't find Color Profile #{$name}";
-    }
-
-    @return $result;
-}
-
-@function toColorName($name) {
-    $result: null;
-
-    @each $val, $color in $cpDefault {
-        @if (equal($name, $val)) {
-            $result: $val;
-        }
-    }
-
-    @if not($result) {
-        @error "Can't find Color #{$name}";
-    }
-
-    @return $result;
-}
-
-@function collectionContains($coll, $key) {
-    @if not (isCollection(($coll))) {
-        @error "$coll is #{type-of($coll)} but must be type Map or List";
-    }
-
-    @return (indexOf($coll, $key));
 }
 
 @function indexOf($coll, $key) {
     $result: null;
 
-    @if (isType($coll, List)) {
+    @if (is(List, $coll)) {
         $result: index($coll, $key);
     }
-    @else if (isType($coll, Map)) {
+    @else if (is(Map, $coll)) {
         $i: 1;
 
         @each $k, $v in $coll {
@@ -358,7 +270,7 @@
         }
     }
     @else {
-        @error "$coll must be type Map or List";
+        @error "$coll of type #{type-of($coll)} must be either Map or List";
     }
 
     @return $result;
@@ -367,8 +279,8 @@
 @function between($min, $max, $val, $inclusive: false) {
     $result: false;
 
-    @if (isNumeric($min, $max, $val)) {
-        @if not($inclusive) {
+    @if (is(Number, $min, $max, $val)) {
+        @if not ($inclusive) {
             $result: $val > $min and $val < $max;
         }
         @else {
@@ -376,65 +288,117 @@
         }
     }
     @else {
-        @error "Values must be numeric";
+        @error "Values must be numeric ($min: #{type-of($min)}, $max: #{type-of($max)}, $val: #{type-of($val)})";
     }
 
     @return $result;
 }
 
-@function isLast($name, $index) {
-    @return equal($index, len(get($name)));
+@function itemIsLast($name, $index) {
+    @return equal($index, len(getMap($name)));
 }
 
-@function getItem($coll, $selector) {
+@function getItem($coll, $selector, $mapItemPart: Value) {
     $result: null;
+    $select: -1;
 
-    @if (isType($coll, List)) {
-        @if (isType($selector, Number)) {
+    @if not (is(String, $selector)) and not (is(Number, $selector)) {
+        @error "$selector with value #{$selector} of type #{type-of($selector)} must be either String or Numeric";
+    }
+
+    @if (equal($selector, First, Middle, Last)) and (is(List, $coll)) or (is(Map, $coll)) {
+        @if (equal($selector, First)) {
+            $select: 1;
+        }
+        @else if (equal($selector, Middle)) {
+            $select: ceil(len($coll) / 2);
+        }
+        @else if (equal($selector, Last)) {
+            $select: len($coll);
+        }
+    }
+
+    @if (is(List, $coll)) {
+        @if (is(Number, $selector)) {
             $result: nth($coll, $selector);
         }
-        @else if (isType($coll, Map)) {
-            @if (isType($selector, Number)) {
-                $i: 1;
-
-                @each $n, $v in $coll {
-                    @if (equal($i, $selector)) {
-                        $result: $v;
+        @else if (is(String, $selector)) {
+            @if ($select > 0) {
+                $result: nth($coll, $select);
+            }
+            @else {
+                @each $item in $coll {
+                    @if (equal($selector, $item)) {
+                        $result: $item;
                     }
-
-                    $i: $i + 1;
-                }
-            }
-            @else if (isType($selector, String)) {
-                @if (map-has-key($coll, $selector)) {
-                    $result: map-get($coll, $selector);
-                }
-            }
-        }
-        @else {
-            @each $item in $coll {
-                @if (equal($item, $selector)) {
-                    $result: $item;
                 }
             }
         }
     }
+    @else if (is(Map, $coll)) {
+        @if (is(Number, $selector)) {
+            $i: 1;
+
+            @each $n, $v in $coll {
+                @if (equal($i, $selector)) {
+                    $result: $v;
+                }
+
+                $i: $i + 1;
+            }
+        }
+        @else if (is(String, $selector)) {
+            $foo: 1;
+
+            @each $nm, $vl in $coll {
+                @if (equal($nm, $selector)) {
+                    $select: $foo;
+                }
+
+                $foo: $foo + 1;
+            }
+
+            @if ($select > 0) {
+                $tmp: nth($coll, $select);
+
+                @if (equal($mapItemPart, Name)) {
+                    $result: nth($tmp, 1);
+                }
+                @else if (equal($mapItemPart, Value)) {
+                    $result: nth($tmp, 2);
+                }
+                @else if (equal($mapItemPart, All)) {
+                    $result: $tmp;
+                }
+                @else {
+                    @error "$mapItemPart equals #{$mapItemPart} must equal either #{$enumerableProtectedWords}";
+                }
+            }
+        }
+    }  
     @else {
-        @error "$coll must be either List or Map but was #{type-of($coll)}";
+        @error "$coll of type #{type-of($coll)} can be either List or Map";
     }
 
     @return $result;
 }
 
-@function strNumbersToList($str) {
-    $vals: ( One: 1, Two: 2, Three: 3, Four: 4, Five: 5, Six: 6, Seven: 7, Eight: 8, Nine: 9, Ten: 10, Eleven: 11, Twelve: 12, Thirteen: 13, Fourteen: 14, Fifteen: 15, Sixteen: 16, Seventeen: 17, Eightteen: 18, Nineteen: 19, Twenty: 20);
-    $result: ();
+@function isProtected($val) {
+    $result: false;
 
-    @each $s in $str {
-        $s: to-upper-case(str-slice($s, 1, 1)) + str-slice($s, 2, str-length($s));
-
-        $result: append($result, $s);
+    @each $w in $enumerableProtectedWords {
+        @if (equal($w, $val)) {
+            $result: true;
+        }
     }
 
-    @return result;
+    @return $result;
+}
+
+@function getSizeName($size: MD) {
+    @return getMap(SizeName, $size);
+}
+
+@function KW($name) {
+    @return getMap(KW, $name);
 }

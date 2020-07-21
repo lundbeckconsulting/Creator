@@ -1,5 +1,6 @@
 ﻿@import "..\\Shared\\Media";
 @import "..\\Shared\\Function";
+@import "..\\Shared\\ColorFunction";
 @import "..\\Shared\\Mixin";
 @import "..\\Shared\\ColorProfiles";
 
@@ -7,9 +8,9 @@ $name: burgerIcon;
 $sizes: ( SM: 1.6rem, MD: 2.8rem, LG: 4rem );
 
 @each $sname, $size in $sizes {
-    .#{$name}-#{lower($sname)} {
-        @each $cname, $cprofile in $CPs {
-            &.cp-#{lower($cname)} {
+    .#{$name}-#{str($sname)} {
+        @each $cname, $cprofile in getMap(CP) {
+            &.cp-#{str($cname)} {
                 display: none;
                 visibility: hidden;
 
@@ -56,7 +57,7 @@ $sizes: ( SM: 1.6rem, MD: 2.8rem, LG: 4rem );
 }
 
 #burgerMenuBackground {
-    @include fillParent(fixed, 0, false);
+    //@include fillParent(fixed, 0, false);
     background-color: rgba(black, 0.8);
 
     & > .close-burger-menu {

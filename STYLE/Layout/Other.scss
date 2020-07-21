@@ -1,240 +1,509 @@
 ﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\ColorFunction";
 @import "..\\Shared\\Media";
 @import "..\\Shared\\Config";
 @import "..\\Shared\\Mixin";
-@import "Mixin";
+@import "LayoutMixin";
 
-.airy {
-  margin: get(Airy, XS);
-}
+@include airy();
 
-@each $n, $v in $airyValues {
-  .#{"airy-" + lower($n)} {
-    margin: $v;
-  }
+@each $n, $v in getMap(Airy) {
+    @include airy($n, $n);
 }
 
 .align {
-  &-left {
-    text-align: left;
-  }
+    &-left {
+        text-align: left;
 
-  &-right {
-    text-align: right;
-  }
-
-  &-center {
-    text-align: center;
-  }
-
-  &-vertical {
-    &-top {
-      position: absolute;
-      top: 0;
-    }
-
-    &-center,
-    &-center-50 {
-      position: absolute;
-      top: 50%;
-    }
-
-    &-center-25 {
-      position: absolute;
-      top: 25%;
-    }
-
-    &-center-75 {
-      position: absolute;
-      top: 75%;
-    }
-
-    &-bottom {
-      position: absolute;
-      bottom: 0;
-    }
-  }
-}
-
-@each $name, $val in $widthSizes {
-  .#{"width-" + lower($name)} {
-    width: $val;
-
-    @each $n, $v in $airyValues {
-      &.#{"airy-" + lower($n)} {
-        margin: $v;
-      }
-
-      &-#{"airy-" + lower($n)} {
-        width: $val;
-        margin: $v;
-      }
-
-      @if (equal($n, MD)) {
-        &.airy {
-          margin: $v;
+        &-force {
+            text-align: left !important;
         }
-
-        &-airy {
-          width: $val;
-          margin: $v;
-        }
-      }
     }
-  }
-}
 
-.#{get(KW, Responsive)} {
-  @include responsive(true, false);
+    &-right {
+        text-align: right;
 
-  &-full-height {
-    @include responsive(true, false);
-    height: 100%;
+        &-force {
+            text-align: right !important;
+        }
+    }
 
     &-center {
-      @include responsive(true);
-      height: 100%;
-    }
-  }
+        text-align: center;
 
-  &-center {
-    @include responsive(true);
-  }
+        &-force {
+            text-align: center !important;
+        }
+    }
+
+    &-vertical {
+        &-top {
+            position: absolute;
+            top: 0;
+
+            &-force {
+                position: absolute !important;
+                top: 0 !important;
+            }
+
+            &-fixed {
+                position: fixed;
+                top: 0;
+
+                &-force {
+                    position: fixed !important;
+                    top: 0 !important;
+                }
+            }
+        }
+
+        &-center,
+        &-center-50 {
+            position: absolute;
+            @include absoluteCenter(Vertical);
+
+            &-force {
+                position: absolute !important;
+                @include absoluteCenter(Vertical, 50%, true);
+            }
+
+            &-fixed {
+                position: fixed;
+                @include absoluteCenter(Vertical);
+
+                &-force {
+                    position: fixed !important;
+                    @include absoluteCenter(Vertical, 50%, true);
+                }
+            }
+        }
+
+        &-center-25 {
+            position: absolute;
+            @include absoluteCenter(Vertical, 25%);
+
+            &-force {
+                position: absolute !important;
+                @include absoluteCenter(Vertical, 25%, true);
+            }
+
+            &-fixed {
+                position: fixed;
+                @include absoluteCenter(Vertical, 25%);
+
+                &-force {
+                    position: fixed !important;
+                    @include absoluteCenter(Vertical, 25%, true);
+                }
+            }
+        }
+
+        &-center-75 {
+            position: absolute;
+            @include absoluteCenter(Vertical, 75%);
+
+            &-force {
+                position: absolute !important;
+                @include absoluteCenter(Vertical, 75%, true);
+            }
+
+            &-fixed {
+                position: fixed;
+                @include absoluteCenter(Vertical, 75%);
+
+                &-force {
+                    position: fixed !important;
+                    @include absoluteCenter(Vertical, 75%, true);
+                }
+            }
+        }
+
+        &-bottom {
+            position: absolute;
+            bottom: 0;
+
+            &-force {
+                position: absolute !important;
+                bottom: 0 !important;
+            }
+
+            &-fixed {
+                position: fixed;
+                bottom: 0;
+
+                &-force {
+                    position: fixed !important;
+                    bottom: 0 !important;
+                }
+            }
+        }
+    }
+
+    &-horizontal {
+        &-center,
+        &-center-50 {
+            position: absolute;
+            @include absoluteCenter();
+
+            &-force {
+                position: absolute !important;
+                @include absoluteCenter(Horizontal, 50%, true);
+            }
+
+            &-fixed {
+                position: fixed !important;
+                @include absoluteCenter();
+
+                &-force {
+                    position: fixed !important;
+                    @include absoluteCenter(Horizontal, 50%, true);
+                }
+            }
+        }
+
+        &-center-25 {
+            position: absolute;
+            @include absoluteCenter(Horizontal, 25%);
+
+            &-force {
+                position: absolute !important;
+                @include absoluteCenter(Horizontal, 25%, true);
+            }
+
+            &-fixed {
+                position: fixed;
+                @include absoluteCenter(Horizontal, 25%);
+
+                &-force {
+                    position: fixed !important;
+                    @include absoluteCenter(Horizontal, 25%, true);
+                }
+            }
+        }
+
+        &-center-75 {
+            position: absolute;
+            @include absoluteCenter(Horizontal, 75%);
+
+            &-force {
+                position: absolute !important;
+                @include absoluteCenter(Horizontal, 75%, true);
+            }
+
+            &-fixed {
+                position: fixed;
+                @include absoluteCenter(Horizontal, 75%);
+
+                &-force {
+                    position: fixed !important;
+                    @include absoluteCenter(Horizontal, 75%, true);
+                }
+            }
+        }
+
+        &-left {
+            position: absolute;
+            left: 0;
+
+            &-force {
+                position: absolute !important;
+                left: 0 !important;
+            }
+
+            &-fixed {
+                position: fixed;
+                left: 0;
+
+                &-force {
+                    position: fixed !important;
+                    left: 0 !important;
+                }
+            }
+        }
+
+        &-right {
+            position: absolute;
+            right: 0;
+
+            &-force {
+                position: absolute !important;
+                right: 0 !important;
+            }
+
+            &-fixed {
+                position: fixed;
+                right: 0;
+
+                &-force {
+                    position: fixed !important;
+                    right: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+@each $name, $val in getMap(Width) {
+    .#{"width-" + str($name)} {
+        width: $val;
+
+        @each $n, $v in getMap(Airy) {
+            &.#{"airy-" + str($n)} {
+                margin: $v;
+            }
+
+            &-#{"airy-" + str($n)} {
+                width: $val;
+                margin: $v;
+            }
+
+            @if (equal($n, MD)) {
+                &.airy {
+                    margin: $v;
+                }
+
+                &-airy {
+                    width: $val;
+                    margin: $v;
+                }
+            }
+        }
+    }
+}
+
+.#{KW(Responsive)} {
+    @include responsive(true, false);
+
+    &-full-height {
+        @include responsive(true, false);
+        height: 100%;
+
+        &-center {
+            @include responsive(true);
+            height: 100%;
+        }
+    }
+
+    &-center {
+        @include responsive(true);
+    }
 }
 
 .container {
-  @include responsive(true, false, true);
-
-  &-clean {
-    @include responsive(true, false, false);
-  }
-
-  &-auto {
-    @include responsive(true, true, true);
+    @include responsive(true, false, true);
 
     &-clean {
-      @include responsive(true, true, false);
+        @include responsive(true, false, false);
     }
-  }
 
-  &-full {
-    @include responsive(false, false, true);
+    &-auto {
+        @include responsive(true, true, true);
 
-    &-clean {
-      @include responsive(false, false, false);
+        &-clean {
+            @include responsive(true, true, false);
+        }
     }
-  }
+
+    &-full {
+        @include responsive(false, false, true);
+
+        &-clean {
+            @include responsive(false, false, false);
+        }
+    }
 }
 
-.#{get(KW, BG-Cover)} {
-  @include bgCover();
+.#{KW(BG-Cover)} {
+    @include bgCover();
 
-  &.fixed,
-  &-fixed {
-    @include bgCover(true);
-  }
+    &-fixed {
+        @include bgCover(true);
+    }
 }
 
-.fixed.top,
 .fixed-top {
-  position: fixed;
-  top: 0;
-  bottom: unset;
-  left: 0;
-  right: 0;
+    position: fixed;
+    top: 0;
+    bottom: unset;
+    left: 0;
+    right: 0;
+
+    &-force {
+        position: fixed !important;
+        top: 0 !important;
+        bottom: unset !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
 }
 
-.fixed.bottom,
 .fixed-bottom {
-  position: fixed;
-  top: unset;
-  left: 0;
-  right: 0;
-  bottom: 0;
+    position: fixed;
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &-force {
+        position: fixed !important;
+        top: unset !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
 }
 
-.fixed.left,
 .fixed-left {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: unset;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: unset;
+
+    &-force {
+        position: fixed !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: unset !important;
+    }
 }
 
-.fixed.right,
 .fixed-right {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: unset;
-  right: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: unset;
+    right: 0;
+
+    &-force {
+        position: fixed !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: unset !important;
+        right: 0 !important;
+    }
 }
 
-.float.left,
 .float-left {
-  float: left;
+    float: left;
+
+    &-force {
+        float: left !important;
+    }
 }
 
-.float.right,
 .float-right {
-  float: right;
+    float: right;
+
+    &-force {
+        float: right !important;
+    }
 }
 
 .hide,
 .close,
 .invisible {
-  display: none;
+    display: none;
+    visibility: hidden;
+
+    &-force {
+        display: none !important;
+        visibility: hidden !important;
+    }
 }
 
 .show,
 .block,
 .visible {
-  display: block;
+    display: block;
+    visibility: visible;
+
+    &-force {
+        display: block !important;
+        visibility: visible !important;
+    }
 }
 
-.position {
-  &-relative {
-    position: relative;
-  }
+.pos {
+    &-rltv {
+        position: relative;
 
-  &-absolute {
-    position: absolute;
-  }
+        &-force {
+            position: relative !important;
+        }
+    }
 
-  &-fixed {
-    position: fixed;
-  }
+    &-abslt {
+        position: absolute;
 
-  &-static {
-    position: static;
-  }
+        &-force {
+            position: absolute !important;
+        }
+    }
 
-  &-sticky {
-    position: sticky;
-  }
+    &-fxd {
+        position: fixed;
 
-  &-center {
-    position: center;
-  }
+        &-force {
+            position: fixed !important;
+        }
+    }
 
-  &-page {
-    position: page;
-  }
+    &-stc {
+        position: static;
+
+        &-force {
+            position: static !important;
+        }
+    }
+
+    &-stck {
+        position: sticky;
+
+        &-force {
+            position: sticky !important;
+        }
+    }
+
+    &-cntr {
+        position: center;
+
+        &-force {
+            position: center !important;
+        }
+    }
+
+    &-pg {
+        position: page;
+
+        &-force {
+            position: page !important;
+        }
+    }
 }
 
 @for $i from 1 through 9 {
-  .o-#{$i} {
-    @if ($i == 1) {
-      opacity: 1;
-    } @else {
-      opacity: #{"0." + $i};
+    .#{KW(Opacity)}-#{$i} {
+        @if ($i == 1) {
+            opacity: 1;
+
+            &-force {
+                opacity: 1 !important;
+            }
+        }
+        @else {
+            opacity: #{"0." + $i};
+
+            &-force {
+                opacity: #{"0." + $i} !important;
+            }
+        }
     }
-  }
 }
 
-@each $name, $val in $headSyno {
-    $size: get(Head, $val);
+@each $name, $val in getMap(HeadMap) {
+    $size: getMap(Head, $val);
 
     .h#{$name} {
         font-size: $size;
@@ -245,14 +514,14 @@
             font-weight: bold;
         }
 
-        @each $s, $v in $airyValues {
-            &-#{"airy-" + lower($s)} {
+        @each $s, $v in getMap(Airy) {
+            &-#{"airy-" + str($s)} {
                 font-size: $size;
                 margin: $v;
                 font-weight: normal;
             }
 
-            &-#{"airy-" + lower($s) + "-bold"} {
+            &-#{"airy-" + str($s) + "-bold"} {
                 font-size: $size;
                 margin: $v;
                 font-weight: bold;
@@ -261,12 +530,12 @@
             @if (equal($s, MD)) {
                 &-airy {
                     font-size: $size;
-                    margin: getAiry();
+                    margin: $v;
                     font-weight: normal;
 
                     &-bold {
                         font-size: $size;
-                        margin: getAiry();
+                        margin: $v;
                         font-weight: bold;
                     }
                 }
@@ -276,117 +545,216 @@
 }
 
 .clean {
-  padding: unset;
+    padding: unset;
+    margin: unset;
+
+    &-force {
+        padding: unset !important;
+        margin: unset !important;
+    }
 }
 
 .clean-mrg {
-  margin: unset;
-}
+    margin: unset;
 
-.clean-all {
-  padding: unset;
-  margin: unset;
-}
-
-.bg {
-  &-white {
-    background-color: white;
-  }
-
-  &-black {
-    background-color: white;
-  }
-
-  @each $n, $v in $CPs {
-    &-#{lower($n)} {
-      background-color: color($n);
+    &-force {
+        margin: unset !important;
     }
-  }
+}
+
+.clean-pad {
+    padding: unset;
+
+    &-force {
+        padding: unset !important;
+    }
 }
 
 .color {
-  &-white {
-    color: white;
-  }
+    &-bg-white {
+        background-color: white;
 
-  &-black {
-    color: black;
-  }
-
-  @each $n, $v in $CPs {
-    &-#{lower($n)} {
-      color: color($n);
+        &-force {
+            background-color: white !important;
+        }
     }
-  }
-}
 
-.border {
-  &-white {
-    border-color: white;
-  }
+    &-white {
+        color: white;
 
-  &-black {
-    border-color: black;
-  }
-
-  @each $n, $v in $CPs {
-    &-#{lower($n)} {
-      border-color: color($n);
+        &-force {
+            color: white !important;
+        }
     }
-  }
+
+    &-bg-black {
+        background-color: black;
+
+        &-force {
+            background-color: black !important;
+        }
+    }
+
+    &-black {
+        color: black;
+
+        &-force {
+            color: black !important;
+        }
+    }
+
+    @each $n, $v in getMap(CP) {
+        &-#{str($n)} {
+            color: color($n);
+
+            &-force {
+                color: color($n) !important;
+            }
+        }
+
+        &-bg-#{str($n)} {
+            background-color: color($n);
+
+            &-force {
+                background-color: color($n) !important;
+            }
+
+            &-opacity-8 {
+                background-color: rgba(color($n), 0.8);
+
+                &-force {
+                    background-color: rgba(color($n), 0.8) !important;
+                }
+            }
+
+            &-opacity-6 {
+                background-color: rgba(color($n), 0.6);
+
+                &-force {
+                    background-color: rgba(color($n), 0.6) !important;
+                }
+            }
+
+            &-opacity-4 {
+                background-color: rgba(color($n), 0.4);
+
+                &-force {
+                    background-color: rgba(color($n), 0.4) !important;
+                }
+            }
+
+            &-opacity-2 {
+                background-color: rgba(color($n), 0.2);
+
+                &-force {
+                    background-color: rgba(color($n), 0.2) !important;
+                }
+            }
+        }
+    }
 }
 
 .dis {
-  &-table {
-    display: table;
-  }
+    &-table {
+        display: table;
+        visibility: visible;
 
-  &-inline-table {
-    display: inline-table;
-  }
+        &-force {
+            display: table !important;
+            visibility: visible !important;
+        }
+    }
 
-  &-block {
-    display: block;
-  }
+    &-inline-table {
+        display: inline-table;
+        visibility: visible;
 
-  &-inline-block {
-    display: inline-block;
-  }
+        &-force {
+            display: inline-table !important;
+            visibility: visible !important;
+        }
+    }
 
-  &-normal {
-    display: normal;
-  }
+    &-block {
+        display: block;
+        visibility: visible;
 
-  &-none {
-    display: none;
-  }
+        &-force {
+            display: block !important;
+            visibility: visible !important;
+        }
+    }
+
+    &-inline-block {
+        display: inline-block;
+        visibility: visible;
+
+        &-force {
+            display: inline-block !important;
+            visibility: visible !important;
+        }
+    }
+
+    &-normal {
+        display: normal;
+        visibility: visible;
+
+        &-force {
+            display: normal !important;
+            visibility: visible !important;
+        }
+    }
+
+    &-none {
+        display: none;
+        visibility: hidden;
+
+        &-force {
+            display: none !important;
+            visibility: hidden !important;
+        }
+    }
 }
 
-.#{get(KW, WhiteSpace)} {
-  &-nowrap {
-    white-space: nowrap;
-  }
+.#{KW(WhiteSpace)} {
+    &-nowrap {
+        white-space: nowrap;
 
-  &-normal {
-    white-space: normal;
-  }
+        &-force {
+            white-space: nowrap !important;
+        }
+    }
 
-  &-pre {
-    white-space: pre;
-  }
+    &-normal {
+        white-space: normal;
 
-  &-normal {
-    white-space: normal;
-  }
+        &-force {
+            white-space: normal !important;
+        }
+    }
+
+    &-pre {
+        white-space: pre;
+
+        &-force {
+            white-space: pre !important;
+        }
+    }
 }
 
 .table-auto {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-force {
+        display: table !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 .fill {
-  min-width: 100%;
-  min-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }

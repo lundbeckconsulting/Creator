@@ -5,31 +5,34 @@
   margin-left: 6px; }
 
 .creator.icon > .wrap-default {
-  color: black; }
+  color: color(Default, Primary); }
 
 .creator.icon > .wrap-primary {
-  color: #8b480e; }
+  color: color(Primary, Primary); }
 
 .creator.icon > .wrap-success {
-  color: #195f34; }
+  color: color(Success, Primary); }
 
 .creator.icon > .wrap-danger {
-  color: #8c101b; }
+  color: color(Danger, Primary); }
 
 .creator.icon > .wrap-warning {
-  color: #ffbf00; }
+  color: color(Warning, Primary); }
 
 .creator.icon > .wrap-info {
-  color: #2894aa; }
+  color: color(Info, Primary); }
 
 .creator.icon > .wrap-light {
-  color: #a19b9b; }
+  color: color(Light, Primary); }
 
 .creator.icon > .wrap-dark {
-  color: #161616; }
+  color: color(Dark, Primary); }
 
 .creator.icon > .wrap-antan {
-  color: #fe2f00; }
+  color: color(Antan, Primary); }
 
 .creator.icon > .wrap-notify {
-  color: #07294e; }
+  color: color(Notify, Primary); }
+
+.creator.icon > .wrap-funk {
+  color: color(Funk, Primary); }

@@ -4,8 +4,8 @@
 .creator.checkbox-wrap {
     display: inline-block;
 
-    @each $name, $map in $CPs {
-        &.cp-#{lower($name)} {
+    @each $name, $map in getMap(CP) {
+        &.cp-#{str($name)} {
             $back: color($name);
             $check: color($name, Fifth);
 
@@ -41,6 +41,7 @@
             cursor: pointer;
             height: 0;
             width: 0;
+            transition: all 0.3s ease-in-out;
         }
 
         & > .checkmark:after {
@@ -59,8 +60,6 @@
             top: 4px;
             width: 4px;
             height: 8px;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
             transform: rotate(45deg);
         }
     }

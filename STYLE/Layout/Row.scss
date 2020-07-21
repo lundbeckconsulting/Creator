@@ -1,6 +1,5 @@
 ﻿@import "..\\Shared\\Function";
 @import "..\\Shared\\Media";
-@import "..\\Shared\\Config";
 
 $base: 12;
 
@@ -15,10 +14,10 @@ $base: 12;
   }
 }
 
-@each $size in get(Common) {
+@each $size in sys(Sizes) {
   @include media($size) {
     @for $c from 1 through $base {
-      .col-#{lower($size)}-#{$c} {
+      .col-#{str($size)}-#{$c} {
         $span: $c;
 
         grid-row: 1 !important;

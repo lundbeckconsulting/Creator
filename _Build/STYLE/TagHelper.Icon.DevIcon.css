@@ -1,0 +1,614 @@
+﻿@font-face {
+  font-family: 'devicon';
+  src: url("/STYLE/FONT/DevIcon/devicons.eot?xqxft6");
+  src: url("/STYLE/FONT/DevIcon/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("/STYLE/FONT/DevIcon/devicons.woff?xqxft6") format("woff"), url("/STYLE/FONT/DevIcon/devicons.ttf?xqxft6") format("truetype"), url("/STYLE/FONT/DevIcon/devicons.svg?xqxft6#devicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.devicon {
+  font-family: 'devicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .devicon.size-xxs {
+    font-size: 0.2rem; }
+  .devicon.size-xs {
+    font-size: 0.6rem; }
+  .devicon.size-sm {
+    font-size: 1rem; }
+  .devicon.size-md {
+    font-size: 1.2rem; }
+  .devicon.size-normal {
+    font-size: 1.4rem; }
+  .devicon.size-lg {
+    font-size: 2rem; }
+  .devicon.size-xl {
+    font-size: 2.4rem; }
+  .devicon.size-xxl {
+    font-size: 3.2rem; }
+  .devicon.size-xxxl {
+    font-size: 3.8rem; }
+  .devicon.size-x7 {
+    font-size: 4.4rem; }
+  .devicon.size-x8 {
+    font-size: 4.8rem; }
+  .devicon.size-x9 {
+    font-size: 5.4rem; }
+
+.devicon-git::before {
+  content: \e602; }
+
+.devicon-git_compare::before {
+  content: \e628; }
+
+.devicon-git_branch::before {
+  content: \e625; }
+
+.devicon-git_commit::before {
+  content: \e629; }
+
+.devicon-git_pull_request::before {
+  content: \e626; }
+
+.devicon-git_merge::before {
+  content: \e627; }
+
+.devicon-bitbucket::before {
+  content: \e603; }
+
+.devicon-github_alt::before {
+  content: \e608; }
+
+.devicon-github_badge::before {
+  content: \e609; }
+
+.devicon-github::before {
+  content: \e60a; }
+
+.devicon-github_full::before {
+  content: \e617; }
+
+.devicon-java::before {
+  content: \e638; }
+
+.devicon-ruby::before {
+  content: \e639; }
+
+.devicon-scala::before {
+  content: \e637; }
+
+.devicon-python::before {
+  content: \e63c; }
+
+.devicon-go::before {
+  content: \e624; }
+
+.devicon-ruby_on_rails::before {
+  content: \e63b; }
+
+.devicon-django::before {
+  content: \e61d; }
+
+.devicon-markdown::before {
+  content: \e63e; }
+
+.devicon-php::before {
+  content: \e63d; }
+
+.devicon-mysql::before {
+  content: \e604; }
+
+.devicon-streamline::before {
+  content: \e605; }
+
+.devicon-database::before {
+  content: \e606; }
+
+.devicon-laravel::before {
+  content: \e63f; }
+
+.devicon-javascript::before {
+  content: \e64e; }
+
+.devicon-angular::before {
+  content: \e653; }
+
+.devicon-backbone::before {
+  content: \e652; }
+
+.devicon-coffeescript::before {
+  content: \e651; }
+
+.devicon-jquery::before {
+  content: \e650; }
+
+.devicon-modernizr::before {
+  content: \e620; }
+
+.devicon-jquery_ui::before {
+  content: \e654; }
+
+.devicon-ember::before {
+  content: \e61b; }
+
+.devicon-dojo::before {
+  content: \e61c; }
+
+.devicon-nodejs::before {
+  content: \e619; }
+
+.devicon-nodejs_small::before {
+  content: \e618; }
+
+.devicon-javascript_shield::before {
+  content: \e64f; }
+
+.devicon-bootstrap::before {
+  content: \e647; }
+
+.devicon-sass::before {
+  content: \e64b; }
+
+.devicon-css3_full::before {
+  content: \e64a; }
+
+.devicon-css3::before {
+  content: \e649; }
+
+.devicon-html5::before {
+  content: \e636; }
+
+.devicon-html5_multimedia::before {
+  content: \e632; }
+
+.devicon-html5_device_access::before {
+  content: \e633; }
+
+.devicon-html5_3d_effects::before {
+  content: \e635; }
+
+.devicon-html5_connectivity::before {
+  content: \e634; }
+
+.devicon-ghost_small::before {
+  content: \e614; }
+
+.devicon-ghost::before {
+  content: \e61f; }
+
+.devicon-magento::before {
+  content: \e640; }
+
+.devicon-joomla::before {
+  content: \e641; }
+
+.devicon-jekyll_small::before {
+  content: \e60d; }
+
+.devicon-drupal::before {
+  content: \e642; }
+
+.devicon-wordpress::before {
+  content: \e60b; }
+
+.devicon-grunt::before {
+  content: \e64c; }
+
+.devicon-bower::before {
+  content: \e64d; }
+
+.devicon-npm::before {
+  content: \e61e; }
+
+.devicon-yahoo_small::before {
+  content: \e62b; }
+
+.devicon-yahoo::before {
+  content: \e615; }
+
+.devicon-bing_small::before {
+  content: \e600; }
+
+.devicon-windows::before {
+  content: \e60f; }
+
+.devicon-linux::before {
+  content: \e612; }
+
+.devicon-ubuntu::before {
+  content: \e63a; }
+
+.devicon-android::before {
+  content: \e60e; }
+
+.devicon-apple::before {
+  content: \e611; }
+
+.devicon-appstore::before {
+  content: \e613; }
+
+.devicon-phonegap::before {
+  content: \e630; }
+
+.devicon-blackberry::before {
+  content: \e623; }
+
+.devicon-stackoverflow::before {
+  content: \e610; }
+
+.devicon-techcrunch::before {
+  content: \e62c; }
+
+.devicon-codrops::before {
+  content: \e62f; }
+
+.devicon-css_tricks::before {
+  content: \e601; }
+
+.devicon-smashing_magazine::before {
+  content: \e62d; }
+
+.devicon-netmagazine::before {
+  content: \e62e; }
+
+.devicon-codepen::before {
+  content: \e616; }
+
+.devicon-cssdeck::before {
+  content: \e62a; }
+
+.devicon-hackernews::before {
+  content: \e61a; }
+
+.devicon-dropbox::before {
+  content: \e607; }
+
+.devicon-google_drive::before {
+  content: \e631; }
+
+.devicon-visualstudio::before {
+  content: \e60c; }
+
+.devicon-unity_small::before {
+  content: \e621; }
+
+.devicon-raspberry_pi::before {
+  content: \e622; }
+
+.devicon-chrome::before {
+  content: \e643; }
+
+.devicon-ie::before {
+  content: \e644; }
+
+.devicon-firefox::before {
+  content: \e645; }
+
+.devicon-opera::before {
+  content: \e646; }
+
+.devicon-safari::before {
+  content: \e648; }
+
+.devicon-swift::before {
+  content: \e655; }
+
+.devicon-symfony::before {
+  content: \e656; }
+
+.devicon-symfony_badge::before {
+  content: \e657; }
+
+.devicon-less::before {
+  content: \e658; }
+
+.devicon-stylus::before {
+  content: \e659; }
+
+.devicon-trello::before {
+  content: \e65a; }
+
+.devicon-atlassian::before {
+  content: \e65b; }
+
+.devicon-jira::before {
+  content: \e65c; }
+
+.devicon-envato::before {
+  content: \e65d; }
+
+.devicon-snap_svg::before {
+  content: \e65e; }
+
+.devicon-raphael::before {
+  content: \e65f; }
+
+.devicon-google_analytics::before {
+  content: \e660; }
+
+.devicon-compass::before {
+  content: \e661; }
+
+.devicon-onedrive::before {
+  content: \e662; }
+
+.devicon-gulp::before {
+  content: \e663; }
+
+.devicon-atom::before {
+  content: \e664; }
+
+.devicon-cisco::before {
+  content: \e665; }
+
+.devicon-nancy::before {
+  content: \e666; }
+
+.devicon-clojure::before {
+  content: \e668; }
+
+.devicon-clojure_alt::before {
+  content: \e66a; }
+
+.devicon-perl::before {
+  content: \e669; }
+
+.devicon-celluloid::before {
+  content: \e66b; }
+
+.devicon-w3c::before {
+  content: \e66c; }
+
+.devicon-redis::before {
+  content: \e66d; }
+
+.devicon-postgresql::before {
+  content: \e66e; }
+
+.devicon-webplatform::before {
+  content: \e66f; }
+
+.devicon-jenkins::before {
+  content: \e667; }
+
+.devicon-requirejs::before {
+  content: \e670; }
+
+.devicon-opensource::before {
+  content: \e671; }
+
+.devicon-typo3::before {
+  content: \e672; }
+
+.devicon-uikit::before {
+  content: \e673; }
+
+.devicon-doctrine::before {
+  content: \e674; }
+
+.devicon-groovy::before {
+  content: \e675; }
+
+.devicon-nginx::before {
+  content: \e676; }
+
+.devicon-haskell::before {
+  content: \e677; }
+
+.devicon-zend::before {
+  content: \e678; }
+
+.devicon-gnu::before {
+  content: \e679; }
+
+.devicon-yeoman::before {
+  content: \e67a; }
+
+.devicon-heroku::before {
+  content: \e67b; }
+
+.devicon-debian::before {
+  content: \e67d; }
+
+.devicon-travis::before {
+  content: \e67e; }
+
+.devicon-dotnet::before {
+  content: \e67f; }
+
+.devicon-codeigniter::before {
+  content: \e680; }
+
+.devicon-javascript_badge::before {
+  content: \e681; }
+
+.devicon-yii::before {
+  content: \e682; }
+
+.devicon-msql_server::before {
+  content: \e67c; }
+
+.devicon-composer::before {
+  content: \e683; }
+
+.devicon-krakenjs_badge::before {
+  content: \e684; }
+
+.devicon-krakenjs::before {
+  content: \e685; }
+
+.devicon-mozilla::before {
+  content: \e686; }
+
+.devicon-firebase::before {
+  content: \e687; }
+
+.devicon-sizzlejs::before {
+  content: \e688; }
+
+.devicon-creativecommons::before {
+  content: \e689; }
+
+.devicon-creativecommons_badge::before {
+  content: \e68a; }
+
+.devicon-mitlicence::before {
+  content: \e68b; }
+
+.devicon-senchatouch::before {
+  content: \e68c; }
+
+.devicon-bugsense::before {
+  content: \e68d; }
+
+.devicon-extjs::before {
+  content: \e68e; }
+
+.devicon-mootools_badge::before {
+  content: \e68f; }
+
+.devicon-mootools::before {
+  content: \e690; }
+
+.devicon-ruby_rough::before {
+  content: \e691; }
+
+.devicon-komodo::before {
+  content: \e692; }
+
+.devicon-coda::before {
+  content: \e693; }
+
+.devicon-bintray::before {
+  content: \e694; }
+
+.devicon-terminal::before {
+  content: \e695; }
+
+.devicon-code::before {
+  content: \e696; }
+
+.devicon-responsive::before {
+  content: \e697; }
+
+.devicon-dart::before {
+  content: \e698; }
+
+.devicon-aptana::before {
+  content: \e699; }
+
+.devicon-mailchimp::before {
+  content: \e69a; }
+
+.devicon-netbeans::before {
+  content: \e69b; }
+
+.devicon-dreamweaver::before {
+  content: \e69c; }
+
+.devicon-brackets::before {
+  content: \e69d; }
+
+.devicon-eclipse::before {
+  content: \e69e; }
+
+.devicon-cloud9::before {
+  content: \e69f; }
+
+.devicon-scrum::before {
+  content: \e6a0; }
+
+.devicon-prolog::before {
+  content: \e6a1; }
+
+.devicon-terminal_badge::before {
+  content: \e6a2; }
+
+.devicon-code_badge::before {
+  content: \e6a3; }
+
+.devicon-mongodb::before {
+  content: \e6a4; }
+
+.devicon-meteor::before {
+  content: \e6a5; }
+
+.devicon-meteorfull::before {
+  content: \e6a6; }
+
+.devicon-fsharp::before {
+  content: \e6a7; }
+
+.devicon-rust::before {
+  content: \e6a8; }
+
+.devicon-ionic::before {
+  content: \e6a9; }
+
+.devicon-sublime::before {
+  content: \e6aa; }
+
+.devicon-appcelerator::before {
+  content: \e6ab; }
+
+.devicon-asterisk::before {
+  content: \e6ac; }
+
+.devicon-aws::before {
+  content: \e6ad; }
+
+.devicon-digital-ocean::before {
+  content: \e6ae; }
+
+.devicon-dlang::before {
+  content: \e6af; }
+
+.devicon-docker::before {
+  content: \e6b0; }
+
+.devicon-erlang::before {
+  content: \e6b1; }
+
+.devicon-google-cloud-platform::before {
+  content: \e6b2; }
+
+.devicon-grails::before {
+  content: \e6b3; }
+
+.devicon-illustrator::before {
+  content: \e6b4; }
+
+.devicon-intellij::before {
+  content: \e6b5; }
+
+.devicon-materializecss::before {
+  content: \e6b6; }
+
+.devicon-openshift::before {
+  content: \e6b7; }
+
+.devicon-photoshop::before {
+  content: \e6b8; }
+
+.devicon-rackspace::before {
+  content: \e6b9; }
+
+.devicon-react::before {
+  content: \e6ba; }
+
+.devicon-redhat::before {
+  content: \e6bb; }
+
+.devicon-scriptcs::before {
+  content: \e6bc; }
+
+.devicon-sqllite::before {
+  content: \e6c4; }
+
+.devicon-vim::before {
+  content: \e6c5; }

@@ -1,175 +1,22 @@
 ﻿@import "..\\Shared\\Mixin";
-@import "..\\Shared\\Config";
-@import "..\\Shared\\Media";
+@import "..\\Shared\\Function";
+@import "LayoutMixin";
 
-$margin: 0;
-$fontSize: 1.6rem;
+@include document();
 
-html.creator {
-    width: 100%;
-    height: 100%;
-    font-size: $fontSize;
+@each $cp, $cv in getMap(CP) {
+    @include document($cp);
+}
 
-    & > body {
-        &.creator {
-            margin: $margin;
-
-            & header.creator {
-                @include responsive(true, true, true);
-            }
-
-            & nav.creator {
-                @include responsive(true, true, true);
-            }
-
-            & main.creator {
-                @include responsive(true, true, true);
-            }
-
-            & footer.creator {
-                @include responsive(true, true, true);
-
-                &-sticky {
-                    flex: 0 0 auto;
-                    @include airy(SM, true);
-                }
+html.creator > body {
+    @each $fn, $fs in getMap(DocFontSize) {
+        @if not (equal($fn, MD)) {
+            &.#{str($fn)} {
+                font-size: $fs;
             }
         }
-
-        &.creator-no-pad {
-            margin: $margin;
-            padding: 0;
-
-            & header.creator {
-                @include responsive(true, true, false);
-            }
-
-            & nav.creator {
-                @include responsive(true, true, false);
-            }
-
-            & main.creator {
-                @include responsive(true, true, false);
-            }
-
-            & footer.creator {
-                @include responsive(true, true, false);
-
-                &-sticky {
-                    flex: 0 0 auto;
-                    @include airy(SM, true);
-                }
-            }
-        }
-
-        &.creator-no-pad-cover {
-            margin: $margin;
-            padding: 0;
-
-            & header.creator {
-                @include responsive(false, true, false);
-            }
-
-            & nav.creator {
-                @include responsive(false, true, false);
-            }
-
-            & main.creator {
-                @include responsive(false, true, false);
-            }
-
-            & footer.creator {
-                @include responsive(false, true, false);
-
-                &-sticky {
-                    flex: 0 0 auto;
-                    @include airy(SM, true);
-                }
-            }
-        }
-
-        @each $name, $size in get(Media) {
-            @if not ($name == XS) {
-                &.creator-#{lower($name)} {
-                    @include media($name) {
-                        margin: $margin;
-                        padding: 0;
-
-                        & header.creator {
-                            @include responsive(true, true, true);
-                        }
-
-                        & nav.creator {
-                            @include responsive(true, true, true);
-                        }
-
-                        & main.creator {
-                            @include responsive(true, true, true);
-                        }
-
-                        & footer.creator {
-                            @include responsive(true, true, true);
-
-                            &-sticky {
-                                flex: 0 0 auto;
-                                @include airy(SM, true);
-                            }
-                        }
-
-                        &-no-pad {
-                            margin: $margin;
-                            padding: 0;
-
-                            & header.creator {
-                                @include responsive(true, true, false);
-                            }
-
-                            & nav.creator {
-                                @include responsive(true, true, false);
-                            }
-
-                            & main.creator {
-                                @include responsive(true, true, false);
-                            }
-
-                            & footer.creator {
-                                @include responsive(true, true, false);
-
-                                &-sticky {
-                                    flex: 0 0 auto;
-                                    @include airy(SM, true);
-                                }
-                            }
-
-                            &-cover {
-                                margin: $margin;
-                                padding: 0;
-
-                                & header.creator {
-                                    @include responsive(false, true, false);
-                                }
-
-                                & nav.creator {
-                                    @include responsive(false, true, false);
-                                }
-
-                                & main.creator {
-                                    @include responsive(false, true, false);
-                                }
-
-                                & footer.creator {
-                                    @include responsive(false, true, false);
-
-                                    &-sticky {
-                                        flex: 0 0 auto;
-                                        @include airy(SM, true);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        @else {
+            font-size: $fs;
         }
     }
 }

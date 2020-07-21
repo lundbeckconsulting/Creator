@@ -47,6 +47,7 @@ function openDialog(id) {
     $("body").append("<div id=\"dialogBackground\"></div>");
 
     $("#dialogBackground").fadeIn("slow", function () {
+        $("#" + id).trigger("command:open");
         $("#" + id).attr("open", "open");
     });
 };

@@ -12,14 +12,47 @@
 </head>
 <body>
     <p>
-        <button class="open-dialog" data-dialog="mainDialog">Open Dialog</button>
+        <button class="open-dialog" data-dialog="notifyDialog">Open Notify Dialog</button>
+        <button class="open-dialog" data-dialog="dangerDialog">Open Danger Dialog</button>
+        <button class="open-dialog" data-dialog="primaryDialog">Open Primary Dialog</button>
+        <a href="#" class="open-dialog" data-dialog="notifyDialog">Link Test</a>
     </p>
-    
-    <dialog id="mainDialog" class="dialog-notify-lg">
+
+    <dialog id="notifyDialog" class="dialog-notify-lg" role="dialog">
         <content>
             <header>
-                <span class="title">My Dialog</span>
-                <span class="close-icon">X</span>
+                <span class="title">My Notify Dialog</span>
+                <i class="close-command"></i>
+            </header>
+            <div class="body">
+                The Body
+            </div>
+            <footer>
+                <button class="ok-command btn">Ok</button>
+            </footer>
+        </content>
+    </dialog>
+
+    <dialog id="dangerDialog" class="dialog-danger-md" role="dialog">
+        <content>
+            <header class="solid">
+                <span class="title">My Danger Dialog</span>
+                <i class="close-command"></i>
+            </header>
+            <div class="body">
+                The Body
+            </div>
+            <footer>
+                <button class="ok-command btn">Ok</button>
+            </footer>
+        </content>
+    </dialog>
+
+    <dialog id="primaryDialog" class="dialog-primary-sm" role="dialog">
+        <content>
+            <header class="solid">
+                <span class="title">My Primary Dialog</span>
+                <i class="close-command"></i>
             </header>
             <div class="body">
                 The Body

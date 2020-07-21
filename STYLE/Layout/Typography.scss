@@ -1,29 +1,46 @@
-﻿@import "..//Shared//Function";
-@import "..//Shared//Media";
+﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\Media";
+@import "LayoutMixin";
 
-@each $n, $v in $headSyno {
-    .#{get(KW, Head) + $n} {
-        font-size: get(Head, $v);
+@each $n, $v in getMap(HeadMap) {
+    $val: getMap(Head, $v);
+
+    .#{KW(Head) + $n} {
+        font-size: nth($val, 1);
 
         &.bold {
             font-weight: bold;
         }
 
         &.airy {
-            padding: $defaultPad;
+            margin: getMap(Airy, SM);
+        }
+    }
+
+    @each $s, $v in getMap(Media) {
+        @if not (equal($s, XS)) {
+            @include media($s) {
+                .#{KW(Head) + $n} {
+                    font-size: nth($val, 2);
+                    
+                    @include airy($s);
+                }
+            }
         }
     }
 }
 
-@each $size, $val in $fontSizes {
-    .#{get(KW, Font) + "-" + $size} {
+@each $size, $val in getMap(FontSize) {
+    .#{KW(Font) + "-" + $size} {
         font-size: $val;
     }
 
-    @each $s, $v in $mediaBreakpoints {
+    @each $s, $v in getMap(Media) {
         @include media($s) {
-            .#{get(KW, Font) + "-" + $size + "-" + lower($s)} {
+            .#{KW(Font) + "-" + $size + "-" + str($s)} {
                 font-size: $val;
+
+                @include airy($s);
             }
         }
     }

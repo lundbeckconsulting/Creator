@@ -1,24 +1,24 @@
 ﻿@import "..\\Shared\\ColorProfiles";
 @import "..\\Shared\\Function";
+@import "..\\Shared\\ColorFunction";
 
 @mixin Foo($type: Default) {
-  $name: cp;
+  $name: color;
   $prop: color;
 
   @if (equal($type, BG)) {
-    $name: cp-bg;
+    $name: color-bg;
     $prop: background-color;
   }
 
   .#{$name} {
-    @each $id, $map in $CPs {
-
+    @each $id, $map in getMap(CP) {
       @each $name, $color in $map {
-        &-#{lower($id)} {
+        &-#{str($id)} {
           @if (equal($name, Primary)) {
             #{$prop}: $color;
           } @else {
-            &-#{lower($name)} {
+            &-#{str($name)} {
               #{$prop}: $color;
             }
           }

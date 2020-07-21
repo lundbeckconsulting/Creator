@@ -1,21 +1,20 @@
-﻿@import "..//Shared//Function";
-@import "..//Shared//Config";
+﻿@import "..\\Shared\\Function";
 
 .position {
-    @each $name, $property in get(Position) {
-        $pos: lower($property);
+    @each $name, $property in sys(Positions) {
+        $pos: str($property, l);
 
-        &-#{lower($name)} {
+        &-#{str($name)} {
             position: $pos;
 
             &-force {
                 position: $pos !important;
             }
 
-            @if ($name == Absolute) or ($name == Fixed) or ($name == Sticky) {
-                @each $dir in $defaultDirections {
-                    &-#{lower($dir)} {
-                        @if ($dir == Left) {
+            @if (equal($name, Absolute, Fixed, Sticky)) {
+                @each $dir in sys(Directions) {
+                    &-#{str($dir)} {
+                        @if (equal($dir, Left)) {
                             position: $pos;
                             left: 0;
                             right: unset;
@@ -26,9 +25,9 @@
                                 right: unset !important;
                             }
 
-                            @each $dr in $defaultDirections {
-                                @if ($dr == Top) {
-                                    &-#{lower($dr)} {
+                            @each $dr in sys(Directions) {
+                                @if (equal($dr, Top)) {
+                                    &-#{str($dr)} {
                                         position: $pos;
                                         left: 0;
                                         right: unset;
@@ -44,8 +43,8 @@
                                         }
                                     }
                                 }
-                                @else if ($dr == Bottom) {
-                                    &-#{lower($dr)} {
+                                @else if (equal($dr, Bottom)) {
+                                    &-#{str($dr)} {
                                         position: $pos;
                                         left: 0;
                                         right: unset;
@@ -79,7 +78,7 @@
                                 }
                             }
                         }
-                        @else if ($dir == Right) {
+                        @else if (equal($dir, Right)) {
                             position: $pos;
                             right: 0;
                             left: unset;
@@ -90,9 +89,9 @@
                                 left: unset !important;
                             }
 
-                            @each $dr in $defaultDirections {
+                            @each $dr in sys(Directions) {
                                 @if ($dr == Top) {
-                                    &-#{lower($dr)} {
+                                    &-#{str($dr)} {
                                         position: $pos;
                                         right: 0;
                                         left: unset;
@@ -108,8 +107,8 @@
                                         }
                                     }
                                 }
-                                @else if ($dr == Bottom) {
-                                    &-#{lower($dr)} {
+                                @else if (equal($dr, Bottom)) {
+                                    &-#{str($dr)} {
                                         position: $pos;
                                         right: 0;
                                         left: unset;
@@ -143,7 +142,7 @@
                                 }
                             }
                         }
-                        @else if ($dir == Top) {
+                        @else if (equal($dir, Top)) {
                             position: $pos;
                             top: 0;
                             bottom: unset;
@@ -154,9 +153,9 @@
                                 bottom: unset !important;
                             }
 
-                            @each $dr in $defaultDirections {
-                                @if ($dr == Left) {
-                                    &-#{lower($dr)} {
+                            @each $dr in sys(Directions) {
+                                @if (equal($dr, Left)) {
+                                    &-#{str($dr)} {
                                         position: $pos;
                                         top: 0;
                                         bottom: unset;
@@ -172,8 +171,8 @@
                                         }
                                     }
                                 }
-                                @else if ($dr == Right) {
-                                    &-#{lower($dr)} {
+                                @else if equal(($dr, Right)) {
+                                    &-#{str($dr)} {
                                         position: $pos;
                                         top: 0;
                                         bottom: unset;
@@ -207,7 +206,7 @@
                                 }
                             }
                         }
-                        @else if ($dir == Bottom) {
+                        @else if (equal($dir, Bottom)) {
                             position: $pos;
                             bottom: 0;
                             top: unset;
@@ -218,9 +217,9 @@
                                 top: unset !important;
                             }
 
-                            @each $dr in $defaultDirections {
-                                @if ($dr == Left) {
-                                    &-#{lower($dr)} {
+                            @each $dr in sys(Directions) {
+                                @if (equal($dr, Left)) {
+                                    &-#{str($dr)} {
                                         position: $pos;
                                         bottom: 0;
                                         top: unset;
@@ -236,8 +235,8 @@
                                         }
                                     }
                                 }
-                                @else if ($dr == Right) {
-                                    &-#{lower($dr)} {
+                                @else if (equal($dr, Right)) {
+                                    &-#{str($dr)} {
                                         position: $pos;
                                         bottom: 0;
                                         top: unset;
@@ -297,5 +296,13 @@
         &-force {
             position: static !important;
         }
+    }
+}
+
+.pos-center {
+    margin: auto;
+
+    &-force {
+        margin: auto !important;
     }
 }

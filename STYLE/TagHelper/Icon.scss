@@ -14,7 +14,7 @@
         }
 
         @each $name, $val in $CPs {
-            &-#{lower($name)} {
+            &-#{str($name)} {
                 color: color($name, Primary);
             }
         }

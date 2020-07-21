@@ -76,18 +76,6 @@
         bottom: unset !important;
         left: 0 !important;
         right: unset !important; }
-    .position-absolute-top-right {
-      position: absolute;
-      top: 0;
-      bottom: unset;
-      right: 0;
-      left: unset; }
-      .position-absolute-top-right-force {
-        position: absolute !important;
-        top: 0 !important;
-        bottom: unset !important;
-        right: 0 !important;
-        left: unset !important; }
     .position-absolute-top-left-right {
       position: absolute;
       top: 0;
@@ -297,18 +285,6 @@
         bottom: unset !important;
         left: 0 !important;
         right: unset !important; }
-    .position-fixed-top-right {
-      position: fixed;
-      top: 0;
-      bottom: unset;
-      right: 0;
-      left: unset; }
-      .position-fixed-top-right-force {
-        position: fixed !important;
-        top: 0 !important;
-        bottom: unset !important;
-        right: 0 !important;
-        left: unset !important; }
     .position-fixed-top-left-right {
       position: fixed;
       top: 0;
@@ -523,18 +499,6 @@
         bottom: unset !important;
         left: 0 !important;
         right: unset !important; }
-    .position-sticky-top-right {
-      position: sticky;
-      top: 0;
-      bottom: unset;
-      right: 0;
-      left: unset; }
-      .position-sticky-top-right-force {
-        position: sticky !important;
-        top: 0 !important;
-        bottom: unset !important;
-        right: 0 !important;
-        left: unset !important; }
     .position-sticky-top-left-right {
       position: sticky;
       top: 0;
@@ -680,3 +644,8 @@
   position: static; }
   .position-clear-force {
     position: static !important; }
+
+.pos-center {
+  margin: auto; }
+  .pos-center-force {
+    margin: auto !important; }

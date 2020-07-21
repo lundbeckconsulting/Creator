@@ -1,0 +1,317 @@
+﻿@import "..\\Shared\\Function";
+@import "..\\Shared\\Config";
+
+@mixin flexEven($direction: row, $includeAlign: true, $force: false, $reverse: false) {
+    @if ($reverse) {
+        $direction: $direction#{-reverse};
+    }
+
+    @if not ($force) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: space-around;
+
+        @if ($includeAlign) {
+            align-items: stretch;
+            align-content: center;
+        }
+
+        & > * {
+            flex: 1 1 auto;
+        }
+    }
+    @else {
+        &-force {
+            display: flex !important;
+            flex-direction: $direction !important;
+            justify-content: space-around !important;
+
+            @if ($includeAlign) {
+                align-items: stretch !important;
+                align-content: center !important;
+            }
+
+            & > * {
+                flex: 1 1 auto !important;
+            }
+        }
+    }
+}
+
+@mixin document($cp: null) {
+    @each $sizeName, $size in getMap(Doc) {
+        $maxWidth: $size;
+
+        html.creator {
+            width: 100%;
+            height: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            @if ($cp == null) {
+                & > body.size-#{str($sizeName)} {
+                    @include documentBody($cp, $maxWidth);
+                }
+            }
+            @else {
+                & > body.size-#{str($sizeName)}.color-#{str($cp)} {
+                    @include documentBody($cp, $maxWidth);
+                }
+            }
+        }
+    }
+
+    a.link {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: getMap(FontSize, 4);
+        transition: all 0.10s;
+
+        @if not ($cp == null) {
+            color: color($cp, Second);
+        }
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+
+            @if not ($cp == null) {
+                color: rgba(color($cp), 0.8);
+            }
+        }
+    }
+}
+
+@mixin documentBody($cp, $maxWidth) {
+    position: relative;
+    width: 100%;
+    max-width: $maxWidth;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.background-cover {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    & header.main {
+        width: 100%;
+        border-bottom-left-radius: getMap(Sys, BorderRadius);
+        border-bottom-right-radius: getMap(Sys, BorderRadius);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+
+        @if not ($cp == null) {
+            background-color: color($cp, Third);
+        }
+
+        &.clear-background {
+            background-color: unset;
+        }
+
+        &.white-background {
+            background-color: white;
+        }
+
+        & .brand-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-right: 8px;
+
+            & > div.brand {
+                display: flex;
+                justify-content: center;
+
+                img.logo {
+                    width: 100%;
+                    max-width: 244px;
+                }
+
+                & > h1.name {
+                    font-size: getMap(Head, XL);
+
+                    @if not ($cp == null) {
+                        color: color($cp);
+                    }
+                }
+            }
+
+            & > nav.main {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: sys(DefaultPad);
+
+                &-clean {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 0;
+                }
+
+                & > a.item {
+                    @if not ($cp == null) {
+                        color: color($cp, Second);
+                    }
+                    @else {
+                        color: black;
+                    }
+
+                    &:hover {
+                        @if not ($cp == null) {
+                            color: rgba(color($cp, Fourth), 0.8);
+                        }
+                        @else {
+                            color: rgba(black, 0.8);
+                        }
+                    }
+                }
+
+                & > .separator {
+                    $mrg: 6px;
+
+                    cursor: pointer;
+                    margin-left: $mrg;
+                    margin-right: $mrg;
+
+                    @if not ($cp == null) {
+                        color: rgba(color($cp, Second), 0.6);
+                    }
+                    @else {
+                        color: rgba(black, 0.6);
+                    }
+                }
+            }
+        }
+    }
+
+    & > main {
+        width: 100%;
+        margin-top: -8px;
+        margin-bottom: -8px;
+
+        @if not ($cp == null) {
+            color: color($cp);
+            background-color: color($cp, Fourth);
+        }
+        @else {
+            color: black;
+        }
+
+        &-clean {
+            width: 100%;
+            padding: 0;
+
+            @if not ($cp == null) {
+                color: color($cp);
+            }
+            @else {
+                color: black;
+            }
+        }
+    }
+
+    & > footer {
+        @include documentFooter($cp, true);
+
+        &-clean {
+            @include documentFooter($cp, false);
+        }
+    }
+}
+
+@mixin documentFooter($cp, $padding: true) {
+    width: 100%;
+    min-height: 114px;
+    border-radius: getMap(Sys, BorderRadius);
+    text-align: center;
+    font-family: Regular;
+    font-size: getMap(Sys, FooterSise);
+    z-index: 420;
+    margin: auto;
+
+    @if not ($cp == null) {
+        color: color($cp, Second);
+        background-color: rgba(color($cp, Fourth), 0.6);
+    }
+    @else {
+        color: black;
+        background-color: rgba(gray, 0.6);
+    }
+
+    @if ($padding) {
+        padding-top: sys(DefaultPad);
+        padding-bottom: sys(DefaultPad);
+    }
+
+    &.large {
+        font-size: getMap(Sys, FooterSizeLarge);
+    }
+
+    &.fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: unset;
+    }
+
+    &.align-left {
+        text-align: left;
+    }
+
+    & nav {
+        & > .item {
+            font-family: SemiBold;
+
+            @if not ($cp == null) {
+                color: color($cp, Second);
+            }
+            @else {
+                color: black;
+            }
+        }
+
+        & > .separator {
+            $mrg: 6px;
+
+            font-family: SemiBold;
+            margin-left: $mrg;
+            margin-right: $mrg;
+
+            @if not ($cp == null) {
+                color: rgba(color($cp, Second), 0.6);
+            }
+            @else {
+                color: rgba(black, 0.6);
+            }
+        }
+    }
+
+    & > copyright.section {
+        font-size: getMap(FontSize, 2);
+    }
+}
+
+@mixin airy($val: XS, $suffix: null) {
+    $result: getMap(Airy, $val);
+    $name: KW(Airy);
+
+    @if ($suffix) {
+        $name: #{$name + "-" + $suffix};
+    }
+
+    &.#{str($name)} {
+        margin: $result;
+
+        &-force {
+            margin: $result !important;
+        }
+    }
+}

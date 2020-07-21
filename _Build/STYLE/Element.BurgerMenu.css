@@ -148,6 +148,21 @@
     color: #1c436d;
     cursor: pointer; }
 
+.burgerIcon-sm.cp-funk {
+  display: none;
+  visibility: hidden; }
+  .burgerIcon-sm.cp-funk::before {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #165992;
+    content: "|||";
+    transform: rotate(90deg);
+    transition: all 0.4ms ease-in-out; }
+  .burgerIcon-sm.cp-funk:hover::before {
+    color: #1976c5;
+    cursor: pointer; }
+
 .burgerIcon-md.cp-default {
   display: none;
   visibility: hidden; }
@@ -296,6 +311,21 @@
     transition: all 0.4ms ease-in-out; }
   .burgerIcon-md.cp-notify:hover::before {
     color: #1c436d;
+    cursor: pointer; }
+
+.burgerIcon-md.cp-funk {
+  display: none;
+  visibility: hidden; }
+  .burgerIcon-md.cp-funk::before {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #165992;
+    content: "|||";
+    transform: rotate(90deg);
+    transition: all 0.4ms ease-in-out; }
+  .burgerIcon-md.cp-funk:hover::before {
+    color: #1976c5;
     cursor: pointer; }
 
 .burgerIcon-lg.cp-default {
@@ -448,6 +478,21 @@
     color: #1c436d;
     cursor: pointer; }
 
+.burgerIcon-lg.cp-funk {
+  display: none;
+  visibility: hidden; }
+  .burgerIcon-lg.cp-funk::before {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #165992;
+    content: "|||";
+    transform: rotate(90deg);
+    transition: all 0.4ms ease-in-out; }
+  .burgerIcon-lg.cp-funk:hover::before {
+    color: #1976c5;
+    cursor: pointer; }
+
 #burgerMenu {
   display: none;
   z-index: 82; }
@@ -467,13 +512,6 @@
       z-index: 99; }
 
 #burgerMenuBackground {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: 0;
-  display: none;
   background-color: rgba(0, 0, 0, 0.8); }
   #burgerMenuBackground > .close-burger-menu {
     position: absolute;

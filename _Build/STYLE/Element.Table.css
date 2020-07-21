@@ -2627,3 +2627,266 @@
   .f-black td-bold {
     color: black;
     font-weight: bold; }
+
+.table-funk {
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse; }
+  .table-funk thead {
+    padding: 8px;
+    background-color: #1e92f4;
+    font-weight: bold;
+    color: #165992; }
+  .table-funk td {
+    border: 2px solid rgba(22, 89, 146, 0.4);
+    color: #165992;
+    padding: 6px; }
+    .table-funk td:first-child {
+      padding-right: 0; }
+  .table-funk-airy {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse; }
+    .table-funk-airy thead {
+      padding: 8px;
+      background-color: #1e92f4;
+      font-weight: bold;
+      color: #165992; }
+    .table-funk-airy td {
+      border: 2px solid rgba(22, 89, 146, 0.4);
+      color: #165992;
+      padding: 14px; }
+      .table-funk-airy td:first-child {
+        padding-right: 0; }
+    .table-funk-airy-fat {
+      display: table;
+      border-spacing: 0;
+      border-collapse: collapse; }
+      .table-funk-airy-fat thead {
+        padding: 8px;
+        background-color: #1e92f4;
+        font-weight: bold;
+        color: #165992; }
+      .table-funk-airy-fat td {
+        border: 6px solid rgba(22, 89, 146, 0.4);
+        color: #165992;
+        padding: 14px; }
+        .table-funk-airy-fat td:first-child {
+          padding-right: 0; }
+      .table-funk-airy-fat-clean {
+        display: table;
+        border-spacing: 0;
+        border-collapse: collapse; }
+        .table-funk-airy-fat-clean thead {
+          padding: 8px;
+          background-color: #1e92f4;
+          font-weight: bold;
+          color: #165992; }
+        .table-funk-airy-fat-clean td {
+          color: #165992;
+          padding: 14px; }
+          .table-funk-airy-fat-clean td:first-child {
+            padding-right: 0; }
+        .table-funk-airy-fat-clean-alternating {
+          display: table;
+          border-spacing: 0;
+          border-collapse: collapse; }
+          .table-funk-airy-fat-clean-alternating thead {
+            padding: 8px;
+            background-color: #1e92f4;
+            font-weight: bold;
+            color: #165992; }
+          .table-funk-airy-fat-clean-alternating td {
+            color: #165992;
+            padding: 14px; }
+            .table-funk-airy-fat-clean-alternating td:first-child {
+              padding-right: 0; }
+          .table-funk-airy-fat-clean-alternating tr:nth-child(even) {
+            background-color: rgba(159, 206, 246, 0.8); }
+      .table-funk-airy-fat-alternating {
+        display: table;
+        border-spacing: 0;
+        border-collapse: collapse; }
+        .table-funk-airy-fat-alternating thead {
+          padding: 8px;
+          background-color: #1e92f4;
+          font-weight: bold;
+          color: #165992; }
+        .table-funk-airy-fat-alternating td {
+          border: 6px solid rgba(22, 89, 146, 0.4);
+          color: #165992;
+          padding: 14px; }
+          .table-funk-airy-fat-alternating td:first-child {
+            padding-right: 0; }
+        .table-funk-airy-fat-alternating tr:nth-child(even) {
+          background-color: rgba(159, 206, 246, 0.8); }
+    .table-funk-airy-clean {
+      display: table;
+      border-spacing: 0;
+      border-collapse: collapse; }
+      .table-funk-airy-clean thead {
+        padding: 8px;
+        background-color: #1e92f4;
+        font-weight: bold;
+        color: #165992; }
+      .table-funk-airy-clean td {
+        color: #165992;
+        padding: 14px; }
+        .table-funk-airy-clean td:first-child {
+          padding-right: 0; }
+      .table-funk-airy-clean-alternating {
+        display: table;
+        border-spacing: 0;
+        border-collapse: collapse; }
+        .table-funk-airy-clean-alternating thead {
+          padding: 8px;
+          background-color: #1e92f4;
+          font-weight: bold;
+          color: #165992; }
+        .table-funk-airy-clean-alternating td {
+          border: 6px solid rgba(22, 89, 146, 0.4);
+          color: #165992;
+          padding: 14px; }
+          .table-funk-airy-clean-alternating td:first-child {
+            padding-right: 0; }
+        .table-funk-airy-clean-alternating tr:nth-child(even) {
+          background-color: rgba(159, 206, 246, 0.8); }
+    .table-funk-airy-alternating {
+      display: table;
+      border-spacing: 0;
+      border-collapse: collapse; }
+      .table-funk-airy-alternating thead {
+        padding: 8px;
+        background-color: #1e92f4;
+        font-weight: bold;
+        color: #165992; }
+      .table-funk-airy-alternating td {
+        border: 2px solid rgba(22, 89, 146, 0.4);
+        color: #165992;
+        padding: 14px; }
+        .table-funk-airy-alternating td:first-child {
+          padding-right: 0; }
+      .table-funk-airy-alternating tr:nth-child(even) {
+        background-color: rgba(159, 206, 246, 0.8); }
+  .table-funk.clean td {
+    color: #165992;
+    padding: 6px; }
+    .table-funk.clean td:first-child {
+      padding-right: 0; }
+  .table-funk.clean.alternating tr:nth-child(even) {
+    background-color: rgba(159, 206, 246, 0.8); }
+  .table-funk-clean {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse; }
+    .table-funk-clean thead {
+      padding: 8px;
+      background-color: #1e92f4;
+      font-weight: bold;
+      color: #165992; }
+    .table-funk-clean td {
+      color: #165992;
+      padding: 6px; }
+      .table-funk-clean td:first-child {
+        padding-right: 0; }
+    .table-funk-clean-alternating {
+      display: table;
+      border-spacing: 0;
+      border-collapse: collapse; }
+      .table-funk-clean-alternating thead {
+        padding: 8px;
+        background-color: #1e92f4;
+        font-weight: bold;
+        color: #165992; }
+      .table-funk-clean-alternating td {
+        color: #165992;
+        padding: 6px; }
+        .table-funk-clean-alternating td:first-child {
+          padding-right: 0; }
+      .table-funk-clean-alternating tr:nth-child(even) {
+        background-color: rgba(159, 206, 246, 0.8); }
+  .table-funk-fat {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse; }
+    .table-funk-fat thead {
+      padding: 8px;
+      background-color: #1e92f4;
+      font-weight: bold;
+      color: #165992; }
+    .table-funk-fat td {
+      border: 6px solid rgba(22, 89, 146, 0.4);
+      color: #165992;
+      padding: 6px; }
+      .table-funk-fat td:first-child {
+        padding-right: 0; }
+    .table-funk-fat-alternating {
+      display: table;
+      border-spacing: 0;
+      border-collapse: collapse; }
+      .table-funk-fat-alternating thead {
+        padding: 8px;
+        background-color: #1e92f4;
+        font-weight: bold;
+        color: #165992; }
+      .table-funk-fat-alternating td {
+        border: 6px solid rgba(22, 89, 146, 0.4);
+        color: #165992;
+        padding: 6px; }
+        .table-funk-fat-alternating td:first-child {
+          padding-right: 0; }
+      .table-funk-fat-alternating tr:nth-child(even) {
+        background-color: rgba(159, 206, 246, 0.8); }
+    .table-funk-fat-clean {
+      display: table;
+      border-spacing: 0;
+      border-collapse: collapse; }
+      .table-funk-fat-clean thead {
+        padding: 8px;
+        background-color: #1e92f4;
+        font-weight: bold;
+        color: #165992; }
+      .table-funk-fat-clean td {
+        color: #165992;
+        padding: 6px; }
+        .table-funk-fat-clean td:first-child {
+          padding-right: 0; }
+      .table-funk-fat-clean-alternating {
+        display: table;
+        border-spacing: 0;
+        border-collapse: collapse; }
+        .table-funk-fat-clean-alternating thead {
+          padding: 8px;
+          background-color: #1e92f4;
+          font-weight: bold;
+          color: #165992; }
+        .table-funk-fat-clean-alternating td {
+          color: #165992;
+          padding: 6px; }
+          .table-funk-fat-clean-alternating td:first-child {
+            padding-right: 0; }
+        .table-funk-fat-clean-alternating tr:nth-child(even) {
+          background-color: rgba(159, 206, 246, 0.8); }
+  .table-funk-alternating {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse; }
+    .table-funk-alternating thead {
+      padding: 8px;
+      background-color: #1e92f4;
+      font-weight: bold;
+      color: #165992; }
+    .table-funk-alternating td {
+      border: 2px solid rgba(22, 89, 146, 0.4);
+      color: #165992;
+      padding: 6px; }
+      .table-funk-alternating td:first-child {
+        padding-right: 0; }
+    .table-funk-alternating tr:nth-child(even) {
+      background-color: rgba(159, 206, 246, 0.8); }
+
+.f-black td {
+  color: black; }
+  .f-black td-bold {
+    color: black;
+    font-weight: bold; }

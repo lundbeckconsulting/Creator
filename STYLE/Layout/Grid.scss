@@ -1,9 +1,8 @@
 ﻿@import "..\\Shared\\Function";
-@import "..\\Shared\\Config";
 
 .grid {
-  @each $name, $val in $gridItemSizes {
-    $name: lower($name);
+  @each $name, $val in getMap(Grid) {
+    $name: str($name);
 
     &-#{$name}-fit {
       display: grid;
@@ -21,8 +20,8 @@
   & {
     grid-gap: 12px;
 
-    @each $name, $val in $gridGapSizes {
-      &-#{lower($name)} {
+    @each $name, $val in getMap(GridGap) {
+      &-#{str($name)} {
         grid-gap: $val;
       }
     }

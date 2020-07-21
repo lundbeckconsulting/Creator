@@ -5,7 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.447" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Assets.Core\Assets.Core.csproj" />
+    <ProjectReference Include="..\Assets\Assets.csproj" />
+    <ProjectReference Include="..\Creator.Components\Creator.Components.csproj" />
+    <ProjectReference Include="..\LC.Components\LC.Components.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="_Build\STYLE\FONT\CaptainIcon\" />
   </ItemGroup>
 
 </Project>

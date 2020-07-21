@@ -1,6 +1,5 @@
 [
   {
-    "outputFileName": "_Build/Creator.css",
     "inputFiles": [
       "_Build/STYLE/Element.BurgerMenu.css",
       "_Build/STYLE/Element.Footer.css",
@@ -13,23 +12,27 @@
       "_Build/STYLE/Layout.Flex.css",
       "_Build/STYLE/Layout.Grid.css",
       "_Build/STYLE/Layout.Media.css",
+      "_Build/STYLE/Layout.MediaDevice.css",
+      "_Build/STYLE/Layout.MediaRetina.css",
       "_Build/STYLE/Layout.Other.css",
       "_Build/STYLE/Layout.PaddingAndMargin.css",
       "_Build/STYLE/Layout.Positioning.css",
       "_Build/STYLE/Layout.Row.css",
       "_Build/STYLE/Layout.Typography.css",
-      "_Build/STYLE/TagHelper.Chapter.css",
       "_Build/STYLE/TagHelper.Icon.css",
-      "_Build/STYLE/TagHelper.Checkbox.css"
-    ]
+      "_Build/STYLE/TagHelper.Checkbox.css",
+      "_Build/STYLE/TagHelper.Icon.CaptainIcon.css",
+      "_Build/STYLE/TagHelper.Icon.DevIcon.css"
+    ],
+    "outputFileName": "_Build/Creator.css"
   },
   {
-    "outputFileName": "_Build/Creator.js",
     "inputFiles": [
       "_Build/SCRIPT/Element.Notify.js",
       "_Build/SCRIPT/Element.Dialog.js",
       "_Build/SCRIPT/Element.BurgerMenu.js"
     ],
-    "sourceMap": true
+    "sourceMap": true,
+    "outputFileName": "_Build/Creator.js"
   }
 ]
