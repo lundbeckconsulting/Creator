@@ -1,3 +1,4 @@
+// log types
 export const LogTypes = {
     Default: "DEFAULT",
     Info: "INFO",
@@ -5,6 +6,7 @@ export const LogTypes = {
     Error: "ERROR"
 };
 
+// date types
 export const DateTypes = {
     Current: "CURRENT",
     Log: "LOG",
@@ -12,6 +14,7 @@ export const DateTypes = {
     Long: "LONG"
 };
 
+// supported types by the get function
 export const getTypes = {
     Name: "NAME",
     Id: "ID",
@@ -20,28 +23,29 @@ export const getTypes = {
     QueryAll: "QUERYALL"
 };
 
-export const get = (type, data) {
+// gets elements based on type and elm value
+export const get = (type, elm) {
     let result = null;
 
     switch (upper(type) {
         case getTypes.Name:
-            result = document.getElementsByName(data);
+            result = document.getElementsByName(elm);
             break;
 
         case getTypes.Id:
-            result = document.getElementById(data);
+            result = document.getElementById(elm);
             break;
 
         case getTypes.Tag:
-            result = document.getElementsByTagName(data);
+            result = document.getElementsByTagName(elm);
             break;
 
         case getTypes.Query:
-            result = document.querySelector(data).elements;
+            result = document.querySelector(elm).elements;
             break;
 
         case getTypes.QueryAll:
-            result = document.querySelectorAll(data);
+            result = document.querySelectorAll(elm);
             break;
 
         default:
@@ -51,8 +55,9 @@ export const get = (type, data) {
     return result;
 };
 
-export const show(type, data) {
-    let result = get(type, data);
+// makes an element visible
+export const show(type, elm) {
+    let result = get(type, elm);
 
     if (!Null(result)) {
         result.style.transition = "all 100ms";
@@ -60,8 +65,9 @@ export const show(type, data) {
     }
 };
 
-export const hide(type, data) {
-    let result = get(type, data);
+// hides an element
+export const hide(type, elm) {
+    let result = get(type, elm);
 
     if (!Null(result)) {
         result.style.transition = "all 100ms";
@@ -69,6 +75,7 @@ export const hide(type, data) {
     }
 };
 
+// gets date in different formats
 export const getDate = (type = DateTypes.Short) => {
     var result = null;
     const current = new Date();
@@ -86,6 +93,18 @@ export const getDate = (type = DateTypes.Short) => {
     return result;
 };
 
+// appends the element to the found node based on type and typeStr
+export const append(type, typeStr, element) {
+    let result = get(type, typeStr);
+
+    if (result) {
+        result.appendChild(element);
+    }
+
+    return result;
+};
+
+// performs log to console
 export const log = (type = LogTypes.Default, entry = EmptyString) => {
     if (equal(type, LogTypes.Default)) {
         console.log(getDate(DateTypes.Log), entry);
@@ -101,8 +120,13 @@ export const log = (type = LogTypes.Default, entry = EmptyString) => {
     }
 };
 
+// trims both start and end
 export const trim = (str) => str.trimStart().trimEnd();
+
+// return true if obj is null or undefined
 export const Null = (obj) => typeof obj === null || typeof obj === "undefined";
+
+// returns true if value is json
 export const isJSON = (json) => {
     var result = false;
 
@@ -115,12 +139,24 @@ export const isJSON = (json) => {
 
     return result;
 };
+
+// returns true if str is string
 export const isString = (str) => typeof str === "string";
+
+// returns true if str is a number
 export const isNumeric = (str) => typeof str === "number";
+
+// returns true if str is of type boolean
 export const isBool = (str) => typeof str === "boolean";
+
+// turns str to upper case
 export const upper = (str) => str.toUpperCase();
+
+// turns str to lower case
 export const lower = (str) => str.toLowerCase();
+
 export const equal = (val, compare) => equals(val, compare);
+
 export const equals = (val, ...compares) => {
     var result = false;
 
@@ -138,7 +174,10 @@ export const equals = (val, ...compares) => {
 
     return result;
 };
+
+// converts the first letter to upper case
 export const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
 export const camelCase = (str) => {
     var result = "";
     var count = -1;
@@ -155,6 +194,8 @@ export const camelCase = (str) => {
 
     return result;
 };
+
+// returns an array based on the list
 export const commaListToArray = (list, trimElement) => {
     var result = [];
 
