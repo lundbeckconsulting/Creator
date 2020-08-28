@@ -1,2 +1,6 @@
 obj/
 bin/
+.vs/
+.vscode/
+_Archive/
+*.csproj.user

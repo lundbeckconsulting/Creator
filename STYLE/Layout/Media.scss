@@ -2,8 +2,15 @@
 @import "..\\Shared\\Function";
 
 [class^="show-"] {
-  display: none !important;
-  visibility: hidden;
+    display: none;
+    visibility: hidden;
+}
+
+@each $name, $val in $mediaBreakpoints {
+    .show-#{str($name)} {
+        display: none;
+        visibility: hidden;
+    }
 }
 
 .hide {
@@ -68,12 +75,6 @@
                     display: inline-block !important;
                     visibility: visible !important;
                 }
-            }
-        }
-
-        @each $n, $v in getMap(HeadMap) {
-            .#{"h" + $n + "-" + $name} {
-                font-size: getMap(Head, $v);
             }
         }
     }

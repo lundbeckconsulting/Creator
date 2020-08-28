@@ -502,48 +502,6 @@
     }
 }
 
-@each $name, $val in getMap(HeadMap) {
-    $size: getMap(Head, $val);
-
-    .h#{$name} {
-        font-size: $size;
-        font-weight: normal;
-
-        &-bold {
-            font-size: $size;
-            font-weight: bold;
-        }
-
-        @each $s, $v in getMap(Airy) {
-            &-#{"airy-" + str($s)} {
-                font-size: $size;
-                margin: $v;
-                font-weight: normal;
-            }
-
-            &-#{"airy-" + str($s) + "-bold"} {
-                font-size: $size;
-                margin: $v;
-                font-weight: bold;
-            }
-
-            @if (equal($s, MD)) {
-                &-airy {
-                    font-size: $size;
-                    margin: $v;
-                    font-weight: normal;
-
-                    &-bold {
-                        font-size: $size;
-                        margin: $v;
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
-    }
-}
-
 .clean {
     padding: unset;
     margin: unset;

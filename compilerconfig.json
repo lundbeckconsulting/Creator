@@ -24,6 +24,10 @@
     "outputFile": "_Build/STYLE/Element.Table.css"
   },
   {
+    "inputFile": "STYLE/Element/Tabs.scss",
+    "outputFile": "_Build/STYLE/Element.Tabs.css"
+  },
+  {
     "inputFile": "STYLE/Layout/ColorProfile.scss",
     "outputFile": "_Build/STYLE/Layout.ColorProfile.css"
   },
@@ -78,14 +82,6 @@
   {
     "inputFile": "STYLE/TagHelper/Checkbox.scss",
     "outputFile": "_Build/STYLE/TagHelper.Checkbox.css"
-  },
-  {
-    "inputFile": "STYLE/TagHelper/Icon.CaptainIcon.scss",
-    "outputFile": "_Build/STYLE/TagHelper.Icon.CaptainIcon.css"
-  },
-  {
-    "inputFile": "STYLE/TagHelper/Icon.DevIcon.scss",
-    "outputFile": "_Build/STYLE/TagHelper.Icon.DevIcon.css"
   },
   {
     "inputFile": "SCRIPT/Element.Notify.js",

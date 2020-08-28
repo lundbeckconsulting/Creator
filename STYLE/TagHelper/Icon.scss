@@ -1,7 +1,25 @@
 ﻿@import "..\\Shared\\Config";
+@import "..\\Shared\\ColorFunction";
 @import "..\\Shared\\Function";
+@import "IconSets";
 
-.creator.icon {
+@font-face {
+    font-family: "" + map-get(map-get($iconSets, "DevIcons"), fontFace);
+    src: url("http://cdn.getcreatorframework.com/components/style/font/devicon/devicons.eot?xqxft6") format("embedded-opentype"), url("http://cdn.getcreatorframework.com/components/style/font/devicon/devicons.woff?xqxft6") format("woff"), url("http://cdn.getcreatorframework.com/components/style/font/devicon/devicons.ttf?xqxft6") format("truetype"), url("http://cdn.getcreatorframework.com/components/style/font/devicon/devicons.svg?xqxft6#devicons") format("svg");
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+@font-face {
+    font-family: "" + map-get(map-get($iconSets, "CaptainIcons"), fontFace);
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    src: url('http://cdn.getcreatorframework.com/components/style/font/captainicon/Icons.eot?-1i2a56') format('embedded-opentype'), url('http://cdn.getcreatorframework.com/components/style/font/captainicon/Icons.woff?-1i2a56') format('woff'), url('http://cdn.getcreatorframework.com/components/style/font/captainicon/Icons.ttf?-1i2a56') format('truetype'), url('http://cdn.getcreatorframework.com/components/style/font/captainicon/Icons.svg?-1i2a56#CaptainIcon') format('svg');
+}
+
+.creator-icon {
     &.clickable {
         &:hover {
             cursor: pointer;
@@ -16,6 +34,27 @@
         @each $name, $val in $CPs {
             &-#{str($name)} {
                 color: color($name, Primary);
+            }
+        }
+    }
+}
+
+@each $setName, $set in $iconSets {
+    $pre: map-get($set, pre);
+    $fontFace: map-get($set, fontFace);
+    $icons: map-get($set, icons);
+
+    .creator-icon.#{$pre} {
+        font-family: "" + $fontFace;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        line-height: 1;
+        text-transform: none;
+
+        @each $iconName, $unicode in $icons {
+            &-#{$iconName}::before {
+                content: unquote("\"\\e#{$unicode}\"");
             }
         }
     }

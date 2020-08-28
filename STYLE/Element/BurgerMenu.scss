@@ -57,7 +57,6 @@ $sizes: ( SM: 1.6rem, MD: 2.8rem, LG: 4rem );
 }
 
 #burgerMenuBackground {
-    //@include fillParent(fixed, 0, false);
     background-color: rgba(black, 0.8);
 
     & > .close-burger-menu {
