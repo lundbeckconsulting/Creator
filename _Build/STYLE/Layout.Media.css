@@ -1,159 +1,125 @@
-﻿[class^="show-"] {
-  display: none !important;
-  visibility: hidden; }
+[class^="show-"] {
+		display: none;
+		visibility: hidden; }
+
+.show-xs {
+		display: none;
+		visibility: hidden; }
+
+.show-sm {
+		display: none;
+		visibility: hidden; }
+
+.show-md {
+		display: none;
+		visibility: hidden; }
+
+.show-lg {
+		display: none;
+		visibility: hidden; }
+
+.show-xl {
+		display: none;
+		visibility: hidden; }
 
 .hide {
-  display: none;
-  visibility: hidden; }
-  .hide-force {
-    display: none !important;
-    visibility: hidden !important; }
+		display: none;
+		visibility: hidden; }
+		.hide-force {
+				display: none !important;
+				visibility: hidden !important; }
 
 .show {
-  display: block;
-  visibility: visible; }
-  .show-force {
-    display: block !important;
-    visibility: visible !important; }
-  .show-inline {
-    display: inline-block;
-    visibility: visible; }
-    .show-inline-force {
-      display: inline-block !important;
-      visibility: visible !important; }
+		display: block;
+		visibility: visible; }
+		.show-force {
+				display: block !important;
+				visibility: visible !important; }
+		.show-inline {
+				display: inline-block;
+				visibility: visible; }
+				.show-inline-force {
+						display: inline-block !important;
+						visibility: visible !important; }
 
 @media (min-width: 576px) {
-  .hide-sm {
-    display: none;
-    visibility: hidden; }
-    .hide-sm-force {
-      display: none !important;
-      visibility: hidden !important; }
-  .show-sm {
-    display: block;
-    visibility: visible; }
-    .show-sm-force {
-      display: block !important;
-      visibility: visible !important; }
-    .show-sm-inline {
-      display: inline-block;
-      visibility: visible !important; }
-      .show-sm-inline-force {
-        display: inline-block !important;
-        visibility: visible !important; }
-  .h1-sm {
-    font-size: 4.4rem, 5.2rem; }
-  .h2-sm {
-    font-size: 3.6rem, 4rem; }
-  .h3-sm {
-    font-size: 3rem, 3.5rem; }
-  .h4-sm {
-    font-size: 2.2rem, 2.8rem; }
-  .h5-sm {
-    font-size: 1.7rem, 2rem; }
-  .h6-sm {
-    font-size: 1.2rem, 1.6rem; }
-  .h7-sm {
-    font-size: 0.8rem, 1rem; } }
+		.hide-sm {
+				display: none;
+				visibility: hidden; }
+				.hide-sm-force {
+						display: none !important;
+						visibility: hidden !important; }
+		.show-sm {
+				display: block;
+				visibility: visible; }
+				.show-sm-force {
+						display: block !important;
+						visibility: visible !important; }
+				.show-sm-inline {
+						display: inline-block;
+						visibility: visible !important; }
+						.show-sm-inline-force {
+								display: inline-block !important;
+								visibility: visible !important; } }
 
 @media (min-width: 768px) {
-  .hide-md {
-    display: none;
-    visibility: hidden; }
-    .hide-md-force {
-      display: none !important;
-      visibility: hidden !important; }
-  .show-md {
-    display: block;
-    visibility: visible; }
-    .show-md-force {
-      display: block !important;
-      visibility: visible !important; }
-    .show-md-inline {
-      display: inline-block;
-      visibility: visible !important; }
-      .show-md-inline-force {
-        display: inline-block !important;
-        visibility: visible !important; }
-  .h1-md {
-    font-size: 4.4rem, 5.2rem; }
-  .h2-md {
-    font-size: 3.6rem, 4rem; }
-  .h3-md {
-    font-size: 3rem, 3.5rem; }
-  .h4-md {
-    font-size: 2.2rem, 2.8rem; }
-  .h5-md {
-    font-size: 1.7rem, 2rem; }
-  .h6-md {
-    font-size: 1.2rem, 1.6rem; }
-  .h7-md {
-    font-size: 0.8rem, 1rem; } }
+		.hide-md {
+				display: none;
+				visibility: hidden; }
+				.hide-md-force {
+						display: none !important;
+						visibility: hidden !important; }
+		.show-md {
+				display: block;
+				visibility: visible; }
+				.show-md-force {
+						display: block !important;
+						visibility: visible !important; }
+				.show-md-inline {
+						display: inline-block;
+						visibility: visible !important; }
+						.show-md-inline-force {
+								display: inline-block !important;
+								visibility: visible !important; } }
 
 @media (min-width: 992px) {
-  .hide-lg {
-    display: none;
-    visibility: hidden; }
-    .hide-lg-force {
-      display: none !important;
-      visibility: hidden !important; }
-  .show-lg {
-    display: block;
-    visibility: visible; }
-    .show-lg-force {
-      display: block !important;
-      visibility: visible !important; }
-    .show-lg-inline {
-      display: inline-block;
-      visibility: visible !important; }
-      .show-lg-inline-force {
-        display: inline-block !important;
-        visibility: visible !important; }
-  .h1-lg {
-    font-size: 4.4rem, 5.2rem; }
-  .h2-lg {
-    font-size: 3.6rem, 4rem; }
-  .h3-lg {
-    font-size: 3rem, 3.5rem; }
-  .h4-lg {
-    font-size: 2.2rem, 2.8rem; }
-  .h5-lg {
-    font-size: 1.7rem, 2rem; }
-  .h6-lg {
-    font-size: 1.2rem, 1.6rem; }
-  .h7-lg {
-    font-size: 0.8rem, 1rem; } }
+		.hide-lg {
+				display: none;
+				visibility: hidden; }
+				.hide-lg-force {
+						display: none !important;
+						visibility: hidden !important; }
+		.show-lg {
+				display: block;
+				visibility: visible; }
+				.show-lg-force {
+						display: block !important;
+						visibility: visible !important; }
+				.show-lg-inline {
+						display: inline-block;
+						visibility: visible !important; }
+						.show-lg-inline-force {
+								display: inline-block !important;
+								visibility: visible !important; } }
 
 @media (min-width: 1200px) {
-  .hide-xl {
-    display: none;
-    visibility: hidden; }
-    .hide-xl-force {
-      display: none !important;
-      visibility: hidden !important; }
-  .show-xl {
-    display: block;
-    visibility: visible; }
-    .show-xl-force {
-      display: block !important;
-      visibility: visible !important; }
-    .show-xl-inline {
-      display: inline-block;
-      visibility: visible !important; }
-      .show-xl-inline-force {
-        display: inline-block !important;
-        visibility: visible !important; }
-  .h1-xl {
-    font-size: 4.4rem, 5.2rem; }
-  .h2-xl {
-    font-size: 3.6rem, 4rem; }
-  .h3-xl {
-    font-size: 3rem, 3.5rem; }
-  .h4-xl {
-    font-size: 2.2rem, 2.8rem; }
-  .h5-xl {
-    font-size: 1.7rem, 2rem; }
-  .h6-xl {
-    font-size: 1.2rem, 1.6rem; }
-  .h7-xl {
-    font-size: 0.8rem, 1rem; } }
+		.hide-xl {
+				display: none;
+				visibility: hidden; }
+				.hide-xl-force {
+						display: none !important;
+						visibility: hidden !important; }
+		.show-xl {
+				display: block;
+				visibility: visible; }
+				.show-xl-force {
+						display: block !important;
+						visibility: visible !important; }
+				.show-xl-inline {
+						display: inline-block;
+						visibility: visible !important; }
+						.show-xl-inline-force {
+								display: inline-block !important;
+								visibility: visible !important; } }
+
+/*# sourceMappingURL=Layout.Media.css.map */

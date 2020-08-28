@@ -1,0 +1,67 @@
+@import "..\\Shared\\ColorProfiles";
+@import "..\\Shared\\ColorFunction";
+
+.tabs > .tab, .tabs > .tabs-group > .tab {
+    @each $cp, $colors in $CPs {
+        &.#{to-lower-case($cp)} {
+            $mrg: 7px;
+            $mrgVertical: 3px;
+
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            border: 3px solid map-get($colors, Primary);
+            border-top: 5px solid map-get($colors, Primary);
+            background-color: map-get($colors, Fourth);
+            margin-left: $mrg;
+            margin-right: $mrg;
+            margin-top: $mrgVertical;
+            margin-bottom: $mrgVertical;
+            color: map-get($colors, First);
+
+            &.straight {
+                border-radius: 0px;
+            }
+        }
+
+        &.left {
+            justify-self: flex-start;
+        }
+
+        &.center {
+            justify-self: center;
+        }
+
+        &.right {
+            justify-self: flex-end;
+        }
+    }
+}
+
+.tabs-group {
+    display: flex;
+    align-items: flex-end;
+
+    &, &.left {
+        justify-self: flex-start;
+    }
+
+    &.center {
+        justify-self: center;
+    }
+
+    &.right {
+        justify-self: flex-end;
+    }
+}
+
+@each $cp, $colors in $CPs {
+    .tabs.#{to-lower-case($cp)} {
+        background-color: map-get($colors, Third);
+    }
+
+    .tabs-content.#{to-lower-case($cp)} {
+        border: 2px solid map-get($colors, First);
+        padding: 15px;
+        background-color: white;
+    }        
+}

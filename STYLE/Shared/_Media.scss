@@ -1,21 +1,22 @@
-﻿@import "Function";
+﻿@import "MediaConfig";
 
 @mixin media($size: MD, $orientation: Any, $mode: Up, $minWidth: null, $maxWidth: null) {
-    $size: str($size, Upper);
-    $width: getMap(Media, $size);
+    $mode: to-upper-case(inspect($mode));
+    $size: to-upper-case(inspect($size));
+    $width: map-get($mediaBreakpoints, $size);
     $query: null;
 
     @if ($minWidth) {
         $width: $minWidth;
     }
 
-    @if (equal($mode, UP)) {
+    @if ($mode == UP) {
         $query: "(min-width: " + $width + ")";
     }
-    @else if (equal($mode, DOWN)) {
+    @else if ($mode == DOWN) {
         $query: "(max-width: " + $width + ")";
     }
-    @else if (equal($mode, ONLY)) {
+    @else if ($mode == ONLY) {
         $query: "(min-width: " + $width + ")";
         $max: null;
 
@@ -23,17 +24,17 @@
             $max: $maxWidth;
         }
         @else {
-            @if (equal($size, XS)) {
-                $max: getMap(Media, SM);
+            @if ($size == XS) {
+                $max: map-get($mediaBreakpoints, SM);
             }
-            @else if (equal($size, SM)) {
-                $max: getMap(Media, MD);
+            @else if ($size == SM) {
+                $max: map-get($mediaBreakpoints, MD);
             }
-            @else if (equal($size, MD)) {
-                $max: getMap(Media, LG);
+            @else if ($size == MD) {
+                $max: map-get($mediaBreakpoints, LG);
             }
-            @else if (equal($size, LG)) {
-                $max: getMap(Media, XL);
+            @else if ($size == LG) {
+                $max: map-get($mediaBreakpoints, XL);
             }
         }
 
@@ -42,8 +43,8 @@
         }
     }
 
-    @if not (equal($orientation, Any)) {
-        $query: $query + " and (orientation: " + str($orientation) + ")";
+    @if not ($orientation == Any) {
+        $query: $query + " and (orientation: " + to-lower-case(inspect($orientation)) + ")";
     }
 
     @media #{$query} {

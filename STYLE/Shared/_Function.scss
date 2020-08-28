@@ -13,6 +13,10 @@ $enumerableProtectedWords: (First, Middle, Last);
     @return $result;
 }
 
+/// Selects map by $mapName from MapIndex
+/// @author Stein Lundbeck
+/// @param {*} $mapName [Sys] - Name of map 
+/// @param {*} $key [null] - Map data to select
 @function getMap($mapName: Sys, $key: null) {
     $result: null;
     $mapName: toMapName($mapName);
@@ -67,6 +71,7 @@ $enumerableProtectedWords: (First, Middle, Last);
     }
 
     @return $result;
+
 }
 @function sys($systemValueName) {
     $result: getMap(Sys, $systemValueName);

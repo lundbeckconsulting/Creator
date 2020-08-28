@@ -1,38 +1,1170 @@
-﻿.creator.icon.clickable:hover {
-  cursor: pointer; }
+@font-face {
+		font-family: "devicons";
+		src: url("http://cdn.getcreatorframework.com/components/style/font/devicon/devicons.eot?xqxft6") format("embedded-opentype"), url("http://cdn.getcreatorframework.com/components/style/font/devicon/devicons.woff?xqxft6") format("woff"), url("http://cdn.getcreatorframework.com/components/style/font/devicon/devicons.ttf?xqxft6") format("truetype"), url("http://cdn.getcreatorframework.com/components/style/font/devicon/devicons.svg?xqxft6#devicons") format("svg");
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal; }
 
-.creator.icon > .wrap > .label {
-  margin-left: 6px; }
+@font-face {
+		font-family: "captainicons";
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		src: url("http://cdn.getcreatorframework.com/components/style/font/captainicon/Icons.eot?-1i2a56") format("embedded-opentype"), url("http://cdn.getcreatorframework.com/components/style/font/captainicon/Icons.woff?-1i2a56") format("woff"), url("http://cdn.getcreatorframework.com/components/style/font/captainicon/Icons.ttf?-1i2a56") format("truetype"), url("http://cdn.getcreatorframework.com/components/style/font/captainicon/Icons.svg?-1i2a56#CaptainIcon") format("svg"); }
 
-.creator.icon > .wrap-default {
-  color: color(Default, Primary); }
+.creator-icon.clickable:hover {
+		cursor: pointer; }
 
-.creator.icon > .wrap-primary {
-  color: color(Primary, Primary); }
+.creator-icon > .wrap > .label {
+		margin-left: 6px; }
 
-.creator.icon > .wrap-success {
-  color: color(Success, Primary); }
+.creator-icon > .wrap-default {
+		color: black; }
 
-.creator.icon > .wrap-danger {
-  color: color(Danger, Primary); }
+.creator-icon > .wrap-primary {
+		color: #8b480e; }
 
-.creator.icon > .wrap-warning {
-  color: color(Warning, Primary); }
+.creator-icon > .wrap-success {
+		color: #195f34; }
 
-.creator.icon > .wrap-info {
-  color: color(Info, Primary); }
+.creator-icon > .wrap-danger {
+		color: #8c101b; }
 
-.creator.icon > .wrap-light {
-  color: color(Light, Primary); }
+.creator-icon > .wrap-warning {
+		color: #ffbf00; }
 
-.creator.icon > .wrap-dark {
-  color: color(Dark, Primary); }
+.creator-icon > .wrap-info {
+		color: #2894aa; }
 
-.creator.icon > .wrap-antan {
-  color: color(Antan, Primary); }
+.creator-icon > .wrap-light {
+		color: #a19b9b; }
 
-.creator.icon > .wrap-notify {
-  color: color(Notify, Primary); }
+.creator-icon > .wrap-dark {
+		color: #161616; }
 
-.creator.icon > .wrap-funk {
-  color: color(Funk, Primary); }
+.creator-icon > .wrap-antan {
+		color: #fe2f00; }
+
+.creator-icon > .wrap-notify {
+		color: #07294e; }
+
+.creator-icon > .wrap-funk {
+		color: #165992; }
+
+.creator-icon.devicon {
+		font-family: "devicons";
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		line-height: 1;
+		text-transform: none; }
+		.creator-icon.devicon-git::before {
+				content: "602"; }
+		.creator-icon.devicon-git_compare::before {
+				content: "628"; }
+		.creator-icon.devicon-git_branch::before {
+				content: "625"; }
+		.creator-icon.devicon-git_commit::before {
+				content: "629"; }
+		.creator-icon.devicon-git_pull_request::before {
+				content: "626"; }
+		.creator-icon.devicon-git_merge::before {
+				content: "627"; }
+		.creator-icon.devicon-bitbucket::before {
+				content: "603"; }
+		.creator-icon.devicon-github_alt::before {
+				content: "608"; }
+		.creator-icon.devicon-github_badge::before {
+				content: "609"; }
+		.creator-icon.devicon-github::before {
+				content: "60a"; }
+		.creator-icon.devicon-github_full::before {
+				content: "617"; }
+		.creator-icon.devicon-java::before {
+				content: "638"; }
+		.creator-icon.devicon-ruby::before {
+				content: "639"; }
+		.creator-icon.devicon-scala::before {
+				content: "637"; }
+		.creator-icon.devicon-python::before {
+				content: "63c"; }
+		.creator-icon.devicon-go::before {
+				content: "624"; }
+		.creator-icon.devicon-ruby_on_rails::before {
+				content: "63b"; }
+		.creator-icon.devicon-django::before {
+				content: "61d"; }
+		.creator-icon.devicon-markdown::before {
+				content: "63e"; }
+		.creator-icon.devicon-php::before {
+				content: "63d"; }
+		.creator-icon.devicon-mysql::before {
+				content: "604"; }
+		.creator-icon.devicon-streamline::before {
+				content: "605"; }
+		.creator-icon.devicon-database::before {
+				content: "606"; }
+		.creator-icon.devicon-laravel::before {
+				content: "63f"; }
+		.creator-icon.devicon-javascript::before {
+				content: "64e"; }
+		.creator-icon.devicon-angular::before {
+				content: "653"; }
+		.creator-icon.devicon-backbone::before {
+				content: "652"; }
+		.creator-icon.devicon-coffeescript::before {
+				content: "651"; }
+		.creator-icon.devicon-jquery::before {
+				content: "650"; }
+		.creator-icon.devicon-modernizr::before {
+				content: "620"; }
+		.creator-icon.devicon-jquery_ui::before {
+				content: "654"; }
+		.creator-icon.devicon-ember::before {
+				content: "61b"; }
+		.creator-icon.devicon-dojo::before {
+				content: "61c"; }
+		.creator-icon.devicon-nodejs::before {
+				content: "619"; }
+		.creator-icon.devicon-nodejs_small::before {
+				content: "618"; }
+		.creator-icon.devicon-javascript_shield::before {
+				content: "64f"; }
+		.creator-icon.devicon-bootstrap::before {
+				content: "647"; }
+		.creator-icon.devicon-sass::before {
+				content: "64b"; }
+		.creator-icon.devicon-css3_full::before {
+				content: "64a"; }
+		.creator-icon.devicon-css3::before {
+				content: "649"; }
+		.creator-icon.devicon-html5::before {
+				content: "636"; }
+		.creator-icon.devicon-html5_multimedia::before {
+				content: "632"; }
+		.creator-icon.devicon-html5_device_access::before {
+				content: "633"; }
+		.creator-icon.devicon-html5_3d_effects::before {
+				content: "635"; }
+		.creator-icon.devicon-html5_connectivity::before {
+				content: "634"; }
+		.creator-icon.devicon-ghost_small::before {
+				content: "614"; }
+		.creator-icon.devicon-ghost::before {
+				content: "61f"; }
+		.creator-icon.devicon-magento::before {
+				content: "640"; }
+		.creator-icon.devicon-joomla::before {
+				content: "641"; }
+		.creator-icon.devicon-jekyll_small::before {
+				content: "60d"; }
+		.creator-icon.devicon-drupal::before {
+				content: "642"; }
+		.creator-icon.devicon-wordpress::before {
+				content: "60b"; }
+		.creator-icon.devicon-grunt::before {
+				content: "64c"; }
+		.creator-icon.devicon-bower::before {
+				content: "64d"; }
+		.creator-icon.devicon-npm::before {
+				content: "61e"; }
+		.creator-icon.devicon-yahoo_small::before {
+				content: "62b"; }
+		.creator-icon.devicon-yahoo::before {
+				content: "615"; }
+		.creator-icon.devicon-bing_small::before {
+				content: "600"; }
+		.creator-icon.devicon-windows::before {
+				content: "60f"; }
+		.creator-icon.devicon-linux::before {
+				content: "612"; }
+		.creator-icon.devicon-ubuntu::before {
+				content: "63a"; }
+		.creator-icon.devicon-android::before {
+				content: "60e"; }
+		.creator-icon.devicon-apple::before {
+				content: "611"; }
+		.creator-icon.devicon-appstore::before {
+				content: "613"; }
+		.creator-icon.devicon-phonegap::before {
+				content: "630"; }
+		.creator-icon.devicon-blackberry::before {
+				content: "623"; }
+		.creator-icon.devicon-stackoverflow::before {
+				content: "610"; }
+		.creator-icon.devicon-techcrunch::before {
+				content: "62c"; }
+		.creator-icon.devicon-codrops::before {
+				content: "62f"; }
+		.creator-icon.devicon-css_tricks::before {
+				content: "601"; }
+		.creator-icon.devicon-smashing_magazine::before {
+				content: "62d"; }
+		.creator-icon.devicon-netmagazine::before {
+				content: "62e"; }
+		.creator-icon.devicon-codepen::before {
+				content: "616"; }
+		.creator-icon.devicon-cssdeck::before {
+				content: "62a"; }
+		.creator-icon.devicon-hackernews::before {
+				content: "61a"; }
+		.creator-icon.devicon-dropbox::before {
+				content: "607"; }
+		.creator-icon.devicon-google_drive::before {
+				content: "631"; }
+		.creator-icon.devicon-visualstudio::before {
+				content: "60c"; }
+		.creator-icon.devicon-unity_small::before {
+				content: "621"; }
+		.creator-icon.devicon-raspberry_pi::before {
+				content: "622"; }
+		.creator-icon.devicon-chrome::before {
+				content: "643"; }
+		.creator-icon.devicon-ie::before {
+				content: "644"; }
+		.creator-icon.devicon-firefox::before {
+				content: "645"; }
+		.creator-icon.devicon-opera::before {
+				content: "646"; }
+		.creator-icon.devicon-safari::before {
+				content: "648"; }
+		.creator-icon.devicon-swift::before {
+				content: "655"; }
+		.creator-icon.devicon-symfony::before {
+				content: "656"; }
+		.creator-icon.devicon-symfony_badge::before {
+				content: "657"; }
+		.creator-icon.devicon-less::before {
+				content: "658"; }
+		.creator-icon.devicon-stylus::before {
+				content: "659"; }
+		.creator-icon.devicon-trello::before {
+				content: "65a"; }
+		.creator-icon.devicon-atlassian::before {
+				content: "65b"; }
+		.creator-icon.devicon-jira::before {
+				content: "65c"; }
+		.creator-icon.devicon-envato::before {
+				content: "65d"; }
+		.creator-icon.devicon-snap_svg::before {
+				content: "65e"; }
+		.creator-icon.devicon-raphael::before {
+				content: "65f"; }
+		.creator-icon.devicon-google_analytics::before {
+				content: "660"; }
+		.creator-icon.devicon-compass::before {
+				content: "661"; }
+		.creator-icon.devicon-onedrive::before {
+				content: "662"; }
+		.creator-icon.devicon-gulp::before {
+				content: "663"; }
+		.creator-icon.devicon-atom::before {
+				content: "664"; }
+		.creator-icon.devicon-cisco::before {
+				content: "665"; }
+		.creator-icon.devicon-nancy::before {
+				content: "666"; }
+		.creator-icon.devicon-clojure::before {
+				content: "668"; }
+		.creator-icon.devicon-clojure_alt::before {
+				content: "66a"; }
+		.creator-icon.devicon-perl::before {
+				content: "669"; }
+		.creator-icon.devicon-celluloid::before {
+				content: "66b"; }
+		.creator-icon.devicon-w3c::before {
+				content: "66c"; }
+		.creator-icon.devicon-redis::before {
+				content: "66d"; }
+		.creator-icon.devicon-postgresql::before {
+				content: "66e"; }
+		.creator-icon.devicon-webplatform::before {
+				content: "66f"; }
+		.creator-icon.devicon-jenkins::before {
+				content: "667"; }
+		.creator-icon.devicon-requirejs::before {
+				content: "670"; }
+		.creator-icon.devicon-opensource::before {
+				content: "671"; }
+		.creator-icon.devicon-typo3::before {
+				content: "672"; }
+		.creator-icon.devicon-uikit::before {
+				content: "673"; }
+		.creator-icon.devicon-doctrine::before {
+				content: "674"; }
+		.creator-icon.devicon-groovy::before {
+				content: "675"; }
+		.creator-icon.devicon-nginx::before {
+				content: "676"; }
+		.creator-icon.devicon-haskell::before {
+				content: "677"; }
+		.creator-icon.devicon-zend::before {
+				content: "678"; }
+		.creator-icon.devicon-gnu::before {
+				content: "679"; }
+		.creator-icon.devicon-yeoman::before {
+				content: "67a"; }
+		.creator-icon.devicon-heroku::before {
+				content: "67b"; }
+		.creator-icon.devicon-debian::before {
+				content: "67d"; }
+		.creator-icon.devicon-travis::before {
+				content: "67e"; }
+		.creator-icon.devicon-dotnet::before {
+				content: "67f"; }
+		.creator-icon.devicon-codeigniter::before {
+				content: "680"; }
+		.creator-icon.devicon-javascript_badge::before {
+				content: "681"; }
+		.creator-icon.devicon-yii::before {
+				content: "682"; }
+		.creator-icon.devicon-msql_server::before {
+				content: "67c"; }
+		.creator-icon.devicon-composer::before {
+				content: "683"; }
+		.creator-icon.devicon-krakenjs_badge::before {
+				content: "684"; }
+		.creator-icon.devicon-krakenjs::before {
+				content: "685"; }
+		.creator-icon.devicon-mozilla::before {
+				content: "686"; }
+		.creator-icon.devicon-firebase::before {
+				content: "687"; }
+		.creator-icon.devicon-sizzlejs::before {
+				content: "688"; }
+		.creator-icon.devicon-creativecommons::before {
+				content: "689"; }
+		.creator-icon.devicon-creativecommons_badge::before {
+				content: "68a"; }
+		.creator-icon.devicon-mitlicence::before {
+				content: "68b"; }
+		.creator-icon.devicon-senchatouch::before {
+				content: "68c"; }
+		.creator-icon.devicon-bugsense::before {
+				content: "68d"; }
+		.creator-icon.devicon-extjs::before {
+				content: "68e"; }
+		.creator-icon.devicon-mootools_badge::before {
+				content: "68f"; }
+		.creator-icon.devicon-mootools::before {
+				content: "690"; }
+		.creator-icon.devicon-ruby_rough::before {
+				content: "691"; }
+		.creator-icon.devicon-komodo::before {
+				content: "692"; }
+		.creator-icon.devicon-coda::before {
+				content: "693"; }
+		.creator-icon.devicon-bintray::before {
+				content: "694"; }
+		.creator-icon.devicon-terminal::before {
+				content: "695"; }
+		.creator-icon.devicon-code::before {
+				content: "696"; }
+		.creator-icon.devicon-responsive::before {
+				content: "697"; }
+		.creator-icon.devicon-dart::before {
+				content: "698"; }
+		.creator-icon.devicon-aptana::before {
+				content: "699"; }
+		.creator-icon.devicon-mailchimp::before {
+				content: "69a"; }
+		.creator-icon.devicon-netbeans::before {
+				content: "69b"; }
+		.creator-icon.devicon-dreamweaver::before {
+				content: "69c"; }
+		.creator-icon.devicon-brackets::before {
+				content: "69d"; }
+		.creator-icon.devicon-eclipse::before {
+				content: "69e"; }
+		.creator-icon.devicon-cloud9::before {
+				content: "69f"; }
+		.creator-icon.devicon-scrum::before {
+				content: "6a0"; }
+		.creator-icon.devicon-prolog::before {
+				content: "6a1"; }
+		.creator-icon.devicon-terminal_badge::before {
+				content: "6a2"; }
+		.creator-icon.devicon-code_badge::before {
+				content: "6a3"; }
+		.creator-icon.devicon-mongodb::before {
+				content: "6a4"; }
+		.creator-icon.devicon-meteor::before {
+				content: "6a5"; }
+		.creator-icon.devicon-meteorfull::before {
+				content: "6a6"; }
+		.creator-icon.devicon-fsharp::before {
+				content: "6a7"; }
+		.creator-icon.devicon-rust::before {
+				content: "6a8"; }
+		.creator-icon.devicon-ionic::before {
+				content: "6a9"; }
+		.creator-icon.devicon-sublime::before {
+				content: "6aa"; }
+		.creator-icon.devicon-appcelerator::before {
+				content: "6ab"; }
+		.creator-icon.devicon-asterisk::before {
+				content: "6ac"; }
+		.creator-icon.devicon-aws::before {
+				content: "6ad"; }
+		.creator-icon.devicon-digital-ocean::before {
+				content: "6ae"; }
+		.creator-icon.devicon-dlang::before {
+				content: "6af"; }
+		.creator-icon.devicon-docker::before {
+				content: "6b0"; }
+		.creator-icon.devicon-erlang::before {
+				content: "6b1"; }
+		.creator-icon.devicon-google-cloud-platform::before {
+				content: "6b2"; }
+		.creator-icon.devicon-grails::before {
+				content: "6b3"; }
+		.creator-icon.devicon-illustrator::before {
+				content: "6b4"; }
+		.creator-icon.devicon-intellij::before {
+				content: "6b5"; }
+		.creator-icon.devicon-materializecss::before {
+				content: "6b6"; }
+		.creator-icon.devicon-openshift::before {
+				content: "6b7"; }
+		.creator-icon.devicon-photoshop::before {
+				content: "6b8"; }
+		.creator-icon.devicon-rackspace::before {
+				content: "6b9"; }
+		.creator-icon.devicon-react::before {
+				content: "6ba"; }
+		.creator-icon.devicon-redhat::before {
+				content: "6bb"; }
+		.creator-icon.devicon-scriptcs::before {
+				content: "6bc"; }
+		.creator-icon.devicon-sqllite::before {
+				content: "6c4"; }
+		.creator-icon.devicon-vim::before {
+				content: "6c5"; }
+
+.creator-icon.captainicon {
+		font-family: "captainicons";
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		line-height: 1;
+		text-transform: none; }
+		.creator-icon.captainicon-ci-home::before {
+				content: "600"; }
+		.creator-icon.captainicon-ci-home-alt::before {
+				content: "6c1"; }
+		.creator-icon.captainicon-ci-pin::before {
+				content: "601"; }
+		.creator-icon.captainicon-ci-comment::before {
+				content: "602"; }
+		.creator-icon.captainicon-ci-comment-dots::before {
+				content: "603"; }
+		.creator-icon.captainicon-ci-comments::before {
+				content: "68c"; }
+		.creator-icon.captainicon-ci-gear::before {
+				content: "605"; }
+		.creator-icon.captainicon-ci-gears::before {
+				content: "606"; }
+		.creator-icon.captainicon-ci-heart::before {
+				content: "607"; }
+		.creator-icon.captainicon-ci-lock::before {
+				content: "608"; }
+		.creator-icon.captainicon-ci-lock-opened::before {
+				content: "609"; }
+		.creator-icon.captainicon-ci-load::before {
+				content: "60a"; }
+		.creator-icon.captainicon-ci-refresh::before {
+				content: "60b"; }
+		.creator-icon.captainicon-ci-tachometer::before {
+				content: "60d"; }
+		.creator-icon.captainicon-ci-compass::before {
+				content: "60e"; }
+		.creator-icon.captainicon-ci-timer::before {
+				content: "60f"; }
+		.creator-icon.captainicon-ci-download::before {
+				content: "610"; }
+		.creator-icon.captainicon-ci-upload::before {
+				content: "611"; }
+		.creator-icon.captainicon-ci-envelope::before {
+				content: "612"; }
+		.creator-icon.captainicon-ci-envelope-opened::before {
+				content: "764"; }
+		.creator-icon.captainicon-ci-envelope-in::before {
+				content: "68a"; }
+		.creator-icon.captainicon-ci-envelope-out::before {
+				content: "68b"; }
+		.creator-icon.captainicon-ci-tag::before {
+				content: "613"; }
+		.creator-icon.captainicon-ci-tag-alt::before {
+				content: "6e5"; }
+		.creator-icon.captainicon-ci-eye::before {
+				content: "614"; }
+		.creator-icon.captainicon-ci-star::before {
+				content: "615"; }
+		.creator-icon.captainicon-ci-mobile::before {
+				content: "616"; }
+		.creator-icon.captainicon-ci-monitor::before {
+				content: "617"; }
+		.creator-icon.captainicon-ci-music-player::before {
+				content: "618"; }
+		.creator-icon.captainicon-ci-camera::before {
+				content: "619"; }
+		.creator-icon.captainicon-ci-suitcase::before {
+				content: "61a"; }
+		.creator-icon.captainicon-ci-shelf::before {
+				content: "61b"; }
+		.creator-icon.captainicon-ci-umbrela::before {
+				content: "61c"; }
+		.creator-icon.captainicon-ci-trash::before {
+				content: "61d"; }
+		.creator-icon.captainicon-ci-shopping-cart::before {
+				content: "61f"; }
+		.creator-icon.captainicon-ci-shopping-cart-full::before {
+				content: "61e"; }
+		.creator-icon.captainicon-ci-calendar::before {
+				content: "620"; }
+		.creator-icon.captainicon-ci-gift::before {
+				content: "621"; }
+		.creator-icon.captainicon-ci-test-tube::before {
+				content: "622"; }
+		.creator-icon.captainicon-ci-puzzle-piece::before {
+				content: "623"; }
+		.creator-icon.captainicon-ci-sun::before {
+				content: "624"; }
+		.creator-icon.captainicon-ci-sun-alt::before {
+				content: "6a1"; }
+		.creator-icon.captainicon-ci-map::before {
+				content: "625"; }
+		.creator-icon.captainicon-ci-paint-brush::before {
+				content: "626"; }
+		.creator-icon.captainicon-ci-lightbulb::before {
+				content: "627"; }
+		.creator-icon.captainicon-ci-phone::before {
+				content: "628"; }
+		.creator-icon.captainicon-ci-band-aid::before {
+				content: "629"; }
+		.creator-icon.captainicon-ci-list-ul::before {
+				content: "62a"; }
+		.creator-icon.captainicon-ci-list-ol::before {
+				content: "62b"; }
+		.creator-icon.captainicon-ci-question::before {
+				content: "62c"; }
+		.creator-icon.captainicon-ci-file::before {
+				content: "62d"; }
+		.creator-icon.captainicon-ci-file-alt::before {
+				content: "62e"; }
+		.creator-icon.captainicon-ci-file-edit::before {
+				content: "652"; }
+		.creator-icon.captainicon-ci-file-filled::before {
+				content: "709"; }
+		.creator-icon.captainicon-ci-user::before {
+				content: "62f"; }
+		.creator-icon.captainicon-ci-user-alt::before {
+				content: "630"; }
+		.creator-icon.captainicon-ci-users::before {
+				content: "631"; }
+		.creator-icon.captainicon-ci-users-alt::before {
+				content: "632"; }
+		.creator-icon.captainicon-ci-mouse::before {
+				content: "633"; }
+		.creator-icon.captainicon-ci-mouse-pointer::before {
+				content: "705"; }
+		.creator-icon.captainicon-ci-keyboard::before {
+				content: "634"; }
+		.creator-icon.captainicon-ci-keyboard-key::before {
+				content: "706"; }
+		.creator-icon.captainicon-ci-pencil::before {
+				content: "635"; }
+		.creator-icon.captainicon-ci-check::before {
+				content: "636"; }
+		.creator-icon.captainicon-ci-check-squared::before {
+				content: "637"; }
+		.creator-icon.captainicon-ci-times::before {
+				content: "638"; }
+		.creator-icon.captainicon-ci-times-squared::before {
+				content: "639"; }
+		.creator-icon.captainicon-ci-plus::before {
+				content: "63a"; }
+		.creator-icon.captainicon-ci-leaf::before {
+				content: "63c"; }
+		.creator-icon.captainicon-ci-leaf-alt::before {
+				content: "753"; }
+		.creator-icon.captainicon-ci-leaf-leaf::before {
+				content: "707"; }
+		.creator-icon.captainicon-ci-laptop::before {
+				content: "63d"; }
+		.creator-icon.captainicon-ci-coffee::before {
+				content: "63e"; }
+		.creator-icon.captainicon-ci-coffee-long::before {
+				content: "6d7"; }
+		.creator-icon.captainicon-ci-bolt::before {
+				content: "63f"; }
+		.creator-icon.captainicon-ci-skull::before {
+				content: "641"; }
+		.creator-icon.captainicon-ci-disc-compact::before {
+				content: "642"; }
+		.creator-icon.captainicon-ci-speaker::before {
+				content: "644"; }
+		.creator-icon.captainicon-ci-microwave::before {
+				content: "645"; }
+		.creator-icon.captainicon-ci-pen::before {
+				content: "646"; }
+		.creator-icon.captainicon-ci-pen-fountain::before {
+				content: "6d8"; }
+		.creator-icon.captainicon-ci-pen-nib::before {
+				content: "703"; }
+		.creator-icon.captainicon-ci-bat-baseball::before {
+				content: "647"; }
+		.creator-icon.captainicon-ci-phonograph::before {
+				content: "648"; }
+		.creator-icon.captainicon-ci-plug-usb::before {
+				content: "649"; }
+		.creator-icon.captainicon-ci-lamp-desk::before {
+				content: "64a"; }
+		.creator-icon.captainicon-ci-gamepad::before {
+				content: "64b"; }
+		.creator-icon.captainicon-ci-gamepad-alt::before {
+				content: "64c"; }
+		.creator-icon.captainicon-ci-portrait::before {
+				content: "64d"; }
+		.creator-icon.captainicon-ci-books::before {
+				content: "64e"; }
+		.creator-icon.captainicon-ci-bag::before {
+				content: "64f"; }
+		.creator-icon.captainicon-ci-glasses::before {
+				content: "650"; }
+		.creator-icon.captainicon-ci-box::before {
+				content: "651"; }
+		.creator-icon.captainicon-ci-box-opened::before {
+				content: "685"; }
+		.creator-icon.captainicon-ci-music::before {
+				content: "653"; }
+		.creator-icon.captainicon-ci-music-note::before {
+				content: "654"; }
+		.creator-icon.captainicon-ci-search-plus::before {
+				content: "656"; }
+		.creator-icon.captainicon-ci-search-minus::before {
+				content: "657"; }
+		.creator-icon.captainicon-ci-utensils::before {
+				content: "658"; }
+		.creator-icon.captainicon-ci-print::before {
+				content: "659"; }
+		.creator-icon.captainicon-ci-facebook::before {
+				content: "65a"; }
+		.creator-icon.captainicon-ci-facebook-squared::before {
+				content: "65b"; }
+		.creator-icon.captainicon-ci-facebook-circled::before {
+				content: "65c"; }
+		.creator-icon.captainicon-ci-twitter::before {
+				content: "65d"; }
+		.creator-icon.captainicon-ci-twitter-squared::before {
+				content: "65e"; }
+		.creator-icon.captainicon-ci-twitter-circled::before {
+				content: "65f"; }
+		.creator-icon.captainicon-ci-google-plus::before {
+				content: "666"; }
+		.creator-icon.captainicon-ci-google-plus-squared::before {
+				content: "667"; }
+		.creator-icon.captainicon-ci-google-plus-circled::before {
+				content: "668"; }
+		.creator-icon.captainicon-ci-rss::before {
+				content: "669"; }
+		.creator-icon.captainicon-ci-rss-squared::before {
+				content: "66a"; }
+		.creator-icon.captainicon-ci-rss-circled::before {
+				content: "66b"; }
+		.creator-icon.captainicon-ci-linkedin::before {
+				content: "66c"; }
+		.creator-icon.captainicon-ci-linkedin-squared::before {
+				content: "66d"; }
+		.creator-icon.captainicon-ci-linkedin-circled::before {
+				content: "66e"; }
+		.creator-icon.captainicon-ci-youtube::before {
+				content: "66f"; }
+		.creator-icon.captainicon-ci-vevo::before {
+				content: "670"; }
+		.creator-icon.captainicon-ci-vevo-squared::before {
+				content: "671"; }
+		.creator-icon.captainicon-ci-vevo-circled::before {
+				content: "672"; }
+		.creator-icon.captainicon-ci-whatsapp::before {
+				content: "678"; }
+		.creator-icon.captainicon-ci-whatsapp-squared::before {
+				content: "679"; }
+		.creator-icon.captainicon-ci-whatsapp-circled::before {
+				content: "67a"; }
+		.creator-icon.captainicon-ci-at::before {
+				content: "67e"; }
+		.creator-icon.captainicon-ci-domino::before {
+				content: "67f"; }
+		.creator-icon.captainicon-ci-git::before {
+				content: "680"; }
+		.creator-icon.captainicon-ci-website::before {
+				content: "681"; }
+		.creator-icon.captainicon-ci-css::before {
+				content: "682"; }
+		.creator-icon.captainicon-ci-fire::before {
+				content: "683"; }
+		.creator-icon.captainicon-ci-mustache::before {
+				content: "684"; }
+		.creator-icon.captainicon-ci-folder-opened::before {
+				content: "686"; }
+		.creator-icon.captainicon-ci-sitemap::before {
+				content: "687"; }
+		.creator-icon.captainicon-ci-usb::before {
+				content: "688"; }
+		.creator-icon.captainicon-ci-button-clothing::before {
+				content: "689"; }
+		.creator-icon.captainicon-ci-thumbtack::before {
+				content: "68e"; }
+		.creator-icon.captainicon-ci-thumbtack-alt::before {
+				content: "70a"; }
+		.creator-icon.captainicon-ci-address-card::before {
+				content: "68f"; }
+		.creator-icon.captainicon-ci-address-card-alt::before {
+				content: "6a2"; }
+		.creator-icon.captainicon-ci-cat::before {
+				content: "690"; }
+		.creator-icon.captainicon-ci-ghost::before {
+				content: "691"; }
+		.creator-icon.captainicon-ci-chicken::before {
+				content: "692"; }
+		.creator-icon.captainicon-ci-balloon::before {
+				content: "693"; }
+		.creator-icon.captainicon-ci-balloon-alt::before {
+				content: "643"; }
+		.creator-icon.captainicon-ci-balloon-face::before {
+				content: "694"; }
+		.creator-icon.captainicon-ci-rocket::before {
+				content: "696"; }
+		.creator-icon.captainicon-ci-broccoli::before {
+				content: "697"; }
+		.creator-icon.captainicon-ci-onion::before {
+				content: "698"; }
+		.creator-icon.captainicon-ci-banana::before {
+				content: "69a"; }
+		.creator-icon.captainicon-ci-banana-peel::before {
+				content: "699"; }
+		.creator-icon.captainicon-ci-croissant::before {
+				content: "69b"; }
+		.creator-icon.captainicon-ci-elephant::before {
+				content: "69c"; }
+		.creator-icon.captainicon-ci-octopus::before {
+				content: "69d"; }
+		.creator-icon.captainicon-ci-bowling::before {
+				content: "69e"; }
+		.creator-icon.captainicon-ci-orange::before {
+				content: "69f"; }
+		.creator-icon.captainicon-ci-watermelon::before {
+				content: "6a0"; }
+		.creator-icon.captainicon-ci-tape::before {
+				content: "6a3"; }
+		.creator-icon.captainicon-ci-page::before {
+				content: "6a4"; }
+		.creator-icon.captainicon-ci-ruler::before {
+				content: "6a6"; }
+		.creator-icon.captainicon-ci-lemon::before {
+				content: "6a7"; }
+		.creator-icon.captainicon-ci-bicycle::before {
+				content: "6a8"; }
+		.creator-icon.captainicon-ci-ball-baseball::before {
+				content: "6a9"; }
+		.creator-icon.captainicon-ci-ball-soccer::before {
+				content: "6aa"; }
+		.creator-icon.captainicon-ci-ball-basket::before {
+				content: "6ab"; }
+		.creator-icon.captainicon-ci-ball-footbal::before {
+				content: "6ac"; }
+		.creator-icon.captainicon-ci-ball-eight::before {
+				content: "6c8"; }
+		.creator-icon.captainicon-ci-foot::before {
+				content: "6ad"; }
+		.creator-icon.captainicon-ci-mashroom::before {
+				content: "6ae"; }
+		.creator-icon.captainicon-ci-ship::before {
+				content: "6af"; }
+		.creator-icon.captainicon-ci-submarine::before {
+				content: "6b0"; }
+		.creator-icon.captainicon-ci-log::before {
+				content: "6b1"; }
+		.creator-icon.captainicon-ci-broom::before {
+				content: "6b2"; }
+		.creator-icon.captainicon-ci-bone::before {
+				content: "6b3"; }
+		.creator-icon.captainicon-ci-paw::before {
+				content: "6b4"; }
+		.creator-icon.captainicon-ci-hanger::before {
+				content: "6b5"; }
+		.creator-icon.captainicon-ci-key::before {
+				content: "6b6"; }
+		.creator-icon.captainicon-ci-key-alt::before {
+				content: "73f"; }
+		.creator-icon.captainicon-ci-spaceship::before {
+				content: "6b7"; }
+		.creator-icon.captainicon-ci-pacman::before {
+				content: "6b8"; }
+		.creator-icon.captainicon-ci-ticket::before {
+				content: "6b9"; }
+		.creator-icon.captainicon-ci-money-bill::before {
+				content: "6ba"; }
+		.creator-icon.captainicon-ci-battery-empty::before {
+				content: "6bb"; }
+		.creator-icon.captainicon-ci-battery-slash::before {
+				content: "6bc"; }
+		.creator-icon.captainicon-ci-battery-quarter::before {
+				content: "6bd"; }
+		.creator-icon.captainicon-ci-battery-half::before {
+				content: "6be"; }
+		.creator-icon.captainicon-ci-battery-full::before {
+				content: "6bf"; }
+		.creator-icon.captainicon-ci-battery-bolt::before {
+				content: "6c0"; }
+		.creator-icon.captainicon-ci-book::before {
+				content: "6c2"; }
+		.creator-icon.captainicon-ci-pizza::before {
+				content: "6c3"; }
+		.creator-icon.captainicon-ci-cupcake::before {
+				content: "6c4"; }
+		.creator-icon.captainicon-ci-store::before {
+				content: "6c5"; }
+		.creator-icon.captainicon-ci-bullseye::before {
+				content: "6c6"; }
+		.creator-icon.captainicon-ci-bullseye-alt::before {
+				content: "6c7"; }
+		.creator-icon.captainicon-ci-chat::before {
+				content: "6c9"; }
+		.creator-icon.captainicon-ci-clapperboard::before {
+				content: "6ca"; }
+		.creator-icon.captainicon-ci-fish-skeleton::before {
+				content: "6cb"; }
+		.creator-icon.captainicon-ci-erlenmeyer::before {
+				content: "6cc"; }
+		.creator-icon.captainicon-ci-grape::before {
+				content: "6cd"; }
+		.creator-icon.captainicon-ci-plane::before {
+				content: "6ce"; }
+		.creator-icon.captainicon-ci-plane-paper::before {
+				content: "6df"; }
+		.creator-icon.captainicon-ci-zeppelin::before {
+				content: "6cf"; }
+		.creator-icon.captainicon-ci-ice-pop::before {
+				content: "6d0"; }
+		.creator-icon.captainicon-ci-ice-cream::before {
+				content: "6d1"; }
+		.creator-icon.captainicon-ci-thumbs-up::before {
+				content: "6d2"; }
+		.creator-icon.captainicon-ci-thumbs-down::before {
+				content: "6d3"; }
+		.creator-icon.captainicon-ci-cheese::before {
+				content: "6d4"; }
+		.creator-icon.captainicon-ci-cake::before {
+				content: "6d5"; }
+		.creator-icon.captainicon-ci-bread::before {
+				content: "6d6"; }
+		.creator-icon.captainicon-ci-feather::before {
+				content: "6d9"; }
+		.creator-icon.captainicon-ci-globe::before {
+				content: "6db"; }
+		.creator-icon.captainicon-ci-share::before {
+				content: "6dc"; }
+		.creator-icon.captainicon-ci-skype::before {
+				content: "6dd"; }
+		.creator-icon.captainicon-ci-html5::before {
+				content: "6de"; }
+		.creator-icon.captainicon-ci-tablet::before {
+				content: "6e0"; }
+		.creator-icon.captainicon-ci-save::before {
+				content: "6e1"; }
+		.creator-icon.captainicon-ci-headphones::before {
+				content: "6e2"; }
+		.creator-icon.captainicon-ci-drawer::before {
+				content: "6e3"; }
+		.creator-icon.captainicon-ci-drawer-empty::before {
+				content: "6e4"; }
+		.creator-icon.captainicon-ci-terminal::before {
+				content: "6ed"; }
+		.creator-icon.captainicon-ci-tie::before {
+				content: "6ee"; }
+		.creator-icon.captainicon-ci-tie-bow::before {
+				content: "6ef"; }
+		.creator-icon.captainicon-ci-milkshake::before {
+				content: "6f0"; }
+		.creator-icon.captainicon-ci-sunglass::before {
+				content: "6f1"; }
+		.creator-icon.captainicon-ci-quote-left::before {
+				content: "6f2"; }
+		.creator-icon.captainicon-ci-quote-right::before {
+				content: "6f3"; }
+		.creator-icon.captainicon-ci-link::before {
+				content: "6f4"; }
+		.creator-icon.captainicon-ci-link-external::before {
+				content: "6f5"; }
+		.creator-icon.captainicon-ci-ellipsis::before {
+				content: "6f6"; }
+		.creator-icon.captainicon-ci-files::before {
+				content: "6f7"; }
+		.creator-icon.captainicon-ci-arrows::before {
+				content: "6f8"; }
+		.creator-icon.captainicon-ci-arrows-alt::before {
+				content: "6f9"; }
+		.creator-icon.captainicon-ci-arrows-pointer::before {
+				content: "6fa"; }
+		.creator-icon.captainicon-ci-knot::before {
+				content: "6fb"; }
+		.creator-icon.captainicon-ci-dashed-circled::before {
+				content: "6fc"; }
+		.creator-icon.captainicon-ci-dashed-squared::before {
+				content: "6fd"; }
+		.creator-icon.captainicon-ci-wand::before {
+				content: "6fe"; }
+		.creator-icon.captainicon-ci-scalpel::before {
+				content: "6ff"; }
+		.creator-icon.captainicon-ci-brush::before {
+				content: "700"; }
+		.creator-icon.captainicon-ci-brush-alt::before {
+				content: "710"; }
+		.creator-icon.captainicon-ci-drop::before {
+				content: "701"; }
+		.creator-icon.captainicon-ci-magnifier::before {
+				content: "702"; }
+		.creator-icon.captainicon-ci-text::before {
+				content: "704"; }
+		.creator-icon.captainicon-ci-stamp::before {
+				content: "708"; }
+		.creator-icon.captainicon-ci-contrast::before {
+				content: "70b"; }
+		.creator-icon.captainicon-ci-stars::before {
+				content: "70c"; }
+		.creator-icon.captainicon-ci-bucket::before {
+				content: "70d"; }
+		.creator-icon.captainicon-ci-toilet-paper::before {
+				content: "70e"; }
+		.creator-icon.captainicon-ci-sliders-v::before {
+				content: "70f"; }
+		.creator-icon.captainicon-ci-paperclip::before {
+				content: "711"; }
+		.creator-icon.captainicon-ci-tools::before {
+				content: "712"; }
+		.creator-icon.captainicon-ci-arrow-to-left::before {
+				content: "71b"; }
+		.creator-icon.captainicon-ci-arrow-to-left-circled::before {
+				content: "725"; }
+		.creator-icon.captainicon-ci-arrow-to-right::before {
+				content: "71a"; }
+		.creator-icon.captainicon-ci-arrow-to-right-circled::before {
+				content: "724"; }
+		.creator-icon.captainicon-ci-arrow-left::before {
+				content: "714"; }
+		.creator-icon.captainicon-ci-arrow-left-circled::before {
+				content: "71e"; }
+		.creator-icon.captainicon-ci-arrow-left-circled-doubled::before {
+				content: "723"; }
+		.creator-icon.captainicon-ci-arrow-left-doubled::before {
+				content: "719"; }
+		.creator-icon.captainicon-ci-arrow-right::before {
+				content: "713"; }
+		.creator-icon.captainicon-ci-arrow-right-circled::before {
+				content: "71d"; }
+		.creator-icon.captainicon-ci-arrow-right-circled-doubled::before {
+				content: "722"; }
+		.creator-icon.captainicon-ci-arrow-right-doubled::before {
+				content: "718"; }
+		.creator-icon.captainicon-ci-arrow-down::before {
+				content: "715"; }
+		.creator-icon.captainicon-ci-arrow-down-circled::before {
+				content: "71f"; }
+		.creator-icon.captainicon-ci-arrow-up::before {
+				content: "716"; }
+		.creator-icon.captainicon-ci-arrow-up-circled::before {
+				content: "720"; }
+		.creator-icon.captainicon-ci-pause::before {
+				content: "717"; }
+		.creator-icon.captainicon-ci-pause-circle::before {
+				content: "721"; }
+		.creator-icon.captainicon-ci-stop::before {
+				content: "71c"; }
+		.creator-icon.captainicon-ci-stop-circle::before {
+				content: "726"; }
+		.creator-icon.captainicon-ci-boy::before {
+				content: "727"; }
+		.creator-icon.captainicon-ci-boy-alt::before {
+				content: "728"; }
+		.creator-icon.captainicon-ci-girl::before {
+				content: "729"; }
+		.creator-icon.captainicon-ci-girl-alt::before {
+				content: "72a"; }
+		.creator-icon.captainicon-ci-picture::before {
+				content: "72b"; }
+		.creator-icon.captainicon-ci-tap::before {
+				content: "72c"; }
+		.creator-icon.captainicon-ci-playing-card::before {
+				content: "72d"; }
+		.creator-icon.captainicon-ci-egg::before {
+				content: "640"; }
+		.creator-icon.captainicon-ci-egg-shell::before {
+				content: "72f"; }
+		.creator-icon.captainicon-ci-egg-shell-alt::before {
+				content: "730"; }
+		.creator-icon.captainicon-ci-chart-bar::before {
+				content: "732"; }
+		.creator-icon.captainicon-ci-chart-bar-pie::before {
+				content: "6a5"; }
+		.creator-icon.captainicon-ci-chart-bar-increase::before {
+				content: "731"; }
+		.creator-icon.captainicon-ci-chart-bar-decrease::before {
+				content: "733"; }
+		.creator-icon.captainicon-ci-wifi::before {
+				content: "734"; }
+		.creator-icon.captainicon-ci-percent::before {
+				content: "735"; }
+		.creator-icon.captainicon-ci-unlock::before {
+				content: "736"; }
+		.creator-icon.captainicon-ci-chess-horse::before {
+				content: "737"; }
+		.creator-icon.captainicon-ci-muffin::before {
+				content: "739"; }
+		.creator-icon.captainicon-ci-denied::before {
+				content: "73a"; }
+		.creator-icon.captainicon-ci-align-justify::before {
+				content: "73b"; }
+		.creator-icon.captainicon-ci-align-left::before {
+				content: "73c"; }
+		.creator-icon.captainicon-ci-align-center::before {
+				content: "73d"; }
+		.creator-icon.captainicon-ci-align-right::before {
+				content: "73e"; }
+		.creator-icon.captainicon-ci-fedora::before {
+				content: "740"; }
+		.creator-icon.captainicon-ci-square-nut::before {
+				content: "742"; }
+		.creator-icon.captainicon-ci-screw::before {
+				content: "743"; }
+		.creator-icon.captainicon-ci-bottle::before {
+				content: "744"; }
+		.creator-icon.captainicon-ci-bottle-prescription::before {
+				content: "741"; }
+		.creator-icon.captainicon-ci-bottle-ink::before {
+				content: "6da"; }
+		.creator-icon.captainicon-ci-power-plug::before {
+				content: "745"; }
+		.creator-icon.captainicon-ci-power-off::before {
+				content: "655"; }
+		.creator-icon.captainicon-ci-notebook::before {
+				content: "746"; }
+		.creator-icon.captainicon-ci-notebook-alt::before {
+				content: "738"; }
+		.creator-icon.captainicon-ci-spatula::before {
+				content: "747"; }
+		.creator-icon.captainicon-ci-hourglass::before {
+				content: "748"; }
+		.creator-icon.captainicon-ci-bell::before {
+				content: "749"; }
+		.creator-icon.captainicon-ci-lifesaver::before {
+				content: "74a"; }
+		.creator-icon.captainicon-ci-anchor::before {
+				content: "74b"; }
+		.creator-icon.captainicon-ci-binoculars::before {
+				content: "74c"; }
+		.creator-icon.captainicon-ci-piggy-bank::before {
+				content: "74d"; }
+		.creator-icon.captainicon-ci-flower::before {
+				content: "74e"; }
+		.creator-icon.captainicon-ci-flowers::before {
+				content: "74f"; }
+		.creator-icon.captainicon-ci-weights::before {
+				content: "750"; }
+		.creator-icon.captainicon-ci-database::before {
+				content: "751"; }
+		.creator-icon.captainicon-ci-ring::before {
+				content: "752"; }
+		.creator-icon.captainicon-ci-info::before {
+				content: "754"; }
+		.creator-icon.captainicon-ci-info-circle::before {
+				content: "755"; }
+		.creator-icon.captainicon-ci-bomb::before {
+				content: "756"; }
+		.creator-icon.captainicon-ci-university::before {
+				content: "757"; }
+		.creator-icon.captainicon-ci-antenna::before {
+				content: "758"; }
+		.creator-icon.captainicon-ci-flag::before {
+				content: "75a"; }
+		.creator-icon.captainicon-ci-flag-alt::before {
+				content: "759"; }
+		.creator-icon.captainicon-ci-joystick::before {
+				content: "75b"; }
+		.creator-icon.captainicon-ci-hand::before {
+				content: "75c"; }
+		.creator-icon.captainicon-ci-pineapple::before {
+				content: "75d"; }
+		.creator-icon.captainicon-ci-tangerine::before {
+				content: "75e"; }
+		.creator-icon.captainicon-ci-cherry::before {
+				content: "75f"; }
+		.creator-icon.captainicon-ci-notification::before {
+				content: "760"; }
+		.creator-icon.captainicon-ci-notification-alt::before {
+				content: "761"; }
+		.creator-icon.captainicon-ci-ribbon::before {
+				content: "762"; }
+		.creator-icon.captainicon-ci-clock::before {
+				content: "60c"; }
+		.creator-icon.captainicon-ci-clock-alarm::before {
+				content: "763"; }
+		.creator-icon.captainicon-ci-windmill::before {
+				content: "765"; }
+		.creator-icon.captainicon-ci-filter::before {
+				content: "766"; }
+		.creator-icon.captainicon-ci-capsule::before {
+				content: "767"; }
+		.creator-icon.captainicon-ci-monster::before {
+				content: "768"; }
+		.creator-icon.captainicon-ci-monster-alt::before {
+				content: "769"; }
+		.creator-icon.captainicon-ci-monster-alt-one::before {
+				content: "76a"; }
+		.creator-icon.captainicon-ci-monster-alt-two::before {
+				content: "76b"; }
+		.creator-icon.captainicon-ci-monster-alt-three::before {
+				content: "76c"; }
+		.creator-icon.captainicon-ci-monster-alt-four::before {
+				content: "76d"; }
+		.creator-icon.captainicon-ci-monster-alt-five::before {
+				content: "72e"; }
+		.creator-icon.captainicon-ci-headset::before {
+				content: "76e"; }
+		.creator-icon.captainicon-ci-ribbons-award::before {
+				content: "76f"; }
+		.creator-icon.captainicon-ci-wheat::before {
+				content: "770"; }
+		.creator-icon.captainicon-ci-moon::before {
+				content: "771"; }
+		.creator-icon.captainicon-ci-cloud::before {
+				content: "604"; }
+		.creator-icon.captainicon-ci-cloud-small::before {
+				content: "772"; }
+		.creator-icon.captainicon-ci-cloud-cog::before {
+				content: "6ec"; }
+		.creator-icon.captainicon-ci-cloud-cog-halved::before {
+				content: "6e6"; }
+		.creator-icon.captainicon-ci-cloud-check::before {
+				content: "6e7"; }
+		.creator-icon.captainicon-ci-cloud-refresh::before {
+				content: "6e8"; }
+		.creator-icon.captainicon-ci-cloud-search::before {
+				content: "6e9"; }
+		.creator-icon.captainicon-ci-cloud-up::before {
+				content: "6ea"; }
+		.creator-icon.captainicon-ci-cloud-down::before {
+				content: "6eb"; }
+		.creator-icon.captainicon-ci-cloud-bolt::before {
+				content: "63b"; }
+		.creator-icon.captainicon-ci-cloud-sunny::before {
+				content: "773"; }
+		.creator-icon.captainicon-ci-cloud-windy::before {
+				content: "774"; }
+		.creator-icon.captainicon-ci-cloud-rainy::before {
+				content: "775"; }
+		.creator-icon.captainicon-ci-cloud-stormy::before {
+				content: "776"; }
+
+/*# sourceMappingURL=TagHelper.Icon.css.map */

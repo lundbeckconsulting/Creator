@@ -1,10 +1,7 @@
 ﻿@import "ColorProfiles";
 @import "SystemValues";
+@import "MediaConfig";
 
-$mediaDevices: ( Phone: XS, Tablet: SM, Computer: LG, Screen: XL );
-$mediaBreakpoints: ( XS: 0px, SM: 576px, MD: 768px, LG: 992px, XL: 1200px );
-$mediaOrientation: ( 0: Any, 1: Portrait, 2: Landscape );
-$mediaRetina: ( 1.25: 120dpi, 1.3: 124.8dpi, 1.5: 144dpi, 2: 192dpi );
 $padAndMarginValues: ( XXS: 4px, XS: 10px, SM: 16px, MD: 28px, LG: 34px, XL: 42px, XXL: 60px );
 $fontSizes: ( 1: 0.8rem, 2: 1.3rem, 3: 1.8rem, 4: 2.2rem, 5: 2.8rem, 6: 3.4rem, 7: 3.8rem, 8: 4.4rem, 9: 4.8rem, 10: 5.2rem );
 $documentWidths: ( XS: 298px, SM: 444px, MD: 598px, LG: 878px, XL: 1366px, XXL: 1920px, Full: 100% );   
@@ -24,8 +21,15 @@ $gridGapSizes: ( XS: 6px, SM: 14px, MD: 1fr );
 $notifyPositions: ( Bar: (Top, Bottom), Box: (Top, Bottom, Left, Right) );
 $notifyDurations: ( Three, Five, Eight, Fourteen, Twenty, Permanent );
 $miscSettings: ( NotifyBoxWidth: 548px, NotifyDefaultPadding: 14px );
-$keywords: ( Airy: airy, Opacity: opacity, MediaDevice: media-device, MediaRetina: media-retina, BG-Cover: bg-cover, BG-Repeat-X: bg-repeat-x, BG-Repeat-Y: bg-repeat-y, BG-NoRepeat: bg-norepeat, Font: f, Head: h, Col: col-, Responsive: r, Image: img, Button: btn, AlignVertical: align-vertical, TextBox: txt, Textarea: txt-area, FormControl: frm-control, SelectControl: sel, ValidateError: validate-error, ValidatedForm: form-validated, WhiteSpace: ws, DialogBackgroundColor: white );
+$keywords: ( Airy: airy, Opacity: opacity, MediaDevice: media-device, MediaRetina: media-retina, BG-Cover: bg-cover, BG-Repeat-X: bg-repeat-x, BG-Repeat-Y: bg-repeat-y, BG-NoRepeat: bg-norepeat, Font: f, HeadTag: h, Col: col-, Responsive: r, Image: img, Button: btn, AlignVertical: align-vertical, TextBox: txt, Textarea: txt-area, FormControl: frm-control, SelectControl: sel, ValidateError: validate-error, ValidatedForm: form-validated, WhiteSpace: ws, DialogBackgroundColor: white, Tabs: tabs, TabsGroup: tabs-group );
 $formControlSpecs: ( ButtonHeight: 49px, ButtonPaddingVertical: 4px, ButtonPaddingHorizontal: 28px, BorderRadius: 8px, Margin: 2px, FontSize: 1.4rem, BorderSize: 3px );
+$headTagOptions: ( 
+    1: ( Phone: 1rem, Tablet: 1.8rem, Computer: 2.6rem, Screen: 4.2rem ), 
+    2: ( Phone: 0.7rem, Tablet: 1.5rem, Computer: 2.2rem, Screen: 3.8rem ),
+    3: ( Phone: 0.6rem, Tablet: 1.3rem, Computer: 2rem, Screen: 3.3rem ),
+    4: ( Phone: 0.4rem, Tablet: 1rem, Computer: 1.6rem, Screen: 2.9rem ),
+    5: ( Phone: 0.3rem, Tablet: 1.1rem, Computer: 1.7rem, Screen: 3rem ),
+    6: ( Phone: 0.2rem, Tablet: 0.7rem, Computer: 1.3rem, Screen: 2.6rem ) );
 
 $mapIndex: (    NotifyPosition: ( Data: $notifyPositions), 
                 NotifyDuration: ( Data: $notifyDurations ), 
@@ -34,7 +38,8 @@ $mapIndex: (    NotifyPosition: ( Data: $notifyPositions),
                 Dialog: ( Data: $dialogSizes), 
                 Width: ( Data: $widths ), 
                 Device: ( Data: $mediaDevices ), 
-                Media: ( Data: $mediaBreakpoints ),     
+                Media: ( Data: $mediaBreakpoints ),  
+                MediaDevice: ( Data: mediaDevices ),   
                 MediaOrientation: ( Data: $mediaOrientation ), 
                 MediaRetina: ( Data: $mediaRetina ), 
                 CP: ( Data: $CPs ), 
@@ -44,8 +49,7 @@ $mapIndex: (    NotifyPosition: ( Data: $notifyPositions),
                 KW: ( Data: $keywords ), 
                 FontSize: ( Data: $fontSizes ), 
                 Airy: ( Data: $airyValues ), 
-                Head: ( Data: $headSizes ), 
-                HeadMap: ( Data: $headMappings), 
+                HeadTag: ( Data: $headTagOptions ), 
                 FlexAlign: ( Data: $flexAlignItems ), 
                 FlexJustify: ( Data: $flexJustifyItems ), 
                 FlexItem: ( Data: $flexItems ), 

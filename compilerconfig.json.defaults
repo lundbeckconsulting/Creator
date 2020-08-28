@@ -20,9 +20,9 @@
       "outputStyle": "nested",
       "Precision": 5,
       "relativeUrls": true,
-      "sourceMapRoot": "",
+      "sourceMapRoot": ".",
       "lineFeed": "",
-      "sourceMap": false
+      "sourceMap": true
     },
     "stylus": {
       "sourceMap": false
