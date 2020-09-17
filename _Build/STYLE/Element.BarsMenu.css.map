@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "Element.BurgerMenu.css",
+	"file": "Element.BarsMenu.css",
 	"sources": [
-		"../../STYLE/Element/BurgerMenu.scss",
+		"../../STYLE/Element/BarsMenu.scss",
 		"../../STYLE/Shared/_Media.scss",
 		"../../STYLE/Shared/_MediaConfig.scss",
 		"../../STYLE/Shared/_Function.scss",

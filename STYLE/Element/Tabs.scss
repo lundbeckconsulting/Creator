@@ -1,47 +1,39 @@
 @import "..\\Shared\\ColorProfiles";
 @import "..\\Shared\\ColorFunction";
 
-.tabs > .tab, .tabs > .tabs-group > .tab {
-    @each $cp, $colors in $CPs {
-        &.#{to-lower-case($cp)} {
-            $mrg: 7px;
-            $mrgVertical: 3px;
+.tabs {
+    width: 100%;
+}
 
+.tabs > .group > .tab {
+    $pad: 14px;
+
+    margin-top: 4px;
+    padding-left: $pad;
+    padding-right: $pad;
+    font-size: 1.4rem;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    @each $cp, $colors in $CPs {
+        &.cp-#{to-lower-case($cp)} {
             border-top-left-radius: 7px;
             border-top-right-radius: 7px;
-            border: 3px solid map-get($colors, Primary);
-            border-top: 5px solid map-get($colors, Primary);
-            background-color: map-get($colors, Fourth);
-            margin-left: $mrg;
-            margin-right: $mrg;
-            margin-top: $mrgVertical;
-            margin-bottom: $mrgVertical;
-            color: map-get($colors, First);
+            border: 3px solid color($cp, Primary);
+            border-top: 5px solid color($cp, Primary);
+            background-color: color($cp, Fourth);
+            color: color($cp, Primary);
 
             &.straight {
                 border-radius: 0px;
             }
         }
-
-        &.left {
-            justify-self: flex-start;
-        }
-
-        &.center {
-            justify-self: center;
-        }
-
-        &.right {
-            justify-self: flex-end;
-        }
     }
-}
 
-.tabs-group {
-    display: flex;
-    align-items: flex-end;
-
-    &, &.left {
+    &.left {
         justify-self: flex-start;
     }
 
@@ -52,16 +44,43 @@
     &.right {
         justify-self: flex-end;
     }
+
+    &.active {
+        border-top-width: 10px;
+    }
 }
 
-@each $cp, $colors in $CPs {
-    .tabs.#{to-lower-case($cp)} {
-        background-color: map-get($colors, Third);
+.tabs > .group {
+    display: flex;
+    align-items: flex-end;
+
+    &, &.left {
+        justify-content: flex-start;
     }
 
-    .tabs-content.#{to-lower-case($cp)} {
-        border: 2px solid map-get($colors, First);
-        padding: 15px;
-        background-color: white;
-    }        
+    &.center {
+        justify-content: center;
+    }
+
+    &.right {
+        justify-content: flex-end;
+    }
+}
+
+.tabs > .content {
+    display: none;
+    visibility: hidden;
+    padding: 6px;
+
+    &.active {
+        display: block;
+        visibility: visible;
+    }
+
+    @each $cp, $colors in $CPs {
+        &.cp-#{to-lower-case($cp)} {
+            border: 2px solid color($cp, First);
+            background-color: white;
+        }
+    }
 }

@@ -1,6 +1,4 @@
-﻿"use strict";
-
-$(".open-dialog[data-dialog]").click(function (e) {
+﻿$(".open-dialog[data-dialog]").click(function (e) {
     var dialogId = $(this).data("dialog");
 
     openDialog(dialogId);
@@ -15,7 +13,7 @@ $("dialog[class^=\"dialog-\"]").find("header .close-command").click(function (e)
 });
 
 $("dialog[class^=\"dialog-\"]").find("footer .ok-command").click(function () {
-    var dialog = $(this).closest("dialog");
+    let dialog = $(this).closest("dialog");
     $(dialog).closest("dialog").trigger("command:ok");
 
     closeDialog(dialog.attr("id"));
@@ -69,3 +67,5 @@ function removeDialogBg() {
     $("body").remove("#dialogBackground");
 };
 
+
+	//# sourceMappingUrl=Element.Dialog.js.map

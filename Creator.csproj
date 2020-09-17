@@ -1,42 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <ApplicationIcon>creator-logo.ico</ApplicationIcon>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageId>Creator framework</PackageId>
-    <Version>2.0.0-beta</Version>
-    <Authors>Stein Lundbeck</Authors>
-    <Company>Lundbeck Consulting</Company>
-    <Product>Creator framework</Product>
-    <Description>Light weight responsive framework for modern web sites. Based on CSS and JavaScript it can be implemented in any project.</Description>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <Copyright>2020</Copyright>
-    <PackageProjectUrl>https://getcreatorframework.com</PackageProjectUrl>
-    <PackageIcon>creator-logo-md.png</PackageIcon>
-    <RepositoryUrl>https://github.com/lundbeckconsulting/Creator</RepositoryUrl>
-    <RepositoryType>.NET Standard class library</RepositoryType>
-    <PackageTags>Creator, responsive, Lundbeck, Consulting, Stylesheet, SASS, HTML, framework</PackageTags>
-    <NeutralLanguage>en</NeutralLanguage>
-    <PackageReleaseNotes>Currently in beta</PackageReleaseNotes>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\Misc\LC.Shared\IMAGE\creator-logo-md.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <ProjectReference Include="..\Assets.Core\Assets.Core.csproj" />
+    <ProjectReference Include="..\Creator.Components\Creator.Components.csproj" />
+    <ProjectReference Include="..\LC.Components.Core\LC.Components.Core.csproj" />
+    <ProjectReference Include="..\LC.Components\LC.Components.csproj" />
   </ItemGroup>
 
 </Project>
