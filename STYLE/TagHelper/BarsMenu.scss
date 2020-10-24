@@ -1,10 +1,25 @@
 ﻿@import "..//Shared//ColorProfiles";
 @import "..//Shared/ColorFunction";
 
-@include bars();
+@mixin style($color, $hoverColor) {
+    display: none;
+    visibility: hidden;
+    z-index: 70;
 
-@each $name, $val in $CPs {
-    @include bars($name);
+    &::before {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: $color;
+        content: '|||';
+        transform: rotate(90deg);
+        transition: all 0.4ms ease-in-out;
+    }
+
+    &:hover::before {
+        cursor: pointer;
+        color: $hoverColor;
+    }
 }
 
 @mixin bars($cp: null) {
@@ -32,25 +47,10 @@
     }
 }
 
-@mixin style($color, $hoverColor) {
-    display: none;
-    visibility: hidden;
-    z-index: 70;
+@include bars();
 
-    &::before {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 3.2rem;
-        font-weight: bold;
-        color: $color;
-        content: '|||';
-        transform: rotate(90deg);
-        transition: all 0.4ms ease-in-out;
-    }
-
-    &:hover::before {
-        cursor: pointer;
-        color: $hoverColor;
-    }
+@each $name, $val in $CPs {
+    @include bars($name);
 }
 
 #creatorBarsBackground {

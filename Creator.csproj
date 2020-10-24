@@ -4,11 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Assets.Core\Assets.Core.csproj" />
-    <ProjectReference Include="..\Creator.Components\Creator.Components.csproj" />
-    <ProjectReference Include="..\LC.Components.Core\LC.Components.Core.csproj" />
-    <ProjectReference Include="..\LC.Components\LC.Components.csproj" />
-  </ItemGroup>
-
 </Project>

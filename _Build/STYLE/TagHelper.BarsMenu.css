@@ -1,0 +1,257 @@
+#creatorBarsMenu {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: black;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu:hover::before {
+				cursor: pointer;
+				color: #0a6ab0; }
+		#creatorBarsMenu > nav > .item {
+				grid-column-start: 2; }
+
+#creatorBarsMenu.cp-default {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-default::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: black;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-default:hover::before {
+				cursor: pointer;
+				color: #a1a1a1; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-primary {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-primary::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #8b480e;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-primary:hover::before {
+				cursor: pointer;
+				color: #d8a77d; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-success {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-success::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #195f34;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-success:hover::before {
+				cursor: pointer;
+				color: #4bcc7c; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-danger {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-danger::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #8c101b;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-danger:hover::before {
+				cursor: pointer;
+				color: #ed7781; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-warning {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-warning::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #ffbf00;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-warning:hover::before {
+				cursor: pointer;
+				color: #ffe9a6; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-info {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-info::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #2894aa;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-info:hover::before {
+				cursor: pointer;
+				color: #8bc8d4; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-light {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-light::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #a19b9b;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-light:hover::before {
+				cursor: pointer;
+				color: #eae2e2; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-dark {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-dark::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #161616;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-dark:hover::before {
+				cursor: pointer;
+				color: #606060; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-antan {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-antan::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #fe2f00;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-antan:hover::before {
+				cursor: pointer;
+				color: #a76e62; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-notify {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-notify::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #07294e;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-notify:hover::before {
+				cursor: pointer;
+				color: #7b9abd; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsMenu.cp-funk {
+		display: none;
+		visibility: hidden;
+		z-index: 70; }
+		#creatorBarsMenu.cp-funk::before {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 3.2rem;
+				font-weight: bold;
+				color: #165992;
+				content: '|||';
+				transform: rotate(90deg);
+				transition: all 0.4ms ease-in-out; }
+		#creatorBarsMenu.cp-funk:hover::before {
+				cursor: pointer;
+				color: #61b2f7; }
+
+#creatorBarsMenu > nav > .item {
+		grid-column-start: 2; }
+
+#creatorBarsBackground {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: 1fr;
+		align-items: center;
+		justify-content: center;
+		visibility: visible;
+		z-index: 60;
+		background-color: rgba(0, 0, 0, 0.8);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0; }
+
+#closeMenuIcon {
+		position: absolute;
+		top: 14px;
+		right: 14px; }
+		#closeMenuIcon::before {
+				font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+				font-weight: bold;
+				font-size: 3rem;
+				color: #1986d5;
+				content: "X"; }
+		#closeMenuIcon:hover::before {
+				cursor: pointer;
+				color: #0d4b78; }
+
+/*# sourceMappingURL=TagHelper.BarsMenu.css.map */

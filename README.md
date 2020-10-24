@@ -28,5 +28,5 @@ See more
 * Ability to style a whole site by defining only one style
 * All items in the different categories can by referenced when you don't need the whole framewowrk
 
-****
-https://getcreatorframework.com | https://github.com/lundbeckconsulting/Creator-Distro | http://lundbeckconsulting.com
+---
+[https://getcreatorframework.com](https://getcreatorframework.com) | [https://github.com/lundbeckconsulting/Creator-Distro](https://github.com/lundbeckconsulting/Creator-Distro) | [http://lundbeckconsulting.com](http://lundbeckconsulting.com)
