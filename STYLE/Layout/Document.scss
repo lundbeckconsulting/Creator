@@ -8,15 +8,6 @@
     @include document($cp);
 }
 
-html.creator > body {
-    @each $fn, $fs in getMap(DocFontSize) {
-        @if not (equal($fn, MD)) {
-            &.#{str($fn)} {
-                font-size: $fs;
-            }
-        }
-        @else {
-            font-size: $fs;
-        }
-    }
+*, *:before, *:after {
+    box-sizing: inherit;
 }

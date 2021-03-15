@@ -6,13 +6,6 @@
     visibility: hidden;
 }
 
-@each $name, $val in $mediaBreakpoints {
-    .show-#{str($name)} {
-        display: none;
-        visibility: hidden;
-    }
-}
-
 .hide {
     display: none;
     visibility: hidden;

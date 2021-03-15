@@ -1,6 +1,6 @@
 ﻿@import "..\\Shared\\Function";
 
-.position {
+.pos {
     @each $name, $property in sys(Positions) {
         $pos: str($property, l);
 
@@ -14,275 +14,36 @@
             @if (equal($name, Absolute, Fixed, Sticky)) {
                 @each $dir in sys(Directions) {
                     &-#{str($dir)} {
+                        position: $pos;
+
                         @if (equal($dir, Left)) {
-                            position: $pos;
                             left: 0;
-                            right: unset;
-
-                            &-force {
-                                position: $pos !important;
-                                left: 0 !important;
-                                right: unset !important;
-                            }
-
-                            @each $dr in sys(Directions) {
-                                @if (equal($dr, Top)) {
-                                    &-#{str($dr)} {
-                                        position: $pos;
-                                        left: 0;
-                                        right: unset;
-                                        top: 0;
-                                        bottom: unset;
-
-                                        &-force {
-                                            position: $pos !important;
-                                            left: 0 !important;
-                                            right: unset !important;
-                                            top: 0 !important;
-                                            bottom: unset !important;
-                                        }
-                                    }
-                                }
-                                @else if (equal($dr, Bottom)) {
-                                    &-#{str($dr)} {
-                                        position: $pos;
-                                        left: 0;
-                                        right: unset;
-                                        bottom: 0;
-                                        top: unset;
-
-                                        &-force {
-                                            position: $pos !important;
-                                            left: 0 !important;
-                                            right: unset !important;
-                                            bottom: 0 !important;
-                                            top: unset !important;
-                                        }
-                                    }
-                                }
-                            }
-
-                            &-top-bottom {
-                                position: $pos;
-                                left: 0;
-                                right: unset;
-                                top: 0;
-                                bottom: 0;
-
-                                &-force {
-                                    position: $pos !important;
-                                    left: 0 !important;
-                                    right: unset !important;
-                                    top: 0 !important;
-                                    bottom: 0 !important;
-                                }
-                            }
                         }
                         @else if (equal($dir, Right)) {
-                            position: $pos;
                             right: 0;
-                            left: unset;
-
-                            &-force {
-                                position: $pos !important;
-                                right: 0 !important;
-                                left: unset !important;
-                            }
-
-                            @each $dr in sys(Directions) {
-                                @if ($dr == Top) {
-                                    &-#{str($dr)} {
-                                        position: $pos;
-                                        right: 0;
-                                        left: unset;
-                                        top: 0;
-                                        bottom: unset;
-
-                                        &-force {
-                                            position: $pos !important;
-                                            right: 0 !important;
-                                            left: unset !important;
-                                            top: 0 !important;
-                                            bottom: unset !important;
-                                        }
-                                    }
-                                }
-                                @else if (equal($dr, Bottom)) {
-                                    &-#{str($dr)} {
-                                        position: $pos;
-                                        right: 0;
-                                        left: unset;
-                                        bottom: 0;
-                                        top: unset;
-
-                                        &-force {
-                                            position: $pos !important;
-                                            right: 0 !important;
-                                            left: unset !important;
-                                            bottom: 0 !important;
-                                            top: unset !important;
-                                        }
-                                    }
-                                }
-                            }
-
-                            &-top-bottom {
-                                position: $pos;
-                                right: 0;
-                                left: unset;
-                                top: 0;
-                                bottom: 0;
-
-                                &-force {
-                                    position: $pos !important;
-                                    right: 0 !important;
-                                    left: unset !important;
-                                    top: 0 !important;
-                                    bottom: 0 !important;
-                                }
-                            }
                         }
                         @else if (equal($dir, Top)) {
-                            position: $pos;
                             top: 0;
-                            bottom: unset;
-
-                            &-force {
-                                position: $pos !important;
-                                top: 0 !important;
-                                bottom: unset !important;
-                            }
-
-                            @each $dr in sys(Directions) {
-                                @if (equal($dr, Left)) {
-                                    &-#{str($dr)} {
-                                        position: $pos;
-                                        top: 0;
-                                        bottom: unset;
-                                        left: 0;
-                                        right: unset;
-
-                                        &-force {
-                                            position: $pos !important;
-                                            top: 0 !important;
-                                            bottom: unset !important;
-                                            left: 0 !important;
-                                            right: unset !important;
-                                        }
-                                    }
-                                }
-                                @else if equal(($dr, Right)) {
-                                    &-#{str($dr)} {
-                                        position: $pos;
-                                        top: 0;
-                                        bottom: unset;
-                                        right: 0;
-                                        left: unset;
-
-                                        &-force {
-                                            position: $pos !important;
-                                            top: 0 !important;
-                                            bottom: unset !important;
-                                            right: 0 !important;
-                                            left: unset !important;
-                                        }
-                                    }
-                                }
-                            }
-
-                            &-left-right {
-                                position: $pos;
-                                top: 0;
-                                bottom: unset;
-                                left: 0;
-                                right: 0;
-
-                                &-force {
-                                    position: $pos !important;
-                                    top: 0 !important;
-                                    bottom: unset !important;
-                                    left: 0 !important;
-                                    right: 0 !important;
-                                }
-                            }
                         }
                         @else if (equal($dir, Bottom)) {
-                            position: $pos;
                             bottom: 0;
-                            top: unset;
-
-                            &-force {
-                                position: $pos !important;
-                                bottom: 0 !important;
-                                top: unset !important;
-                            }
-
-                            @each $dr in sys(Directions) {
-                                @if (equal($dr, Left)) {
-                                    &-#{str($dr)} {
-                                        position: $pos;
-                                        bottom: 0;
-                                        top: unset;
-                                        left: 0;
-                                        right: unset;
-
-                                        &-force {
-                                            position: $pos !important;
-                                            bottom: 0 !important;
-                                            top: unset !important;
-                                            left: 0 !important;
-                                            right: unset !important;
-                                        }
-                                    }
-                                }
-                                @else if (equal($dr, Right)) {
-                                    &-#{str($dr)} {
-                                        position: $pos;
-                                        bottom: 0;
-                                        top: unset;
-                                        right: 0;
-                                        left: unset;
-
-                                        &-force {
-                                            position: $pos !important;
-                                            bottom: 0 !important;
-                                            top: unset !important;
-                                            right: 0 !important;
-                                            left: unset !important;
-                                        }
-                                    }
-                                }
-                            }
-
-                            &-left-right {
-                                position: $pos;
-                                bottom: 0;
-                                top: unset;
-                                left: 0;
-                                right: 0;
-
-                                &-force {
-                                    position: $pos !important;
-                                    bottom: 0 !important;
-                                    top: unset !important;
-                                    left: 0 !important;
-                                    right: 0 !important;
-                                }
-                            }
                         }
-                    }
-
-                    &-fill {
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        bottom: 0;
 
                         &-force {
-                            left: 0 !important;
-                            right: 0 !important;
-                            top: 0 !important;
-                            bottom: 0 !important;
+                            position: $pos !important;
+
+                            @if (equal($dir, Left)) {
+                                left: 0 !important;
+                            }
+                            @else if (equal($dir, Right)) {
+                                right: 0 !important;
+                            }
+                            @else if (equal($dir, Top)) {
+                                top: 0 !important;
+                            }
+                            @else if (equal($dir, Bottom)) {
+                                bottom: 0 !important;
+                            }
                         }
                     }
                 }
@@ -290,19 +51,11 @@
         }
     }
 
-    &-clear {
-        position: static;
+    &-center {
+        margin: auto;
 
         &-force {
-            position: static !important;
+            margin: auto !important;
         }
-    }
-}
-
-.pos-center {
-    margin: auto;
-
-    &-force {
-        margin: auto !important;
     }
 }

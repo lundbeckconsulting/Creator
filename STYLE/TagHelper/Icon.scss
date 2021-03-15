@@ -20,41 +20,30 @@
 }
 
 .creator-icon {
-    &.clickable {
-        &:hover {
-            cursor: pointer;
-        }
+    display: flex;
+    align-items: center;
+
+    & > .text {
+        margin-left: 6px;
     }
 
-    & > .wrap {
-        & > .label {
-            margin-left: 6px;
-        }
+    @each $setName, $set in $iconSets {
+        $pre: map-get($set, pre);
+        $fontFace: map-get($set, fontFace);
+        $icons: map-get($set, icons);
 
-        @each $name, $val in $CPs {
-            &-#{str($name)} {
-                color: color($name, Primary);
-            }
-        }
-    }
-}
+        &.#{$pre} {
+            font-family: "" + $fontFace;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            line-height: 1;
+            text-transform: none;
 
-@each $setName, $set in $iconSets {
-    $pre: map-get($set, pre);
-    $fontFace: map-get($set, fontFace);
-    $icons: map-get($set, icons);
-
-    .creator-icon.#{$pre} {
-        font-family: "" + $fontFace;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: normal;
-        line-height: 1;
-        text-transform: none;
-
-        @each $iconName, $unicode in $icons {
-            &-#{$iconName}::before {
-                content: unquote("\"\\e#{$unicode}\"");
+            @each $iconName, $unicode in $icons {
+                &-#{$iconName}::before {
+                    content: unquote("\"\\e#{$unicode}\"");
+                }
             }
         }
     }

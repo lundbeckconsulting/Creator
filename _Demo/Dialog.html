@@ -6,12 +6,10 @@
     <title>Dialog demo</title>
 
     <link href="../_Build/Creator.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-
-
 </head>
 <body>
     <p>
+        <button onclick="test()">Tall</button>
         <button class="open-dialog" data-dialog="notifyDialog">Open Notify Dialog</button>
         <button class="open-dialog" data-dialog="dangerDialog">Open Danger Dialog</button>
         <button class="open-dialog" data-dialog="primaryDialog">Open Primary Dialog</button>
@@ -62,6 +60,8 @@
             </footer>
         </content>
     </dialog>
+
+<div id="dialogBackground" class="show">vds</div>
 
     <script src="../_Build/Creator.js"></script>
 </body>

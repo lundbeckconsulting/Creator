@@ -18,8 +18,6 @@ See more
 
 **Key features:**
 
-* Device Media: Define which devices your content will be visible on
-* Support for retina devices
 * Row/Column: Pure CSS implementation
 * Color Profile: Full color schema of five colors for all eleven color profiles, allowing for easy styling elements
 * Over 600 flex styles so you don't need to define it over and over
@@ -27,6 +25,10 @@ See more
 * New module utilizing the Dialog tag
 * Ability to style a whole site by defining only one style
 * All items in the different categories can by referenced when you don't need the whole framewowrk
+
+New site with documentation out now!
+
+**[https://getcreatorframework.com](https://getcreatorframework.com)**
 
 ---
 [https://getcreatorframework.com](https://getcreatorframework.com) | [https://github.com/lundbeckconsulting/Creator-Distro](https://github.com/lundbeckconsulting/Creator-Distro) | [http://lundbeckconsulting.com](http://lundbeckconsulting.com)

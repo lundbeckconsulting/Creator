@@ -74,14 +74,15 @@
       @include formControl($name);
   }
 
-  .#{getMap(KW, SelectControl)}-#{$name} {
-      $padVert: 2px;
+    .#{getMap(KW, SelectControl)}-#{$name} {
+        $padVert: 2px;
 
-      @include formControl($name, true, 42px, 4px, 1.2rem);
-      border: getMap(FormControl, BorderSize) solid color($name);
-      padding-left: 6px;
-      padding-top: $padVert;
-      padding-bottom: $padVert;
-      font-weight: bold;
-  }
+        @include formControl($name, true, 36px, 4px, 15px);
+        border: getMap(FormControl, BorderSize) solid color($name);
+        padding-left: 6px;
+        padding-top: $padVert;
+        padding-bottom: $padVert;
+        font-weight: bold;
+        margin: getMap(FormControl, Margin);
+    }
 }

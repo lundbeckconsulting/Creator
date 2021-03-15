@@ -7,7 +7,7 @@
 @mixin dialogCloseCommand($color) {
     flex: 0 0 22px;
     font-family: Verdana, 'Open Sans';
-    font-size: 1.4rem;
+    font-size: 16px;
     font-weight: bolder;
     font-style: normal;
     transition: sys(Transition);
@@ -60,6 +60,7 @@
 
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
                     color: $semiColor;
                     padding-left: $padHori;
                     padding-right: $padHori;
@@ -81,7 +82,7 @@
 
                     & > .title {
                         flex: 1 1 auto;
-                        font-size: 1.5rem;
+                        font-size: 16px;
                         font-weight: bold;
 
                         @include noOverflow();
@@ -111,9 +112,6 @@
                     border-top: 1px solid $color;
 
                     & .ok-command {
-                        font-size: 1.2rem;
-                        font-weight: 600;
-
                         &.btn {
                             $minWidth: 66px;
 

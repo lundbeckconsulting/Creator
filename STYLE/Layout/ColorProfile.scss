@@ -10,6 +10,10 @@
     $name: color-bg;
     $prop: background-color;
   }
+  @else if (equal($type, Border)) {
+    $name: color-border;
+    $prop: border-color;
+  }
 
   .#{$name} {
     @each $id, $map in getMap(CP) {
@@ -30,3 +34,4 @@
 
 @include Foo();
 @include Foo(BG);
+@include Foo(Border);

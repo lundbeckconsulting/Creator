@@ -2,30 +2,14 @@
 @import "..\\Shared\\Media";
 @import "LayoutMixin";
 
-@each $md, $mdv in $mediaDevices {
-    @include media($mdv) {
-      @each $nr, $data in $headTagOptions {
-        $val: map-get($data, $md);
-        
-        .#{KW(HeadTag)}#{$nr} {
-          font-size: $val;
-        }
-      }
+@each $nr, $font in getMap(HeadTags) {
+    h#{$nr} {
+        font-size: $font;
     }
-  }
+}
 
 @each $size, $val in getMap(FontSize) {
-    .#{KW(Font) + "-" + $size} {
+    .#{KW(Font) + $size} {
         font-size: $val;
-    }
-
-    @each $s, $v in getMap(Media) {
-        @include media($s) {
-            .#{KW(Font) + "-" + $size + "-" + str($s)} {
-                font-size: $val;
-
-                @include airy($s);
-            }
-        }
     }
 }

@@ -2,7 +2,7 @@
 @import "..\\Shared\\ColorFunction";
 @import "..\\Shared\\Mixin";
 
-@mixin formControl($cpName: Default, $glowFocus: true, $height: 44px, $borderRadius: getMap(FormControl, BorderRadius), $fontSize: getMap(FormControl, FontSize)) {
+@mixin formControl($cpName: Default, $glowFocus: true, $height: 36px, $borderRadius: getMap(FormControl, BorderRadius), $fontSize: getMap(FormControl, FontSize)) {
     $cpName: toCPName($cpName);
 
     color: color($cpName);

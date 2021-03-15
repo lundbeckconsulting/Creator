@@ -1,71 +1,62 @@
-﻿$(".open-dialog[data-dialog]").click(function (e) {
-    var dialogId = $(this).data("dialog");
+﻿const closeDialogs = () => {
+    document.querySelectorAll("dialog").forEach(elm => {
+        elm.removeAttribute("open");
 
-    openDialog(dialogId);
+        if (document.getElementById("dialogBackground") !== null) {
+            document.getElementById("dialogBackground").remove();
+        }
+    });
+};
+
+const openDialog = (id) => {
+    let bg = document.createElement("div");
+    bg.id = "dialogBackground";
+    bg.classList.add("show-force");
+    bg.addEventListener("click", event => {
+        closeDialogs();
+    });
+    document.body.appendChild(bg);
+
+    document.getElementById(id).setAttribute("open", "open");
+};
+
+document.querySelectorAll(".open-dialog[data-dialog]").forEach(elm => {
+    elm.addEventListener("click", event => {
+        let dialogId = elm.getAttribute("data-dialog");
+
+        if (dialogId !== null) {
+            openDialog(dialogId);
+        }
+    });
 });
 
-$("dialog[class^=\"dialog-\"]").find("header .close-command").click(function (e) {
-    var dialog = $(this).closest("dialog");
-
-    $(dialog).trigger("command:close");
-
-    closeDialog(dialog.attr("id"));
-});
-
-$("dialog[class^=\"dialog-\"]").find("footer .ok-command").click(function () {
-    let dialog = $(this).closest("dialog");
-    $(dialog).closest("dialog").trigger("command:ok");
-
-    closeDialog(dialog.attr("id"));
-});
-
-$("dialog[class^='dialog-']").on("close", function (e) {
-    closeDialog($(this).attr("id"));
-});
-
-$("dialog[class^='dialog-']").on("open", function (e) {
-    openDialog($(this).attr("id"));
-});
-
-$("body").on("click", "#dialogBackground", function () {
-    $("dialog").removeAttr("open");
-
-    closeDialogBg();
-});
-
-$(document).keyup(function (e) {
-    if (e.key === "Escape") {
-        $("dialog").removeAttr("open");
-
-        closeDialogBg();
+window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+        closeDialogs();
     }
 });
 
-function openDialog(id) {
-    removeDialogBg();
-
-    $("body").append("<div id=\"dialogBackground\"></div>");
-
-    $("#dialogBackground").fadeIn("slow", function () {
-        $("#" + id).trigger("command:open");
-        $("#" + id).attr("open", "open");
+document.querySelectorAll("dialog").forEach(elm => {
+    elm.querySelector("header .close-command").addEventListener("click", event => {
+        closeDialogs();
     });
-};
+});
 
-function closeDialog(id) {
-    $("#" + id).removeAttr("open");
-    closeDialogBg();
-};
-
-function closeDialogBg() {
-    $("#dialogBackground").fadeOut("slow", function () {
-        removeDialogBg();
+document.querySelectorAll("dialog").forEach(elm => {
+    elm.addEventListener("cmd:close", event => {
+        closeDialogs();
     });
-};
 
-function removeDialogBg() {
-    $("body").remove("#dialogBackground");
-};
+    elm.addEventListener("cmd:show", event => {
+        openDialog(elm.id);
+    });
+});
+
+document.querySelectorAll("dialog").forEach(elm => {
+    elm.querySelector("footer .ok-command").addEventListener("click", event => {
+        closeDialogs();
+    });
+});
 
 
 	//# sourceMappingUrl=Element.Dialog.js.map

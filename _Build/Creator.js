@@ -1,127 +1,119 @@
-﻿$(".open-dialog[data-dialog]").click(function (e) {
-    var dialogId = $(this).data("dialog");
+﻿const closeDialogs = () => {
+    document.querySelectorAll("dialog").forEach(elm => {
+        elm.removeAttribute("open");
 
-    openDialog(dialogId);
-});
-
-$("dialog[class^=\"dialog-\"]").find("header .close-command").click(function (e) {
-    var dialog = $(this).closest("dialog");
-
-    $(dialog).trigger("command:close");
-
-    closeDialog(dialog.attr("id"));
-});
-
-$("dialog[class^=\"dialog-\"]").find("footer .ok-command").click(function () {
-    let dialog = $(this).closest("dialog");
-    $(dialog).closest("dialog").trigger("command:ok");
-
-    closeDialog(dialog.attr("id"));
-});
-
-$("dialog[class^='dialog-']").on("close", function (e) {
-    closeDialog($(this).attr("id"));
-});
-
-$("dialog[class^='dialog-']").on("open", function (e) {
-    openDialog($(this).attr("id"));
-});
-
-$("body").on("click", "#dialogBackground", function () {
-    $("dialog").removeAttr("open");
-
-    closeDialogBg();
-});
-
-$(document).keyup(function (e) {
-    if (e.key === "Escape") {
-        $("dialog").removeAttr("open");
-
-        closeDialogBg();
-    }
-});
-
-function openDialog(id) {
-    removeDialogBg();
-
-    $("body").append("<div id=\"dialogBackground\"></div>");
-
-    $("#dialogBackground").fadeIn("slow", function () {
-        $("#" + id).trigger("command:open");
-        $("#" + id).attr("open", "open");
-    });
-};
-
-function closeDialog(id) {
-    $("#" + id).removeAttr("open");
-    closeDialogBg();
-};
-
-function closeDialogBg() {
-    $("#dialogBackground").fadeOut("slow", function () {
-        removeDialogBg();
-    });
-};
-
-function removeDialogBg() {
-    $("body").remove("#dialogBackground");
-};
-
-
-	//# sourceMappingUrl=Element.Dialog.js.map
-
-
-﻿var styles = ["Bar", "Box"];
-var barPositions = ["Top", "Bottom"];
-var boxPositions = ["Top", "Bottom", "Left", "Right"];
-var durations = { Three: 3, Five: 5, Eight: 8, Fourteen: 14, Twenty: 20, Permanent: -99 };
-
-for (let style of styles) {
-    jQuery.each(durations, function (duration, val) {
-        for (let position of boxPositions) {
-            handleNotifyElement(getElement(style, position, duration), parseInt(val.toString()));
+        if (document.getElementById("dialogBackground") !== null) {
+            document.getElementById("dialogBackground").remove();
         }
     });
-}
+};
 
-function getElement(style, position, duration) {
-    let result = ".notify-" + style + "-" + position + "-" + duration;
-
-    return result.toLowerCase();
-}
-
-function isBox(e) {
-    return $(e).find(".box").length > 0;
-}
-
-function handleNotifyElement(element, dur) {
-    if ($(element).hasClass("show")) {
-        setInterval(function () {
-            $(element).removeClass("show");
-        }, dur * 1000);
-    }
-    else {
-        $(element).on("notify:show", function (e) {
-            $(element).fadeIn("slow", function () {
-                $(element).addClass("show");
-
-                if (dur != -99) {
-                    setTimeout(function () {
-                        $(element).removeClass("show");
-                    }, dur * 1000);
-                }
-            });
-        });
-    }
-
-    $(element).on("notify:close", function () {
-        $(element).removeClass("show");
+const openDialog = (id) => {
+    let bg = document.createElement("div");
+    bg.id = "dialogBackground";
+    bg.classList.add("show-force");
+    bg.addEventListener("click", event => {
+        closeDialogs();
     });
-}
+    document.body.appendChild(bg);
+
+    document.getElementById(id).setAttribute("open", "open");
+};
+
+document.querySelectorAll(".open-dialog[data-dialog]").forEach(elm => {
+    elm.addEventListener("click", event => {
+        let dialogId = elm.getAttribute("data-dialog");
+
+        if (dialogId !== null) {
+            openDialog(dialogId);
+        }
+    });
+});
+
+window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+        closeDialogs();
+    }
+});
+
+document.querySelectorAll("dialog").forEach(elm => {
+    elm.querySelector("header .close-command").addEventListener("click", event => {
+        closeDialogs();
+    });
+});
+
+document.querySelectorAll("dialog").forEach(elm => {
+    elm.addEventListener("cmd:close", event => {
+        closeDialogs();
+    });
+
+    elm.addEventListener("cmd:show", event => {
+        openDialog(elm.id);
+    });
+});
+
+document.querySelectorAll("dialog").forEach(elm => {
+    elm.querySelector("footer .ok-command").addEventListener("click", event => {
+        closeDialogs();
+    });
+});
 
 
-	//# sourceMappingUrl=Element.Notify.js.map
+	
 
+﻿const _notifyDurations = { "three": 3, "five": 5, "eight": 8, "fourteen": 14, "twenty": 20, "permanent": -99 };
+
+const parseElement = (elm) => {
+    let tmp = elm.getAttribute("class");
+    let val;
+    let result = {};
+
+    for (let str of tmp.split(" ")) {
+        if (str.startsWith("notify-")) {
+            val = str;
+        }
+    };
+
+    if (val.length > 0) {
+        let vals = val.split("-");
+
+        if (vals.length === 4) {
+            result = {
+                "type": vals[1],
+                "position": vals[2],
+                "duration": vals[3],
+                "element": elm
+            };
+        };
+    };
+
+    return result;
+};
+
+const showElement = (elm) => {
+    let notify = parseElement(elm);
+
+    setTimeout(() => {
+        notify.element.classList.add("show");
+
+        if (notify.duration !== "permanent") {
+            setTimeout(() => {
+                notify.element.classList.remove("show");
+            }, _notifyDurations[notify.duration] * 1000);
+        }
+    }, 800);
+};
+
+document.querySelectorAll("[class^=notify-]").forEach((elm) => {
+    elm.addEventListener("cmd:open", (e) => {
+        showElement(elm);
+    });
+
+    elm.dispatchEvent(new Event("cmd:open"));
+});
+
+
+	
 
 var tabs = document.querySelectorAll(".tabs > .group > .tab");
 
@@ -151,7 +143,6 @@ tabs.forEach((tab) => {
 });
 
 
-	//# sourceMappingUrl=Element.Tabs.js.map
-
+	
 
 	//# sourceMappingUrl=Creator.js.map
