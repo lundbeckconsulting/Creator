@@ -1131,5 +1131,7 @@
 						content: "775"; }
 				.creator-icon.captainicon-ci-cloud-stormy::before {
 						content: "776"; }
+		.creator-icon.pointer:hover {
+				cursor: pointer; }
 
 /*# sourceMappingURL=TagHelper.Icon.css.map */

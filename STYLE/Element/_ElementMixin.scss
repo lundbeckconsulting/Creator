@@ -5,8 +5,6 @@
 @mixin formControl($cpName: Default, $glowFocus: true, $height: 36px, $borderRadius: getMap(FormControl, BorderRadius), $fontSize: getMap(FormControl, FontSize)) {
     $cpName: toCPName($cpName);
 
-    color: color($cpName);
-    background-color: color($cpName, Fifth);
     border-radius: $borderRadius;
     font-size: $fontSize;
     transition: sys(Transition);
@@ -74,7 +72,7 @@
     padding-left: $padHori;
     padding-right: $padHori;
     margin: getMap(FormControl, Margin);
-    
+
     &:hover {
         background-color: #f1efe8;
     }
@@ -122,10 +120,10 @@
 
     @if not (itemExists($exclude, background)) {
         @if ($gradient) {
-            background: linear-gradient($fore, $back);
+            background: linear-gradient($fore, $back) !important;
         }
         @else {
-            background-color: $back;
+            background-color: $back !important;
         }
     }
 
@@ -137,9 +135,9 @@
     }
 
     @if not (itemExists($exclude, color)) {
-        color: $fore;
+        color: $fore !important;
     }
-    
+
     @if ($border) {
         border: getMap(FormControl, BorderSize) solid $borderColor;
     }

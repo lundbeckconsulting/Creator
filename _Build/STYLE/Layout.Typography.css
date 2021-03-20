@@ -1,20 +1,38 @@
 h1 {
 		font-size: 44px; }
+		h1.slim {
+				font-size: 44px;
+				margin: 0; }
 
 h2 {
 		font-size: 38px; }
+		h2.slim {
+				font-size: 38px;
+				margin: 0; }
 
 h3 {
 		font-size: 32px; }
+		h3.slim {
+				font-size: 32px;
+				margin: 0; }
 
 h4 {
 		font-size: 26px; }
+		h4.slim {
+				font-size: 26px;
+				margin: 0; }
 
 h5 {
 		font-size: 22px; }
+		h5.slim {
+				font-size: 22px;
+				margin: 0; }
 
 h6 {
 		font-size: 19px; }
+		h6.slim {
+				font-size: 19px;
+				margin: 0; }
 
 .f1 {
 		font-size: 6px; }

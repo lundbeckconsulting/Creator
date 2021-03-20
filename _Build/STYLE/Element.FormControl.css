@@ -1,7 +1,5 @@
 .txt-default,
 .txt-area-default {
-		color: black;
-		background-color: #ececec;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -29,8 +27,6 @@
 				background-color: #f1efe8; }
 		.txt-default-shadow,
 		.txt-area-default-shadow {
-				color: black;
-				background-color: #ececec;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -77,18 +73,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-default {
-		background-color: white;
+		background-color: white !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: black;
+		color: black !important;
 		border: 3px solid #2a2a2a;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: black;
-		background-color: #ececec;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -99,18 +93,16 @@
 				background-color: black;
 				cursor: pointer; }
 		.btn-default-no-border {
-				background-color: white;
+				background-color: white !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				border: 3px solid #2a2a2a;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: black;
-				background-color: #ececec;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -121,18 +113,16 @@
 						background-color: black;
 						cursor: pointer; }
 		.btn-default-shadow {
-				background-color: white;
+				background-color: white !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				border: 3px solid #2a2a2a;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: black;
-				background-color: #ececec;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -144,18 +134,16 @@
 						background-color: black;
 						cursor: pointer; }
 		.btn-default-bs {
-				background-color: white;
+				background-color: white !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				border: 3px solid #2a2a2a;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: black;
-				background-color: #ececec;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -168,18 +156,16 @@
 						cursor: pointer; }
 
 .btn-default-gradient {
-		background: linear-gradient(black, white);
+		background: linear-gradient(black, white) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: black;
+		color: black !important;
 		border: 3px solid #2a2a2a;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: black;
-		background-color: #ececec;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -189,18 +175,16 @@
 				background: linear-gradient(#ececec, #303030);
 				cursor: pointer; }
 		.btn-default-gradient-no-border {
-				background: linear-gradient(black, white);
+				background: linear-gradient(black, white) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				border: 3px solid #2a2a2a;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: black;
-				background-color: #ececec;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -210,18 +194,16 @@
 						background: linear-gradient(#ececec, #303030);
 						cursor: pointer; }
 		.btn-default-gradient-shadow {
-				background: linear-gradient(black, white);
+				background: linear-gradient(black, white) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				border: 3px solid #2a2a2a;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: black;
-				background-color: #ececec;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -232,18 +214,16 @@
 						background: linear-gradient(#ececec, #303030);
 						cursor: pointer; }
 		.btn-default-gradient-bs {
-				background: linear-gradient(black, white);
+				background: linear-gradient(black, white) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				border: 3px solid #2a2a2a;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: black;
-				background-color: #ececec;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -255,8 +235,6 @@
 						cursor: pointer; }
 
 .frm-control-default {
-		color: black;
-		background-color: #ececec;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -268,8 +246,6 @@
 				background-color: #eae2e2; }
 
 .sel-default {
-		color: black;
-		background-color: #ececec;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -288,8 +264,6 @@
 
 .txt-primary,
 .txt-area-primary {
-		color: #8b480e;
-		background-color: #efdbc9;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -317,8 +291,6 @@
 				background-color: #f1efe8; }
 		.txt-primary-shadow,
 		.txt-area-primary-shadow {
-				color: #8b480e;
-				background-color: #efdbc9;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -365,18 +337,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-primary {
-		background-color: #8b480e;
+		background-color: #8b480e !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #efdbc9;
+		color: #efdbc9 !important;
 		border: 3px solid #8b480e;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #8b480e;
-		background-color: #efdbc9;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -387,17 +357,15 @@
 				background-color: #381d06;
 				cursor: pointer; }
 		.btn-primary-no-border {
-				background-color: #8b480e;
+				background-color: #8b480e !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #efdbc9;
+				color: #efdbc9 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8b480e;
-				background-color: #efdbc9;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -408,17 +376,15 @@
 						background-color: #381d06;
 						cursor: pointer; }
 		.btn-primary-shadow {
-				background-color: #8b480e;
+				background-color: #8b480e !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #efdbc9;
+				color: #efdbc9 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8b480e;
-				background-color: #efdbc9;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -430,18 +396,16 @@
 						background-color: #381d06;
 						cursor: pointer; }
 		.btn-primary-bs {
-				background-color: #8b480e;
+				background-color: #8b480e !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #efdbc9;
+				color: #efdbc9 !important;
 				border: 3px solid #8b480e;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8b480e;
-				background-color: #efdbc9;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -454,18 +418,16 @@
 						cursor: pointer; }
 
 .btn-primary-gradient {
-		background: linear-gradient(#251304, #8b480e);
+		background: linear-gradient(#251304, #8b480e) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #251304;
+		color: #251304 !important;
 		border: 3px solid #8b480e;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #8b480e;
-		background-color: #efdbc9;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -475,17 +437,15 @@
 				background: linear-gradient(#efdbc9, #b06c31);
 				cursor: pointer; }
 		.btn-primary-gradient-no-border {
-				background: linear-gradient(#251304, #8b480e);
+				background: linear-gradient(#251304, #8b480e) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #251304;
+				color: #251304 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8b480e;
-				background-color: #efdbc9;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -495,17 +455,15 @@
 						background: linear-gradient(#efdbc9, #b06c31);
 						cursor: pointer; }
 		.btn-primary-gradient-shadow {
-				background: linear-gradient(#251304, #8b480e);
+				background: linear-gradient(#251304, #8b480e) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #251304;
+				color: #251304 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8b480e;
-				background-color: #efdbc9;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -516,18 +474,16 @@
 						background: linear-gradient(#efdbc9, #b06c31);
 						cursor: pointer; }
 		.btn-primary-gradient-bs {
-				background: linear-gradient(#251304, #8b480e);
+				background: linear-gradient(#251304, #8b480e) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #251304;
+				color: #251304 !important;
 				border: 3px solid #8b480e;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8b480e;
-				background-color: #efdbc9;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -539,8 +495,6 @@
 						cursor: pointer; }
 
 .frm-control-primary {
-		color: #8b480e;
-		background-color: #efdbc9;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -552,8 +506,6 @@
 				background-color: #eae2e2; }
 
 .sel-primary {
-		color: #8b480e;
-		background-color: #efdbc9;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -572,8 +524,6 @@
 
 .txt-success,
 .txt-area-success {
-		color: #195f34;
-		background-color: #a0edbd;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -601,8 +551,6 @@
 				background-color: #f1efe8; }
 		.txt-success-shadow,
 		.txt-area-success-shadow {
-				color: #195f34;
-				background-color: #a0edbd;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -649,18 +597,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-success {
-		background-color: #195f34;
+		background-color: #195f34 !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #a0edbd;
+		color: #a0edbd !important;
 		border: 3px solid #195f34;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #195f34;
-		background-color: #a0edbd;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -671,17 +617,15 @@
 				background-color: #06160c;
 				cursor: pointer; }
 		.btn-success-no-border {
-				background-color: #195f34;
+				background-color: #195f34 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #a0edbd;
+				color: #a0edbd !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #195f34;
-				background-color: #a0edbd;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -692,17 +636,15 @@
 						background-color: #06160c;
 						cursor: pointer; }
 		.btn-success-shadow {
-				background-color: #195f34;
+				background-color: #195f34 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #a0edbd;
+				color: #a0edbd !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #195f34;
-				background-color: #a0edbd;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -714,18 +656,16 @@
 						background-color: #06160c;
 						cursor: pointer; }
 		.btn-success-bs {
-				background-color: #195f34;
+				background-color: #195f34 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #a0edbd;
+				color: #a0edbd !important;
 				border: 3px solid #195f34;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #195f34;
-				background-color: #a0edbd;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -738,18 +678,16 @@
 						cursor: pointer; }
 
 .btn-success-gradient {
-		background: linear-gradient(#020603, #195f34);
+		background: linear-gradient(#020603, #195f34) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #020603;
+		color: #020603 !important;
 		border: 3px solid #195f34;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #195f34;
-		background-color: #a0edbd;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -759,17 +697,15 @@
 				background: linear-gradient(#a0edbd, #238649);
 				cursor: pointer; }
 		.btn-success-gradient-no-border {
-				background: linear-gradient(#020603, #195f34);
+				background: linear-gradient(#020603, #195f34) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #020603;
+				color: #020603 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #195f34;
-				background-color: #a0edbd;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -779,17 +715,15 @@
 						background: linear-gradient(#a0edbd, #238649);
 						cursor: pointer; }
 		.btn-success-gradient-shadow {
-				background: linear-gradient(#020603, #195f34);
+				background: linear-gradient(#020603, #195f34) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #020603;
+				color: #020603 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #195f34;
-				background-color: #a0edbd;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -800,18 +734,16 @@
 						background: linear-gradient(#a0edbd, #238649);
 						cursor: pointer; }
 		.btn-success-gradient-bs {
-				background: linear-gradient(#020603, #195f34);
+				background: linear-gradient(#020603, #195f34) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #020603;
+				color: #020603 !important;
 				border: 3px solid #195f34;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #195f34;
-				background-color: #a0edbd;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -823,8 +755,6 @@
 						cursor: pointer; }
 
 .frm-control-success {
-		color: #195f34;
-		background-color: #a0edbd;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -836,8 +766,6 @@
 				background-color: #eae2e2; }
 
 .sel-success {
-		color: #195f34;
-		background-color: #a0edbd;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -856,8 +784,6 @@
 
 .txt-danger,
 .txt-area-danger {
-		color: #8c101b;
-		background-color: #ffcacf;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -885,8 +811,6 @@
 				background-color: #f1efe8; }
 		.txt-danger-shadow,
 		.txt-area-danger-shadow {
-				color: #8c101b;
-				background-color: #ffcacf;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -933,18 +857,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-danger {
-		background-color: #8c101b;
+		background-color: #8c101b !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #ffcacf;
+		color: #ffcacf !important;
 		border: 3px solid #8c101b;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #8c101b;
-		background-color: #ffcacf;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -955,17 +877,15 @@
 				background-color: #3a070b;
 				cursor: pointer; }
 		.btn-danger-no-border {
-				background-color: #8c101b;
+				background-color: #8c101b !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #ffcacf;
+				color: #ffcacf !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8c101b;
-				background-color: #ffcacf;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -976,17 +896,15 @@
 						background-color: #3a070b;
 						cursor: pointer; }
 		.btn-danger-shadow {
-				background-color: #8c101b;
+				background-color: #8c101b !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #ffcacf;
+				color: #ffcacf !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8c101b;
-				background-color: #ffcacf;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -998,18 +916,16 @@
 						background-color: #3a070b;
 						cursor: pointer; }
 		.btn-danger-bs {
-				background-color: #8c101b;
+				background-color: #8c101b !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #ffcacf;
+				color: #ffcacf !important;
 				border: 3px solid #8c101b;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8c101b;
-				background-color: #ffcacf;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1022,18 +938,16 @@
 						cursor: pointer; }
 
 .btn-danger-gradient {
-		background: linear-gradient(#270408, #8c101b);
+		background: linear-gradient(#270408, #8c101b) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #270408;
+		color: #270408 !important;
 		border: 3px solid #8c101b;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #8c101b;
-		background-color: #ffcacf;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1043,17 +957,15 @@
 				background: linear-gradient(#ffcacf, #a12d37);
 				cursor: pointer; }
 		.btn-danger-gradient-no-border {
-				background: linear-gradient(#270408, #8c101b);
+				background: linear-gradient(#270408, #8c101b) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #270408;
+				color: #270408 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8c101b;
-				background-color: #ffcacf;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1063,17 +975,15 @@
 						background: linear-gradient(#ffcacf, #a12d37);
 						cursor: pointer; }
 		.btn-danger-gradient-shadow {
-				background: linear-gradient(#270408, #8c101b);
+				background: linear-gradient(#270408, #8c101b) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #270408;
+				color: #270408 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8c101b;
-				background-color: #ffcacf;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1084,18 +994,16 @@
 						background: linear-gradient(#ffcacf, #a12d37);
 						cursor: pointer; }
 		.btn-danger-gradient-bs {
-				background: linear-gradient(#270408, #8c101b);
+				background: linear-gradient(#270408, #8c101b) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #270408;
+				color: #270408 !important;
 				border: 3px solid #8c101b;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #8c101b;
-				background-color: #ffcacf;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1107,8 +1015,6 @@
 						cursor: pointer; }
 
 .frm-control-danger {
-		color: #8c101b;
-		background-color: #ffcacf;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1120,8 +1026,6 @@
 				background-color: #eae2e2; }
 
 .sel-danger {
-		color: #8c101b;
-		background-color: #ffcacf;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1140,8 +1044,6 @@
 
 .txt-warning,
 .txt-area-warning {
-		color: #ffbf00;
-		background-color: #fff2cb;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1169,8 +1071,6 @@
 				background-color: #f1efe8; }
 		.txt-warning-shadow,
 		.txt-area-warning-shadow {
-				color: #ffbf00;
-				background-color: #fff2cb;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1217,18 +1117,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-warning {
-		background-color: #ffbf00;
+		background-color: #ffbf00 !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #86291c;
+		color: #86291c !important;
 		border: 3px solid #ffbf00;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #ffbf00;
-		background-color: #fff2cb;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1239,17 +1137,15 @@
 				background-color: #a37a00;
 				cursor: pointer; }
 		.btn-warning-no-border {
-				background-color: #ffbf00;
+				background-color: #ffbf00 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #86291c;
+				color: #86291c !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #ffbf00;
-				background-color: #fff2cb;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1260,17 +1156,15 @@
 						background-color: #a37a00;
 						cursor: pointer; }
 		.btn-warning-shadow {
-				background-color: #ffbf00;
+				background-color: #ffbf00 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #86291c;
+				color: #86291c !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #ffbf00;
-				background-color: #fff2cb;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1282,18 +1176,16 @@
 						background-color: #a37a00;
 						cursor: pointer; }
 		.btn-warning-bs {
-				background-color: #ffbf00;
+				background-color: #ffbf00 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #86291c;
+				color: #86291c !important;
 				border: 3px solid #ffbf00;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #ffbf00;
-				background-color: #fff2cb;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1306,18 +1198,16 @@
 						cursor: pointer; }
 
 .btn-warning-gradient {
-		background: linear-gradient(#86291c, #ffbf00);
+		background: linear-gradient(#86291c, #ffbf00) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #86291c;
+		color: #86291c !important;
 		border: 3px solid #ffbf00;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #ffbf00;
-		background-color: #fff2cb;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1327,17 +1217,15 @@
 				background: linear-gradient(#fff2cb, #ffd24a);
 				cursor: pointer; }
 		.btn-warning-gradient-no-border {
-				background: linear-gradient(#86291c, #ffbf00);
+				background: linear-gradient(#86291c, #ffbf00) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #86291c;
+				color: #86291c !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #ffbf00;
-				background-color: #fff2cb;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1347,17 +1235,15 @@
 						background: linear-gradient(#fff2cb, #ffd24a);
 						cursor: pointer; }
 		.btn-warning-gradient-shadow {
-				background: linear-gradient(#86291c, #ffbf00);
+				background: linear-gradient(#86291c, #ffbf00) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #86291c;
+				color: #86291c !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #ffbf00;
-				background-color: #fff2cb;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1368,18 +1254,16 @@
 						background: linear-gradient(#fff2cb, #ffd24a);
 						cursor: pointer; }
 		.btn-warning-gradient-bs {
-				background: linear-gradient(#86291c, #ffbf00);
+				background: linear-gradient(#86291c, #ffbf00) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #86291c;
+				color: #86291c !important;
 				border: 3px solid #ffbf00;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #ffbf00;
-				background-color: #fff2cb;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1391,8 +1275,6 @@
 						cursor: pointer; }
 
 .frm-control-warning {
-		color: #ffbf00;
-		background-color: #fff2cb;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1404,8 +1286,6 @@
 				background-color: #eae2e2; }
 
 .sel-warning {
-		color: #ffbf00;
-		background-color: #fff2cb;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1424,8 +1304,6 @@
 
 .txt-info,
 .txt-area-info {
-		color: #2894aa;
-		background-color: #c4e7ee;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1453,8 +1331,6 @@
 				background-color: #f1efe8; }
 		.txt-info-shadow,
 		.txt-area-info-shadow {
-				color: #2894aa;
-				background-color: #c4e7ee;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1501,18 +1377,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-info {
-		background-color: #2894aa;
+		background-color: #2894aa !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #c4e7ee;
+		color: #c4e7ee !important;
 		border: 3px solid #2894aa;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #2894aa;
-		background-color: #c4e7ee;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1523,17 +1397,15 @@
 				background-color: #175360;
 				cursor: pointer; }
 		.btn-info-no-border {
-				background-color: #2894aa;
+				background-color: #2894aa !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #c4e7ee;
+				color: #c4e7ee !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #2894aa;
-				background-color: #c4e7ee;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1544,17 +1416,15 @@
 						background-color: #175360;
 						cursor: pointer; }
 		.btn-info-shadow {
-				background-color: #2894aa;
+				background-color: #2894aa !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #c4e7ee;
+				color: #c4e7ee !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #2894aa;
-				background-color: #c4e7ee;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1566,18 +1436,16 @@
 						background-color: #175360;
 						cursor: pointer; }
 		.btn-info-bs {
-				background-color: #2894aa;
+				background-color: #2894aa !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #c4e7ee;
+				color: #c4e7ee !important;
 				border: 3px solid #2894aa;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #2894aa;
-				background-color: #c4e7ee;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1590,18 +1458,16 @@
 						cursor: pointer; }
 
 .btn-info-gradient {
-		background: linear-gradient(#0c436e, #2894aa);
+		background: linear-gradient(#0c436e, #2894aa) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #0c436e;
+		color: #0c436e !important;
 		border: 3px solid #2894aa;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #2894aa;
-		background-color: #c4e7ee;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1611,17 +1477,15 @@
 				background: linear-gradient(#c4e7ee, #46a3b6);
 				cursor: pointer; }
 		.btn-info-gradient-no-border {
-				background: linear-gradient(#0c436e, #2894aa);
+				background: linear-gradient(#0c436e, #2894aa) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #0c436e;
+				color: #0c436e !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #2894aa;
-				background-color: #c4e7ee;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1631,17 +1495,15 @@
 						background: linear-gradient(#c4e7ee, #46a3b6);
 						cursor: pointer; }
 		.btn-info-gradient-shadow {
-				background: linear-gradient(#0c436e, #2894aa);
+				background: linear-gradient(#0c436e, #2894aa) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #0c436e;
+				color: #0c436e !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #2894aa;
-				background-color: #c4e7ee;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1652,18 +1514,16 @@
 						background: linear-gradient(#c4e7ee, #46a3b6);
 						cursor: pointer; }
 		.btn-info-gradient-bs {
-				background: linear-gradient(#0c436e, #2894aa);
+				background: linear-gradient(#0c436e, #2894aa) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #0c436e;
+				color: #0c436e !important;
 				border: 3px solid #2894aa;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #2894aa;
-				background-color: #c4e7ee;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1675,8 +1535,6 @@
 						cursor: pointer; }
 
 .frm-control-info {
-		color: #2894aa;
-		background-color: #c4e7ee;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1688,8 +1546,6 @@
 				background-color: #eae2e2; }
 
 .sel-info {
-		color: #2894aa;
-		background-color: #c4e7ee;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1708,8 +1564,6 @@
 
 .txt-light,
 .txt-area-light {
-		color: #a19b9b;
-		background-color: #f7f2f2;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1737,8 +1591,6 @@
 				background-color: #f1efe8; }
 		.txt-light-shadow,
 		.txt-area-light-shadow {
-				color: #a19b9b;
-				background-color: #f7f2f2;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1785,18 +1637,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-light {
-		background-color: #a19b9b;
+		background-color: #a19b9b !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #f7f2f2;
+		color: #f7f2f2 !important;
 		border: 3px solid #a19b9b;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #a19b9b;
-		background-color: #f7f2f2;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1807,17 +1657,15 @@
 				background-color: #746d6d;
 				cursor: pointer; }
 		.btn-light-no-border {
-				background-color: #a19b9b;
+				background-color: #a19b9b !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #f7f2f2;
+				color: #f7f2f2 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #a19b9b;
-				background-color: #f7f2f2;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1828,17 +1676,15 @@
 						background-color: #746d6d;
 						cursor: pointer; }
 		.btn-light-shadow {
-				background-color: #a19b9b;
+				background-color: #a19b9b !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #f7f2f2;
+				color: #f7f2f2 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #a19b9b;
-				background-color: #f7f2f2;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1850,18 +1696,16 @@
 						background-color: #746d6d;
 						cursor: pointer; }
 		.btn-light-bs {
-				background-color: #a19b9b;
+				background-color: #a19b9b !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #f7f2f2;
+				color: #f7f2f2 !important;
 				border: 3px solid #a19b9b;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #a19b9b;
-				background-color: #f7f2f2;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1874,18 +1718,16 @@
 						cursor: pointer; }
 
 .btn-light-gradient {
-		background: linear-gradient(#696363, #a19b9b);
+		background: linear-gradient(#696363, #a19b9b) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #696363;
+		color: #696363 !important;
 		border: 3px solid #a19b9b;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #a19b9b;
-		background-color: #f7f2f2;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1895,17 +1737,15 @@
 				background: linear-gradient(#f7f2f2, #bbb3b3);
 				cursor: pointer; }
 		.btn-light-gradient-no-border {
-				background: linear-gradient(#696363, #a19b9b);
+				background: linear-gradient(#696363, #a19b9b) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #696363;
+				color: #696363 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #a19b9b;
-				background-color: #f7f2f2;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1915,17 +1755,15 @@
 						background: linear-gradient(#f7f2f2, #bbb3b3);
 						cursor: pointer; }
 		.btn-light-gradient-shadow {
-				background: linear-gradient(#696363, #a19b9b);
+				background: linear-gradient(#696363, #a19b9b) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #696363;
+				color: #696363 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #a19b9b;
-				background-color: #f7f2f2;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1936,18 +1774,16 @@
 						background: linear-gradient(#f7f2f2, #bbb3b3);
 						cursor: pointer; }
 		.btn-light-gradient-bs {
-				background: linear-gradient(#696363, #a19b9b);
+				background: linear-gradient(#696363, #a19b9b) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #696363;
+				color: #696363 !important;
 				border: 3px solid #a19b9b;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #a19b9b;
-				background-color: #f7f2f2;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -1959,8 +1795,6 @@
 						cursor: pointer; }
 
 .frm-control-light {
-		color: #a19b9b;
-		background-color: #f7f2f2;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1972,8 +1806,6 @@
 				background-color: #eae2e2; }
 
 .sel-light {
-		color: #a19b9b;
-		background-color: #f7f2f2;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -1992,8 +1824,6 @@
 
 .txt-dark,
 .txt-area-dark {
-		color: #161616;
-		background-color: #c3c3c3;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2021,8 +1851,6 @@
 				background-color: #f1efe8; }
 		.txt-dark-shadow,
 		.txt-area-dark-shadow {
-				color: #161616;
-				background-color: #c3c3c3;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2069,18 +1897,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-dark {
-		background-color: #161616;
+		background-color: #161616 !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: gray;
+		color: gray !important;
 		border: 3px solid #161616;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #161616;
-		background-color: #c3c3c3;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2091,17 +1917,15 @@
 				background-color: black;
 				cursor: pointer; }
 		.btn-dark-no-border {
-				background-color: #161616;
+				background-color: #161616 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: gray;
+				color: gray !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #161616;
-				background-color: #c3c3c3;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2112,17 +1936,15 @@
 						background-color: black;
 						cursor: pointer; }
 		.btn-dark-shadow {
-				background-color: #161616;
+				background-color: #161616 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: gray;
+				color: gray !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #161616;
-				background-color: #c3c3c3;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2134,18 +1956,16 @@
 						background-color: black;
 						cursor: pointer; }
 		.btn-dark-bs {
-				background-color: #161616;
+				background-color: #161616 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: gray;
+				color: gray !important;
 				border: 3px solid #161616;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #161616;
-				background-color: #c3c3c3;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2158,18 +1978,16 @@
 						cursor: pointer; }
 
 .btn-dark-gradient {
-		background: linear-gradient(white, #161616);
+		background: linear-gradient(white, #161616) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: white;
+		color: white !important;
 		border: 3px solid #161616;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #161616;
-		background-color: #c3c3c3;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2179,17 +1997,15 @@
 				background: linear-gradient(#c3c3c3, #2c2c2c);
 				cursor: pointer; }
 		.btn-dark-gradient-no-border {
-				background: linear-gradient(white, #161616);
+				background: linear-gradient(white, #161616) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: white;
+				color: white !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #161616;
-				background-color: #c3c3c3;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2199,17 +2015,15 @@
 						background: linear-gradient(#c3c3c3, #2c2c2c);
 						cursor: pointer; }
 		.btn-dark-gradient-shadow {
-				background: linear-gradient(white, #161616);
+				background: linear-gradient(white, #161616) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: white;
+				color: white !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #161616;
-				background-color: #c3c3c3;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2220,18 +2034,16 @@
 						background: linear-gradient(#c3c3c3, #2c2c2c);
 						cursor: pointer; }
 		.btn-dark-gradient-bs {
-				background: linear-gradient(white, #161616);
+				background: linear-gradient(white, #161616) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: white;
+				color: white !important;
 				border: 3px solid #161616;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #161616;
-				background-color: #c3c3c3;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2243,8 +2055,6 @@
 						cursor: pointer; }
 
 .frm-control-dark {
-		color: #161616;
-		background-color: #c3c3c3;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2256,8 +2066,6 @@
 				background-color: #eae2e2; }
 
 .sel-dark {
-		color: #161616;
-		background-color: #c3c3c3;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2276,8 +2084,6 @@
 
 .txt-antan,
 .txt-area-antan {
-		color: #fe2f00;
-		background-color: #e8bdb4;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2305,8 +2111,6 @@
 				background-color: #f1efe8; }
 		.txt-antan-shadow,
 		.txt-area-antan-shadow {
-				color: #fe2f00;
-				background-color: #e8bdb4;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2353,18 +2157,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-antan {
-		background-color: #fe2f00;
+		background-color: #fe2f00 !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #e8bdb4;
+		color: #e8bdb4 !important;
 		border: 3px solid #fe2f00;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #fe2f00;
-		background-color: #e8bdb4;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2375,17 +2177,15 @@
 				background-color: #a21e00;
 				cursor: pointer; }
 		.btn-antan-no-border {
-				background-color: #fe2f00;
+				background-color: #fe2f00 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #e8bdb4;
+				color: #e8bdb4 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #fe2f00;
-				background-color: #e8bdb4;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2396,17 +2196,15 @@
 						background-color: #a21e00;
 						cursor: pointer; }
 		.btn-antan-shadow {
-				background-color: #fe2f00;
+				background-color: #fe2f00 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #e8bdb4;
+				color: #e8bdb4 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #fe2f00;
-				background-color: #e8bdb4;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2418,18 +2216,16 @@
 						background-color: #a21e00;
 						cursor: pointer; }
 		.btn-antan-bs {
-				background-color: #fe2f00;
+				background-color: #fe2f00 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #e8bdb4;
+				color: #e8bdb4 !important;
 				border: 3px solid #fe2f00;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #fe2f00;
-				background-color: #e8bdb4;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2442,18 +2238,16 @@
 						cursor: pointer; }
 
 .btn-antan-gradient {
-		background: linear-gradient(#8e1a00, #fe2f00);
+		background: linear-gradient(#8e1a00, #fe2f00) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #8e1a00;
+		color: #8e1a00 !important;
 		border: 3px solid #fe2f00;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #fe2f00;
-		background-color: #e8bdb4;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2463,17 +2257,15 @@
 				background: linear-gradient(#e8bdb4, #c44b30);
 				cursor: pointer; }
 		.btn-antan-gradient-no-border {
-				background: linear-gradient(#8e1a00, #fe2f00);
+				background: linear-gradient(#8e1a00, #fe2f00) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #8e1a00;
+				color: #8e1a00 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #fe2f00;
-				background-color: #e8bdb4;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2483,17 +2275,15 @@
 						background: linear-gradient(#e8bdb4, #c44b30);
 						cursor: pointer; }
 		.btn-antan-gradient-shadow {
-				background: linear-gradient(#8e1a00, #fe2f00);
+				background: linear-gradient(#8e1a00, #fe2f00) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #8e1a00;
+				color: #8e1a00 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #fe2f00;
-				background-color: #e8bdb4;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2504,18 +2294,16 @@
 						background: linear-gradient(#e8bdb4, #c44b30);
 						cursor: pointer; }
 		.btn-antan-gradient-bs {
-				background: linear-gradient(#8e1a00, #fe2f00);
+				background: linear-gradient(#8e1a00, #fe2f00) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #8e1a00;
+				color: #8e1a00 !important;
 				border: 3px solid #fe2f00;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #fe2f00;
-				background-color: #e8bdb4;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2527,8 +2315,6 @@
 						cursor: pointer; }
 
 .frm-control-antan {
-		color: #fe2f00;
-		background-color: #e8bdb4;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2540,8 +2326,6 @@
 				background-color: #eae2e2; }
 
 .sel-antan {
-		color: #fe2f00;
-		background-color: #e8bdb4;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2560,8 +2344,6 @@
 
 .txt-notify,
 .txt-area-notify {
-		color: #07294e;
-		background-color: #c1cfde;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2589,8 +2371,6 @@
 				background-color: #f1efe8; }
 		.txt-notify-shadow,
 		.txt-area-notify-shadow {
-				color: #07294e;
-				background-color: #c1cfde;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2637,18 +2417,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-notify {
-		background-color: #07294e;
+		background-color: #07294e !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #c1cfde;
+		color: #c1cfde !important;
 		border: 3px solid #07294e;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #07294e;
-		background-color: #c1cfde;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2659,17 +2437,15 @@
 				background-color: black;
 				cursor: pointer; }
 		.btn-notify-no-border {
-				background-color: #07294e;
+				background-color: #07294e !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #c1cfde;
+				color: #c1cfde !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #07294e;
-				background-color: #c1cfde;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2680,17 +2456,15 @@
 						background-color: black;
 						cursor: pointer; }
 		.btn-notify-shadow {
-				background-color: #07294e;
+				background-color: #07294e !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #c1cfde;
+				color: #c1cfde !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #07294e;
-				background-color: #c1cfde;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2702,18 +2476,16 @@
 						background-color: black;
 						cursor: pointer; }
 		.btn-notify-bs {
-				background-color: #07294e;
+				background-color: #07294e !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #c1cfde;
+				color: #c1cfde !important;
 				border: 3px solid #07294e;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #07294e;
-				background-color: #c1cfde;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2726,18 +2498,16 @@
 						cursor: pointer; }
 
 .btn-notify-gradient {
-		background: linear-gradient(black, #07294e);
+		background: linear-gradient(black, #07294e) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: black;
+		color: black !important;
 		border: 3px solid #07294e;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #07294e;
-		background-color: #c1cfde;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2747,17 +2517,15 @@
 				background: linear-gradient(#c1cfde, #1c436d);
 				cursor: pointer; }
 		.btn-notify-gradient-no-border {
-				background: linear-gradient(black, #07294e);
+				background: linear-gradient(black, #07294e) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #07294e;
-				background-color: #c1cfde;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2767,17 +2535,15 @@
 						background: linear-gradient(#c1cfde, #1c436d);
 						cursor: pointer; }
 		.btn-notify-gradient-shadow {
-				background: linear-gradient(black, #07294e);
+				background: linear-gradient(black, #07294e) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #07294e;
-				background-color: #c1cfde;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2788,18 +2554,16 @@
 						background: linear-gradient(#c1cfde, #1c436d);
 						cursor: pointer; }
 		.btn-notify-gradient-bs {
-				background: linear-gradient(black, #07294e);
+				background: linear-gradient(black, #07294e) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: black;
+				color: black !important;
 				border: 3px solid #07294e;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #07294e;
-				background-color: #c1cfde;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2811,8 +2575,6 @@
 						cursor: pointer; }
 
 .frm-control-notify {
-		color: #07294e;
-		background-color: #c1cfde;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2824,8 +2586,6 @@
 				background-color: #eae2e2; }
 
 .sel-notify {
-		color: #07294e;
-		background-color: #c1cfde;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2844,8 +2604,6 @@
 
 .txt-funk,
 .txt-area-funk {
-		color: #165992;
-		background-color: #9fcef6;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2873,8 +2631,6 @@
 				background-color: #f1efe8; }
 		.txt-funk-shadow,
 		.txt-area-funk-shadow {
-				color: #165992;
-				background-color: #9fcef6;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2921,18 +2677,16 @@
 						border: 2px solid #2eac5e; }
 
 .btn-funk {
-		background-color: #165992;
+		background-color: #165992 !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #9fcef6;
+		color: #9fcef6 !important;
 		border: 3px solid #165992;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #165992;
-		background-color: #9fcef6;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -2943,17 +2697,15 @@
 				background-color: #0a2842;
 				cursor: pointer; }
 		.btn-funk-no-border {
-				background-color: #165992;
+				background-color: #165992 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #9fcef6;
+				color: #9fcef6 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #165992;
-				background-color: #9fcef6;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2964,17 +2716,15 @@
 						background-color: #0a2842;
 						cursor: pointer; }
 		.btn-funk-shadow {
-				background-color: #165992;
+				background-color: #165992 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #9fcef6;
+				color: #9fcef6 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #165992;
-				background-color: #9fcef6;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -2986,18 +2736,16 @@
 						background-color: #0a2842;
 						cursor: pointer; }
 		.btn-funk-bs {
-				background-color: #165992;
+				background-color: #165992 !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #9fcef6;
+				color: #9fcef6 !important;
 				border: 3px solid #165992;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #165992;
-				background-color: #9fcef6;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -3010,18 +2758,16 @@
 						cursor: pointer; }
 
 .btn-funk-gradient {
-		background: linear-gradient(#9fcef6, #165992);
+		background: linear-gradient(#9fcef6, #165992) !important;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		padding-left: 16px;
 		padding-right: 16px;
-		color: #9fcef6;
+		color: #9fcef6 !important;
 		border: 3px solid #165992;
 		display: block;
 		margin: 2px;
 		box-shadow: 2px 2px #111111;
-		color: #165992;
-		background-color: #9fcef6;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -3031,17 +2777,15 @@
 				background: linear-gradient(#9fcef6, #1976c5);
 				cursor: pointer; }
 		.btn-funk-gradient-no-border {
-				background: linear-gradient(#9fcef6, #165992);
+				background: linear-gradient(#9fcef6, #165992) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #9fcef6;
+				color: #9fcef6 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #165992;
-				background-color: #9fcef6;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -3051,17 +2795,15 @@
 						background: linear-gradient(#9fcef6, #1976c5);
 						cursor: pointer; }
 		.btn-funk-gradient-shadow {
-				background: linear-gradient(#9fcef6, #165992);
+				background: linear-gradient(#9fcef6, #165992) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #9fcef6;
+				color: #9fcef6 !important;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #165992;
-				background-color: #9fcef6;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -3072,18 +2814,16 @@
 						background: linear-gradient(#9fcef6, #1976c5);
 						cursor: pointer; }
 		.btn-funk-gradient-bs {
-				background: linear-gradient(#9fcef6, #165992);
+				background: linear-gradient(#9fcef6, #165992) !important;
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 16px;
 				padding-right: 16px;
-				color: #9fcef6;
+				color: #9fcef6 !important;
 				border: 3px solid #165992;
 				display: block;
 				margin: 2px;
 				box-shadow: 2px 2px #111111;
-				color: #165992;
-				background-color: #9fcef6;
 				border-radius: 8px;
 				font-size: 15px;
 				transition: all 0.4s ease-in-out;
@@ -3095,8 +2835,6 @@
 						cursor: pointer; }
 
 .frm-control-funk {
-		color: #165992;
-		background-color: #9fcef6;
 		border-radius: 8px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;
@@ -3108,8 +2846,6 @@
 				background-color: #eae2e2; }
 
 .sel-funk {
-		color: #165992;
-		background-color: #9fcef6;
 		border-radius: 4px;
 		font-size: 15px;
 		transition: all 0.4s ease-in-out;

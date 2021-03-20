@@ -47,4 +47,10 @@
             }
         }
     }
+
+    &.pointer {
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }

@@ -5,6 +5,11 @@
 @each $nr, $font in getMap(HeadTags) {
     h#{$nr} {
         font-size: $font;
+
+        &.#{"slim"} {
+            font-size: $font;
+            margin: 0;
+        }
     }
 }
 

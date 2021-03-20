@@ -1,0 +1,5 @@
+@mixin mapToProperties($map) {
+    @each $key in map-keys($map) {
+        #{$key}: map-get($map, $key)
+    }
+}
