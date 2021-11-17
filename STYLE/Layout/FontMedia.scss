@@ -1,0 +1,44 @@
+@import "..//Shared//Function";
+@import "..//Shared//Media";
+
+$pre: str(getPrefix(Font));
+
+.#{$pre}-media {
+	@each $name, $prop in getMap(MediaFont) {
+		@include media($name) {
+			font-size: $prop;
+		}
+
+		&-force {
+			@include media($name) {
+				font-size: $prop !important;
+			}
+		}
+	}
+}
+
+.#{$pre}-head {
+	$mrg: 13px;
+
+	font-weight: bold;
+	margin-top: $mrg;
+	margin-bottom: $mrg;
+
+	&-force {
+		font-weight: bold !important;
+		margin-top: $mrg !important;
+		margin-bottom: $mrg !important;
+	}
+
+	@each $name, $prop in getMap(MediaFontHead) {
+		@include media($name) {
+			font-size: $prop;
+		}
+
+		&-force {
+			@include media($name) {
+				font-size: $prop !important;
+			}
+		}
+	}
+}

@@ -3,7 +3,7 @@
 
 $enumerableProtectedWords: (First, Middle, Last);
 
-@function mapExists($mapName) { 
+@function mapExists($mapName) {
     $result: map-get($mapIndex, toMapName($mapName));
 
     @if not ($result) {
@@ -15,7 +15,7 @@ $enumerableProtectedWords: (First, Middle, Last);
 
 /// Selects map by $mapName from MapIndex
 /// @author Stein Lundbeck
-/// @param {*} $mapName [Sys] - Name of map 
+/// @param {*} $mapName [Sys] - Name of map
 /// @param {*} $key [null] - Map data to select
 @function getMap($mapName: Sys, $key: null) {
     $result: null;
@@ -380,7 +380,7 @@ $enumerableProtectedWords: (First, Middle, Last);
                 }
             }
         }
-    }  
+    }
     @else {
         @error "$coll of type #{type-of($coll)} can be either List or Map";
     }
@@ -406,4 +406,8 @@ $enumerableProtectedWords: (First, Middle, Last);
 
 @function KW($name) {
     @return getMap(KW, $name);
+}
+
+@function getPrefix($name: font) {
+    @return getMap(StylePrefix, $name);
 }

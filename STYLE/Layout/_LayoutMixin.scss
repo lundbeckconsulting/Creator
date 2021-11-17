@@ -255,6 +255,10 @@
 
     &.large {
         font-size: getMap(Sys, FooterSizeLarge);
+
+        &-force {
+            font-size: getMap(Sys, FooterSizeLarge) !important;
+        }
     }
 
     &.fixed {
@@ -263,10 +267,30 @@
         left: 0;
         right: 0;
         margin: unset;
+
+        &-force {
+            position: fixed !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            margin: unset !important;
+        }
     }
 
     &.align-left {
         text-align: left;
+
+        &-force {
+            text-align: left !important;
+        }
+    }
+
+    &.align-right {
+        text-align: right;
+
+        &-force {
+            text-align: right !important;
+        }
     }
 
     & nav {

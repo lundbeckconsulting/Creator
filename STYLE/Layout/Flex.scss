@@ -2,7 +2,9 @@
 @import "..\\Shared\\Function";
 @import "LayoutMixin";
 
-.flex {
+$pre: getPrefix(Flex);
+
+.#{$pre} {
     display: flex;
 
     &-force {
@@ -160,7 +162,7 @@
 }
 
 @each $item, $property in getMap(FlexItem) {
-    .flex-item {
+    .#{$pre}-item {
         @each $sizeName, $size in getMap(FlexItemSize) {
             $styleName: str($item) + "-" + str($sizeName);
             $prop: $property + " " + str($size);

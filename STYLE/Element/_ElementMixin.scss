@@ -18,13 +18,13 @@
 
 @mixin formControlHover($cpName: Default, $gradient: false) {
     &:hover {
-        $cursor: pointer;
+        cursor: pointer;
 
         @if ($gradient) {
             $start: color($cpName, Last);
             $end: color($cpName, Second);
 
-            background: linear-gradient($start, $end);
+            background: linear-gradient($start, $end) !important;
         }
         @else {
             $cpName: toCPName($cpName);
@@ -38,11 +38,9 @@
                 $fore: #6d6d6d;
             }
 
-            color: $fore;
-            background-color: $back;
+            color: $fore !important;
+            background-color: $back !important;
         }
-
-        cursor: $cursor;
     }
 }
 

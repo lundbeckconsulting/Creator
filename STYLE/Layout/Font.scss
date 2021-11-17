@@ -1,0 +1,80 @@
+@import "..//Shared//Function";
+@import "..//Shared//Media";
+
+$pre: str(getPrefix(Font));
+
+.#{$pre}-bold {
+    font-weight: bold;
+
+    &-force {
+        font-weight: bold !important;
+    }
+}
+
+@each $z in getMap(BoldSize) {
+    $size: 0px;
+
+    @if (str($z) == smallest) {
+        $size: 9px;
+    }
+    @else if (str($z) == small) {
+        $size: 12px;
+    }
+    @else if (str($z) == big) {
+        $size: 20px;
+    }
+    @else if (str($z) == bigger) {
+        $size: 26px;
+    }
+    @else if (str($z) == large) {
+        $size: 34px;
+    }
+    @else if (str($z) == xl) {
+        $size: 47px;
+    }
+    @else if (str($z) == largest) {
+        $size: 56px;
+    }
+
+    .#{$pre}-bold-#{str($z)} {
+        font-size: $size;
+        font-weight: bold;
+
+        &-force {
+            font-size: $size !important;
+            font-weight: bold !important;
+        }
+    }
+}
+
+.#{$pre}-reset {
+    font-family: unset;
+    font-size: unset;
+    font-weight: unset;
+
+    &-force {
+        font-family: unset !important;
+        font-size: unset !important;
+        font-weight: unset !important;
+    }
+}
+
+@each $name, $prop in getMap(FontIntro) {
+    @include media($name) {
+        .#{$pre}-intro {
+            $mrg: 12px;
+
+            font-size: $prop;
+            font-weight: 800;
+            margin-top: $mrg;
+            margin-bottom: $mrg;
+
+            &-force {
+                font-size: $prop !important;
+                font-weight: 800 !important;
+                margin-top: $mrg !important;
+                margin-bottom: $mrg !important;
+            }
+        }
+    }
+}

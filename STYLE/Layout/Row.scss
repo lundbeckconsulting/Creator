@@ -1,9 +1,11 @@
 ﻿@import "..\\Shared\\Function";
 @import "..\\Shared\\Media";
 
+$rowPre: getPrefix(MediaRow);
+$colPre: getPrefix(MediaColumn);
 $base: 12;
 
-.row {
+.#{$rowPre} {
   display: grid;
   grid-template-columns: repeat($base, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -17,7 +19,7 @@ $base: 12;
 @each $size in sys(Sizes) {
   @include media($size) {
     @for $c from 1 through $base {
-      .col-#{str($size)}-#{$c} {
+      .#{$colPre}-#{str($size)}-#{$c} {
         $span: $c;
 
         grid-row: 1 !important;

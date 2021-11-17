@@ -2,7 +2,7 @@
 	"version": 3,
 	"file": "Element.Footer.min.css",
 	"sources": [
-		"../../../../..//stdin"
+		"../../../../../stdin"
 	],
 	"names": [],
 	"mappings": "AAAA,AAAA,YAAY,AAAC,CACX,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,UAAU,CAAE,KAAK,CAAG,AAEtB,AAAA,WAAW,AAAC,CACV,IAAI,CAAE,QAAQ,CAAG,AAEnB,AAAA,eAAe,AAAC,CACd,IAAI,CAAE,QAAQ,CAAG"

@@ -17,13 +17,19 @@ $flexItemSizes: ( Auto: auto, XXS: 76px, XS: 120px, SM: 200px, MD: 280px, LG: 36
 $flexItems: ( Resize: 1 1, Shrink: 0 1, Grow: 1 0, Fixed: 0 0 );
 $gridItemSizes: ( XS: 8px, SM: 60px, MD: 144px, LG: 366px, XL: 536px, XXL: 768px );
 $gridGapSizes: ( XS: 6px, SM: 14px, MD: 1fr );
-$notifyPositions: ( Bar: (Top, Bottom), Box: (Top, Bottom, Left, Right) );
+$notifyPositions: ( Bar: ( Top, Bottom ), Box: ( Top, Bottom, Left, Right ) );
 $notifyDurations: ( Three, Five, Eight, Fourteen, Twenty, Permanent );
 $miscSettings: ( NotifyBoxWidth: 548px, NotifyDefaultPadding: 14px );
 $keywords: ( Airy: airy, Opacity: opacity, MediaDevice: media-device, MediaRetina: media-retina, BG-Cover: bg-cover, BG-Repeat-X: bg-repeat-x, BG-Repeat-Y: bg-repeat-y, BG-NoRepeat: bg-norepeat, Font: f, HeadTag: h, Col: col-, Responsive: r, Image: img, Button: btn, AlignVertical: align-vertical, TextBox: txt, Textarea: txt-area, FormControl: frm-control, SelectControl: sel, ValidateError: validate-error, ValidatedForm: form-validated, WhiteSpace: ws, DialogBackgroundColor: white, Tabs: tabs, TabsGroup: tabs-group );
 $formControlSpecs: ( ButtonHeight: 36px, ButtonPaddingVertical: 4px, ButtonPaddingHorizontal: 16px, BorderRadius: 8px, Margin: 2px, FontSize: 15px, BorderSize: 3px );
+$boldSizes: ( Smallest, Small, Big, Bigger, Large, XL, Largest );
+$fontMedia: ( XS: 9px, SM: 12px, LG: 24px, XL: 48px );
+$fontMediaHeader: ( XS: 12px, SM: 18px, MD: 29px, LG: 44px, XL: 69px );
+$fontIntro: ( XS: 14px, SM: 19px, MD: 25px, LG: 34px, XL: 44px );
+$fixedItems: ( Left, Left-Top, Right, Right-Top, Top, Bottom );
+$stylePrefix: ( Font: Font, MediaRow: Row, MediaColumn: Col, Flex: Flex );
 
-$mapIndex: (    NotifyPosition: ( Data: $notifyPositions),
+$mapIndex: ( NotifyPosition: ( Data: $notifyPositions),
                 NotifyDuration: ( Data: $notifyDurations ),
                 Pad: ( Data: $padAndMarginValues ),
                 Margin: ( Data: $padAndMarginValues ),
@@ -51,4 +57,10 @@ $mapIndex: (    NotifyPosition: ( Data: $notifyPositions),
                 MiscSettings: ( Data: $miscSettings ),
                 Doc: ( Data: $documentWidths ),
                 DocFontSize: ( Data: $documentFontSizes ),
-                FormControl: (Data: $formControlSpecs ));
+                FormControl: ( Data: $formControlSpecs ),
+                BoldSize: ( Data: $boldSizes ),
+                MediaFont: ( Data: $fontMedia ),
+                FontIntro: ( Data: $fontIntro ),
+                MediaFontHead: ( Data: $fontMediaHeader),
+                FixedItem: ( Data: $fixedItems ),
+                StylePrefix: ( Data: $stylePrefix ) );

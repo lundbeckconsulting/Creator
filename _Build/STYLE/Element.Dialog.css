@@ -81,18 +81,16 @@
 				justify-content: end;
 				border-top: 1px solid black; }
 				.dialog-default-xs > content > footer .ok-command.btn {
-						background-color: white;
+						background-color: white !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: black;
+						color: black !important;
 						border: 3px solid #2a2a2a;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: black;
-						background-color: #ececec;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -100,22 +98,20 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-default-xs > content > footer .ok-command.btn:hover {
-								color: #ececec;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ececec !important;
+								background-color: black !important; }
 						.dialog-default-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -124,22 +120,20 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-default-xs > content > footer .ok-command.btn-left:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 						.dialog-default-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -148,9 +142,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-default-xs > content > footer .ok-command.btn-center:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 				.dialog-default-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -238,18 +232,16 @@
 				justify-content: end;
 				border-top: 1px solid black; }
 				.dialog-default-sm > content > footer .ok-command.btn {
-						background-color: white;
+						background-color: white !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: black;
+						color: black !important;
 						border: 3px solid #2a2a2a;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: black;
-						background-color: #ececec;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -257,22 +249,20 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-default-sm > content > footer .ok-command.btn:hover {
-								color: #ececec;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ececec !important;
+								background-color: black !important; }
 						.dialog-default-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -281,22 +271,20 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-default-sm > content > footer .ok-command.btn-left:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 						.dialog-default-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -305,9 +293,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-default-sm > content > footer .ok-command.btn-center:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 				.dialog-default-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -395,18 +383,16 @@
 				justify-content: end;
 				border-top: 1px solid black; }
 				.dialog-default-md > content > footer .ok-command.btn {
-						background-color: white;
+						background-color: white !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: black;
+						color: black !important;
 						border: 3px solid #2a2a2a;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: black;
-						background-color: #ececec;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -414,22 +400,20 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-default-md > content > footer .ok-command.btn:hover {
-								color: #ececec;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ececec !important;
+								background-color: black !important; }
 						.dialog-default-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -438,22 +422,20 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-default-md > content > footer .ok-command.btn-left:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 						.dialog-default-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -462,9 +444,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-default-md > content > footer .ok-command.btn-center:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 				.dialog-default-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -552,18 +534,16 @@
 				justify-content: end;
 				border-top: 1px solid black; }
 				.dialog-default-lg > content > footer .ok-command.btn {
-						background-color: white;
+						background-color: white !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: black;
+						color: black !important;
 						border: 3px solid #2a2a2a;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: black;
-						background-color: #ececec;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -571,22 +551,20 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-default-lg > content > footer .ok-command.btn:hover {
-								color: #ececec;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ececec !important;
+								background-color: black !important; }
 						.dialog-default-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -595,22 +573,20 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-default-lg > content > footer .ok-command.btn-left:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 						.dialog-default-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -619,9 +595,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-default-lg > content > footer .ok-command.btn-center:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 				.dialog-default-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -709,18 +685,16 @@
 				justify-content: end;
 				border-top: 1px solid black; }
 				.dialog-default-xl > content > footer .ok-command.btn {
-						background-color: white;
+						background-color: white !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: black;
+						color: black !important;
 						border: 3px solid #2a2a2a;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: black;
-						background-color: #ececec;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -728,22 +702,20 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-default-xl > content > footer .ok-command.btn:hover {
-								color: #ececec;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ececec !important;
+								background-color: black !important; }
 						.dialog-default-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -752,22 +724,20 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-default-xl > content > footer .ok-command.btn-left:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 						.dialog-default-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, white);
+								background: linear-gradient(black, white) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								border: 3px solid #2a2a2a;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: black;
-								background-color: #ececec;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -776,9 +746,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-default-xl > content > footer .ok-command.btn-center:hover {
-										color: #ececec;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ececec !important;
+										background-color: black !important; }
 				.dialog-default-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -866,17 +836,15 @@
 				justify-content: end;
 				border-top: 1px solid #8b480e; }
 				.dialog-primary-xs > content > footer .ok-command.btn {
-						background-color: #8b480e;
+						background-color: #8b480e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #efdbc9;
+						color: #efdbc9 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8b480e;
-						background-color: #efdbc9;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -884,21 +852,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-primary-xs > content > footer .ok-command.btn:hover {
-								color: #efdbc9;
-								background-color: #381d06;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #efdbc9 !important;
+								background-color: #381d06 !important; }
 						.dialog-primary-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -907,21 +873,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-primary-xs > content > footer .ok-command.btn-left:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 						.dialog-primary-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -930,9 +894,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-primary-xs > content > footer .ok-command.btn-center:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 				.dialog-primary-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -1020,17 +984,15 @@
 				justify-content: end;
 				border-top: 1px solid #8b480e; }
 				.dialog-primary-sm > content > footer .ok-command.btn {
-						background-color: #8b480e;
+						background-color: #8b480e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #efdbc9;
+						color: #efdbc9 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8b480e;
-						background-color: #efdbc9;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -1038,21 +1000,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-primary-sm > content > footer .ok-command.btn:hover {
-								color: #efdbc9;
-								background-color: #381d06;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #efdbc9 !important;
+								background-color: #381d06 !important; }
 						.dialog-primary-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1061,21 +1021,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-primary-sm > content > footer .ok-command.btn-left:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 						.dialog-primary-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1084,9 +1042,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-primary-sm > content > footer .ok-command.btn-center:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 				.dialog-primary-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -1174,17 +1132,15 @@
 				justify-content: end;
 				border-top: 1px solid #8b480e; }
 				.dialog-primary-md > content > footer .ok-command.btn {
-						background-color: #8b480e;
+						background-color: #8b480e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #efdbc9;
+						color: #efdbc9 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8b480e;
-						background-color: #efdbc9;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -1192,21 +1148,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-primary-md > content > footer .ok-command.btn:hover {
-								color: #efdbc9;
-								background-color: #381d06;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #efdbc9 !important;
+								background-color: #381d06 !important; }
 						.dialog-primary-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1215,21 +1169,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-primary-md > content > footer .ok-command.btn-left:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 						.dialog-primary-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1238,9 +1190,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-primary-md > content > footer .ok-command.btn-center:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 				.dialog-primary-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -1328,17 +1280,15 @@
 				justify-content: end;
 				border-top: 1px solid #8b480e; }
 				.dialog-primary-lg > content > footer .ok-command.btn {
-						background-color: #8b480e;
+						background-color: #8b480e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #efdbc9;
+						color: #efdbc9 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8b480e;
-						background-color: #efdbc9;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -1346,21 +1296,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-primary-lg > content > footer .ok-command.btn:hover {
-								color: #efdbc9;
-								background-color: #381d06;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #efdbc9 !important;
+								background-color: #381d06 !important; }
 						.dialog-primary-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1369,21 +1317,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-primary-lg > content > footer .ok-command.btn-left:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 						.dialog-primary-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1392,9 +1338,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-primary-lg > content > footer .ok-command.btn-center:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 				.dialog-primary-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -1482,17 +1428,15 @@
 				justify-content: end;
 				border-top: 1px solid #8b480e; }
 				.dialog-primary-xl > content > footer .ok-command.btn {
-						background-color: #8b480e;
+						background-color: #8b480e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #efdbc9;
+						color: #efdbc9 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8b480e;
-						background-color: #efdbc9;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -1500,21 +1444,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-primary-xl > content > footer .ok-command.btn:hover {
-								color: #efdbc9;
-								background-color: #381d06;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #efdbc9 !important;
+								background-color: #381d06 !important; }
 						.dialog-primary-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1523,21 +1465,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-primary-xl > content > footer .ok-command.btn-left:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 						.dialog-primary-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(#251304, #8b480e);
+								background: linear-gradient(#251304, #8b480e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #251304;
+								color: #251304 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8b480e;
-								background-color: #efdbc9;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1546,9 +1486,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-primary-xl > content > footer .ok-command.btn-center:hover {
-										color: #efdbc9;
-										background-color: #381d06;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #efdbc9 !important;
+										background-color: #381d06 !important; }
 				.dialog-primary-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -1636,17 +1576,15 @@
 				justify-content: end;
 				border-top: 1px solid #195f34; }
 				.dialog-success-xs > content > footer .ok-command.btn {
-						background-color: #195f34;
+						background-color: #195f34 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #a0edbd;
+						color: #a0edbd !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #195f34;
-						background-color: #a0edbd;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -1654,21 +1592,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-success-xs > content > footer .ok-command.btn:hover {
-								color: #a0edbd;
-								background-color: #06160c;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #a0edbd !important;
+								background-color: #06160c !important; }
 						.dialog-success-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1677,21 +1613,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-success-xs > content > footer .ok-command.btn-left:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 						.dialog-success-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1700,9 +1634,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-success-xs > content > footer .ok-command.btn-center:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 				.dialog-success-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -1790,17 +1724,15 @@
 				justify-content: end;
 				border-top: 1px solid #195f34; }
 				.dialog-success-sm > content > footer .ok-command.btn {
-						background-color: #195f34;
+						background-color: #195f34 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #a0edbd;
+						color: #a0edbd !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #195f34;
-						background-color: #a0edbd;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -1808,21 +1740,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-success-sm > content > footer .ok-command.btn:hover {
-								color: #a0edbd;
-								background-color: #06160c;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #a0edbd !important;
+								background-color: #06160c !important; }
 						.dialog-success-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1831,21 +1761,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-success-sm > content > footer .ok-command.btn-left:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 						.dialog-success-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1854,9 +1782,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-success-sm > content > footer .ok-command.btn-center:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 				.dialog-success-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -1944,17 +1872,15 @@
 				justify-content: end;
 				border-top: 1px solid #195f34; }
 				.dialog-success-md > content > footer .ok-command.btn {
-						background-color: #195f34;
+						background-color: #195f34 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #a0edbd;
+						color: #a0edbd !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #195f34;
-						background-color: #a0edbd;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -1962,21 +1888,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-success-md > content > footer .ok-command.btn:hover {
-								color: #a0edbd;
-								background-color: #06160c;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #a0edbd !important;
+								background-color: #06160c !important; }
 						.dialog-success-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -1985,21 +1909,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-success-md > content > footer .ok-command.btn-left:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 						.dialog-success-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2008,9 +1930,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-success-md > content > footer .ok-command.btn-center:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 				.dialog-success-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -2098,17 +2020,15 @@
 				justify-content: end;
 				border-top: 1px solid #195f34; }
 				.dialog-success-lg > content > footer .ok-command.btn {
-						background-color: #195f34;
+						background-color: #195f34 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #a0edbd;
+						color: #a0edbd !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #195f34;
-						background-color: #a0edbd;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -2116,21 +2036,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-success-lg > content > footer .ok-command.btn:hover {
-								color: #a0edbd;
-								background-color: #06160c;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #a0edbd !important;
+								background-color: #06160c !important; }
 						.dialog-success-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2139,21 +2057,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-success-lg > content > footer .ok-command.btn-left:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 						.dialog-success-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2162,9 +2078,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-success-lg > content > footer .ok-command.btn-center:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 				.dialog-success-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -2252,17 +2168,15 @@
 				justify-content: end;
 				border-top: 1px solid #195f34; }
 				.dialog-success-xl > content > footer .ok-command.btn {
-						background-color: #195f34;
+						background-color: #195f34 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #a0edbd;
+						color: #a0edbd !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #195f34;
-						background-color: #a0edbd;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -2270,21 +2184,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-success-xl > content > footer .ok-command.btn:hover {
-								color: #a0edbd;
-								background-color: #06160c;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #a0edbd !important;
+								background-color: #06160c !important; }
 						.dialog-success-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2293,21 +2205,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-success-xl > content > footer .ok-command.btn-left:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 						.dialog-success-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(#020603, #195f34);
+								background: linear-gradient(#020603, #195f34) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #020603;
+								color: #020603 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #195f34;
-								background-color: #a0edbd;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2316,9 +2226,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-success-xl > content > footer .ok-command.btn-center:hover {
-										color: #a0edbd;
-										background-color: #06160c;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #a0edbd !important;
+										background-color: #06160c !important; }
 				.dialog-success-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -2406,17 +2316,15 @@
 				justify-content: end;
 				border-top: 1px solid #8c101b; }
 				.dialog-danger-xs > content > footer .ok-command.btn {
-						background-color: #8c101b;
+						background-color: #8c101b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #ffcacf;
+						color: #ffcacf !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8c101b;
-						background-color: #ffcacf;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -2424,21 +2332,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-danger-xs > content > footer .ok-command.btn:hover {
-								color: #ffcacf;
-								background-color: #3a070b;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ffcacf !important;
+								background-color: #3a070b !important; }
 						.dialog-danger-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2447,21 +2353,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-danger-xs > content > footer .ok-command.btn-left:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 						.dialog-danger-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2470,9 +2374,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-danger-xs > content > footer .ok-command.btn-center:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 				.dialog-danger-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -2560,17 +2464,15 @@
 				justify-content: end;
 				border-top: 1px solid #8c101b; }
 				.dialog-danger-sm > content > footer .ok-command.btn {
-						background-color: #8c101b;
+						background-color: #8c101b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #ffcacf;
+						color: #ffcacf !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8c101b;
-						background-color: #ffcacf;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -2578,21 +2480,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-danger-sm > content > footer .ok-command.btn:hover {
-								color: #ffcacf;
-								background-color: #3a070b;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ffcacf !important;
+								background-color: #3a070b !important; }
 						.dialog-danger-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2601,21 +2501,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-danger-sm > content > footer .ok-command.btn-left:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 						.dialog-danger-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2624,9 +2522,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-danger-sm > content > footer .ok-command.btn-center:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 				.dialog-danger-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -2714,17 +2612,15 @@
 				justify-content: end;
 				border-top: 1px solid #8c101b; }
 				.dialog-danger-md > content > footer .ok-command.btn {
-						background-color: #8c101b;
+						background-color: #8c101b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #ffcacf;
+						color: #ffcacf !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8c101b;
-						background-color: #ffcacf;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -2732,21 +2628,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-danger-md > content > footer .ok-command.btn:hover {
-								color: #ffcacf;
-								background-color: #3a070b;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ffcacf !important;
+								background-color: #3a070b !important; }
 						.dialog-danger-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2755,21 +2649,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-danger-md > content > footer .ok-command.btn-left:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 						.dialog-danger-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2778,9 +2670,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-danger-md > content > footer .ok-command.btn-center:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 				.dialog-danger-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -2868,17 +2760,15 @@
 				justify-content: end;
 				border-top: 1px solid #8c101b; }
 				.dialog-danger-lg > content > footer .ok-command.btn {
-						background-color: #8c101b;
+						background-color: #8c101b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #ffcacf;
+						color: #ffcacf !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8c101b;
-						background-color: #ffcacf;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -2886,21 +2776,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-danger-lg > content > footer .ok-command.btn:hover {
-								color: #ffcacf;
-								background-color: #3a070b;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ffcacf !important;
+								background-color: #3a070b !important; }
 						.dialog-danger-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2909,21 +2797,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-danger-lg > content > footer .ok-command.btn-left:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 						.dialog-danger-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -2932,9 +2818,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-danger-lg > content > footer .ok-command.btn-center:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 				.dialog-danger-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -3022,17 +2908,15 @@
 				justify-content: end;
 				border-top: 1px solid #8c101b; }
 				.dialog-danger-xl > content > footer .ok-command.btn {
-						background-color: #8c101b;
+						background-color: #8c101b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #ffcacf;
+						color: #ffcacf !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #8c101b;
-						background-color: #ffcacf;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -3040,21 +2924,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-danger-xl > content > footer .ok-command.btn:hover {
-								color: #ffcacf;
-								background-color: #3a070b;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #ffcacf !important;
+								background-color: #3a070b !important; }
 						.dialog-danger-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3063,21 +2945,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-danger-xl > content > footer .ok-command.btn-left:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 						.dialog-danger-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(#270408, #8c101b);
+								background: linear-gradient(#270408, #8c101b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #270408;
+								color: #270408 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #8c101b;
-								background-color: #ffcacf;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3086,9 +2966,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-danger-xl > content > footer .ok-command.btn-center:hover {
-										color: #ffcacf;
-										background-color: #3a070b;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #ffcacf !important;
+										background-color: #3a070b !important; }
 				.dialog-danger-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -3176,17 +3056,15 @@
 				justify-content: end;
 				border-top: 1px solid #ffbf00; }
 				.dialog-warning-xs > content > footer .ok-command.btn {
-						background-color: #ffbf00;
+						background-color: #ffbf00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #86291c;
+						color: #86291c !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #ffbf00;
-						background-color: #fff2cb;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -3194,21 +3072,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-warning-xs > content > footer .ok-command.btn:hover {
-								color: white;
-								background-color: #a37a00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: white !important;
+								background-color: #a37a00 !important; }
 						.dialog-warning-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3217,21 +3093,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-warning-xs > content > footer .ok-command.btn-left:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 						.dialog-warning-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3240,9 +3114,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-warning-xs > content > footer .ok-command.btn-center:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 				.dialog-warning-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -3330,17 +3204,15 @@
 				justify-content: end;
 				border-top: 1px solid #ffbf00; }
 				.dialog-warning-sm > content > footer .ok-command.btn {
-						background-color: #ffbf00;
+						background-color: #ffbf00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #86291c;
+						color: #86291c !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #ffbf00;
-						background-color: #fff2cb;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -3348,21 +3220,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-warning-sm > content > footer .ok-command.btn:hover {
-								color: white;
-								background-color: #a37a00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: white !important;
+								background-color: #a37a00 !important; }
 						.dialog-warning-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3371,21 +3241,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-warning-sm > content > footer .ok-command.btn-left:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 						.dialog-warning-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3394,9 +3262,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-warning-sm > content > footer .ok-command.btn-center:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 				.dialog-warning-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -3484,17 +3352,15 @@
 				justify-content: end;
 				border-top: 1px solid #ffbf00; }
 				.dialog-warning-md > content > footer .ok-command.btn {
-						background-color: #ffbf00;
+						background-color: #ffbf00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #86291c;
+						color: #86291c !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #ffbf00;
-						background-color: #fff2cb;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -3502,21 +3368,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-warning-md > content > footer .ok-command.btn:hover {
-								color: white;
-								background-color: #a37a00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: white !important;
+								background-color: #a37a00 !important; }
 						.dialog-warning-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3525,21 +3389,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-warning-md > content > footer .ok-command.btn-left:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 						.dialog-warning-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3548,9 +3410,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-warning-md > content > footer .ok-command.btn-center:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 				.dialog-warning-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -3638,17 +3500,15 @@
 				justify-content: end;
 				border-top: 1px solid #ffbf00; }
 				.dialog-warning-lg > content > footer .ok-command.btn {
-						background-color: #ffbf00;
+						background-color: #ffbf00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #86291c;
+						color: #86291c !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #ffbf00;
-						background-color: #fff2cb;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -3656,21 +3516,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-warning-lg > content > footer .ok-command.btn:hover {
-								color: white;
-								background-color: #a37a00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: white !important;
+								background-color: #a37a00 !important; }
 						.dialog-warning-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3679,21 +3537,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-warning-lg > content > footer .ok-command.btn-left:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 						.dialog-warning-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3702,9 +3558,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-warning-lg > content > footer .ok-command.btn-center:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 				.dialog-warning-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -3792,17 +3648,15 @@
 				justify-content: end;
 				border-top: 1px solid #ffbf00; }
 				.dialog-warning-xl > content > footer .ok-command.btn {
-						background-color: #ffbf00;
+						background-color: #ffbf00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #86291c;
+						color: #86291c !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #ffbf00;
-						background-color: #fff2cb;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -3810,21 +3664,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-warning-xl > content > footer .ok-command.btn:hover {
-								color: white;
-								background-color: #a37a00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: white !important;
+								background-color: #a37a00 !important; }
 						.dialog-warning-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3833,21 +3685,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-warning-xl > content > footer .ok-command.btn-left:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 						.dialog-warning-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(#86291c, #ffbf00);
+								background: linear-gradient(#86291c, #ffbf00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #86291c;
+								color: #86291c !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #ffbf00;
-								background-color: #fff2cb;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3856,9 +3706,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-warning-xl > content > footer .ok-command.btn-center:hover {
-										color: white;
-										background-color: #a37a00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: white !important;
+										background-color: #a37a00 !important; }
 				.dialog-warning-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -3946,17 +3796,15 @@
 				justify-content: end;
 				border-top: 1px solid #2894aa; }
 				.dialog-info-xs > content > footer .ok-command.btn {
-						background-color: #2894aa;
+						background-color: #2894aa !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c4e7ee;
+						color: #c4e7ee !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #2894aa;
-						background-color: #c4e7ee;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -3964,21 +3812,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-info-xs > content > footer .ok-command.btn:hover {
-								color: #c4e7ee;
-								background-color: #175360;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c4e7ee !important;
+								background-color: #175360 !important; }
 						.dialog-info-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -3987,21 +3833,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-info-xs > content > footer .ok-command.btn-left:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 						.dialog-info-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4010,9 +3854,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-info-xs > content > footer .ok-command.btn-center:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 				.dialog-info-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -4100,17 +3944,15 @@
 				justify-content: end;
 				border-top: 1px solid #2894aa; }
 				.dialog-info-sm > content > footer .ok-command.btn {
-						background-color: #2894aa;
+						background-color: #2894aa !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c4e7ee;
+						color: #c4e7ee !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #2894aa;
-						background-color: #c4e7ee;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -4118,21 +3960,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-info-sm > content > footer .ok-command.btn:hover {
-								color: #c4e7ee;
-								background-color: #175360;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c4e7ee !important;
+								background-color: #175360 !important; }
 						.dialog-info-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4141,21 +3981,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-info-sm > content > footer .ok-command.btn-left:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 						.dialog-info-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4164,9 +4002,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-info-sm > content > footer .ok-command.btn-center:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 				.dialog-info-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -4254,17 +4092,15 @@
 				justify-content: end;
 				border-top: 1px solid #2894aa; }
 				.dialog-info-md > content > footer .ok-command.btn {
-						background-color: #2894aa;
+						background-color: #2894aa !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c4e7ee;
+						color: #c4e7ee !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #2894aa;
-						background-color: #c4e7ee;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -4272,21 +4108,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-info-md > content > footer .ok-command.btn:hover {
-								color: #c4e7ee;
-								background-color: #175360;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c4e7ee !important;
+								background-color: #175360 !important; }
 						.dialog-info-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4295,21 +4129,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-info-md > content > footer .ok-command.btn-left:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 						.dialog-info-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4318,9 +4150,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-info-md > content > footer .ok-command.btn-center:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 				.dialog-info-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -4408,17 +4240,15 @@
 				justify-content: end;
 				border-top: 1px solid #2894aa; }
 				.dialog-info-lg > content > footer .ok-command.btn {
-						background-color: #2894aa;
+						background-color: #2894aa !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c4e7ee;
+						color: #c4e7ee !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #2894aa;
-						background-color: #c4e7ee;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -4426,21 +4256,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-info-lg > content > footer .ok-command.btn:hover {
-								color: #c4e7ee;
-								background-color: #175360;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c4e7ee !important;
+								background-color: #175360 !important; }
 						.dialog-info-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4449,21 +4277,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-info-lg > content > footer .ok-command.btn-left:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 						.dialog-info-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4472,9 +4298,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-info-lg > content > footer .ok-command.btn-center:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 				.dialog-info-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -4562,17 +4388,15 @@
 				justify-content: end;
 				border-top: 1px solid #2894aa; }
 				.dialog-info-xl > content > footer .ok-command.btn {
-						background-color: #2894aa;
+						background-color: #2894aa !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c4e7ee;
+						color: #c4e7ee !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #2894aa;
-						background-color: #c4e7ee;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -4580,21 +4404,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-info-xl > content > footer .ok-command.btn:hover {
-								color: #c4e7ee;
-								background-color: #175360;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c4e7ee !important;
+								background-color: #175360 !important; }
 						.dialog-info-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4603,21 +4425,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-info-xl > content > footer .ok-command.btn-left:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 						.dialog-info-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(#0c436e, #2894aa);
+								background: linear-gradient(#0c436e, #2894aa) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #0c436e;
+								color: #0c436e !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #2894aa;
-								background-color: #c4e7ee;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4626,9 +4446,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-info-xl > content > footer .ok-command.btn-center:hover {
-										color: #c4e7ee;
-										background-color: #175360;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c4e7ee !important;
+										background-color: #175360 !important; }
 				.dialog-info-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -4716,17 +4536,15 @@
 				justify-content: end;
 				border-top: 1px solid #242424; }
 				.dialog-light-xs > content > footer .ok-command.btn {
-						background-color: #a19b9b;
+						background-color: #a19b9b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #f7f2f2;
+						color: #f7f2f2 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #a19b9b;
-						background-color: #f7f2f2;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -4734,21 +4552,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-light-xs > content > footer .ok-command.btn:hover {
-								color: #f7f2f2;
-								background-color: #746d6d;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #f7f2f2 !important;
+								background-color: #746d6d !important; }
 						.dialog-light-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4757,21 +4573,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-light-xs > content > footer .ok-command.btn-left:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 						.dialog-light-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4780,9 +4594,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-light-xs > content > footer .ok-command.btn-center:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 				.dialog-light-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -4870,17 +4684,15 @@
 				justify-content: end;
 				border-top: 1px solid #242424; }
 				.dialog-light-sm > content > footer .ok-command.btn {
-						background-color: #a19b9b;
+						background-color: #a19b9b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #f7f2f2;
+						color: #f7f2f2 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #a19b9b;
-						background-color: #f7f2f2;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -4888,21 +4700,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-light-sm > content > footer .ok-command.btn:hover {
-								color: #f7f2f2;
-								background-color: #746d6d;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #f7f2f2 !important;
+								background-color: #746d6d !important; }
 						.dialog-light-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4911,21 +4721,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-light-sm > content > footer .ok-command.btn-left:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 						.dialog-light-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -4934,9 +4742,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-light-sm > content > footer .ok-command.btn-center:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 				.dialog-light-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -5024,17 +4832,15 @@
 				justify-content: end;
 				border-top: 1px solid #242424; }
 				.dialog-light-md > content > footer .ok-command.btn {
-						background-color: #a19b9b;
+						background-color: #a19b9b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #f7f2f2;
+						color: #f7f2f2 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #a19b9b;
-						background-color: #f7f2f2;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -5042,21 +4848,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-light-md > content > footer .ok-command.btn:hover {
-								color: #f7f2f2;
-								background-color: #746d6d;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #f7f2f2 !important;
+								background-color: #746d6d !important; }
 						.dialog-light-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5065,21 +4869,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-light-md > content > footer .ok-command.btn-left:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 						.dialog-light-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5088,9 +4890,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-light-md > content > footer .ok-command.btn-center:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 				.dialog-light-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -5178,17 +4980,15 @@
 				justify-content: end;
 				border-top: 1px solid #242424; }
 				.dialog-light-lg > content > footer .ok-command.btn {
-						background-color: #a19b9b;
+						background-color: #a19b9b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #f7f2f2;
+						color: #f7f2f2 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #a19b9b;
-						background-color: #f7f2f2;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -5196,21 +4996,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-light-lg > content > footer .ok-command.btn:hover {
-								color: #f7f2f2;
-								background-color: #746d6d;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #f7f2f2 !important;
+								background-color: #746d6d !important; }
 						.dialog-light-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5219,21 +5017,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-light-lg > content > footer .ok-command.btn-left:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 						.dialog-light-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5242,9 +5038,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-light-lg > content > footer .ok-command.btn-center:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 				.dialog-light-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -5332,17 +5128,15 @@
 				justify-content: end;
 				border-top: 1px solid #242424; }
 				.dialog-light-xl > content > footer .ok-command.btn {
-						background-color: #a19b9b;
+						background-color: #a19b9b !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #f7f2f2;
+						color: #f7f2f2 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #a19b9b;
-						background-color: #f7f2f2;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -5350,21 +5144,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-light-xl > content > footer .ok-command.btn:hover {
-								color: #f7f2f2;
-								background-color: #746d6d;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #f7f2f2 !important;
+								background-color: #746d6d !important; }
 						.dialog-light-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5373,21 +5165,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-light-xl > content > footer .ok-command.btn-left:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 						.dialog-light-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(#696363, #a19b9b);
+								background: linear-gradient(#696363, #a19b9b) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #696363;
+								color: #696363 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #a19b9b;
-								background-color: #f7f2f2;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5396,9 +5186,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-light-xl > content > footer .ok-command.btn-center:hover {
-										color: #f7f2f2;
-										background-color: #746d6d;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #f7f2f2 !important;
+										background-color: #746d6d !important; }
 				.dialog-light-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -5486,17 +5276,15 @@
 				justify-content: end;
 				border-top: 1px solid #161616; }
 				.dialog-dark-xs > content > footer .ok-command.btn {
-						background-color: #161616;
+						background-color: #161616 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: gray;
+						color: gray !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #161616;
-						background-color: #c3c3c3;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -5504,21 +5292,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-dark-xs > content > footer .ok-command.btn:hover {
-								color: #6d6d6d;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #6d6d6d !important;
+								background-color: black !important; }
 						.dialog-dark-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5527,21 +5313,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-dark-xs > content > footer .ok-command.btn-left:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 						.dialog-dark-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5550,9 +5334,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-dark-xs > content > footer .ok-command.btn-center:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 				.dialog-dark-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -5640,17 +5424,15 @@
 				justify-content: end;
 				border-top: 1px solid #161616; }
 				.dialog-dark-sm > content > footer .ok-command.btn {
-						background-color: #161616;
+						background-color: #161616 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: gray;
+						color: gray !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #161616;
-						background-color: #c3c3c3;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -5658,21 +5440,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-dark-sm > content > footer .ok-command.btn:hover {
-								color: #6d6d6d;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #6d6d6d !important;
+								background-color: black !important; }
 						.dialog-dark-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5681,21 +5461,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-dark-sm > content > footer .ok-command.btn-left:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 						.dialog-dark-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5704,9 +5482,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-dark-sm > content > footer .ok-command.btn-center:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 				.dialog-dark-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -5794,17 +5572,15 @@
 				justify-content: end;
 				border-top: 1px solid #161616; }
 				.dialog-dark-md > content > footer .ok-command.btn {
-						background-color: #161616;
+						background-color: #161616 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: gray;
+						color: gray !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #161616;
-						background-color: #c3c3c3;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -5812,21 +5588,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-dark-md > content > footer .ok-command.btn:hover {
-								color: #6d6d6d;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #6d6d6d !important;
+								background-color: black !important; }
 						.dialog-dark-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5835,21 +5609,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-dark-md > content > footer .ok-command.btn-left:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 						.dialog-dark-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5858,9 +5630,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-dark-md > content > footer .ok-command.btn-center:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 				.dialog-dark-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -5948,17 +5720,15 @@
 				justify-content: end;
 				border-top: 1px solid #161616; }
 				.dialog-dark-lg > content > footer .ok-command.btn {
-						background-color: #161616;
+						background-color: #161616 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: gray;
+						color: gray !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #161616;
-						background-color: #c3c3c3;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -5966,21 +5736,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-dark-lg > content > footer .ok-command.btn:hover {
-								color: #6d6d6d;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #6d6d6d !important;
+								background-color: black !important; }
 						.dialog-dark-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -5989,21 +5757,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-dark-lg > content > footer .ok-command.btn-left:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 						.dialog-dark-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6012,9 +5778,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-dark-lg > content > footer .ok-command.btn-center:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 				.dialog-dark-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -6102,17 +5868,15 @@
 				justify-content: end;
 				border-top: 1px solid #161616; }
 				.dialog-dark-xl > content > footer .ok-command.btn {
-						background-color: #161616;
+						background-color: #161616 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: gray;
+						color: gray !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #161616;
-						background-color: #c3c3c3;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -6120,21 +5884,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-dark-xl > content > footer .ok-command.btn:hover {
-								color: #6d6d6d;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #6d6d6d !important;
+								background-color: black !important; }
 						.dialog-dark-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6143,21 +5905,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-dark-xl > content > footer .ok-command.btn-left:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 						.dialog-dark-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(white, #161616);
+								background: linear-gradient(white, #161616) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: white;
+								color: white !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #161616;
-								background-color: #c3c3c3;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6166,9 +5926,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-dark-xl > content > footer .ok-command.btn-center:hover {
-										color: #6d6d6d;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #6d6d6d !important;
+										background-color: black !important; }
 				.dialog-dark-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -6256,17 +6016,15 @@
 				justify-content: end;
 				border-top: 1px solid #fe2f00; }
 				.dialog-antan-xs > content > footer .ok-command.btn {
-						background-color: #fe2f00;
+						background-color: #fe2f00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #e8bdb4;
+						color: #e8bdb4 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #fe2f00;
-						background-color: #e8bdb4;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -6274,21 +6032,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-antan-xs > content > footer .ok-command.btn:hover {
-								color: #e8bdb4;
-								background-color: #a21e00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #e8bdb4 !important;
+								background-color: #a21e00 !important; }
 						.dialog-antan-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6297,21 +6053,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-antan-xs > content > footer .ok-command.btn-left:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 						.dialog-antan-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6320,9 +6074,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-antan-xs > content > footer .ok-command.btn-center:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 				.dialog-antan-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -6410,17 +6164,15 @@
 				justify-content: end;
 				border-top: 1px solid #fe2f00; }
 				.dialog-antan-sm > content > footer .ok-command.btn {
-						background-color: #fe2f00;
+						background-color: #fe2f00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #e8bdb4;
+						color: #e8bdb4 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #fe2f00;
-						background-color: #e8bdb4;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -6428,21 +6180,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-antan-sm > content > footer .ok-command.btn:hover {
-								color: #e8bdb4;
-								background-color: #a21e00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #e8bdb4 !important;
+								background-color: #a21e00 !important; }
 						.dialog-antan-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6451,21 +6201,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-antan-sm > content > footer .ok-command.btn-left:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 						.dialog-antan-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6474,9 +6222,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-antan-sm > content > footer .ok-command.btn-center:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 				.dialog-antan-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -6564,17 +6312,15 @@
 				justify-content: end;
 				border-top: 1px solid #fe2f00; }
 				.dialog-antan-md > content > footer .ok-command.btn {
-						background-color: #fe2f00;
+						background-color: #fe2f00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #e8bdb4;
+						color: #e8bdb4 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #fe2f00;
-						background-color: #e8bdb4;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -6582,21 +6328,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-antan-md > content > footer .ok-command.btn:hover {
-								color: #e8bdb4;
-								background-color: #a21e00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #e8bdb4 !important;
+								background-color: #a21e00 !important; }
 						.dialog-antan-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6605,21 +6349,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-antan-md > content > footer .ok-command.btn-left:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 						.dialog-antan-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6628,9 +6370,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-antan-md > content > footer .ok-command.btn-center:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 				.dialog-antan-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -6718,17 +6460,15 @@
 				justify-content: end;
 				border-top: 1px solid #fe2f00; }
 				.dialog-antan-lg > content > footer .ok-command.btn {
-						background-color: #fe2f00;
+						background-color: #fe2f00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #e8bdb4;
+						color: #e8bdb4 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #fe2f00;
-						background-color: #e8bdb4;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -6736,21 +6476,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-antan-lg > content > footer .ok-command.btn:hover {
-								color: #e8bdb4;
-								background-color: #a21e00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #e8bdb4 !important;
+								background-color: #a21e00 !important; }
 						.dialog-antan-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6759,21 +6497,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-antan-lg > content > footer .ok-command.btn-left:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 						.dialog-antan-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6782,9 +6518,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-antan-lg > content > footer .ok-command.btn-center:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 				.dialog-antan-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -6872,17 +6608,15 @@
 				justify-content: end;
 				border-top: 1px solid #fe2f00; }
 				.dialog-antan-xl > content > footer .ok-command.btn {
-						background-color: #fe2f00;
+						background-color: #fe2f00 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #e8bdb4;
+						color: #e8bdb4 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #fe2f00;
-						background-color: #e8bdb4;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -6890,21 +6624,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-antan-xl > content > footer .ok-command.btn:hover {
-								color: #e8bdb4;
-								background-color: #a21e00;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #e8bdb4 !important;
+								background-color: #a21e00 !important; }
 						.dialog-antan-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6913,21 +6645,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-antan-xl > content > footer .ok-command.btn-left:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 						.dialog-antan-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(#8e1a00, #fe2f00);
+								background: linear-gradient(#8e1a00, #fe2f00) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #8e1a00;
+								color: #8e1a00 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #fe2f00;
-								background-color: #e8bdb4;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -6936,9 +6666,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-antan-xl > content > footer .ok-command.btn-center:hover {
-										color: #e8bdb4;
-										background-color: #a21e00;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #e8bdb4 !important;
+										background-color: #a21e00 !important; }
 				.dialog-antan-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -7026,17 +6756,15 @@
 				justify-content: end;
 				border-top: 1px solid #07294e; }
 				.dialog-notify-xs > content > footer .ok-command.btn {
-						background-color: #07294e;
+						background-color: #07294e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c1cfde;
+						color: #c1cfde !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #07294e;
-						background-color: #c1cfde;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -7044,21 +6772,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-notify-xs > content > footer .ok-command.btn:hover {
-								color: #c1cfde;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c1cfde !important;
+								background-color: black !important; }
 						.dialog-notify-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7067,21 +6793,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-notify-xs > content > footer .ok-command.btn-left:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 						.dialog-notify-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7090,9 +6814,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-notify-xs > content > footer .ok-command.btn-center:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 				.dialog-notify-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -7180,17 +6904,15 @@
 				justify-content: end;
 				border-top: 1px solid #07294e; }
 				.dialog-notify-sm > content > footer .ok-command.btn {
-						background-color: #07294e;
+						background-color: #07294e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c1cfde;
+						color: #c1cfde !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #07294e;
-						background-color: #c1cfde;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -7198,21 +6920,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-notify-sm > content > footer .ok-command.btn:hover {
-								color: #c1cfde;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c1cfde !important;
+								background-color: black !important; }
 						.dialog-notify-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7221,21 +6941,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-notify-sm > content > footer .ok-command.btn-left:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 						.dialog-notify-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7244,9 +6962,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-notify-sm > content > footer .ok-command.btn-center:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 				.dialog-notify-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -7334,17 +7052,15 @@
 				justify-content: end;
 				border-top: 1px solid #07294e; }
 				.dialog-notify-md > content > footer .ok-command.btn {
-						background-color: #07294e;
+						background-color: #07294e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c1cfde;
+						color: #c1cfde !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #07294e;
-						background-color: #c1cfde;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -7352,21 +7068,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-notify-md > content > footer .ok-command.btn:hover {
-								color: #c1cfde;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c1cfde !important;
+								background-color: black !important; }
 						.dialog-notify-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7375,21 +7089,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-notify-md > content > footer .ok-command.btn-left:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 						.dialog-notify-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7398,9 +7110,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-notify-md > content > footer .ok-command.btn-center:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 				.dialog-notify-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -7488,17 +7200,15 @@
 				justify-content: end;
 				border-top: 1px solid #07294e; }
 				.dialog-notify-lg > content > footer .ok-command.btn {
-						background-color: #07294e;
+						background-color: #07294e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c1cfde;
+						color: #c1cfde !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #07294e;
-						background-color: #c1cfde;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -7506,21 +7216,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-notify-lg > content > footer .ok-command.btn:hover {
-								color: #c1cfde;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c1cfde !important;
+								background-color: black !important; }
 						.dialog-notify-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7529,21 +7237,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-notify-lg > content > footer .ok-command.btn-left:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 						.dialog-notify-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7552,9 +7258,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-notify-lg > content > footer .ok-command.btn-center:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 				.dialog-notify-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -7642,17 +7348,15 @@
 				justify-content: end;
 				border-top: 1px solid #07294e; }
 				.dialog-notify-xl > content > footer .ok-command.btn {
-						background-color: #07294e;
+						background-color: #07294e !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #c1cfde;
+						color: #c1cfde !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #07294e;
-						background-color: #c1cfde;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -7660,21 +7364,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-notify-xl > content > footer .ok-command.btn:hover {
-								color: #c1cfde;
-								background-color: black;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #c1cfde !important;
+								background-color: black !important; }
 						.dialog-notify-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7683,21 +7385,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-notify-xl > content > footer .ok-command.btn-left:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 						.dialog-notify-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(black, #07294e);
+								background: linear-gradient(black, #07294e) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: black;
+								color: black !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #07294e;
-								background-color: #c1cfde;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7706,9 +7406,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-notify-xl > content > footer .ok-command.btn-center:hover {
-										color: #c1cfde;
-										background-color: black;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #c1cfde !important;
+										background-color: black !important; }
 				.dialog-notify-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -7796,17 +7496,15 @@
 				justify-content: end;
 				border-top: 1px solid #165992; }
 				.dialog-funk-xs > content > footer .ok-command.btn {
-						background-color: #165992;
+						background-color: #165992 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #9fcef6;
+						color: #9fcef6 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #165992;
-						background-color: #9fcef6;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -7814,21 +7512,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-funk-xs > content > footer .ok-command.btn:hover {
-								color: #9fcef6;
-								background-color: #0a2842;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #9fcef6 !important;
+								background-color: #0a2842 !important; }
 						.dialog-funk-xs > content > footer .ok-command.btn-left {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7837,21 +7533,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-funk-xs > content > footer .ok-command.btn-left:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 						.dialog-funk-xs > content > footer .ok-command.btn-center {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7860,9 +7554,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-funk-xs > content > footer .ok-command.btn-center:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 				.dialog-funk-xs > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -7950,17 +7644,15 @@
 				justify-content: end;
 				border-top: 1px solid #165992; }
 				.dialog-funk-sm > content > footer .ok-command.btn {
-						background-color: #165992;
+						background-color: #165992 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #9fcef6;
+						color: #9fcef6 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #165992;
-						background-color: #9fcef6;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -7968,21 +7660,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-funk-sm > content > footer .ok-command.btn:hover {
-								color: #9fcef6;
-								background-color: #0a2842;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #9fcef6 !important;
+								background-color: #0a2842 !important; }
 						.dialog-funk-sm > content > footer .ok-command.btn-left {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -7991,21 +7681,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-funk-sm > content > footer .ok-command.btn-left:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 						.dialog-funk-sm > content > footer .ok-command.btn-center {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -8014,9 +7702,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-funk-sm > content > footer .ok-command.btn-center:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 				.dialog-funk-sm > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -8104,17 +7792,15 @@
 				justify-content: end;
 				border-top: 1px solid #165992; }
 				.dialog-funk-md > content > footer .ok-command.btn {
-						background-color: #165992;
+						background-color: #165992 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #9fcef6;
+						color: #9fcef6 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #165992;
-						background-color: #9fcef6;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -8122,21 +7808,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-funk-md > content > footer .ok-command.btn:hover {
-								color: #9fcef6;
-								background-color: #0a2842;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #9fcef6 !important;
+								background-color: #0a2842 !important; }
 						.dialog-funk-md > content > footer .ok-command.btn-left {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -8145,21 +7829,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-funk-md > content > footer .ok-command.btn-left:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 						.dialog-funk-md > content > footer .ok-command.btn-center {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -8168,9 +7850,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-funk-md > content > footer .ok-command.btn-center:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 				.dialog-funk-md > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -8258,17 +7940,15 @@
 				justify-content: end;
 				border-top: 1px solid #165992; }
 				.dialog-funk-lg > content > footer .ok-command.btn {
-						background-color: #165992;
+						background-color: #165992 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #9fcef6;
+						color: #9fcef6 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #165992;
-						background-color: #9fcef6;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -8276,21 +7956,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-funk-lg > content > footer .ok-command.btn:hover {
-								color: #9fcef6;
-								background-color: #0a2842;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #9fcef6 !important;
+								background-color: #0a2842 !important; }
 						.dialog-funk-lg > content > footer .ok-command.btn-left {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -8299,21 +7977,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-funk-lg > content > footer .ok-command.btn-left:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 						.dialog-funk-lg > content > footer .ok-command.btn-center {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -8322,9 +7998,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-funk-lg > content > footer .ok-command.btn-center:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 				.dialog-funk-lg > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }
@@ -8412,17 +8088,15 @@
 				justify-content: end;
 				border-top: 1px solid #165992; }
 				.dialog-funk-xl > content > footer .ok-command.btn {
-						background-color: #165992;
+						background-color: #165992 !important;
 						padding-top: 4px;
 						padding-bottom: 4px;
 						padding-left: 16px;
 						padding-right: 16px;
-						color: #9fcef6;
+						color: #9fcef6 !important;
 						display: block;
 						margin: 2px;
 						box-shadow: 2px 2px #111111;
-						color: #165992;
-						background-color: #9fcef6;
 						border-radius: 8px;
 						font-size: 15px;
 						transition: all 0.4s ease-in-out;
@@ -8430,21 +8104,19 @@
 						height: 36px;
 						min-width: 66px; }
 						.dialog-funk-xl > content > footer .ok-command.btn:hover {
-								color: #9fcef6;
-								background-color: #0a2842;
-								cursor: pointer; }
+								cursor: pointer;
+								color: #9fcef6 !important;
+								background-color: #0a2842 !important; }
 						.dialog-funk-xl > content > footer .ok-command.btn-left {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -8453,21 +8125,19 @@
 								min-width: 66px;
 								margin-right: auto; }
 								.dialog-funk-xl > content > footer .ok-command.btn-left:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 						.dialog-funk-xl > content > footer .ok-command.btn-center {
-								background: linear-gradient(#9fcef6, #165992);
+								background: linear-gradient(#9fcef6, #165992) !important;
 								padding-top: 4px;
 								padding-bottom: 4px;
 								padding-left: 16px;
 								padding-right: 16px;
-								color: #9fcef6;
+								color: #9fcef6 !important;
 								display: block;
 								margin: 2px;
 								box-shadow: 2px 2px #111111;
-								color: #165992;
-								background-color: #9fcef6;
 								border-radius: 8px;
 								font-size: 15px;
 								transition: all 0.4s ease-in-out;
@@ -8476,9 +8146,9 @@
 								min-width: 66px;
 								margin: auto; }
 								.dialog-funk-xl > content > footer .ok-command.btn-center:hover {
-										color: #9fcef6;
-										background-color: #0a2842;
-										cursor: pointer; }
+										cursor: pointer;
+										color: #9fcef6 !important;
+										background-color: #0a2842 !important; }
 				.dialog-funk-xl > content > footer .ok-command:hover {
 						cursor: pointer;
 						font-weight: 800; }

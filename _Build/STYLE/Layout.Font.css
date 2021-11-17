@@ -1,0 +1,124 @@
+.font-bold {
+		font-weight: bold; }
+		.font-bold-force {
+				font-weight: bold !important; }
+
+.font-bold-smallest {
+		font-size: 9px;
+		font-weight: bold; }
+		.font-bold-smallest-force {
+				font-size: 9px !important;
+				font-weight: bold !important; }
+
+.font-bold-small {
+		font-size: 12px;
+		font-weight: bold; }
+		.font-bold-small-force {
+				font-size: 12px !important;
+				font-weight: bold !important; }
+
+.font-bold-big {
+		font-size: 20px;
+		font-weight: bold; }
+		.font-bold-big-force {
+				font-size: 20px !important;
+				font-weight: bold !important; }
+
+.font-bold-bigger {
+		font-size: 26px;
+		font-weight: bold; }
+		.font-bold-bigger-force {
+				font-size: 26px !important;
+				font-weight: bold !important; }
+
+.font-bold-large {
+		font-size: 34px;
+		font-weight: bold; }
+		.font-bold-large-force {
+				font-size: 34px !important;
+				font-weight: bold !important; }
+
+.font-bold-xl {
+		font-size: 47px;
+		font-weight: bold; }
+		.font-bold-xl-force {
+				font-size: 47px !important;
+				font-weight: bold !important; }
+
+.font-bold-largest {
+		font-size: 56px;
+		font-weight: bold; }
+		.font-bold-largest-force {
+				font-size: 56px !important;
+				font-weight: bold !important; }
+
+.font-reset {
+		font-family: unset;
+		font-size: unset;
+		font-weight: unset; }
+		.font-reset-force {
+				font-family: unset !important;
+				font-size: unset !important;
+				font-weight: unset !important; }
+
+@media (min-width: 0px) {
+		.font-intro {
+				font-size: 14px;
+				font-weight: 800;
+				margin-top: 12px;
+				margin-bottom: 12px; }
+				.font-intro-force {
+						font-size: 14px !important;
+						font-weight: 800 !important;
+						margin-top: 12px !important;
+						margin-bottom: 12px !important; } }
+
+@media (min-width: 576px) {
+		.font-intro {
+				font-size: 19px;
+				font-weight: 800;
+				margin-top: 12px;
+				margin-bottom: 12px; }
+				.font-intro-force {
+						font-size: 19px !important;
+						font-weight: 800 !important;
+						margin-top: 12px !important;
+						margin-bottom: 12px !important; } }
+
+@media (min-width: 768px) {
+		.font-intro {
+				font-size: 25px;
+				font-weight: 800;
+				margin-top: 12px;
+				margin-bottom: 12px; }
+				.font-intro-force {
+						font-size: 25px !important;
+						font-weight: 800 !important;
+						margin-top: 12px !important;
+						margin-bottom: 12px !important; } }
+
+@media (min-width: 992px) {
+		.font-intro {
+				font-size: 34px;
+				font-weight: 800;
+				margin-top: 12px;
+				margin-bottom: 12px; }
+				.font-intro-force {
+						font-size: 34px !important;
+						font-weight: 800 !important;
+						margin-top: 12px !important;
+						margin-bottom: 12px !important; } }
+
+@media (min-width: 1200px) {
+		.font-intro {
+				font-size: 44px;
+				font-weight: 800;
+				margin-top: 12px;
+				margin-bottom: 12px; }
+				.font-intro-force {
+						font-size: 44px !important;
+						font-weight: 800 !important;
+						margin-top: 12px !important;
+						margin-bottom: 12px !important; } }
+
+/*# sourceMappingURL=Layout.Font.css.map */
